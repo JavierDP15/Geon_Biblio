@@ -1,0 +1,12 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Geon_Biblio",
+	"webDir": "www",
+	"packageClassList": [
+		"AppPlugin",
+		"HapticsPlugin",
+		"KeyboardPlugin",
+		"SplashScreenPlugin",
+		"StatusBarPlugin"
+	]
+}
