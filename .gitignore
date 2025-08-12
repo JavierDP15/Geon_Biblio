@@ -68,3 +68,14 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Entornos y claves
+.env
+.env.*  # Si usas entornos múltiples
+
+# Archivos de Capacitor
+/android/app/build/
+/ios/App/build/
+
+# Mapas de origen
+*.map
