@@ -1,0 +1,27 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>intro</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">intro</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+  <video
+    #video1
+    *ngIf="showVideo1"
+    [src]="'assets/videos/firma_alma.mp4'"
+    autoplay
+    playsinline
+    muted
+    (ended)="onVideoEnded()">
+  </video>
+  
+    <!-- Botón para iniciar en iOS -->
+     <div *ngIf="showStartButton" class="start-button-container">
+      <button expand="block" size="large" (click)="startIntro()">Toca para iniciar</button>
+     </div>
+</ion-content>
