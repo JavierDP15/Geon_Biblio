@@ -1,0 +1,7 @@
+{
+  "name": "Geon_Biblio",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
