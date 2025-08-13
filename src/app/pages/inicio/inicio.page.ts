@@ -63,4 +63,11 @@ export class InicioPage implements OnInit {
       this.sonido = true;
     }
   }
+
+  saltar() {
+    this.currentStep = 3;
+    this.mostrarMenu = true;
+    this.video1.nativeElement.pause();
+    this.video1.nativeElement.currentTime = 0;
+  }
 }

@@ -4,6 +4,7 @@
     [src]="'assets/videos/intro_biblioteca_geon.mp4'"
     muted
     playsinline
+    (click)="saltar()"
     (ended)="onVideo1Ended()"
     [class.active]="currentStep === 1"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
@@ -14,6 +15,7 @@
     [src]="'assets/videos/video_intro2.mp4'"
     muted
     playsinline
+    (click)="saltar()"
     (ended)="onVideo2Ended()"
     [class.active]="currentStep === 2"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
