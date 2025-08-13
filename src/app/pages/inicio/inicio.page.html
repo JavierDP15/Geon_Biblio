@@ -24,4 +24,21 @@
     [class.active]="currentStep === 3"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
   />
+
+  <div *ngIf="mostrarMenu" class="cuerpo">
+    <img src="assets/img/titulo.png" alt="titulo" class="titulo">
+    <img src="assets/img/subtitulo.png" alt="subtitulo" class="subtitulo">
+    <button class="archivo">Archivo</button>
+    <div class="extras">
+      <button class="boton-extra">Autora</button>
+      <button class="boton-extra">Opciones</button>
+      <button class="boton-extra">Créditos</button>
+      <button class="boton-extra">Logros</button>
+    </div>
+  </div>
+  <div *ngIf="mostrarMenu" class="sonido" (click)="cambiarSonido()">
+    <img *ngIf="sonido" (click)="cambiarSonido()" src="assets/iconos/sonido-encendido.png"/>
+    <img *ngIf="!sonido" (click)="cambiarSonido()" src="assets/iconos/sin-sonido.png"/>
+  </div>
+  <img *ngIf="mostrarMenu" src="assets/img/estrella.png" class="estrella"/>
 </ion-content>

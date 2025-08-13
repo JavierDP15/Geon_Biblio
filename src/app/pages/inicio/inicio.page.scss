@@ -1,11 +1,101 @@
 video, img {
     opacity: 0;
     pointer-events: none;
-    z-index: 0;
 }
 
 video.active, img.active {
     opacity: 1;
     pointer-events: auto;
+}
+
+.cuerpo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-top: 1.5%;
+    width: 100%;
+    height: 90%;
+
+    img {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    .titulo {
+        width: 40%;
+    }
+
+    .subtitulo {
+        width: 70%;
+    }
+
+    .archivo {
+        z-index: 2;
+
+        height: 13%;
+
+        background-image: url('/assets/iconos/boton_archivo.png');
+        background-color: transparent;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        width: 29%;
+        height: 20%;
+
+        color: black;
+
+        margin-top: 2%;
+    }
+
+    .extras {
+        z-index: 1;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        width: 90%;
+        height: 20%;
+
+        .boton-extra {
+            background-image: url('/assets/iconos/boton.png');
+            background-color: transparent;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            width: 100%;
+            height: 100%;
+
+            color: black;
+        }
+    }
+}
+
+.sonido {
+    position: absolute;
+    top: 7%;
+    left: 92%;
+
     z-index: 1;
+
+    img {
+        opacity: 1;
+        width: 35px;
+    }
+}
+
+.estrella {
+    position: absolute;
+    top: 33%;
+    left: 24.7%;
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+    opacity: 1;
+    width: 20%;
+    height: 40%;
 }

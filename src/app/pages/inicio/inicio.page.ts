@@ -22,6 +22,8 @@ export class InicioPage implements OnInit {
   showVideo1 = true;
   showVideo2 = false;
   showImage = false;
+  mostrarMenu= false;
+  sonido = true;
 
   musica!: Howl;
 
@@ -49,5 +51,16 @@ export class InicioPage implements OnInit {
 
   onVideo2Ended() {
     this.currentStep = 3;
+    this.mostrarMenu = true;
+  }
+
+  cambiarSonido() {
+    if (this.sonido === true) {
+      this.musica.volume(0);
+      this.sonido = false;
+    } else {
+      this.musica.volume(1);
+      this.sonido = true;
+    }
   }
 }
