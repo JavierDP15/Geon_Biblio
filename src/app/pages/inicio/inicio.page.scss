@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Immortal';
+    src: url('/assets/fuentes/immortal.ttf');
+}
+
 video, img {
     opacity: 0;
     pointer-events: none;
@@ -8,15 +13,23 @@ video.active, img.active {
     pointer-events: auto;
 }
 
+
 .cuerpo {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-
+    
     margin-top: 1.5%;
     width: 100%;
     height: 90%;
+    
+    
+    button {
+        font-family: 'Immortal', sans-serif;
+        font-size: 4rem;
+        color: #432f16 !important;
+    }
 
     img {
         opacity: 1;
@@ -25,10 +38,12 @@ video.active, img.active {
 
     .titulo {
         width: 40%;
+        animation: titulo 10s forwards;
     }
 
     .subtitulo {
         width: 70%;
+        animation: subtitulo 10s forwards;
     }
 
     .archivo {
@@ -48,6 +63,8 @@ video.active, img.active {
         color: black;
 
         margin-top: 2%;
+
+        animation: archivo 10s forwards;
     }
 
     .extras {
@@ -71,6 +88,8 @@ video.active, img.active {
             height: 100%;
 
             color: black;
+
+            animation: botones 10s forwards;
         }
     }
 }
@@ -90,12 +109,88 @@ video.active, img.active {
 
 .estrella {
     position: absolute;
-    top: 33%;
+    top: 35%;
     left: 24.7%;
-    transform: translate(-50%, -50%);
 
     z-index: 1;
     opacity: 1;
     width: 20%;
     height: 40%;
+
+    transform-origin: center center;
+
+    animation: estrella 16s forwards;
+}
+
+@keyframes titulo {
+    0% {
+        opacity: 0;
+        transform: translateY(70%) scale(2);
+    }
+    10% {
+        opacity: 1;
+    }
+    30% {
+        transform: translateY(0%) scale(1);
+    }
+}
+
+@keyframes subtitulo {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    31% {
+        opacity: 1;
+        clip-path: inset(0 100% 0 0);
+    }
+    50% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes archivo {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes botones {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes estrella {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    55% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    70% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+    
 }

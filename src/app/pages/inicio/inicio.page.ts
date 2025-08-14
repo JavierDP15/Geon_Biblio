@@ -27,7 +27,8 @@ export class InicioPage implements OnInit {
   ngOnInit() {
     this.musica = new Howl({
       src: ['assets/audios/honor-and-sword.mp3'],
-      volume: 1
+      volume: 1,
+      loop: true
     });
 
     setTimeout(() => {
@@ -45,5 +46,12 @@ export class InicioPage implements OnInit {
   cambiarSonido() {
     this.sonido = !this.sonido;
     this.musica.volume(this.sonido ? 1 : 0);
+  }
+
+  saltarVideo() {
+    this.video1.nativeElement.pause();
+    this.video1.nativeElement.currentTime = 0;
+    this.currentStep = 2;
+    this.mostrarMenu = true;
   }
 }
