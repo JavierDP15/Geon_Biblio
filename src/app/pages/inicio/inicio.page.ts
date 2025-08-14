@@ -64,10 +64,10 @@ export class InicioPage implements OnInit {
     }
   }
 
-  saltar() {
-    this.currentStep = 3;
-    this.mostrarMenu = true;
-    this.video1.nativeElement.pause();
-    this.video1.nativeElement.currentTime = 0;
-  }
+  // saltar() {
+  //   this.currentStep = 3;
+  //   this.mostrarMenu = true;
+  //   this.video1.nativeElement.pause();
+  //   this.video1.nativeElement.currentTime = 0;
+  // }
 }

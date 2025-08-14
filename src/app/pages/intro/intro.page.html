@@ -14,9 +14,11 @@
     #video1
     *ngIf="showVideo1"
     [src]="'assets/videos/firma_alma.mp4'"
+    poster="assets/fondos/negro.jpg"
     autoplay
     playsinline
     muted
+    preload="auto"
     (ended)="onVideoEnded()">
   </video>
   

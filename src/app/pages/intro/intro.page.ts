@@ -57,5 +57,6 @@ export class IntroPage implements OnInit {
   onVideoEnded() {
     this.musica1.stop();
     this.router.navigate(['/inicio']);
+    // this.router.navigate(['/inicio']);
   }
 }
