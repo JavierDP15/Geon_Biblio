@@ -15,12 +15,8 @@ import { Howl } from 'howler';
 export class InicioPage implements OnInit {
 
   @ViewChild('video1') video1!: ElementRef<HTMLVideoElement>;
-  @ViewChild('video2') video2!: ElementRef<HTMLVideoElement>;
 
   currentStep = 1;
-  // showVideo1 = true;
-  // showVideo2 = false;
-  // showImage = false;
   mostrarMenu= false;
   sonido = true;
 
@@ -40,34 +36,9 @@ export class InicioPage implements OnInit {
     }, 100);
   }
 
-  ngAfterViewInit() {
-    const video1El = this.video1.nativeElement;
-    const video2El = this.video2.nativeElement;
-
-    video1El.addEventListener('timeupdate', () => {
-      if (video1El.duration && video1El.currentTime >= video1El.duration - 0.1) {
-        this.onVideo1Ended();
-      }
-    });
-
-    video2El.addEventListener('timeupdate', () => {
-      if (video2El.duration && video2El.currentTime >= video2El.duration - 0.1) {
-        this.onVideo2Ended();
-      }
-    });
-  }
-
   onVideo1Ended() {
     if (this.currentStep !== 1) return;
     this.currentStep = 2;
-    setTimeout(() => {
-      this.video2.nativeElement.play();
-    }, 100);
-  }
-
-  onVideo2Ended() {
-    if (this.currentStep !== 2) return;
-    this.currentStep = 3;
     this.mostrarMenu = true;
   }
 
@@ -75,21 +46,4 @@ export class InicioPage implements OnInit {
     this.sonido = !this.sonido;
     this.musica.volume(this.sonido ? 1 : 0);
   }
-
-  // cambiarSonido() {
-  //   if (this.sonido === true) {
-  //     this.musica.volume(0);
-  //     this.sonido = false;
-  //   } else {
-  //     this.musica.volume(1);
-  //     this.sonido = true;
-  //   }
-  // }
-
-  // saltar() {
-  //   this.currentStep = 3;
-  //   this.mostrarMenu = true;
-  //   this.video1.nativeElement.pause();
-  //   this.video1.nativeElement.currentTime = 0;
-  // }
 }
