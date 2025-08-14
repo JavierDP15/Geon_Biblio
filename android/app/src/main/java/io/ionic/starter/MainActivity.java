@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package io.ionic.geonBiblio;
 
 import android.os.Bundle;
 import android.view.View;

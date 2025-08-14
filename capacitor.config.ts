@@ -1,7 +1,7 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.Geon-Biblio',
+  appId: 'io.ionic.geonBiblio',
   appName: 'Geon_Biblio',
   webDir: 'www',
   plugins: {
