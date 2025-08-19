@@ -79,3 +79,5 @@ Thumbs.db
 
 # Mapas de origen
 *.map
+resources/ios/**/*
+resources/android/**/*
