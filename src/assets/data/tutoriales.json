@@ -1,0 +1,12 @@
+[
+  {
+    "pagina": "archivo",
+    "titulo": "paso 1",
+    "mensaje": "Esto es el mensaje del tutorial"
+  },
+  {
+    "pagina": "personajes",
+    "titulo": "Explorando personajes",
+    "mensaje": "Pulsa sobre un personaje para ver más información."
+  }
+]

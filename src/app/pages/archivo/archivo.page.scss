@@ -1,0 +1,9 @@
+video, img {
+    opacity: 0;
+    pointer-events: none;
+}
+
+video.active, img.active {
+    opacity: 1;
+    pointer-events: auto;
+}

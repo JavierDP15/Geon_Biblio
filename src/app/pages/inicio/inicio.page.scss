@@ -51,7 +51,7 @@ video.active, img.active {
 
         height: 13%;
 
-        background-image: url('/assets/iconos/boton_archivo.png');
+        background-image: url('/assets/img/boton_archivo.png');
         background-color: transparent;
         background-size: contain;
         background-position: center;
@@ -78,7 +78,7 @@ video.active, img.active {
         height: 20%;
 
         .boton-extra {
-            background-image: url('/assets/iconos/boton.png');
+            background-image: url('/assets/img/boton.png');
             background-color: transparent;
             background-size: contain;
             background-position: center;
@@ -94,18 +94,18 @@ video.active, img.active {
     }
 }
 
-.sonido {
-    position: absolute;
-    top: 7%;
-    left: 92%;
+// .sonido {
+//     position: absolute;
+//     top: 7%;
+//     left: 92%;
 
-    z-index: 1;
+//     z-index: 1;
 
-    img {
-        opacity: 1;
-        width: 35px;
-    }
-}
+    // img {
+    //     opacity: 1;
+    //     width: 35px;
+    // }
+// }
 
 .estrella {
     position: absolute;
@@ -120,6 +120,19 @@ video.active, img.active {
     transform-origin: center center;
 
     animation: estrella 16s forwards;
+}
+
+.desvanecer {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    opacity: 0;
+    z-index: 3;
+
+    animation: desvanecerse 1s forwards;
 }
 
 @keyframes titulo {
@@ -184,13 +197,22 @@ video.active, img.active {
         transform: translate(-50%, -50%) scale(0);
     }
     55% {
-        transform: translate(-50%, -50%) scale(1.2);
+        transform: translate(-50%, -50%) scale(1.5);
     }
     70% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1.3);
     }
     100% {
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(1.3);
     }
     
+}
+
+@keyframes desvanecerse {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

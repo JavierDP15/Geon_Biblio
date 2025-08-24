@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true">
+  <video
+    #video
+    [src]="'assets/videos/entrada_archivo.mp4'"
+    muted
+    playsinline
+    preload="auto"
+    poster="assets/fondos/negro.jpg"
+    (ended)="onVideoEnded()"
+    [class.active]="currentStep === 1"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+  </video>
+
+  <img 
+    src="assets/fondos/fondo_archivo.png"
+    [class.active]="currentStep === 2"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+  />
+
+  <div *ngIf="mostrarCuerpo" class="cuerpo">
+
+  </div>
+
+  <div *ngIf="mostrarCuerpo" class="opciones">
+    <div class="ayuda">
+      <img src="assets/iconos/ayuda.png">
+    </div>
+    <div class="sonido">
+      <app-musica></app-musica>
+    </div>
+  </div>
+</ion-content>

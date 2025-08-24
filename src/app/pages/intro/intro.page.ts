@@ -21,7 +21,7 @@ export class IntroPage implements OnInit {
 
   showVideo1 = true;
   
-  musica1!: Howl;
+  // musica1!: Howl;
   
   showStartButton = false;
 
@@ -38,24 +38,24 @@ export class IntroPage implements OnInit {
       this.startIntro();
     }
 
-    this.musica1 = new Howl ({
-      src: ['assets/audios/magical-twinkle.mp3'],
-      volume: 1
-    });
+    // this.musica1 = new Howl ({
+    //   src: ['assets/audios/magical-twinkle.mp3'],
+    //   volume: 1
+    // });
   }
 
   startIntro() {
     this.showStartButton = false;
     this.showVideo1 = true;
 
-    setTimeout(() => {
-      this.introVideo1.nativeElement.play();
-      this.musica1.play();
-    }, 100);
+    // setTimeout(() => {
+    //   this.introVideo1.nativeElement.play();
+    //   this.musica1.play();
+    // }, 100);
   }
 
   onVideoEnded() {
-    this.musica1.stop();
+    // this.musica1.stop();
     this.router.navigate(['/inicio']);
     // this.router.navigate(['/inicio']);
   }

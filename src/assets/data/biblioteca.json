@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "nombre": "Arathiel",
+    "categoria": "dios",
+    "descripcion": "Dios de la guerra y la estrategia.",
+    "otrosDatos": { "simbolo": "espada cruzada", "culto": "imperial" }
+  },
+  {
+    "id": 2,
+    "nombre": "Kaelorn",
+    "categoria": "personaje",
+    "descripcion": "Guerrero del clan del norte.",
+    "otrosDatos": { "arma": "hacha doble", "raza": "humano" }
+  },
+  {
+    "id": 3,
+    "nombre": "Forjaespadas",
+    "categoria": "profesion",
+    "descripcion": "Artesano especializado en la creación de armas."
+  }
+]
