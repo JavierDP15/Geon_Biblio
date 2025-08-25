@@ -4,13 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 import { MusicaComponent } from 'src/app/components/musica/musica.component';
 import { MusicaService } from 'src/app/services/musica/musica.service';
+import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
 
 @Component({
   selector: 'app-archivo',
   templateUrl: './archivo.page.html',
   styleUrls: ['./archivo.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, MusicaComponent]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, MusicaComponent, AyudaComponent]
 })
 export class ArchivoPage implements OnInit {
 
@@ -18,6 +19,7 @@ export class ArchivoPage implements OnInit {
 
   currentStep = 1;
   mostrarCuerpo = false;
+  primeraVisita = false;
 
   constructor(
     private musicaService: MusicaService
@@ -31,6 +33,13 @@ export class ArchivoPage implements OnInit {
 
   onVideoEnded() {
     if (this.currentStep !== 1) return;
+    this.currentStep = 2;
+    this.mostrarCuerpo = true;
+  }
+
+  saltarVideo() {
+    this.video.nativeElement.pause();
+    this.video.nativeElement.currentTime = 0;
     this.currentStep = 2;
     this.mostrarCuerpo = true;
   }

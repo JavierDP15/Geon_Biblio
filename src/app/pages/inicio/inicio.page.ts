@@ -69,7 +69,7 @@ export class InicioPage implements OnInit {
 
   toArchivo() {
     this.desvanecer = true;
-    this.musicaService.reproducirSonido('assets/audios/sonido_boton.mp3', 1)
+    // this.musicaService.reproducirSonido('assets/audios/sonido_boton.mp3', 1)
     setTimeout(() => {
       this.router.navigate(['/archivo']);
     }, 1000);

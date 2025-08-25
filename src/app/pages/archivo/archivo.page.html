@@ -1,4 +1,4 @@
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" [scrollY]="false">
   <video
     #video
     [src]="'assets/videos/entrada_archivo.mp4'"
@@ -6,6 +6,7 @@
     playsinline
     preload="auto"
     poster="assets/fondos/negro.jpg"
+    (click)="saltarVideo()"
     (ended)="onVideoEnded()"
     [class.active]="currentStep === 1"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
@@ -18,7 +19,31 @@
   />
 
   <div *ngIf="mostrarCuerpo" class="cuerpo">
-
+    <button class="archivo">Archivo</button>
+    <div class="botones">
+      <div class="fila-botones">
+        <div class="boton">
+          <img class="icono-boton" src="assets/iconos/geografia.png">
+          <button class="boton">Geografía</button>
+        </div>
+        <div></div>
+        <div class="boton">
+          <img class="icono-boton" src="assets/iconos/geones.png">
+          <button class="boton">Geones</button>
+        </div>
+      </div>
+      <div class="fila-botones">
+        <div class="boton">
+          <img class="icono-boton" src="assets/iconos/geografia.png">
+          <button class="boton">Magia</button>
+        </div>
+        <div></div>
+        <div class="boton">
+          <img class="icono-boton" src="assets/iconos/geografia.png">
+          <button class="boton">Ferhel</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div *ngIf="mostrarCuerpo" class="opciones">
@@ -28,5 +53,10 @@
     <div class="sonido">
       <app-musica></app-musica>
     </div>
+    <div class="ayuda">
+      <app-ayuda [pagina]="'archivo'"></app-ayuda>
+    </div>
   </div>
+
+  <div *ngIf="primeraVisita" class="tutorial"></div>
 </ion-content>
