@@ -25,7 +25,7 @@ export class ArchivoPage implements OnInit {
 
   tutorial: Tutorial | null = null;
   tutorialStep = 1;
-  maxTutorialStep = 2;
+  maxTutorialStep = 3;
 
   constructor(
     private musicaService: MusicaService,

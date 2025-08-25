@@ -62,5 +62,6 @@
   <div *ngIf="tutorial" class="tutorial">
     <app-dialogo *ngIf="tutorialStep === 1" [pagina]="'archivo'" [tutorial]="tutorial" (cerrar)="onCerrarTutorialStep()"></app-dialogo>
     <app-caja-texto *ngIf="tutorialStep === 2" [tutorial]="tutorial" (cerrar)="onCerrarTutorialStep()"></app-caja-texto>
+    <app-caja-texto *ngIf="tutorialStep === 3" [tutorial]="tutorial" (cerrar)="onCerrarTutorialStep()"></app-caja-texto>
   </div>
 </ion-content>
