@@ -55,6 +55,7 @@ export class ArchivoPage implements OnInit {
   }
 
   async mostrarTutorial() {
-      this.tutorial = await this.tutorialService.mostrarTutorial('archivo');
+      this.tutorial = await this.tutorialService.mostrarTutorial('archivo', 1);
+      console.log(this.tutorial);
   }
 }

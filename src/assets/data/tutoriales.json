@@ -1,14 +1,20 @@
 [
   {
     "pagina": "archivo",
-    "titulo": "paso 1",
+    "paso": 1,
     "mensaje": "Te doy la bienvenida a la Biblioteca de Anfírenis. En ella encontrarás todo tipo de textos e información sobre el mundo de Cartam. Nuestro noble templo de sabiduría abre todos los días y horas del año, salvo en caso de Calamidad. Siéntete libre de investigar el edificio y de estudiar los miles de rollos y libros de sus estanterías.",
-    "foto": "assets/fotos/bibliotecaria_ayiat.png",
-    "nombre": "Bibliotecaria Ayiat"
+    "otrosDatos": {
+      "foto": "assets/fotos/bibliotecaria_ayiat.png",
+      "nombre": "Bibliotecaria Ayiat"
+    }
   },
   {
-    "pagina": "personajes",
-    "titulo": "Explorando personajes",
-    "mensaje": "Pulsa sobre un personaje para ver más información."
+    "pagina": "archivo",
+    "paso": 2,
+    "mensaje": "Te doy la bienvenida a la Biblioteca de Anfírenis. En ella encontrarás todo tipo de textos e información sobre el mundo de Cartam. Nuestro noble templo de sabiduría abre todos los días y horas del año, salvo en caso de Calamidad. Siéntete libre de investigar el edificio y de estudiar los miles de rollos y libros de sus estanterías.",
+    "otrosDatos": {
+      "foto": "",
+      "nombre": ""
+    }
   }
 ]

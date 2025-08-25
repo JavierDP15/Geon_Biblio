@@ -5,10 +5,12 @@ import { firstValueFrom } from 'rxjs';
 
 export interface Tutorial {
   pagina: string;
-  titulo: string;
+  paso: number,
   mensaje: string;
-  foto?: string;
-  nombre: string;
+  otrosDatos: {
+    foto: string,
+    nombre: string
+  }
 }
 
 @Injectable({
@@ -34,13 +36,14 @@ export class TutorialService {
     }
   }
 
-  async mostrarTutorial(pagina: string): Promise<Tutorial | null> {
+  async mostrarTutorial(pagina: string, numero: number): Promise<Tutorial | null> {
     await this.ready();
 
-    const yaVisto = await this.storage.get(`tutorial_${pagina}`);
+    const clave = `tutorial_${pagina}_${numero}`;
+    const yaVisto = await this.storage.get(clave);
     if (!yaVisto) {
-      await this.storage.set(`tutorial_${pagina}`, true);
-      return this.tutoriales.find(t => t.pagina === pagina) || null;
+      await this.storage.set(clave, true);
+      return this.tutoriales.find(t => t.pagina === pagina && t.paso === numero) || null;
     }
     return null;
   }

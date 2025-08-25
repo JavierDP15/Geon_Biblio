@@ -60,10 +60,8 @@ export class DialogoComponent  implements OnInit {
   }
 
   siguiente() {
-    console.log(this.animando);
     if (!this.animando){
       if (this.paginaActual < this.paginas.length - 1) {
-        console.log('ayuyu');
         this.paginaActual++;
         this.mostrarConAnimacion();
       } else {
