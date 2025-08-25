@@ -1,0 +1,7 @@
+<div class="fondo" (click)="siguiente()">
+  <div *ngIf="tutorial" class="caja">
+    <img class="fondo-dialogo" src="assets/img/cuadro_dialogo.png">
+    <p class="texto">{{ textoMostrado }}</p>
+    <div class="flecha" *ngIf="paginaActual < paginas.length - 1"></div>
+  </div>
+</div>

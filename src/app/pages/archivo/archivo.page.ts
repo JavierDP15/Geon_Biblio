@@ -7,13 +7,14 @@ import { MusicaService } from 'src/app/services/musica/musica.service';
 import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
 import { Tutorial, TutorialService } from 'src/app/services/tutorial/tutorial.service';
 import { DialogoComponent } from 'src/app/components/dialogo/dialogo.component';
+import { CajaTextoComponent } from 'src/app/components/caja-texto/caja-texto.component';
 
 @Component({
   selector: 'app-archivo',
   templateUrl: './archivo.page.html',
   styleUrls: ['./archivo.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, MusicaComponent, AyudaComponent, DialogoComponent]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, MusicaComponent, AyudaComponent, DialogoComponent, CajaTextoComponent]
 })
 export class ArchivoPage implements OnInit {
 
@@ -21,7 +22,10 @@ export class ArchivoPage implements OnInit {
 
   currentStep = 1;
   mostrarCuerpo = false;
+
   tutorial: Tutorial | null = null;
+  tutorialStep = 1;
+  maxTutorialStep = 2;
 
   constructor(
     private musicaService: MusicaService,
@@ -55,7 +59,17 @@ export class ArchivoPage implements OnInit {
   }
 
   async mostrarTutorial() {
-      this.tutorial = await this.tutorialService.mostrarTutorial('archivo', 1);
-      console.log(this.tutorial);
+    this.tutorialStep = 1;
+    this.tutorial = await this.tutorialService.mostrarTutorial('archivo', this.tutorialStep);
+  }
+
+  async onCerrarTutorialStep() {
+    if (this.tutorialStep < this.maxTutorialStep) {
+      this.tutorial = await this.tutorialService.mostrarTutorial('archivo', this.tutorialStep + 1);
+      this.tutorialStep++;
+    } else {
+      this.tutorial = null;
+      this.tutorialStep = 0;
+    }
   }
 }

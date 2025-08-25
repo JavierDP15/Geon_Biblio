@@ -11,7 +11,16 @@
   {
     "pagina": "archivo",
     "paso": 2,
-    "mensaje": "Te doy la bienvenida a la Biblioteca de Anfírenis. En ella encontrarás todo tipo de textos e información sobre el mundo de Cartam. Nuestro noble templo de sabiduría abre todos los días y horas del año, salvo en caso de Calamidad. Siéntete libre de investigar el edificio y de estudiar los miles de rollos y libros de sus estanterías.",
+    "mensaje": "Para acceder a cada una de las salas, utiliza los botones que se despliegan en la pantalla. Para regresar a una sala anterior, utiliza el botón indicado.",
+    "otrosDatos": {
+      "foto": "",
+      "nombre": ""
+    }
+  },
+  {
+    "pagina": "archivo",
+    "paso": 3,
+    "mensaje": "Puedes pausar o reactivar la música y los efectos sonoros con el botón indicado.",
     "otrosDatos": {
       "foto": "",
       "nombre": ""

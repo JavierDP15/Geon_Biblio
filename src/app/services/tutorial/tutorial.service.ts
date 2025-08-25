@@ -41,11 +41,14 @@ export class TutorialService {
 
     const clave = `tutorial_${pagina}_${numero}`;
     const yaVisto = await this.storage.get(clave);
-    if (!yaVisto) {
+
+    const tutorial = this.tutoriales.find(t => t.pagina === pagina && Number(t.paso) === numero) || null;
+
+    if (!yaVisto && tutorial) {
       await this.storage.set(clave, true);
-      return this.tutoriales.find(t => t.pagina === pagina && t.paso === numero) || null;
+      // return this.tutoriales.find(t => t.pagina === pagina && t.paso === numero) || null;
     }
-    return null;
+    return tutorial ? { ...tutorial } : null;
   }
 
   async resetTutorial(pagina: string) {
