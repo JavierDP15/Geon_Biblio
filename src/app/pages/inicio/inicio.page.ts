@@ -31,16 +31,10 @@ export class InicioPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.musica = new Howl({
-    //   src: ['assets/audios/honor-and-sword.mp3'],
-    //   volume: 1,
-    //   loop: true
-    // });
 
     setTimeout(() => {
       this.video1.nativeElement.play();
       this.musicaService.play();
-      // this.musica.play();
     }, 100);
   }
 
@@ -49,16 +43,6 @@ export class InicioPage implements OnInit {
     this.currentStep = 2;
     this.mostrarMenu = true;
   }
-
-  // cambiarSonido() {
-  //   if (this.sonido) {
-  //     // this.musica.volume(this.sonido ? 1 : 0);
-  //     this.musicaService.setVolumen(0);
-  //   } else {
-  //     this.musicaService.setVolumen(1)
-  //   }
-  //   this.sonido = !this.sonido;
-  // }
 
   saltarVideo() {
     this.video1.nativeElement.pause();
@@ -69,7 +53,7 @@ export class InicioPage implements OnInit {
 
   toArchivo() {
     this.desvanecer = true;
-    // this.musicaService.reproducirSonido('assets/audios/sonido_boton.mp3', 1)
+    this.musicaService.reproducirSonido('assets/audios/sonido_boton.mp3')
     setTimeout(() => {
       this.router.navigate(['/archivo']);
     }, 1000);

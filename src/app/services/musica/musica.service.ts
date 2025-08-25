@@ -41,7 +41,7 @@ export class MusicaService {
     return this.musica ? this.musica.volume() : 0;
   }
 
-  reproducirSonido(ruta: string, volumen: number = 1) {
+  reproducirSonido(ruta: string, volumen: number = 1.2) {
     const sonido = new Howl({
       src: [ruta],
       volume: volumen

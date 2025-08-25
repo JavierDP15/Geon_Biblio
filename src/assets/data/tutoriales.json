@@ -2,7 +2,9 @@
   {
     "pagina": "archivo",
     "titulo": "paso 1",
-    "mensaje": "Esto es el mensaje del tutorial"
+    "mensaje": "Te doy la bienvenida a la Biblioteca de Anfírenis. En ella encontrarás todo tipo de textos e información sobre el mundo de Cartam. Nuestro noble templo de sabiduría abre todos los días y horas del año, salvo en caso de Calamidad. Siéntete libre de investigar el edificio y de estudiar los miles de rollos y libros de sus estanterías.",
+    "foto": "assets/fotos/bibliotecaria_ayiat.png",
+    "nombre": "Bibliotecaria Ayiat"
   },
   {
     "pagina": "personajes",

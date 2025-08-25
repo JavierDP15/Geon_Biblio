@@ -167,12 +167,15 @@ video.active, img.active {
 @keyframes archivo {
     0% {
         opacity: 0;
+        pointer-events: none;
     }
     50% {
         opacity: 0;
+        pointer-events: none;
     }
     80% {
         opacity: 1;
+        pointer-events: auto;
     }
 
 }

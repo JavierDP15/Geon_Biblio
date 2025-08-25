@@ -7,6 +7,8 @@ export interface Tutorial {
   pagina: string;
   titulo: string;
   mensaje: string;
+  foto?: string;
+  nombre: string;
 }
 
 @Injectable({
@@ -23,11 +25,17 @@ export class TutorialService {
   async init() {
     await this.storage.create();
     this.storageReady = true;
-    this.tutoriales = await firstValueFrom(this.http.get<Tutorial[]>('assets/data/toturiales.json'));
+    this.tutoriales = await firstValueFrom(this.http.get<Tutorial[]>('assets/data/tutoriales.json'));
+  }
+
+  async ready() {
+    if (!this.storageReady) {
+      await this.init();
+    }
   }
 
   async mostrarTutorial(pagina: string): Promise<Tutorial | null> {
-    if (!this.storageReady) return null;
+    await this.ready();
 
     const yaVisto = await this.storage.get(`tutorial_${pagina}`);
     if (!yaVisto) {
@@ -35,5 +43,13 @@ export class TutorialService {
       return this.tutoriales.find(t => t.pagina === pagina) || null;
     }
     return null;
+  }
+
+  async resetTutorial(pagina: string) {
+    await this.storage.remove(`tutorial_${pagina}`);
+  }
+
+  async resetTodos() {
+    await this.storage.clear();
   }
 }

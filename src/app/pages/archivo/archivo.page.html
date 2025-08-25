@@ -15,10 +15,11 @@
   <img 
     src="assets/fondos/fondo_archivo.png"
     [class.active]="currentStep === 2"
+    [class.blur-background]="tutorial"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
   />
 
-  <div *ngIf="mostrarCuerpo" class="cuerpo">
+  <div *ngIf="mostrarCuerpo" class="cuerpo" [class.blur-background]="tutorial">
     <button class="archivo">Archivo</button>
     <div class="botones">
       <div class="fila-botones">
@@ -46,17 +47,19 @@
     </div>
   </div>
 
-  <div *ngIf="mostrarCuerpo" class="opciones">
+  <div *ngIf="mostrarCuerpo" class="opciones" >
     <div class="ayuda">
       <img src="assets/iconos/ayuda.png">
     </div>
     <div class="sonido">
       <app-musica></app-musica>
     </div>
-    <div class="ayuda">
+    <div class="ayuda" [class.blur-background]="tutorial">
       <app-ayuda [pagina]="'archivo'"></app-ayuda>
     </div>
   </div>
 
-  <div *ngIf="primeraVisita" class="tutorial"></div>
+  <div *ngIf="tutorial" class="tutorial">
+    <app-dialogo [pagina]="'archivo'" [tutorial]="tutorial" (cerrar)="tutorial = null"></app-dialogo>
+  </div>
 </ion-content>
