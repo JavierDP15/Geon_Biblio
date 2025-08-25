@@ -3,6 +3,11 @@
     src: url('/assets/fuentes/immortal.ttf');
 }
 
+@font-face {
+    font-family: 'Nothern';
+    src: url('/assets/fuentes/nothern.ttf');
+}
+
 video, img {
     opacity: 0;
     pointer-events: none;
@@ -51,7 +56,7 @@ video.active, img.active {
         align-items: center;
         gap: 10%;
 
-        font-family: 'Immortal', sans-serif;
+        font-family: 'Nothern', sans-serif;
 
         width: 100%;
         height: 50%;

@@ -9,6 +9,7 @@
 		}
 	},
 	"packageClassList": [
+		"CapacitorSQLitePlugin",
 		"AppPlugin",
 		"HapticsPlugin",
 		"KeyboardPlugin",

@@ -1,8 +1,9 @@
-<div class="fondo" (click)="cerrarDialogo()">
+<div class="fondo" (click)="siguiente()">
   <img *ngIf="tutorial" class="foto" [src]="tutorial.foto">
   <div *ngIf="tutorial" class="nombre">{{ tutorial.nombre }}</div>
   <div *ngIf="tutorial" class="caja">
     <img class="fondo-dialogo" src="assets/img/cuadro_dialogo.png">
-    <p class="texto">{{ tutorial.mensaje }}</p>
+    <p class="texto">{{ textoMostrado }}</p>
+    <div class="flecha" *ngIf="paginaActual < paginas.length - 1"></div>
   </div>
 </div>
