@@ -92,20 +92,16 @@ video.active, img.active {
             animation: botones 10s forwards;
         }
     }
+
 }
 
-// .sonido {
-//     position: absolute;
-//     top: 7%;
-//     left: 92%;
+.sonido {
+position: absolute;
+top: 7%;
+left: 91%;
 
-//     z-index: 1;
-
-    // img {
-    //     opacity: 1;
-    //     width: 35px;
-    // }
-// }
+z-index: 5;
+}
 
 .estrella {
     position: absolute;

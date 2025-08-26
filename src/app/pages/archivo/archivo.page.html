@@ -36,12 +36,12 @@
       </div>
       <div class="fila-botones" [class.blur-background]="tutorial">
         <div class="boton">
-          <img class="icono-boton" src="assets/iconos/geografia.png">
+          <img class="icono-boton" src="assets/iconos/magia.png">
           <button class="boton">Magia</button>
         </div>
         <div></div>
         <div class="boton">
-          <img class="icono-boton" src="assets/iconos/geografia.png">
+          <img class="icono-boton" src="assets/iconos/ferhel.png">
           <button class="boton">Ferhel</button>
         </div>
       </div>
@@ -49,9 +49,9 @@
   </div>
 
   <div *ngIf="mostrarCuerpo" class="opciones" >
-    <!-- <div class="ayuda">
-      <img src="assets/iconos/ayuda.png">
-    </div> -->
+    <div class="atras" [class.blur-background]="tutorial && tutorialStep !== 3" [class.tutorial-resaltar-pequeño]="tutorialStep === 3">
+      <app-atras [pagina]="'inicio'"></app-atras>
+    </div>
     <div class="sonido" [class.blur-background]="tutorial && tutorialStep !== 4" [class.tutorial-resaltar-pequeño]="tutorialStep === 4">
       <app-musica></app-musica>
     </div>

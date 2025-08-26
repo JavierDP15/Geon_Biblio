@@ -8,13 +8,26 @@ import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
 import { Tutorial, TutorialService } from 'src/app/services/tutorial/tutorial.service';
 import { DialogoComponent } from 'src/app/components/dialogo/dialogo.component';
 import { CajaTextoComponent } from 'src/app/components/caja-texto/caja-texto.component';
+import { AtrasComponent } from 'src/app/components/atras/atras.component';
 
 @Component({
   selector: 'app-archivo',
   templateUrl: './archivo.page.html',
   styleUrls: ['./archivo.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, MusicaComponent, AyudaComponent, DialogoComponent, CajaTextoComponent]
+  imports: [
+    IonContent
+    , IonHeader
+    , IonTitle
+    , IonToolbar
+    , CommonModule
+    , FormsModule
+    , MusicaComponent
+    , AyudaComponent
+    , DialogoComponent
+    , CajaTextoComponent
+    , AtrasComponent
+  ]
 })
 export class ArchivoPage implements OnInit {
 
