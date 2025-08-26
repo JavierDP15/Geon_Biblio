@@ -25,5 +25,68 @@
       "foto": "",
       "nombre": ""
     }
+  },
+  {
+    "pagina": "archivo",
+    "paso": 4,
+    "mensaje": "Puedes pausar o reactivar la música y los efectos sonoros con el botón indicado.",
+    "otrosDatos": {
+      "foto": "",
+      "nombre": ""
+    }
+  },
+  {
+    "pagina": "archivo",
+    "paso": 5,
+    "mensaje": "Nuestro personal estará siempre atento por si necesitas algo. Por favor, no dudes en dirigirte a nosotros.",
+    "otrosDatos": {
+      "foto": "assets/fotos/bibliotecaria_ayiat.png",
+      "nombre": "Bibliotecaria Ayiat"
+    }
+  },
+  {
+    "pagina": "archivo",
+    "paso": 6,
+    "mensaje": "Podrás realizar interacciones de diálogo en cada sala haciendo clic en el icono correspondiente.",
+    "otrosDatos": {
+      "foto": "",
+      "nombre": ""
+    }
+  },
+  {
+    "pagina": "archivo",
+    "paso": 7,
+    "mensaje": "Sin embargo, comprende que no podremos atenderte en todo momento. ¡Siempre estamos sobrepasados de trabajo!",
+    "otrosDatos": {
+      "foto": "assets/fotos/bibliotecaria_ayiat.png",
+      "nombre": "Bibliotecaria Ayiat"
+    }
+  },
+  {
+    "pagina": "archivo",
+    "paso": 8,
+    "mensaje": "Después de cada interacción, deberás esperar un tiempo antes de solicitar una nueva.",
+    "otrosDatos": {
+      "foto": "",
+      "nombre": ""
+    }
+  },
+  {
+    "pagina": "archivo",
+    "paso": 9,
+    "mensaje": "¡Ah, importante! Algunos de los sabios más reputados de Cartam vienen hasta Anfírenis para realizar sus estudios. Quizás puedas conocerlos entre estas salas.",
+    "otrosDatos": {
+      "foto": "assets/fotos/bibliotecaria_ayiat.png",
+      "nombre": "Bibliotecaria Ayiat"
+    }
+  },
+  {
+    "pagina": "archivo",
+    "paso": 10,
+    "mensaje": "Adelante y mucha suerte. Dentro de estos muros te espera un mundo fascinante. ¡Hasta ahora!",
+    "otrosDatos": {
+      "foto": "assets/fotos/bibliotecaria_ayiat.png",
+      "nombre": "Bibliotecaria Ayiat"
+    }
   }
 ]
