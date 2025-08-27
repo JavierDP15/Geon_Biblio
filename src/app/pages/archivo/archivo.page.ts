@@ -9,6 +9,7 @@ import { Tutorial, TutorialService } from 'src/app/services/tutorial/tutorial.se
 import { DialogoComponent } from 'src/app/components/dialogo/dialogo.component';
 import { CajaTextoComponent } from 'src/app/components/caja-texto/caja-texto.component';
 import { AtrasComponent } from 'src/app/components/atras/atras.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-archivo',
@@ -32,6 +33,7 @@ import { AtrasComponent } from 'src/app/components/atras/atras.component';
 export class ArchivoPage implements OnInit {
 
   @ViewChild('video') video!: ElementRef<HTMLVideoElement>;
+  @ViewChild('videoEntradaCat') videoCat!: ElementRef<HTMLVideoElement>;
 
   currentStep = 1;
   mostrarCuerpo = false;
@@ -40,13 +42,16 @@ export class ArchivoPage implements OnInit {
   tutorialStep = 1;
   maxTutorialStep = 10;
 
+  navegarA = '';
+
   constructor(
     private musicaService: MusicaService,
-    private tutorialService: TutorialService
+    private tutorialService: TutorialService,
+    private router: Router
   ) { }
 
   ngOnInit() {
-    this.tutorialService.resetTodos();
+    // this.tutorialService.resetTodos();
     setTimeout(() => {
       this.video.nativeElement.play();
     }, 100)
@@ -84,5 +89,18 @@ export class ArchivoPage implements OnInit {
       this.tutorial = null;
       this.tutorialStep = 0;
     }
+  }
+
+  irA(categoria: string) {
+    this.currentStep = 3;
+    this.navegarA = categoria;
+    setTimeout(() => {
+      this.videoCat.nativeElement.play();
+    }, 1000)
+  }
+
+  onVideoCatEnded() {
+    if (this.currentStep !== 3) return;
+    this.router.navigate(['/' + this.navegarA])
   }
 }

@@ -21,5 +21,9 @@ export const routes: Routes = [
     path: 'archivo',
     loadComponent: () => import('./pages/archivo/archivo.page').then( m => m.ArchivoPage)
   },
+  {
+    path: 'geones',
+    loadComponent: () => import('./pages/geones/geones.page').then( m => m.GeonesPage)
+  },
 
 ];

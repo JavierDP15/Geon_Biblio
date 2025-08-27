@@ -5,6 +5,7 @@ import { StatusBar, Style } from '@capacitor/status-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MusicaService } from './services/musica/musica.service';
 import { Platform } from '@ionic/angular';
+import { App } from '@capacitor/app';
 
 @Component({
   selector: 'app-root',
@@ -35,7 +36,13 @@ export class AppComponent {
     await ScreenOrientation.lock({ orientation: 'landscape' })
   }
 
-  // async ngOnInit() {
-  //   await StatusBar.hide();
-  // }
+  ngOnInit() {
+    App.addListener('pause', () => {
+      this.musicaService.pause();
+    });
+
+    App.addListener('resume', () => {
+      this.musicaService.play();
+    })
+  }
 }

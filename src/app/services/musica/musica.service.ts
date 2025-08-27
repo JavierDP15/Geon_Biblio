@@ -33,6 +33,10 @@ export class MusicaService {
     this.musica?.stop();
   }
 
+  pause() {
+    this.musica?.pause();
+  }
+
   setVolumen(volumen: number) {
     this.musica?.volume(volumen);
   }

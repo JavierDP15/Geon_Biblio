@@ -154,6 +154,10 @@ video.active, img.active {
     z-index: 901;
 }
 
+.desvanecer {
+    animation: desvanecer 1s forwards;
+}
+
 @keyframes resaltar-grande {
     0%, 100% {
         transform: scale(1);
@@ -173,5 +177,14 @@ video.active, img.active {
     50% {
         transform: scale(1.5);
         z-index: 901;
+    }
+}
+
+@keyframes desvanecer {
+    0%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
