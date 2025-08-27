@@ -20,6 +20,10 @@ video.active, img.active {
     z-index: 0;
 }
 
+#videoEntradaCat {
+    z-index: 999 !important;
+}
+
 .cuerpo{
     display: flex;
     flex-direction: column;

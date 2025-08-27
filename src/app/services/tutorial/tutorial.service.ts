@@ -39,6 +39,7 @@ export class TutorialService {
   async mostrarTutorial(pagina: string, numero: number): Promise<Tutorial | null> {
     await this.ready();
 
+
     const clave = `tutorial_${pagina}_${numero}`;
     const yaVisto = await this.storage.get(clave);
 
@@ -46,7 +47,6 @@ export class TutorialService {
 
     if (!yaVisto && tutorial) {
       await this.storage.set(clave, true);
-      // return this.tutoriales.find(t => t.pagina === pagina && t.paso === numero) || null;
     }
     return tutorial ? { ...tutorial } : null;
   }

@@ -69,7 +69,15 @@ export class ArchivoPage implements OnInit {
   saltarVideo() {
     this.video.nativeElement.pause();
     this.video.nativeElement.currentTime = 0;
-    this.currentStep = 2;
+    if (this.currentStep === 1) {
+      this.currentStep = 2;
+    } 
+    if (this.currentStep === 3) {
+      this.videoCat.nativeElement.pause();
+      this.videoCat.nativeElement.currentTime = 0;
+      this.currentStep = 2;
+      this.router.navigate(['/' + this.navegarA]);
+    }
     this.mostrarCuerpo = true;
     setTimeout(() => {
       this.mostrarTutorial();
@@ -95,12 +103,15 @@ export class ArchivoPage implements OnInit {
     this.currentStep = 3;
     this.navegarA = categoria;
     setTimeout(() => {
+      this.mostrarCuerpo = false;
       this.videoCat.nativeElement.play();
     }, 1000)
   }
 
   onVideoCatEnded() {
     if (this.currentStep !== 3) return;
-    this.router.navigate(['/' + this.navegarA])
+    this.currentStep = 2;
+    this.videoCat.nativeElement.currentTime = 0;
+    this.router.navigate(['/' + this.navegarA]);
   }
 }

@@ -31,7 +31,6 @@ export class InicioPage implements OnInit {
   ) { }
 
   ngOnInit() {
-
     setTimeout(() => {
       this.video1.nativeElement.play();
       this.musicaService.play();
@@ -55,6 +54,7 @@ export class InicioPage implements OnInit {
     this.desvanecer = true;
     this.musicaService.reproducirSonido('assets/audios/sonido_boton.mp3')
     setTimeout(() => {
+      this.desvanecer = false;
       this.router.navigate(['/archivo']);
     }, 1000);
   }
