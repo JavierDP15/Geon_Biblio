@@ -36,26 +36,56 @@ export class TutorialService {
     }
   }
 
-  async mostrarTutorial(pagina: string, numero: number): Promise<Tutorial | null> {
+  // async mostrarTutorial(pagina: string, numero: number): Promise<Tutorial | null> {
+  //   await this.ready();
+
+
+  //   const clave = `tutorial_${pagina}_${numero}`;
+  //   const yaVisto = await this.storage.get(clave);
+
+  //   const tutorial = this.tutoriales.find(t => t.pagina === pagina && Number(t.paso) === numero) || null;
+
+  //   if (!yaVisto && tutorial) {
+  //     await this.storage.set(clave, true);
+  //   }
+  //   return tutorial ? { ...tutorial } : null;
+  // }
+
+  async mostrarTutorial(pagina: string): Promise<Tutorial[] | null> {
     await this.ready();
 
-
-    const clave = `tutorial_${pagina}_${numero}`;
+    const clave = `tutorial_${pagina}`;
     const yaVisto = await this.storage.get(clave);
 
-    const tutorial = this.tutoriales.find(t => t.pagina === pagina && Number(t.paso) === numero) || null;
-
-    if (!yaVisto && tutorial) {
-      await this.storage.set(clave, true);
+    if (yaVisto) {
+      return null;
     }
-    return tutorial ? { ...tutorial } : null;
+
+    await this.storage.set(clave, true);
+
+    return this.tutoriales.filter(t => t.pagina === pagina) || null;
   }
 
   async resetTutorial(pagina: string) {
-    await this.storage.remove(`tutorial_${pagina}`);
+    await this.ready();
+    const keys = await this.storage.keys();
+    const keysToRemove = keys.filter(k => k.startsWith(`tutorial_${pagina}`));
+    for (const key of keysToRemove) {
+      await this.storage.remove(key);
+    }
   }
 
   async resetTodos() {
-    await this.storage.clear();
+    await this.ready();
+    const keys = await this.storage.keys();
+    const keysToRemove = keys.filter(k => k.startsWith(`tutorial`));
+    for (const key of keysToRemove) {
+      await this.storage.remove(key);
+    }
   }
+
+  // Esto resetea todo el storage
+  // async resetTodos() {
+  //   await this.storage.clear();
+  // }
 }

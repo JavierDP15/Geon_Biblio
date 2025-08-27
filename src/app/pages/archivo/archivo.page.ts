@@ -38,9 +38,8 @@ export class ArchivoPage implements OnInit {
   currentStep = 1;
   mostrarCuerpo = false;
 
-  tutorial: Tutorial | null = null;
+  tutorial: Tutorial[] | null = null;
   tutorialStep = 1;
-  maxTutorialStep = 10;
 
   navegarA = '';
 
@@ -51,7 +50,7 @@ export class ArchivoPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.tutorialService.resetTodos();
+    this.tutorialService.resetTutorial('archivo');
     setTimeout(() => {
       this.video.nativeElement.play();
     }, 100)
@@ -85,13 +84,15 @@ export class ArchivoPage implements OnInit {
   }
 
   async mostrarTutorial() {
-    this.tutorialStep = 1;
-    this.tutorial = await this.tutorialService.mostrarTutorial('archivo', this.tutorialStep);
+    const tutoriales = await this.tutorialService.mostrarTutorial('archivo');
+    if (tutoriales) {
+      this.tutorial = tutoriales;
+      this.tutorialStep = 1;
+    }
   }
 
   async onCerrarTutorialStep() {
-    if (this.tutorialStep < this.maxTutorialStep) {
-      this.tutorial = await this.tutorialService.mostrarTutorial('archivo', this.tutorialStep + 1);
+    if (this.tutorial && this.tutorialStep < this.tutorial.length) {
       this.tutorialStep++;
     } else {
       this.tutorial = null;

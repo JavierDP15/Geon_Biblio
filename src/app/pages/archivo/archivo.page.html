@@ -74,15 +74,15 @@
   </div>
 
   <div *ngIf="tutorial" class="tutorial">
-    <app-dialogo *ngIf="tutorialStep === 1" [pagina]="'archivo'" [tutorial]="tutorial" (cerrar)="onCerrarTutorialStep()"></app-dialogo>
-    <app-caja-texto *ngIf="tutorialStep === 2" [tutorial]="tutorial" (cerrar)="onCerrarTutorialStep()"></app-caja-texto>
-    <app-caja-texto *ngIf="tutorialStep === 3" [tutorial]="tutorial" (cerrar)="onCerrarTutorialStep()"></app-caja-texto>
-    <app-caja-texto *ngIf="tutorialStep === 4" [tutorial]="tutorial" (cerrar)="onCerrarTutorialStep()"></app-caja-texto>
-    <app-dialogo *ngIf="tutorialStep === 5" [pagina]="'archivo'" [tutorial]="tutorial" (cerrar)="onCerrarTutorialStep()"></app-dialogo>
-    <app-caja-texto *ngIf="tutorialStep === 6" [tutorial]="tutorial" (cerrar)="onCerrarTutorialStep()"></app-caja-texto>
-    <app-dialogo *ngIf="tutorialStep === 7" [pagina]="'archivo'" [tutorial]="tutorial" (cerrar)="onCerrarTutorialStep()"></app-dialogo>
-    <app-caja-texto *ngIf="tutorialStep === 8" [tutorial]="tutorial" (cerrar)="onCerrarTutorialStep()"></app-caja-texto>
-    <app-dialogo *ngIf="tutorialStep === 9" [pagina]="'archivo'" [tutorial]="tutorial" (cerrar)="onCerrarTutorialStep()"></app-dialogo>
-    <app-dialogo *ngIf="tutorialStep === 10" [pagina]="'archivo'" [tutorial]="tutorial" (cerrar)="onCerrarTutorialStep()"></app-dialogo>
+    <app-dialogo *ngIf="tutorialStep === 1" [pagina]="'archivo'" [tutorial]="tutorial[tutorialStep -1]" (cerrar)="onCerrarTutorialStep()"></app-dialogo>
+    <app-caja-texto *ngIf="tutorialStep === 2" [tutorial]="tutorial[tutorialStep -1]" (cerrar)="onCerrarTutorialStep()"></app-caja-texto>
+    <app-caja-texto *ngIf="tutorialStep === 3" [tutorial]="tutorial[tutorialStep -1]" (cerrar)="onCerrarTutorialStep()"></app-caja-texto>
+    <app-caja-texto *ngIf="tutorialStep === 4" [tutorial]="tutorial[tutorialStep -1]" (cerrar)="onCerrarTutorialStep()"></app-caja-texto>
+    <app-dialogo *ngIf="tutorialStep === 5" [pagina]="'archivo'" [tutorial]="tutorial[tutorialStep -1]" (cerrar)="onCerrarTutorialStep()"></app-dialogo>
+    <app-caja-texto *ngIf="tutorialStep === 6" [tutorial]="tutorial[tutorialStep -1]" (cerrar)="onCerrarTutorialStep()"></app-caja-texto>
+    <app-dialogo *ngIf="tutorialStep === 7" [pagina]="'archivo'" [tutorial]="tutorial[tutorialStep -1]" (cerrar)="onCerrarTutorialStep()"></app-dialogo>
+    <app-caja-texto *ngIf="tutorialStep === 8" [tutorial]="tutorial[tutorialStep -1]" (cerrar)="onCerrarTutorialStep()"></app-caja-texto>
+    <app-dialogo *ngIf="tutorialStep === 9" [pagina]="'archivo'" [tutorial]="tutorial[tutorialStep -1]" (cerrar)="onCerrarTutorialStep()"></app-dialogo>
+    <app-dialogo *ngIf="tutorialStep === 10" [pagina]="'archivo'" [tutorial]="tutorial[tutorialStep -1]" (cerrar)="onCerrarTutorialStep()"></app-dialogo>
   </div>
 </ion-content>
