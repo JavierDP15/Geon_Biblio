@@ -4,7 +4,6 @@ import { filter, map } from 'rxjs/operators'
 import { BehaviorSubject, firstValueFrom, Observable } from 'rxjs';
 
 export interface Entrada {
-  id: string;
   nombre: string;
   categoria: string;
   descripcion: string;
@@ -61,7 +60,8 @@ export class BibliotecaService {
     return this.datos.filter(item => item.categoria === categoria);
   }
 
-  getPorId(id: string): Entrada | undefined {
-    return this.datos.find(item => item.id === id);
+  async getPorNombre(nombre: string): Promise<Entrada | undefined> {
+    await this.esperarDatos();
+    return this.datos.find(item => item.nombre === nombre);
   }
 }

@@ -5,6 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/stan
 import { MusicaComponent } from 'src/app/components/musica/musica.component';
 import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
 import { AtrasComponent } from 'src/app/components/atras/atras.component';
+import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/biblioteca.service';
 
 @Component({
   selector: 'app-geones',
@@ -25,11 +26,14 @@ import { AtrasComponent } from 'src/app/components/atras/atras.component';
 })
 export class GeonesPage implements OnInit {
   mostrarCuerpo = true;
+  geones: Entrada | null = null;
 
-  constructor() { }
+  constructor(
+    private bibliotecaService: BibliotecaService
+  ) { }
 
-  ngOnInit() {
-
+  async ngOnInit() {
+    this.geones = await this.bibliotecaService.getPorNombre('Geones') ?? null;
   }
 
 }

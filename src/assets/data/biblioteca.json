@@ -1,20 +1,16 @@
 [
   {
-    "id": 1,
-    "nombre": "Arathiel",
-    "categoria": "dios",
-    "descripcion": "Dios de la guerra y la estrategia.",
-    "otrosDatos": { "simbolo": "espada cruzada", "culto": "imperial" }
+    "nombre": "Geones",
+    "categoria": "geones",
+    "descripcion": "Los Geones son criaturas cósmicas que azotan Cartam desde el inicio de los tiempos. Los dioses no son magnánimos ni complacientes, ni responden a ruegos, oraciones o piedad alguna. Son criaturas atemporales, llegadas desde los rincones más recónditos del universo, que enfrentan directamente al mundo desde sus inicios.\n\nLas civilizaciones han evolucionado haciendo frente a esta amenaza con escasas armas en su haber. Cartam ha sido víctima de tres cataclismos planetarios propiciados por los dioses y por múltiples calamidades que han remodelado la orografía, el clima y las fronteras de los pueblos. Cientos de civilizaciones han caído y sido reemplazadas en el transcurso de las eras. Cientos más lo harán en el futuro.\n\nEsta es una batalla sin tregua, sin esperanza y sin vocación de final.\n\nEn la biblioteca de Anfírenis encontrarás exhaustiva información acerca del panteón de dioses y sus desastres. Utiliza los textos con mesura por su contenido y con cuidado en cuanto a su continente; algunos de los rollos que aquí se guardan pertenecen a periodos pre-Apotheosis. Que los Geones nunca te encuentren."
   },
   {
-    "id": 2,
     "nombre": "Kaelorn",
     "categoria": "personaje",
     "descripcion": "Guerrero del clan del norte.",
     "otrosDatos": { "arma": "hacha doble", "raza": "humano" }
   },
   {
-    "id": 3,
     "nombre": "Forjaespadas",
     "categoria": "profesion",
     "descripcion": "Artesano especializado en la creación de armas."
