@@ -4,7 +4,7 @@
 
 .cuerpo {
     display: grid;
-    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
     row-gap: 3vh;
     justify-content: center;
     align-items: center;
@@ -43,19 +43,19 @@
         white-space: pre-line;
         height: 100%;
         overflow-y: auto;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         font-family: 'Amiri';
         color: black;
         line-height: 1.2;
+        // font-weight: bold;
     }
 
     .botones {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        row-gap: 5vh;
+        display: flex;
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
+        // justify-content: center;
+        justify-content: space-evenly;
 
         .boton {
             background-image: url('/assets/img/boton_interior.png');
@@ -68,13 +68,17 @@
             max-width: 50vw;
 
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-family: 'Immortal', serif;
             color: white;
 
             display: flex;
             justify-content: center;
             align-items: center;
+
+            span{
+                width: 20vw;
+            }
 
             .manifestaciones {
                 display: inline-block;
