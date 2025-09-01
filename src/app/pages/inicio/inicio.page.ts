@@ -6,6 +6,7 @@ import { MusicaService } from 'src/app/services/musica/musica.service';
 import { Howl } from 'howler';
 import { MusicaComponent } from 'src/app/components/musica/musica.component';
 import { Router } from '@angular/router';
+import { EstadoPaginasService } from 'src/app/services/estadoPaginas/estado-paginas';
 
 @Component({
   selector: 'app-inicio',
@@ -20,21 +21,28 @@ export class InicioPage implements OnInit {
 
   currentStep = 1;
   mostrarMenu = false;
-  sonido = true;
+  // sonido = true;
   desvanecer = false;
-
-  // musica!: Howl;
 
   constructor(
     private musicaService: MusicaService
     , private router: Router
+    , private estadoService: EstadoPaginasService
   ) { }
 
-  ngOnInit() {
-    setTimeout(() => {
+  ngOnInit() { }
+
+  ionViewWillEnter() {
+    if (!this.estadoService.getEntrado('inicio')) {
+      setTimeout(() => {
       this.video1.nativeElement.play();
-      this.musicaService.play();
-    }, 100);
+      this.musicaService.play('honor-and-sword', true, this.musicaService.getVolumenGlobal());
+      }, 100);
+      this.estadoService.setEntrado('inicio', true);
+    } else {
+      this.currentStep = 2;
+      this.mostrarMenu = true;
+    }
   }
 
   onVideo1Ended() {
@@ -52,7 +60,7 @@ export class InicioPage implements OnInit {
 
   toArchivo() {
     this.desvanecer = true;
-    this.musicaService.reproducirSonido('assets/audios/sonido_boton.mp3')
+    this.musicaService.reproducirSonido('assets/audios/sonido_boton.mp3');
     setTimeout(() => {
       this.desvanecer = false;
       this.router.navigate(['/archivo']);

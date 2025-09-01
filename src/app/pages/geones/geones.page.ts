@@ -6,6 +6,7 @@ import { MusicaComponent } from 'src/app/components/musica/musica.component';
 import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
 import { AtrasComponent } from 'src/app/components/atras/atras.component';
 import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/biblioteca.service';
+import { MusicaService } from 'src/app/services/musica/musica.service';
 
 @Component({
   selector: 'app-geones',
@@ -32,10 +33,17 @@ export class GeonesPage implements OnInit {
 
   constructor(
     private bibliotecaService: BibliotecaService
+    , private musicaService: MusicaService
   ) { }
 
   async ngOnInit() {
     this.geones = await this.bibliotecaService.getPorNombre('Geones') ?? null;
+  }
+
+  ionViewWillEnter() {
+    if (!this.musicaService.getSilenciado()) {
+      this.musicaService.play('caves-of-dawn');
+    }
   }
 
   toggleBotones() {

@@ -10,6 +10,7 @@ import { DialogoComponent } from 'src/app/components/dialogo/dialogo.component';
 import { CajaTextoComponent } from 'src/app/components/caja-texto/caja-texto.component';
 import { AtrasComponent } from 'src/app/components/atras/atras.component';
 import { Router } from '@angular/router';
+import { EstadoPaginasService } from 'src/app/services/estadoPaginas/estado-paginas';
 
 @Component({
   selector: 'app-archivo',
@@ -46,14 +47,34 @@ export class ArchivoPage implements OnInit {
   constructor(
     private musicaService: MusicaService,
     private tutorialService: TutorialService,
-    private router: Router
+    private router: Router,
+    private estadoService: EstadoPaginasService
   ) { }
 
   ngOnInit() {
-    this.tutorialService.resetTutorial('archivo');
-    setTimeout(() => {
-      this.video.nativeElement.play();
-    }, 100)
+    // this.tutorialService.resetTutorial('archivo');
+    // setTimeout(() => {
+    //   this.video.nativeElement.play();
+    // }, 100)
+  }
+  
+  ionViewWillEnter() {
+    if (!this.estadoService.getEntrado('archivo')) {
+      this.tutorialService.resetTutorial('archivo');
+      setTimeout(() => {
+        this.video.nativeElement.play();
+      }, 100);
+      this.estadoService.setEntrado('archivo', true);
+    } else {
+      this.currentStep = 2;
+      this.mostrarCuerpo = true;
+    }
+
+    if (this.musicaService.getPistaActual() !== 'honor-and-sword') {
+      console.log('Ayuyu');
+      this.musicaService.stopTodas();
+      this.musicaService.play('honor-and-sword');
+    }
   }
 
   onVideoEnded() {
@@ -74,7 +95,7 @@ export class ArchivoPage implements OnInit {
     if (this.currentStep === 3) {
       this.videoCat.nativeElement.pause();
       this.videoCat.nativeElement.currentTime = 0;
-      this.currentStep = 2;
+      this.musicaService.stopTodas();
       this.router.navigate(['/' + this.navegarA]);
     }
     this.mostrarCuerpo = true;
@@ -102,16 +123,17 @@ export class ArchivoPage implements OnInit {
 
   irA(categoria: string) {
     this.currentStep = 3;
+    this.musicaService.reproducirSonido('assets/audios/sonido_boton.mp3');
     this.navegarA = categoria;
     setTimeout(() => {
       this.mostrarCuerpo = false;
       this.videoCat.nativeElement.play();
+      this.musicaService.fadeOut(8000, 'honor-and-sword')
     }, 1000)
   }
 
   onVideoCatEnded() {
     if (this.currentStep !== 3) return;
-    this.currentStep = 2;
     this.videoCat.nativeElement.currentTime = 0;
     this.router.navigate(['/' + this.navegarA]);
   }

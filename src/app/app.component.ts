@@ -24,10 +24,12 @@ export class AppComponent {
     StatusBar.hide();
 
     if(this.platform.is('android')) {
-      this.musicaService.init();
+      this.musicaService.initPista('honor-and-sword');
+      this.musicaService.initPista('caves-of-dawn');
     } else {
       document.addEventListener('click', () => {
-        this.musicaService.init();
+        this.musicaService.initPista('honor-and-sword');
+        this.musicaService.initPista('caves-of-dawn');
       }, {once: true});
     }
   }
@@ -38,11 +40,13 @@ export class AppComponent {
 
   ngOnInit() {
     App.addListener('pause', () => {
-      this.musicaService.pause();
+      this.musicaService.pauseTodas();
     });
 
     App.addListener('resume', () => {
-      this.musicaService.play();
+      if (this.musicaService.getPistaActual()) {
+        this.musicaService.play(this.musicaService.getPistaActual());
+      }
     })
   }
 }

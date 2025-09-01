@@ -11,24 +11,31 @@ import { MusicaService } from 'src/app/services/musica/musica.service';
 })
 export class MusicaComponent  implements OnInit {
 
-  musica = false;
+  musica = true;
 
   constructor(private musicaService: MusicaService) { }
 
   ngOnInit() {
-    const musica = this.musicaService.getVolumen();
-    if (musica > 0) {
-      this.musica = true;
+    this.musica = !this.musicaService.getSilenciado();
     }
-  }
 
   cambiarMusica() {
-    if (this.musica) {
-      this.musicaService.setVolumen(0);
+    const pista = this.musicaService.getPistaActual();
+    if (!pista) return;
+
+    this.musicaService.cambiarSilenciado();
+
+    if (this.musicaService.getSilenciado()) {
+      this.musicaService.setVolumen(0, pista);
     } else {
-      this.musicaService.setVolumen(1)
+      this.musicaService.setVolumen(this.musicaService.getVolumenGlobal(), pista);
+      const howl = this.musicaService.getHowl(pista);
+      if (howl && !howl.playing()) {
+        howl.play();
+      }
     }
-    this.musica = !this.musica;
+
+    this.musica = !this.musicaService.getSilenciado();
   }
 
 }

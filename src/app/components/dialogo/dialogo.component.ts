@@ -27,17 +27,32 @@ export class DialogoComponent  implements OnInit {
 
   async ngOnInit() {
     if (this.tutorial?.mensaje) {
-      this.paginarTexto(this.tutorial.mensaje, 200);
+      this.paginarTexto(this.tutorial.mensaje, 220);
       this.mostrarConAnimacion();
     }
   }
 
   private paginarTexto(texto: string, charsPorPagina: number) {
-    this.paginas = [];
-    for (let i = 0; i < texto.length; i += charsPorPagina) {
-      this.paginas.push(texto.substring(i, i +charsPorPagina));
+  this.paginas = [];
+  let i = 0;
+
+  while (i < texto.length) {
+    let fin = i + charsPorPagina;
+
+    if (fin < texto.length) {
+      while (fin > i && texto[fin] !== ' ' && texto[fin] !== '\n') {
+        fin--;
+      }
     }
+
+    if (fin === i) {
+      fin = i + charsPorPagina;
+    }
+
+    this.paginas.push(texto.substring(i, fin).trim());
+    i = fin;
   }
+}
 
   private mostrarConAnimacion() {
     this.textoMostrado = '';
