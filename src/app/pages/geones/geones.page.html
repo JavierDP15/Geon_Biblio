@@ -7,7 +7,7 @@
 
   <div *ngIf="mostrarCuerpo" class="cuerpo aparecer" [class.expandido]="!botonesVisibles">
     <div class="geones">Geones</div>
-    <div *ngIf="!botonesVisibles" class="texto">{{ geones?.descripcion }}</div>
+    <div class="texto" [class.aparecerTexto]="!botonesVisibles" [class.ocultarTexto]="botonesVisibles">{{ geones?.descripcion }}</div>
     <div *ngIf="botonesVisibles"></div>
     <div class="botones" [class.mostrar]="botonesVisibles" [class.ocultar]="!botonesVisibles">
       <div class="boton"><span>Panteón</span></div>
