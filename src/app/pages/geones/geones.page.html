@@ -9,14 +9,16 @@
     <div class="geones">Geones</div>
     <div *ngIf="!botonesVisibles" class="texto">{{ geones?.descripcion }}</div>
     <div *ngIf="botonesVisibles"></div>
-    <div class="botones" *ngIf="botonesVisibles">
+    <div class="botones" [class.mostrar]="botonesVisibles" [class.ocultar]="!botonesVisibles">
       <div class="boton"><span>Panteón</span></div>
       <div class="boton"><span>Calamidades</span></div>
       <div class="boton"><span>Apotheosis</span></div>
       <div class="boton"><span class="manifestaciones">Otras<br>Manifestaciones</span></div>
     </div>
-    <div *ngIf="botonesVisibles" class="toggle-down" (click)="toggleBotones()"></div>
-    <div *ngIf="!botonesVisibles" class="toggle-up" (click)="toggleBotones()"></div>
+    <div class="toggle" [class.flechaArriba]="botonesVisibles" [class.flechaAbajo]="!botonesVisibles" (click)="toggleBotones()">
+      <!-- <div *ngIf="botonesVisibles" class="toggle-down"></div>
+      <div *ngIf="!botonesVisibles" class="toggle-up"></div> -->
+    </div>
   </div>
   <div *ngIf="mostrarCuerpo" class="opciones aparecer">
     <div class="atras">
