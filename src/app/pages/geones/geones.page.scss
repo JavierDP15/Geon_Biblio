@@ -54,7 +54,7 @@
         line-height: 1.2;
         transform: translateY(18vh);
 
-        clip-path: inset(0 0 10%0 0);
+        clip-path: inset(0 0 100% 0);
         transition: clip-path 0.4s ease;
     }
 
@@ -66,24 +66,6 @@
         animation: ocultarTexto 0.4s forwards;
     }
 
-    @keyframes revelarTexto {
-        0% {
-            clip-path: inset(0 0 100% 0);
-        }
-        100% {
-            clip-path: inset(0 0 0 0);
-        }
-    }
-
-    @keyframes ocultarTexto {
-        0% {
-            clip-path: inset(0 0 0 0);
-        }
-        100% {
-            clip-path: inset(0 0 100% 0);
-        }
-    }
-
     .botones {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -91,29 +73,29 @@
         row-gap: 5vh;
         align-items: center;
         justify-content: center;
-
+        
         .boton {
             background-image: url('/assets/img/boton_interior.png');
             background-color: transparent;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-
+            
             height: 20vh;
-
+            
             text-align: center;
             font-size: 1.5rem;
             font-family: 'Immortal', serif;
             color: white;
-
+            
             display: flex;
             justify-content: center;
             align-items: center;
-
+            
             span {
                 width: 33vw;
             }
-
+            
             .manifestaciones {
                 display: inline-block;
                 margin-top: -2.5%;
@@ -121,15 +103,15 @@
             }
         }
     }
-
+    
     .botones.ocultar {
         animation: bajarBotones 0.4s forwards;
     }
-
+    
     .botones.mostrar {
         animation: subirBotones 0.4s forwards;
     }
-
+    
     .toggle {
         position: fixed;
         top: 90%;
@@ -139,45 +121,21 @@
         border-right: 10px solid transparent;
         border-bottom: 15px solid white;
         transition: transform 0.4 ease;
+    }
+    
+    .toggle.flechaArriba {
+        animation: subirFlecha 0.4s forwards;
+    }
+    
+    .toggle.flechaAbajo {
+        animation: bajarFlecha 0.4s forwards;
+    }
+}
 
-        
-        // .toggle-up {
-            //     width: 0;
-            //     height: 0;
-            //     margin:  10px auto 0 auto;
-            //     border-left: 10px solid transparent;
-            //     border-right: 10px solid transparent;
-            //     border-bottom: 15px solid white;
-            // }
-            
-            // .toggle-down {
-                //     position: absolute;
-                //     top: 42%;
-                //     left: 50%;
-                //     width: 0;
-                //     height: 0;
-                //     margin:  10px auto 0 auto;
-                //     border-left: 10px solid transparent;
-                //     border-right: 10px solid transparent;
-                //     border-top: 15px solid white;
-                //     transform: translateX(-50%);
-                // }
-            }
-
-            .toggle.flechaArriba {
-                animation: subirFlecha 0.4s forwards;
-                // transform: translateX(-50%) translateY(-50%);
-            }
-        
-            .toggle.flechaAbajo {
-                animation: bajarFlecha 0.4s forwards;
-            }
-        }
-        
-        .opciones {
-            
-            .sonido {
-                position: absolute;
+.opciones {
+    
+    .sonido {
+        position: absolute;
         top: 7%;
         left: 91%;
     }
@@ -241,5 +199,23 @@
     }
     100% {
         transform: translateX(-50%) translateY(0px) rotateZ(0deg);
+    }
+}
+
+@keyframes revelarTexto {
+    0% {
+        clip-path: inset(0 0 100% 0);
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes ocultarTexto {
+    0% {
+        clip-path: inset(0 0 0 0);
+    }
+    100% {
+        clip-path: inset(0 0 100% 0);
     }
 }
