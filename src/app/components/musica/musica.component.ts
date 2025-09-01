@@ -29,10 +29,10 @@ export class MusicaComponent  implements OnInit {
       this.musicaService.setVolumen(0, pista);
     } else {
       this.musicaService.setVolumen(this.musicaService.getVolumenGlobal(), pista);
-      const howl = this.musicaService.getHowl(pista);
-      if (howl && !howl.playing()) {
-        howl.play();
-      }
+      // const howl = this.musicaService.getHowl(pista);
+      // if (howl && !howl.playing()) {
+      //   howl.play();
+      // }
     }
 
     this.musica = !this.musicaService.getSilenciado();
