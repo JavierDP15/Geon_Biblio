@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonIcon } from '@ionic/angular/standalone';
 import { MusicaComponent } from 'src/app/components/musica/musica.component';
 import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
 import { AtrasComponent } from 'src/app/components/atras/atras.component';
@@ -17,6 +17,7 @@ import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/bibliote
     , IonHeader
     , IonTitle
     , IonToolbar
+    , IonIcon
     , CommonModule
     , FormsModule
     , MusicaComponent
@@ -27,6 +28,7 @@ import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/bibliote
 export class GeonesPage implements OnInit {
   mostrarCuerpo = true;
   geones: Entrada | null = null;
+  botonesVisibles = false;
 
   constructor(
     private bibliotecaService: BibliotecaService
@@ -34,6 +36,10 @@ export class GeonesPage implements OnInit {
 
   async ngOnInit() {
     this.geones = await this.bibliotecaService.getPorNombre('Geones') ?? null;
+  }
+
+  toggleBotones() {
+    this.botonesVisibles = !this.botonesVisibles;
   }
 
 }

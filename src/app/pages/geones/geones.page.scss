@@ -8,14 +8,19 @@
     row-gap: 3vh;
     justify-content: center;
     align-items: center;
+    transition: grid-template-rows 0.3s ease;
 
     width: 100vw;
     height: 100vh;
 
     padding-top: 4vh;
     padding-left: 8vw;
-    padding-right: 6.5vw;
+    padding-right: 8vw;
     padding-bottom: 4vh;
+
+    &.expandido {
+        grid-template-rows: 1fr 5fr;
+    }
 
     .geones {
         background-image: url('/assets/img/panel_categoria.png');
@@ -47,6 +52,7 @@
         font-family: 'Amiri';
         color: black;
         line-height: 1.2;
+        transition: height 0.3s ease;
     }
 
     .botones {
@@ -64,8 +70,7 @@
             background-repeat: no-repeat;
             background-position: center;
 
-            height: 15vh;
-            max-width: 50vw;
+            height: 20vh;
 
             text-align: center;
             font-size: 1.5rem;
@@ -76,12 +81,39 @@
             justify-content: center;
             align-items: center;
 
+            span {
+                width: 33vw;
+            }
+
             .manifestaciones {
                 display: inline-block;
                 margin-top: -2.5%;
                 line-height: 1;
             }
         }
+    }
+
+    .toggle-up {
+        width: 0;
+        height: 0;
+        margin:  10px auto 0 auto;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 15px solid white;
+        transform: translateX(-50%);
+    }
+
+    .toggle-down {
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        margin:  10px auto 0 auto;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 15px solid white;
+        transform: translateX(-50%);
     }
 }
 

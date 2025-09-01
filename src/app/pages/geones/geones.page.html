@@ -5,15 +5,18 @@
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: top;"
   />
 
-  <div *ngIf="mostrarCuerpo" class="cuerpo aparecer">
+  <div *ngIf="mostrarCuerpo" class="cuerpo aparecer" [class.expandido]="!botonesVisibles">
     <div class="geones">Geones</div>
-    <div class="texto">{{ geones?.descripcion }}</div>
-    <div class="botones">
+    <div *ngIf="!botonesVisibles" class="texto">{{ geones?.descripcion }}</div>
+    <div *ngIf="botonesVisibles"></div>
+    <div class="botones" *ngIf="botonesVisibles">
       <div class="boton"><span>Panteón</span></div>
       <div class="boton"><span>Calamidades</span></div>
       <div class="boton"><span>Apotheosis</span></div>
       <div class="boton"><span class="manifestaciones">Otras<br>Manifestaciones</span></div>
     </div>
+    <div *ngIf="botonesVisibles" class="toggle-down" (click)="toggleBotones()"></div>
+    <div *ngIf="!botonesVisibles" class="toggle-up" (click)="toggleBotones()"></div>
   </div>
   <div *ngIf="mostrarCuerpo" class="opciones aparecer">
     <div class="atras">
