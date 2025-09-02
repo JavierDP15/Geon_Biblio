@@ -1,0 +1,169 @@
+.constelaciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    .constelacion {
+        position: relative;
+
+        height: 60%;
+        width: 30%;
+        z-index: 1;
+
+        .estrellas {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            height: 90%;
+
+        }
+
+        .icono {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            opacity: 0.4;
+
+            height: 90%;
+
+            z-index: 2;
+
+            animation: aparecerIcono 2s forwards;
+
+            @keyframes aparecerIcono {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 0.4;
+                }
+            }
+        }
+        
+        .nombre {
+            position: absolute;
+            top: 95%;
+            left: 50%;
+            color: white;
+            // transform: translate(-50%, -50%);
+            transform: translateX(-50%);
+
+            font-family: 'Aladin', serif;
+            font-size: 2rem;
+        }
+        
+        .completa {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            height: 90%;
+
+            z-index: 10;
+        }
+
+        .linea {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+
+            height: 90%;
+
+            z-index: 3;
+        }
+    }
+
+    .abacu {
+        position: relative;
+
+        .abacu1 {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 1;
+
+            height: 90%;
+
+            z-index: 3;
+
+
+            @keyframes aparecer {
+                0% {
+                    clip-path: inset(0 0 0 0);
+                }
+                100% {
+                    clip-path: inset(0 0 100% 0);
+                }
+            }
+        }
+
+        .abacu2 {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 1;
+
+            height: 90%;
+
+            z-index: 3;
+        }
+
+        .abacu3 {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 1;
+
+            height: 90%;
+
+            z-index: 3;
+        }
+
+        .abacu4 {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 1;
+
+            height: 90%;
+
+            z-index: 3;
+        }
+    }
+}
+
+.opciones {
+    
+    .sonido {
+        position: absolute;
+        top: 7%;
+        left: 91%;
+    }
+    
+    .ayuda {
+        position: absolute;
+        top: 7%;
+        left: 84%;
+    }
+    
+    .atras {
+        position: absolute;
+        top: 7%;
+        left: 5%;
+    }
+}

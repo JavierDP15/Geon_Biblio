@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true">
+  
+  <div class="constelaciones">
+    <div class="constelacion abacu" (click)="abacu()">
+      <img class="estrellas" src="assets/img/constelaciones/abacu/abacu_estrellas.png"/>
+      <img *ngIf="mostrarAbacu" class="icono" src="assets/img/constelaciones/abacu/abacu_icono.png"/>
+      <img class="linea" [class.abacu1]="pasoAbacu >= 1" src="assets/img/constelaciones/abacu/abacu_linea1.png"/>
+      <img class="linea" [class.abacu2]="pasoAbacu >= 2" src="assets/img/constelaciones/abacu/abacu_linea2.png"/>
+      <img class="linea" [class.abacu3]="pasoAbacu >= 3" src="assets/img/constelaciones/abacu/abacu_linea3.png"/>
+      <img class="linea" [class.abacu4]="pasoAbacu >= 4" src="assets/img/constelaciones/abacu/abacu_linea4.png"/>
+      <img *ngIf="mostrarAbacu" class="completa" src="assets/img/constelaciones/abacu/abacu_constelacion.png"/>
+      <span class="nombre">Ábacu</span>
+    </div>
+  </div>
+  
+  <img 
+    class="imagen-fondo"
+    src="assets/fondos/fondo_universo.jpg"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; z-index: 0;"
+  />
+  <div class="opciones aparecer">
+    <div class="atras">
+      <app-atras [pagina]="'geones'"></app-atras>
+    </div>
+    <div class="sonido">
+      <app-musica></app-musica>
+    </div>
+    <div class="ayuda">
+      <app-ayuda [pagina]="'constelaciones'"></app-ayuda>
+    </div>
+  </div>
+</ion-content>

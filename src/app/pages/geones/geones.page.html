@@ -9,7 +9,7 @@
     <div class="geones">Geones</div>
     <div class="texto" [class.aparecerTexto]="!botonesVisibles" [class.ocultarTexto]="botonesVisibles">{{ geones?.descripcion }}</div>
     <div class="botones" [class.mostrar]="botonesVisibles" [class.ocultar]="!botonesVisibles">
-      <div class="boton"><span>Panteón</span></div>
+      <div class="boton" (click)="irA('constelaciones')"><span>Panteón</span></div>
       <div class="boton"><span>Calamidades</span></div>
       <div class="boton"><span>Apotheosis</span></div>
       <div class="boton"><span class="manifestaciones">Otras<br>Manifestaciones</span></div>

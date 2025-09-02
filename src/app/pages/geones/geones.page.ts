@@ -7,6 +7,7 @@ import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
 import { AtrasComponent } from 'src/app/components/atras/atras.component';
 import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/biblioteca.service';
 import { MusicaService } from 'src/app/services/musica/musica.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-geones',
@@ -31,9 +32,12 @@ export class GeonesPage implements OnInit {
   geones: Entrada | null = null;
   botonesVisibles = false;
 
+  navegarA = '';
+
   constructor(
     private bibliotecaService: BibliotecaService
     , private musicaService: MusicaService
+    , private router: Router
   ) { }
 
   async ngOnInit() {
@@ -48,6 +52,12 @@ export class GeonesPage implements OnInit {
 
   toggleBotones() {
     this.botonesVisibles = !this.botonesVisibles;
+  }
+
+  irA(subcategoria: string) {
+    this.musicaService.reproducirSonido('assets/audios/sonido_boton.mp3');
+    this.navegarA = subcategoria;
+    this.router.navigate(['/' + this.navegarA]);
   }
 
 }
