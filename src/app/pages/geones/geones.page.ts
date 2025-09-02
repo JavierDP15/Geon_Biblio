@@ -45,9 +45,7 @@ export class GeonesPage implements OnInit {
   }
 
   ionViewWillEnter() {
-    // if (!this.musicaService.getSilenciado()) {
-      this.musicaService.play('caves-of-dawn');
-    // }
+    this.musicaService.play('caves-of-dawn');
   }
 
   toggleBotones() {

@@ -24,6 +24,60 @@
 
         }
 
+        .lineas {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 90%;
+
+            .trazo1Ab {
+                stroke: white;
+                stroke-width: 0.5;
+                stroke-linecap: round;
+                stroke-dasharray: 100;
+                stroke-dashoffset: 100;
+                animation: dibujar 1.5s linear forwards;
+
+            }
+
+            .trazo2Ab {
+                stroke: white;
+                stroke-width: 0.5;
+                stroke-linecap: round;
+                stroke-dasharray: 100;
+                stroke-dashoffset: 100;
+                animation: dibujar 1.5s linear forwards;
+
+            }
+
+            .trazo3Ab {
+                stroke: white;
+                stroke-width: 0.5;
+                stroke-linecap: round;
+                stroke-dasharray: 100;
+                stroke-dashoffset: 100;
+                animation: dibujar 0.5s linear forwards;
+
+            }
+
+            .trazo4Ab {
+                stroke: white;
+                stroke-width: 0.5;
+                stroke-linecap: round;
+                stroke-dasharray: 100;
+                stroke-dashoffset: 100;
+                animation: dibujar 1s linear forwards;
+
+            }
+
+            @keyframes dibujar {
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+        }
+
         .icono {
             position: absolute;
             top: 0;
@@ -39,7 +93,7 @@
             animation: aparecerIcono 2s forwards;
 
             @keyframes aparecerIcono {
-                0% {
+                0%, 50% {
                     opacity: 0;
                 }
                 100% {
@@ -69,80 +123,17 @@
             height: 90%;
 
             z-index: 10;
-        }
 
-        .linea {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
+            animation: mostrarCompleta 2s forwards;
 
-            height: 90%;
-
-            z-index: 3;
-        }
-    }
-
-    .abacu {
-        position: relative;
-
-        .abacu1 {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 1;
-
-            height: 90%;
-
-            z-index: 3;
-
-
-            @keyframes aparecer {
+            @keyframes mostrarCompleta {
                 0% {
-                    clip-path: inset(0 0 0 0);
+                    opacity: 0;
                 }
                 100% {
-                    clip-path: inset(0 0 100% 0);
+                    opacity: 1;
                 }
             }
-        }
-
-        .abacu2 {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 1;
-
-            height: 90%;
-
-            z-index: 3;
-        }
-
-        .abacu3 {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 1;
-
-            height: 90%;
-
-            z-index: 3;
-        }
-
-        .abacu4 {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 1;
-
-            height: 90%;
-
-            z-index: 3;
         }
     }
 }

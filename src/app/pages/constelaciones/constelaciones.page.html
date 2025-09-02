@@ -1,15 +1,30 @@
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" [scrollY]="false">
   
   <div class="constelaciones">
     <div class="constelacion abacu" (click)="abacu()">
       <img class="estrellas" src="assets/img/constelaciones/abacu/abacu_estrellas.png"/>
       <img *ngIf="mostrarAbacu" class="icono" src="assets/img/constelaciones/abacu/abacu_icono.png"/>
-      <img class="linea" [class.abacu1]="pasoAbacu >= 1" src="assets/img/constelaciones/abacu/abacu_linea1.png"/>
-      <img class="linea" [class.abacu2]="pasoAbacu >= 2" src="assets/img/constelaciones/abacu/abacu_linea2.png"/>
-      <img class="linea" [class.abacu3]="pasoAbacu >= 3" src="assets/img/constelaciones/abacu/abacu_linea3.png"/>
-      <img class="linea" [class.abacu4]="pasoAbacu >= 4" src="assets/img/constelaciones/abacu/abacu_linea4.png"/>
+      <svg class="lineas" viewBox="0 0 100 100" preserveAspectRatio="xMidyMid meet">
+        <line *ngIf="pasoAbacu >= 1 && !ocultarSVGAbacu" x1="57%" y1="54%" x2="36.5%" y2="79%" class="trazo1Ab"/>
+        <line *ngIf="pasoAbacu >= 2 && !ocultarSVGAbacu" x1="36.5%" y1="79%" x2="66.2%" y2="94.5%" class="trazo2Ab"/>
+        <line *ngIf="pasoAbacu >= 3 && !ocultarSVGAbacu" x1="66.2%" y1="94.5%" x2="30%" y2="5.8%" class="trazo3Ab"/>
+        <line *ngIf="pasoAbacu >= 4 && !ocultarSVGAbacu" x1="30%" y1="5.8%" x2="65%" y2="40.2%" class="trazo4Ab"/>
+      </svg>
       <img *ngIf="mostrarAbacu" class="completa" src="assets/img/constelaciones/abacu/abacu_constelacion.png"/>
       <span class="nombre">Ábacu</span>
+    </div>
+
+    <div class="constelacion virnut" (click)="virnut()">
+      <img class="estrellas" src="assets/img/constelaciones/virnut/virnut_estrellas.png"/>
+      <img *ngIf="mostrarVirnut" class="icono" src="assets/img/constelaciones/virnut/virnut_icono.png"/>
+      <svg class="lineas" viewBox="0 0 100 100" preserveAspectRatio="xMidyMid meet">
+        <line *ngIf="pasoVirnut >= 1 && !ocultarSVGVirnut" x1="57%" y1="54%" x2="36.5%" y2="79%" class="trazo1Vi"/>
+        <line *ngIf="pasoVirnut >= 2 && !ocultarSVGVirnut" x1="36.5%" y1="79%" x2="66.2%" y2="94.5%" class="trazo2Vi"/>
+        <line *ngIf="pasoVirnut >= 3 && !ocultarSVGVirnut" x1="66.2%" y1="94.5%" x2="30%" y2="5.8%" class="trazo3Vi"/>
+        <line *ngIf="pasoVirnut >= 4 && !ocultarSVGVirnut" x1="30%" y1="5.8%" x2="65%" y2="40.2%" class="trazo4Vi"/>
+      </svg>
+      <img *ngIf="mostrarVirnut" class="completa" src="assets/img/constelaciones/virnut/virnut_constelacion.png"/>
+      <span class="nombre">Virnut</span>
     </div>
   </div>
   
