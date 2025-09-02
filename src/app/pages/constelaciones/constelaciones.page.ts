@@ -56,7 +56,6 @@ export class ConstelacionesPage implements OnInit {
       for (let i = 0; i < this.lineasAbacu; i++) {
         setTimeout(() => {
           this.pasoAbacu++;
-          console.log(this.pasoAbacu);
         }, i * 500);
       }
       setTimeout(() => {
@@ -73,8 +72,7 @@ export class ConstelacionesPage implements OnInit {
       this.ocultarSVGVirnut = !this.ocultarSVGVirnut;
       for (let i = 0; i < this.lineasVirnut; i++) {
         setTimeout(() => {
-          this.pasoAbacu++;
-          console.log(this.pasoVirnut);
+          this.pasoVirnut++;
         }, i * 500);
       }
       setTimeout(() => {
