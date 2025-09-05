@@ -1,0 +1,71 @@
+.cuerpo {
+    margin-top: 8%;
+    margin-bottom: 8%;
+
+    width: 100%;
+    max-height: calc(100vh - 30%);
+    flex: 1 1 auto;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+
+    z-index: 2;
+
+    .icono {
+        width: 15%;
+
+        z-index: 2;
+    }
+
+    .nombre {
+        color: white;
+        font-family: 'Fantaisie', serif;
+        font-size: 2.5rem;
+        text-shadow: 2px 1px 0px black;
+
+        z-index: 2;
+    }
+
+    .subtitulo {
+        color: black;
+        font-style: italic;
+        width: 90%;
+        text-align: center;
+        line-height: 1.4rem;
+
+        z-index: 2;
+    }
+
+    .texto {
+        color: black;
+        width: 90%;
+        text-align: center;
+        line-height: 1.4rem;
+
+        z-index: 2;
+    }
+}
+
+.opciones {
+    
+    .sonido {
+        position: fixed;
+        top: 7%;
+        left: 91%;
+    }
+    
+    .ayuda {
+        position: fixed;
+        top: 7%;
+        left: 84%;
+    }
+    
+    .atras {
+        position: fixed;
+        top: 7%;
+        left: 5%;
+    }
+}

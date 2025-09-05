@@ -10,7 +10,7 @@
         <line *ngIf="pasoAbacu >= 3 && !ocultarSVGAbacu" x1="66.2%" y1="94.5%" x2="30%" y2="5.8%" class="trazo3Ab"/>
         <line *ngIf="pasoAbacu >= 4 && !ocultarSVGAbacu" x1="30%" y1="5.8%" x2="65%" y2="40.2%" class="trazo4Ab"/>
       </svg>
-      <img *ngIf="mostrarAbacu" class="completa" src="assets/img/constelaciones/abacu/abacu_constelacion.png"/>
+      <img *ngIf="mostrarAbacu" (click)="irA('abacu')" class="completa" src="assets/img/constelaciones/abacu/abacu_constelacion.png"/>
       <span class="nombre">Ábacu</span>
     </div>
 
@@ -25,7 +25,7 @@
         <line *ngIf="pasoVirnut >= 5 && !ocultarSVGVirnut" x1="86%" y1="24%" x2="61.5%" y2="67.2%" class="trazo5Vi"/>
         <line *ngIf="pasoVirnut >= 6 && !ocultarSVGVirnut" x1="61.5%" y1="67.2%" x2="82%" y2="83%" class="trazo6Vi"/>
       </svg>
-      <img *ngIf="mostrarVirnut" class="completa" src="assets/img/constelaciones/virnut/virnut_constelacion.png"/>
+      <img *ngIf="mostrarVirnut" (click)="irA('virnut')" class="completa" src="assets/img/constelaciones/virnut/virnut_constelacion.png"/>
       <span class="nombre">Virnut</span>
     </div>
   </div>

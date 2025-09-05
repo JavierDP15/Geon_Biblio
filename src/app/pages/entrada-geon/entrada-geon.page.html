@@ -1,3 +1,26 @@
 <ion-content [fullscreen]="true" [scrollY]="false">
+    <img 
+        class="imagen-fondo"
+        src="assets/fondos/fondo_categoria.jpg"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; z-index: 0;"
+    />
 
+    <div *ngIf="entrada" class="cuerpo">
+        <img class="icono" [src]="entrada.otrosDatos.imagen">
+        <div class="nombre">{{ entrada.nombre }}</div>
+        <div class="subtitulo">{{ entrada.otrosDatos.subtitulo }}</div>
+        <div class="texto">{{ entrada.descripcion }}</div>
+    </div>
+
+    <div class="opciones aparecer">
+        <div class="atras">
+        <app-atras [pagina]="'constelaciones'"></app-atras>
+        </div>
+        <div class="sonido">
+        <app-musica></app-musica>
+        </div>
+        <div class="ayuda">
+        <app-ayuda [pagina]="'abacu'"></app-ayuda>
+        </div>
+    </div>
 </ion-content>

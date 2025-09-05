@@ -23,6 +23,15 @@
     src: url('/assets/fuentes/aladin.ttf');
 }
 
+@font-face {
+    font-family: 'Fantaisie';
+    src: url('/assets/fuentes/fantaisieartistique.ttf');
+}
+
+ion-content {
+    white-space: pre-line;
+}
+
 /* Core CSS required for Ionic components to work properly */
 @import "@ionic/angular/css/core.css";
 

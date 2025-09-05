@@ -44,7 +44,7 @@ export class GeonesPage implements OnInit {
   ) { }
 
   async ngOnInit() {
-    this.geones = await this.bibliotecaService.getPorNombre('Geones') ?? null;
+    this.geones = await this.bibliotecaService.getPorId('geones') ?? null;
   }
 
   ionViewWillEnter() {

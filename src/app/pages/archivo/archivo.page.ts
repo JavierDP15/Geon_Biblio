@@ -67,6 +67,8 @@ export class ArchivoPage implements OnInit {
 
       this.intentarReproducir(video);
 
+      // this.intentarReproducir(video);
+
       // setTimeout(() => {
       //   this.video.nativeElement.play();
       // }, 100);
@@ -82,19 +84,47 @@ export class ArchivoPage implements OnInit {
     }
   }
 
-  private intentarReproducir(video: HTMLVideoElement, intentos = 0) {
-    video.play().then(() => {
-      console.log('Video iniciado con éxito');
-    })
-    .catch(() => {
-      console.warn('Fallo al iniciar el video, reintentando...');
-      if (intentos < 5) {
-        setTimeout(() => this.intentarReproducir(video, intentos + 1), 500);
-      } else {
-        console.error('No se pudo reproducir el video tras varios intentos');
-        this.currentStep = 2;
-      }
-    })
+  private intentarReproducir(video: HTMLVideoElement, maxIntentos = 5) {
+    video.muted = true;
+    video.playsInline = true;
+    let intentos = 0;
+
+    const reproducir = () => {
+      video.play().then(() => {
+        console.log('Video iniciado con éxito');
+      })
+      .catch((err) => {
+        console.warn(`Intento ${intentos + 1} fallido:`, err);
+        intentos++;
+        if (intentos < maxIntentos) {
+          setTimeout(reproducir, 500);
+        } else {
+          console.error('No se pudo reproducir el video tras varios intentos');
+          this.currentStep = 2;
+          this.mostrarCuerpo = true
+        }
+      })
+    };
+
+    if (video.readyState >= 3) {
+      reproducir();
+    } else {
+      video.oncanplaythrough = reproducir;
+    }
+
+    // video.play().then(() => {
+    //   console.log('Video iniciado con éxito');
+    // })
+    // .catch(() => {
+    //   console.warn('Fallo al iniciar el video, reintentando...');
+    //   if (intentos < 5) {
+    //     setTimeout(() => this.intentarReproducir(video, intentos + 1), 500);
+    //   } else {
+    //     console.error('No se pudo reproducir el video tras varios intentos');
+    //     this.currentStep = 2;
+    //     this.mostrarCuerpo = true;
+    //   }
+    // })
   }
 
   onVideoEnded() {

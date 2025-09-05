@@ -7,6 +7,7 @@ import { AtrasComponent } from 'src/app/components/atras/atras.component';
 import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
 import { GeonesService } from 'src/app/services/geones/geones.service';
 import { MusicaService } from 'src/app/services/musica/musica.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-constelaciones',
@@ -26,6 +27,8 @@ import { MusicaService } from 'src/app/services/musica/musica.service';
   ]
 })
 export class ConstelacionesPage implements OnInit {
+  isAnimating = false;
+
   mostrarAbacu = false;
   pasoAbacu = 0;
   ocultarSVGAbacu = true;
@@ -39,6 +42,7 @@ export class ConstelacionesPage implements OnInit {
   constructor(
       private geonesService: GeonesService
     , private musicaService: MusicaService
+    , private router: Router
   ) { }
 
   ngOnInit() { }
@@ -56,7 +60,14 @@ export class ConstelacionesPage implements OnInit {
     }
   }
 
+  irA(geonSeleccionado: string) {
+    this.router.navigate(['/entrada-geon', geonSeleccionado]);
+  }
+
   abacu() {
+    if (this.isAnimating) return;
+    this.isAnimating = true;
+
     if (!this.mostrarAbacu) {
       this.ocultarSVGAbacu = !this.ocultarSVGAbacu;
       for (let i = 0; i < this.lineasAbacu; i++) {
@@ -67,13 +78,17 @@ export class ConstelacionesPage implements OnInit {
       setTimeout(() => {
         this.mostrarAbacu = !this.mostrarAbacu
         this.geonesService.setDescubierto('abacu', true);
+        this.isAnimating = false;
       }, 500 * this.lineasAbacu);
     } else {
-
+      // this.router.navigate(['/geon', 'abacu']);
     }
   }
 
   virnut() {
+    if (this.isAnimating) return;
+    this.isAnimating = true;
+
     if (!this.mostrarVirnut) {
       this.ocultarSVGVirnut = !this.ocultarSVGVirnut;
       for (let i = 0; i < this.lineasVirnut; i++) {
@@ -84,6 +99,7 @@ export class ConstelacionesPage implements OnInit {
       setTimeout(() => {
         this.mostrarVirnut = !this.mostrarVirnut
         this.geonesService.setDescubierto('virnut', true);
+        this.isAnimating = false;
       }, 500 * this.lineasVirnut);
     } else {
 

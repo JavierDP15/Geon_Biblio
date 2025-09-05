@@ -4,10 +4,14 @@ import { filter, map } from 'rxjs/operators'
 import { BehaviorSubject, firstValueFrom, Observable } from 'rxjs';
 
 export interface Entrada {
+  id: string;
   nombre: string;
   categoria: string;
   descripcion: string;
-  otrosDatos?: any;
+  otrosDatos: {
+    subtitulo: string,
+    imagen: string
+  };
 }
 
 @Injectable({
@@ -51,7 +55,7 @@ export class BibliotecaService {
   buscar(termino: string): Entrada[] {
     termino = termino.toLowerCase();
     return this.datos.filter(item => 
-      item.nombre.toLowerCase().includes(termino)
+      item.id.toLowerCase().includes(termino)
       || item.descripcion.toLowerCase().includes(termino)
     );
   }
@@ -60,8 +64,8 @@ export class BibliotecaService {
     return this.datos.filter(item => item.categoria === categoria);
   }
 
-  async getPorNombre(nombre: string): Promise<Entrada | undefined> {
+  async getPorId(id: string): Promise<Entrada | undefined> {
     await this.esperarDatos();
-    return this.datos.find(item => item.nombre === nombre);
+    return this.datos.find(item => item.id === id);
   }
 }

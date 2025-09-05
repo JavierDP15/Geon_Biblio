@@ -17,7 +17,8 @@ export const routes: Routes = [
   {
     path: 'inicio',
     loadComponent: () => import('./pages/inicio/inicio.page').then( m => m.InicioPage)
-  },  {
+  },
+  {
     path: 'archivo',
     loadComponent: () => import('./pages/archivo/archivo.page').then( m => m.ArchivoPage)
   },
@@ -30,7 +31,7 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/constelaciones/constelaciones.page').then( m => m.ConstelacionesPage)
   },
   {
-    path: 'entrada-geon',
+    path: 'entrada-geon/:geon',
     loadComponent: () => import('./pages/entrada-geon/entrada-geon.page').then( m => m.EntradaGeonPage)
   },
 
