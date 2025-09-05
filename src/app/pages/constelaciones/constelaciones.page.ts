@@ -45,7 +45,12 @@ export class ConstelacionesPage implements OnInit {
 
   ionViewWillEnter() {
     this.musicaService.play('caves-of-dawn');
+
     if (this.geonesService.getDescubierto('abacu')) {
+      this.mostrarAbacu = true;
+    }
+
+    if (this.geonesService.getDescubierto('virnut')) {
       this.mostrarAbacu = true;
     }
   }
