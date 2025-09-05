@@ -32,6 +32,13 @@ export class AppComponent {
         this.musicaService.initPista('caves-of-dawn');
       }, {once: true});
     }
+
+    this.precargarImagen('assets/fondos/fondo_categoria.jpg');
+  }
+
+  precargarImagen(src: string) {
+    const img = new Image();
+    img.src = src;
   }
 
   async bloquearHorizontal() {

@@ -29,5 +29,9 @@ export const routes: Routes = [
     path: 'constelaciones',
     loadComponent: () => import('./pages/constelaciones/constelaciones.page').then( m => m.ConstelacionesPage)
   },
+  {
+    path: 'entrada-geon',
+    loadComponent: () => import('./pages/entrada-geon/entrada-geon.page').then( m => m.EntradaGeonPage)
+  },
 
 ];

@@ -32,7 +32,7 @@ export class GeonesPage implements OnInit {
   mostrarCuerpo = true;
   geones: Entrada | null = null;
   botonesVisibles = false;
-  imagenCargada = false;
+  // imagenCargada = false;
 
   navegarA = '';
 
@@ -53,12 +53,14 @@ export class GeonesPage implements OnInit {
     if (!mostrarBotones) {
       this.botonesVisibles = false;
       this.estadoPaginasService.setEntrado('botonesGeon', false);
+    } else {
+      this.botonesVisibles = true;
     }
   }
 
-  onImagenCargada() {
-    this.imagenCargada = true;
-  }
+  // onImagenCargada() {
+  //   this.imagenCargada = true;
+  // }
 
   toggleBotones() {
     this.botonesVisibles = !this.botonesVisibles;
