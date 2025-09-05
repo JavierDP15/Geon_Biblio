@@ -8,6 +8,7 @@ import { AtrasComponent } from 'src/app/components/atras/atras.component';
 import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/biblioteca.service';
 import { MusicaService } from 'src/app/services/musica/musica.service';
 import { Router } from '@angular/router';
+import { EstadoPaginasService } from 'src/app/services/estadoPaginas/estado-paginas';
 
 @Component({
   selector: 'app-geones',
@@ -31,12 +32,14 @@ export class GeonesPage implements OnInit {
   mostrarCuerpo = true;
   geones: Entrada | null = null;
   botonesVisibles = false;
+  imagenCargada = false;
 
   navegarA = '';
 
   constructor(
     private bibliotecaService: BibliotecaService
     , private musicaService: MusicaService
+    , private estadoPaginasService: EstadoPaginasService
     , private router: Router
   ) { }
 
@@ -46,10 +49,20 @@ export class GeonesPage implements OnInit {
 
   ionViewWillEnter() {
     this.musicaService.play('caves-of-dawn');
+    const mostrarBotones = this.estadoPaginasService.getEntrado('botonesGeon');
+    if (!mostrarBotones) {
+      this.botonesVisibles = false;
+      this.estadoPaginasService.setEntrado('botonesGeon', false);
+    }
+  }
+
+  onImagenCargada() {
+    this.imagenCargada = true;
   }
 
   toggleBotones() {
     this.botonesVisibles = !this.botonesVisibles;
+    this.estadoPaginasService.setEntrado('botonesGeon', this.botonesVisibles);
   }
 
   irA(subcategoria: string) {

@@ -44,8 +44,12 @@ export class AppComponent {
     });
 
     App.addListener('resume', () => {
-      if (this.musicaService.getPistaActual()) {
-        this.musicaService.play(this.musicaService.getPistaActual());
+      const actual = this.musicaService.getPistaActual();
+      if (actual) {
+        const howl = this.musicaService.getHowl(actual);
+        if (howl && !howl.playing()) {
+          howl.play();
+        }
       }
     })
   }

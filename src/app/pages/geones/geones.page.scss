@@ -1,6 +1,33 @@
-// .imagen-fondo {
+ion-content {
+    --background: #000;
+}
 
-// }
+.backgroundFallback {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 0;
+}
+
+.imagen-fondo {
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  z-index: 0;
+}
+
+.imagen-fondo.loaded {
+    opacity: 1;
+}
 
 .cuerpo {
     display: grid;
@@ -17,6 +44,9 @@
     padding-left: 8vw;
     padding-right: 8vw;
     padding-bottom: 4vh;
+
+    opacity: 0;
+    transition: opacity 1s ease-in;
 
     &.expandido {
         grid-template-rows: 1fr 5fr;

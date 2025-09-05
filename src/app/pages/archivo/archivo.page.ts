@@ -61,9 +61,15 @@ export class ArchivoPage implements OnInit {
   ionViewWillEnter() {
     if (!this.estadoService.getEntrado('archivo')) {
       this.tutorialService.resetTutorial('archivo');
-      setTimeout(() => {
-        this.video.nativeElement.play();
-      }, 100);
+
+      const video = this.video.nativeElement;
+      video.currentTime = 0;
+
+      this.intentarReproducir(video);
+
+      // setTimeout(() => {
+      //   this.video.nativeElement.play();
+      // }, 100);
       this.estadoService.setEntrado('archivo', true);
     } else {
       this.currentStep = 2;
@@ -71,10 +77,24 @@ export class ArchivoPage implements OnInit {
     }
 
     if (this.musicaService.getPistaActual() !== 'honor-and-sword') {
-      console.log('Ayuyu');
       this.musicaService.stopTodas();
       this.musicaService.play('honor-and-sword');
     }
+  }
+
+  private intentarReproducir(video: HTMLVideoElement, intentos = 0) {
+    video.play().then(() => {
+      console.log('Video iniciado con éxito');
+    })
+    .catch(() => {
+      console.warn('Fallo al iniciar el video, reintentando...');
+      if (intentos < 5) {
+        setTimeout(() => this.intentarReproducir(video, intentos + 1), 500);
+      } else {
+        console.error('No se pudo reproducir el video tras varios intentos');
+        this.currentStep = 2;
+      }
+    })
   }
 
   onVideoEnded() {

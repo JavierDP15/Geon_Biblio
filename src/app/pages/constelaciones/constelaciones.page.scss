@@ -138,7 +138,7 @@
             left: 50%;
             transform: translateX(-50%);
 
-            opacity: 0.4;
+            // opacity: 0;
 
             height: 90%;
 
@@ -151,7 +151,7 @@
                     opacity: 0;
                 }
                 100% {
-                    opacity: 0.4;
+                    opacity: 0.2;
                 }
             }
         }
