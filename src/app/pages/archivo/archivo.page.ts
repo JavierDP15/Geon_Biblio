@@ -58,14 +58,14 @@ export class ArchivoPage implements OnInit {
     // }, 100)
   }
   
-  ionViewWillEnter() {
+  ionViewDidEnter() {
     if (!this.estadoService.getEntrado('archivo')) {
       this.tutorialService.resetTutorial('archivo');
 
       const video = this.video.nativeElement;
       video.currentTime = 0;
 
-      this.intentarReproducir(video);
+      // this.intentarReproducir(video);
 
       // this.intentarReproducir(video);
 
@@ -82,6 +82,25 @@ export class ArchivoPage implements OnInit {
       this.musicaService.stopTodas();
       this.musicaService.play('honor-and-sword');
     }
+  }
+
+  ionViewWillLeave() {
+    if (this.video?.nativeElement) {
+      this.resetVideo(this.video.nativeElement);
+    }
+    if (this.videoCat?.nativeElement) {
+      this.resetVideo(this.videoCat.nativeElement);
+    }
+
+    this.currentStep = 1;
+    this.mostrarCuerpo = false;
+  }
+
+  private resetVideo(video: HTMLVideoElement) {
+    if(!video) return;
+    video.pause();
+    video.currentTime = 0;
+    video.load();
   }
 
   private intentarReproducir(video: HTMLVideoElement, maxIntentos = 5) {
@@ -111,20 +130,6 @@ export class ArchivoPage implements OnInit {
     } else {
       video.oncanplaythrough = reproducir;
     }
-
-    // video.play().then(() => {
-    //   console.log('Video iniciado con éxito');
-    // })
-    // .catch(() => {
-    //   console.warn('Fallo al iniciar el video, reintentando...');
-    //   if (intentos < 5) {
-    //     setTimeout(() => this.intentarReproducir(video, intentos + 1), 500);
-    //   } else {
-    //     console.error('No se pudo reproducir el video tras varios intentos');
-    //     this.currentStep = 2;
-    //     this.mostrarCuerpo = true;
-    //   }
-    // })
   }
 
   onVideoEnded() {
@@ -177,7 +182,13 @@ export class ArchivoPage implements OnInit {
     this.navegarA = categoria;
     setTimeout(() => {
       this.mostrarCuerpo = false;
-      this.videoCat.nativeElement.play();
+
+      const videoCat = this.videoCat.nativeElement;
+      videoCat.currentTime = 0;
+      videoCat.muted = true;
+      videoCat.playsInline = true;
+      videoCat.play();
+      // this.videoCat.nativeElement.play();
       this.musicaService.fadeOut(8000, 'honor-and-sword')
     }, 1000)
   }
