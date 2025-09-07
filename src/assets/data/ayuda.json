@@ -54,5 +54,23 @@
         "nombre": "",
         "foto": "",
         "texto": "Segundo mensaje random para comprobar que funciona la <i>cursiva</i> y la <b>negrita<b/>."
+    },
+    {
+        "pagina": "abacu",
+        "numero": 2,
+        "paso": 2,
+        "nombre": "",
+        "foto": "",
+        "texto": "Segundo mensaje random para comprobar que funciona la <i>cursiva</i> y la <b>negrita<b/>."
+    },
+
+    
+    {
+        "pagina": "virnut",
+        "numero": 1,
+        "paso": 1,
+        "nombre": "Bibliotecaria Ayiat",
+        "foto": "assets/fotos/bibliotecaria_ayiat.png",
+        "texto": "Por favor, te pido consideración. Algunos de los eruditos que ves en esta sala son peregrinos llegados de lejanas tierras. El estudio de los Geones es un asunto muy delicado; una simple distracción podría romper las guardas mágicas que utilizan para escrutar los textos impíos. En Anfírenis nos tomamos muy en serio el asunto de las Calamidades."
     }
 ]

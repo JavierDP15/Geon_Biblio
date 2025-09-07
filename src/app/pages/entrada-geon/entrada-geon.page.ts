@@ -25,7 +25,7 @@ import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/bibliote
   ]
 })
 export class EntradaGeonPage implements OnInit {
-  private geon = '';
+  geon = '';
   entrada: Entrada | null = null;
 
   constructor(
@@ -35,9 +35,7 @@ export class EntradaGeonPage implements OnInit {
 
   async ngOnInit() {
     this.geon = this.route.snapshot.paramMap.get('geon') || '';
-    console.log(this.geon);
     this.entrada = await this.bibliotecaService.getPorId(this.geon) ?? null;
-    console.log(this.entrada);
   }
 
 }
