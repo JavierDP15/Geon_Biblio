@@ -1,0 +1,58 @@
+[
+    {
+        "pagina": "abacu",
+        "numero": 1,
+        "paso": 1,
+        "nombre": "Oberus Hajit",
+        "foto": "assets/fotos/oberus_hajit.png",
+        "texto": "¿Que te hable sobre el Geón del tiempo?"
+    },
+    {
+        "pagina": "abacu",
+        "numero": 1,
+        "paso": 2,
+        "nombre": "Oberus Hajit",
+        "foto": "assets/fotos/oberus_hajit.png",
+        "texto": "..."
+    },
+    {
+        "pagina": "abacu",
+        "numero": 1,
+        "paso": 3,
+        "nombre": "Oberus Hajit",
+        "foto": "assets/fotos/oberus_hajit.png",
+        "texto": "..."
+    },
+    {
+        "pagina": "abacu",
+        "numero": 1,
+        "paso": 4,
+        "nombre": "Oberus Hajit",
+        "foto": "assets/fotos/oberus_hajit.png",
+        "texto": "¿No tienes otras preguntas que hacerme? Es que… mis asuntos con él son demasiado personales. En serio… necesito un poco de aire. Con permiso…"
+    },
+    {
+        "pagina": "abacu",
+        "numero": 1,
+        "paso": 5,
+        "nombre": "",
+        "foto": "",
+        "texto": "<i>Oberus sale de la biblioteca y te deja con la palabra en la boca.</i>"
+    },
+    {
+        "pagina": "abacu",
+        "numero": 2,
+        "paso": 1,
+        "nombre": "",
+        "foto": "",
+        "texto": "Ayuda de prueba para comprobar que sale random."
+    },
+    {
+        "pagina": "abacu",
+        "numero": 2,
+        "paso": 2,
+        "nombre": "",
+        "foto": "",
+        "texto": "Segundo mensaje random para comprobar que funciona la <i>cursiva</i> y la <b>negrita<b/>."
+    }
+]

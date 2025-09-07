@@ -11,16 +11,17 @@
         <div class="subtitulo">{{ entrada.otrosDatos.subtitulo }}</div>
         <div class="texto">{{ entrada.descripcion }}</div>
     </div>
-
-    <div class="opciones aparecer">
-        <div class="atras">
-        <app-atras [pagina]="'constelaciones'"></app-atras>
-        </div>
-        <div class="sonido">
-        <app-musica></app-musica>
-        </div>
-        <div class="ayuda">
-        <app-ayuda [pagina]="'abacu'"></app-ayuda>
-        </div>
-    </div>
+    
 </ion-content>
+
+<div class="opciones aparecer">
+    <div class="atras">
+        <app-atras [pagina]="'constelaciones'"></app-atras>
+    </div>
+    <div class="sonido">
+        <app-musica></app-musica>
+    </div>
+    <div class="ayuda">
+        <app-ayuda [pagina]="'abacu'"></app-ayuda>
+    </div>
+</div>

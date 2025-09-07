@@ -2,91 +2,71 @@
   {
     "pagina": "archivo",
     "paso": 1,
-    "mensaje": "Te doy la bienvenida a la Biblioteca de Anfírenis. En ella encontrarás todo tipo de textos e información sobre el mundo de Cartam. Nuestro noble templo de sabiduría abre todos los días y horas del año, salvo en caso de Calamidad. Siéntete libre de investigar el edificio y de estudiar los miles de rollos y libros de sus estanterías.",
-    "otrosDatos": {
-      "foto": "assets/fotos/bibliotecaria_ayiat.png",
-      "nombre": "Bibliotecaria Ayiat"
-    }
+    "texto": "Te doy la bienvenida a la Biblioteca de Anfírenis. En ella encontrarás todo tipo de textos e información sobre el mundo de Cartam. Nuestro noble templo de sabiduría abre todos los días y horas del año, salvo en caso de Calamidad. Siéntete libre de investigar el edificio y de estudiar los miles de rollos y libros de sus estanterías.",
+    "foto": "assets/fotos/bibliotecaria_ayiat.png",
+    "nombre": "Bibliotecaria Ayiat"
   },
   {
     "pagina": "archivo",
     "paso": 2,
-    "mensaje": "Para acceder a cada una de las salas, utiliza los botones que se despliegan en la pantalla.",
-    "otrosDatos": {
-      "foto": "",
-      "nombre": ""
-    }
+    "texto": "Para acceder a cada una de las salas, utiliza los botones que se despliegan en la pantalla.",
+    "foto": "",
+    "nombre": ""
   },
   {
     "pagina": "archivo",
     "paso": 3,
-    "mensaje": "Para regresar a una sala anterior, utiliza el botón indicado.",
-    "otrosDatos": {
-      "foto": "",
-      "nombre": ""
-    }
+    "texto": "Para regresar a una sala anterior, utiliza el botón indicado.",
+    "foto": "",
+    "nombre": ""
   },
   {
     "pagina": "archivo",
     "paso": 4,
-    "mensaje": "Puedes pausar o reactivar la música y los efectos sonoros con el botón indicado.",
-    "otrosDatos": {
-      "foto": "",
-      "nombre": ""
-    }
+    "texto": "Puedes pausar o reactivar la música y los efectos sonoros con el botón indicado.",
+    "foto": "",
+    "nombre": ""
   },
   {
     "pagina": "archivo",
     "paso": 5,
-    "mensaje": "Nuestro personal estará siempre atento por si necesitas algo. Por favor, no dudes en dirigirte a nosotros.",
-    "otrosDatos": {
-      "foto": "assets/fotos/bibliotecaria_ayiat.png",
-      "nombre": "Bibliotecaria Ayiat"
-    }
+    "texto": "Nuestro personal estará siempre atento por si necesitas algo. Por favor, no dudes en dirigirte a nosotros.",
+    "foto": "assets/fotos/bibliotecaria_ayiat.png",
+    "nombre": "Bibliotecaria Ayiat"
   },
   {
     "pagina": "archivo",
     "paso": 6,
-    "mensaje": "Podrás realizar interacciones de diálogo en cada sala haciendo clic en el icono correspondiente.",
-    "otrosDatos": {
-      "foto": "",
-      "nombre": ""
-    }
+    "texto": "Podrás realizar interacciones de diálogo en cada sala haciendo clic en el icono correspondiente.",
+    "foto": "",
+    "nombre": ""
   },
   {
     "pagina": "archivo",
     "paso": 7,
-    "mensaje": "Sin embargo, comprende que no podremos atenderte en todo momento. ¡Siempre estamos sobrepasados de trabajo!",
-    "otrosDatos": {
-      "foto": "assets/fotos/bibliotecaria_ayiat.png",
-      "nombre": "Bibliotecaria Ayiat"
-    }
+    "texto": "Sin embargo, comprende que no podremos atenderte en todo momento. ¡Siempre estamos sobrepasados de trabajo!",
+    "foto": "assets/fotos/bibliotecaria_ayiat.png",
+    "nombre": "Bibliotecaria Ayiat"
   },
   {
     "pagina": "archivo",
     "paso": 8,
-    "mensaje": "Después de cada interacción, deberás esperar un tiempo antes de solicitar una nueva.",
-    "otrosDatos": {
-      "foto": "",
-      "nombre": ""
-    }
+    "texto": "Después de cada interacción, deberás esperar un tiempo antes de solicitar una nueva.",
+    "foto": "",
+    "nombre": ""
   },
   {
     "pagina": "archivo",
     "paso": 9,
-    "mensaje": "¡Ah, importante! Algunos de los sabios más reputados de Cartam vienen hasta Anfírenis para realizar sus estudios. Quizás puedas conocerlos entre estas salas.",
-    "otrosDatos": {
-      "foto": "assets/fotos/bibliotecaria_ayiat.png",
-      "nombre": "Bibliotecaria Ayiat"
-    }
+    "texto": "¡Ah, importante! Algunos de los sabios más reputados de Cartam vienen hasta Anfírenis para realizar sus estudios. Quizás puedas conocerlos entre estas salas.",
+    "foto": "assets/fotos/bibliotecaria_ayiat.png",
+    "nombre": "Bibliotecaria Ayiat"
   },
   {
     "pagina": "archivo",
     "paso": 10,
-    "mensaje": "Adelante y mucha suerte. Dentro de estos muros te espera un mundo fascinante. ¡Hasta ahora!",
-    "otrosDatos": {
-      "foto": "assets/fotos/bibliotecaria_ayiat.png",
-      "nombre": "Bibliotecaria Ayiat"
-    }
+    "texto": "Adelante y mucha suerte. Dentro de estos muros te espera un mundo fascinante. ¡Hasta ahora!",
+    "foto": "assets/fotos/bibliotecaria_ayiat.png",
+    "nombre": "Bibliotecaria Ayiat"
   }
 ]

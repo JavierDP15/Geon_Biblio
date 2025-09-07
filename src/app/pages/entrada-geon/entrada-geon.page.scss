@@ -16,7 +16,7 @@ ion-content {
     align-items: center;
     gap: 4vh;
 
-    z-index: 2;
+    // z-index: 2;
 
     .icono {
         width: 15%;
@@ -54,6 +54,8 @@ ion-content {
 }
 
 .opciones {
+
+    z-index: 1500;
     
     .sonido {
         position: fixed;

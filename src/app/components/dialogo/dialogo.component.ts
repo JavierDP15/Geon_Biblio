@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Ayuda } from 'src/app/services/ayuda/ayuda.service';
 import { Tutorial, TutorialService } from 'src/app/services/tutorial/tutorial.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { Tutorial, TutorialService } from 'src/app/services/tutorial/tutorial.se
 })
 export class DialogoComponent  implements OnInit {
   @Input() pagina: string = '';
-  @Input() tutorial: Tutorial | null = null;
+  @Input() entrada: Tutorial | Ayuda | null = null;
   @Output() cerrar = new EventEmitter<void>();
 
   paginas: string[] = [];
@@ -26,8 +27,8 @@ export class DialogoComponent  implements OnInit {
   constructor() { }
 
   async ngOnInit() {
-    if (this.tutorial?.mensaje) {
-      this.paginarTexto(this.tutorial.mensaje, 220);
+    if (this.entrada?.texto) {
+      this.paginarTexto(this.entrada.texto, 220);
       this.mostrarConAnimacion();
     }
   }

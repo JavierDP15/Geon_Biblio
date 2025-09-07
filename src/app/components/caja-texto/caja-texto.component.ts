@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Ayuda } from 'src/app/services/ayuda/ayuda.service';
 import { Tutorial } from 'src/app/services/tutorial/tutorial.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { Tutorial } from 'src/app/services/tutorial/tutorial.service';
   imports: [CommonModule]
 })
 export class CajaTextoComponent  implements OnInit {
-  @Input() tutorial: Tutorial | null = null;
+  @Input() entrada: Tutorial | Ayuda | null = null;
   @Output() cerrar = new EventEmitter<void>();
 
   paginas: string[] = [];
@@ -25,8 +26,8 @@ export class CajaTextoComponent  implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    if (this.tutorial?.mensaje) {
-      this.paginarTexto(this.tutorial.mensaje, 200);
+    if (this.entrada?.texto) {
+      this.paginarTexto(this.entrada.texto, 200);
       this.mostrarConAnimacion();
     }
   }

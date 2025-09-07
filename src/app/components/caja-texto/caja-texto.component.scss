@@ -5,11 +5,17 @@
 
 .fondo {
     position: fixed;
-    top: 0;
-    left: 0;
+    // top: 0;
+    // left: 0;
+    inset: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 990;
+
+    z-index: 2000;
+
+    pointer-events: auto;
+
+    transform: none !important;
 
     .caja {
 
@@ -24,7 +30,7 @@
 
         transform: translateY(-50%);
 
-        z-index: 993;
+        z-index: 2000;
 
         .fondo-dialogo {
             position: absolute;

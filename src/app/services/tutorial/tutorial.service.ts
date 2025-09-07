@@ -5,12 +5,10 @@ import { firstValueFrom } from 'rxjs';
 
 export interface Tutorial {
   pagina: string;
-  paso: number,
-  mensaje: string;
-  otrosDatos: {
-    foto: string,
-    nombre: string
-  }
+  paso: number;
+  texto: string;
+  foto: string;
+  nombre: string;
 }
 
 @Injectable({
@@ -35,21 +33,6 @@ export class TutorialService {
       await this.init();
     }
   }
-
-  // async mostrarTutorial(pagina: string, numero: number): Promise<Tutorial | null> {
-  //   await this.ready();
-
-
-  //   const clave = `tutorial_${pagina}_${numero}`;
-  //   const yaVisto = await this.storage.get(clave);
-
-  //   const tutorial = this.tutoriales.find(t => t.pagina === pagina && Number(t.paso) === numero) || null;
-
-  //   if (!yaVisto && tutorial) {
-  //     await this.storage.set(clave, true);
-  //   }
-  //   return tutorial ? { ...tutorial } : null;
-  // }
 
   async mostrarTutorial(pagina: string): Promise<Tutorial[] | null> {
     await this.ready();
@@ -83,9 +66,4 @@ export class TutorialService {
       await this.storage.remove(key);
     }
   }
-
-  // Esto resetea todo el storage
-  // async resetTodos() {
-  //   await this.storage.clear();
-  // }
 }

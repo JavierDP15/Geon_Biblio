@@ -1,3 +1,26 @@
 <div class="ayuda">
   <img (click)="mostrarAyuda()" class="icono-ayuda" src="assets/iconos/ayuda.png"/>
 </div>
+
+<div *ngIf="pasoAyuda >= 1 && ayudaSeleccionada.length > 0" class="fondo-blur"></div>
+
+<div *ngIf="pasoAyuda >= 1 && ayudaSeleccionada.length > 0" class="mostrando">
+  <ng-container
+    *ngFor="
+      let paso of (ayudaSeleccionada | slice:(pasoAyuda - 1):pasoAyuda);
+      trackBy: trackByPaso
+    "
+  >
+    <app-dialogo
+      *ngIf="paso.nombre?.trim()"
+      [entrada]="paso"
+      (cerrar)="onCerrarPaso()">
+    </app-dialogo>
+
+    <app-caja-texto
+      *ngIf="!paso.nombre?.trim()"
+      [entrada]="paso"
+      (cerrar)="onCerrarPaso()">
+    </app-caja-texto>
+  </ng-container>
+</div>
