@@ -9,7 +9,7 @@
         <img class="icono" [src]="entrada.otrosDatos.imagen">
         <div class="nombre">{{ entrada.nombre }}</div>
         <div class="subtitulo">{{ entrada.otrosDatos.subtitulo }}</div>
-        <div class="texto">{{ entrada.descripcion }}</div>
+        <div class="texto" [innerHTML]="entrada.descripcion"></div>
     </div>
     
 </ion-content>
