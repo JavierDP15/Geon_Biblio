@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true" [scrollY]="false">
   
   <div class="constelaciones">
-    <div class="constelacion abacu" (click)="abacu()">
+    <div class="constelacion abacu arriba" (click)="abacu()">
       <img class="estrellas" src="assets/img/constelaciones/abacu/abacu_estrellas.png"/>
       <img *ngIf="mostrarAbacu" class="icono" src="assets/img/constelaciones/abacu/abacu_icono.png"/>
       <svg class="lineas" viewBox="0 0 100 100" preserveAspectRatio="xMidyMid meet">
@@ -14,7 +14,7 @@
       <span class="nombre">Ábacu</span>
     </div>
 
-    <div class="constelacion virnut" (click)="virnut()">
+    <div class="constelacion virnut abajo" (click)="virnut()">
       <img class="estrellas" src="assets/img/constelaciones/virnut/virnut_estrellas.png"/>
       <img *ngIf="mostrarVirnut" class="icono" src="assets/img/constelaciones/virnut/virnut_icono.png"/>
       <svg class="lineas" viewBox="0 0 100 100" preserveAspectRatio="xMidyMid meet">

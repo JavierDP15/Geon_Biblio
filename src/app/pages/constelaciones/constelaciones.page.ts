@@ -66,9 +66,9 @@ export class ConstelacionesPage implements OnInit {
 
   abacu() {
     if (this.isAnimating) return;
-    this.isAnimating = true;
-
+    
     if (!this.mostrarAbacu) {
+      this.isAnimating = true;
       this.ocultarSVGAbacu = !this.ocultarSVGAbacu;
       for (let i = 0; i < this.lineasAbacu; i++) {
         setTimeout(() => {
@@ -80,16 +80,14 @@ export class ConstelacionesPage implements OnInit {
         this.geonesService.setDescubierto('abacu', true);
         this.isAnimating = false;
       }, 500 * this.lineasAbacu);
-    } else {
-      // this.router.navigate(['/geon', 'abacu']);
     }
   }
 
   virnut() {
     if (this.isAnimating) return;
-    this.isAnimating = true;
-
+    
     if (!this.mostrarVirnut) {
+      this.isAnimating = true;
       this.ocultarSVGVirnut = !this.ocultarSVGVirnut;
       for (let i = 0; i < this.lineasVirnut; i++) {
         setTimeout(() => {
@@ -101,8 +99,6 @@ export class ConstelacionesPage implements OnInit {
         this.geonesService.setDescubierto('virnut', true);
         this.isAnimating = false;
       }, 500 * this.lineasVirnut);
-    } else {
-
     }
   }
 }
