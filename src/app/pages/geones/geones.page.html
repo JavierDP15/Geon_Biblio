@@ -4,7 +4,7 @@
 
   <img 
     class="imagen-fondo"
-    src="assets/fondos/fondo_categoria.jpg"
+    src="assets/fondos/fondo_geones.jpg"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: top;"
     />
     <!-- (load)="onImagenCargada()"
@@ -19,7 +19,11 @@
       <div class="boton"><span>Apotheosis</span></div>
       <div class="boton"><span class="manifestaciones">Otras<br>Manifestaciones</span></div>
     </div>
-    <div class="toggle" [class.flechaArriba]="botonesVisibles" [class.flechaAbajo]="!botonesVisibles" (click)="toggleBotones()"></div>
+    <div class="cuerpoMenu">
+      <img class="toggle" src="assets/img/boton_menu.png" [class.flechaArriba]="botonesVisibles" [class.flechaAbajo]="!botonesVisibles" (click)="toggleBotones()"/>
+      <span class="menu" [class.menuArriba]="botonesVisibles" [class.menuAbajo]="!botonesVisibles">Menú</span>
+    </div>
+    <!-- <div class="toggle" [class.flechaArriba]="botonesVisibles" [class.flechaAbajo]="!botonesVisibles" (click)="toggleBotones()"></div> -->
   </div>
   <div *ngIf="mostrarCuerpo" class="opciones aparecer">
     <div class="atras">

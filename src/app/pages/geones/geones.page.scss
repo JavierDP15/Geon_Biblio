@@ -1,33 +1,6 @@
 ion-content {
-    --background: #c4b48c;
+    // --background: #c4b48c;
 }
-
-// .backgroundFallback {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background: #000;
-//     z-index: 0;
-// }
-
-// .imagen-fondo {
-//     position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-//   object-position: top;
-//   opacity: 0;
-//   transition: opacity 1s ease-in;
-//   z-index: 0;
-// }
-
-// .imagen-fondo.loaded {
-//     opacity: 1;
-// }
 
 .cuerpo {
     display: grid;
@@ -45,15 +18,12 @@ ion-content {
     padding-right: 8vw;
     padding-bottom: 4vh;
 
-    // opacity: 0;
-    // transition: opacity 1s ease-in;
-
     &.expandido {
         grid-template-rows: 1fr 5fr;
     }
 
     .geones {
-        background-image: url('/assets/img/panel_categoria.png');
+        background-image: url('/assets/img/titulo_geones.png');
         background-color: transparent;
         background-size: contain;
         background-repeat: no-repeat;
@@ -67,7 +37,7 @@ ion-content {
         
         z-index: 1;
         
-        font-family: 'Aladin', sans-serif;
+        font-family: 'fantaisie', sans-serif;
         font-size: 9vh;
         color: white;
         
@@ -76,13 +46,14 @@ ion-content {
 
     .texto {
         white-space: pre-line;
-        height: 260%;
+        height: 50vh;
+        // height: 260%;
         overflow-y: auto;
         font-size: 1.1rem;
-        font-family: 'Amiri';
-        color: black;
-        line-height: 1.2;
-        transform: translateY(18vh);
+        font-family: 'Aladin';
+        color: white;
+        // line-height: 1.2;
+        transform: translateY(3vh);
 
         clip-path: inset(0 0 100% 0);
         transition: clip-path 0.4s ease;
@@ -100,22 +71,23 @@ ion-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        row-gap: 5vh;
+        // row-gap: 5vh;
         align-items: center;
         justify-content: center;
         
         .boton {
-            background-image: url('/assets/img/boton_interior.png');
+            background-image: url('/assets/img/cuadro_nombre_personaje.png');
             background-color: transparent;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
             
-            height: 20vh;
+            height: 30vh;
+            width: 100%;
             
             text-align: center;
             font-size: 1.5rem;
-            font-family: 'Immortal', serif;
+            font-family: 'fantaisie', serif;
             color: white;
             
             display: flex;
@@ -128,8 +100,8 @@ ion-content {
             
             .manifestaciones {
                 display: inline-block;
-                margin-top: -2.5%;
-                line-height: 1;
+                // margin-top: -0.5%;
+                line-height: 0.9;
             }
         }
     }
@@ -141,24 +113,45 @@ ion-content {
     .botones.mostrar {
         animation: subirBotones 0.4s forwards;
     }
-    
-    .toggle {
-        position: fixed;
-        top: 90%;
+
+    .cuerpoMenu {
+        position: absolute;
+        top: 75%;
         left: 50%;
-        transform: translateX(-50%) translateY(0);
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-bottom: 15px solid white;
-        transition: transform 0.4 ease;
-    }
-    
-    .toggle.flechaArriba {
-        animation: subirFlecha 0.4s forwards;
-    }
-    
-    .toggle.flechaAbajo {
-        animation: bajarFlecha 0.4s forwards;
+        transform: translateX(-50%) translateY(0);;
+        display: flex;
+        justify-content: center;
+
+        .menu {
+            position: absolute;
+            top: 80%;
+            left: 100;
+
+            color: white;
+            font-family: 'aladin', serif;
+            font-size: 1.1rem;
+        }
+
+        .toggle {
+            width: 30%;
+            transition: transform 0.4 ease;
+        }
+        
+        .toggle.flechaArriba {
+            animation: subirFlecha 0.4s forwards;
+        }
+        
+        .toggle.flechaAbajo {
+            animation: bajarFlecha 0.4s forwards;
+        }
+
+        .menu.menuArriba {
+            animation: subirMenu 0.4s forwards;
+        }
+
+        .menu.menuAbajo {
+            animation: bajarMenu 0.4s forwards;
+        }
     }
 }
 
@@ -198,37 +191,43 @@ ion-content {
 
 @keyframes bajarBotones {
     0% {
-        transform: translateY(0px);
+        transform: translateY(-70%);
     }
     100% {
-        transform: translateY(200px);
+        transform: translateY(70%);
     }
 }
 
 @keyframes subirBotones {
     0% {
-        transform: translateY(200px);
+        transform: translateY(70%);
+        // transform: translateY(300px);
     }
     100% {
-        transform: translateY(0px);
+        // transform: translateY(0px);
+        transform: translateY(-70%);
     }
 }
 
 @keyframes subirFlecha {
     0% {
-        transform: translateX(-50%) translateY(0) rotateZ(0deg);
+        transform: translateY(0) rotateZ(0deg);
+        // transform: translateX(-50%) translateY(0) rotateZ(0deg);
     }
     100% {
-        transform: translateX(-50%) translateY(-45vh) rotateZ(180deg);
+        transform: translateY(-40vh) rotateZ(180deg);
+        // transform: translateX(-50%) translateY(-45vh) rotateZ(180deg);
     }
 }
 
 @keyframes bajarFlecha {
     0% {
-        transform: translateX(-50%) translateY(-45vh) rotateZ(180deg);
+        transform: translateY(-40vh) rotateZ(180deg);
+        // transform: translateX(-50%) translateY(-45vh) rotateZ(180deg);
     }
     100% {
-        transform: translateX(-50%) translateY(0px) rotateZ(0deg);
+        transform: translateY(0px) rotateZ(0deg);
+        // transform: translateX(-50%) translateY(0px) rotateZ(0deg);
     }
 }
 
@@ -247,5 +246,36 @@ ion-content {
     }
     100% {
         clip-path: inset(0 0 100% 0);
+    }
+}
+
+@keyframes subirMenu {
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    1% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-55vh);
+    }
+}
+
+@keyframes bajarMenu {
+    0%{
+        transform: translateY(-55vh);
+    }
+    1% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0);
     }
 }
