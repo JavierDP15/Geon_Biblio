@@ -129,6 +129,62 @@ ion-content {
                 animation: dibujar 1s linear forwards;
             }
 
+            //////////////////////////////////////// Caal
+
+            .trazo1Ca {
+                stroke: white;
+                stroke-width: 0.5;
+                stroke-linecap: round;
+                stroke-dasharray: 100;
+                stroke-dashoffset: 100;
+                animation: dibujar 1.5s linear forwards;
+            }
+
+            .trazo2Ca {
+                stroke: white;
+                stroke-width: 0.5;
+                stroke-linecap: round;
+                stroke-dasharray: 100;
+                stroke-dashoffset: 100;
+                animation: dibujar 1s linear forwards;
+            }
+
+            .trazo3Ca {
+                stroke: white;
+                stroke-width: 0.5;
+                stroke-linecap: round;
+                stroke-dasharray: 100;
+                stroke-dashoffset: 100;
+                animation: dibujar 1s linear forwards;
+            }
+
+            .trazo4Ca {
+                stroke: white;
+                stroke-width: 0.5;
+                stroke-linecap: round;
+                stroke-dasharray: 100;
+                stroke-dashoffset: 100;
+                animation: dibujar 0.9s linear forwards;
+            }
+
+            .trazo5Ca {
+                stroke: white;
+                stroke-width: 0.5;
+                stroke-linecap: round;
+                stroke-dasharray: 100;
+                stroke-dashoffset: 100;
+                animation: dibujar 1s linear forwards;
+            }
+
+            .trazo6Ca {
+                stroke: white;
+                stroke-width: 0.5;
+                stroke-linecap: round;
+                stroke-dasharray: 100;
+                stroke-dashoffset: 100;
+                animation: dibujar 1s linear forwards;
+            }
+
             @keyframes dibujar {
                 to {
                     stroke-dashoffset: 0;

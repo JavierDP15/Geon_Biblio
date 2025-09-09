@@ -28,6 +28,20 @@
       <img *ngIf="mostrarVirnut" (click)="irA('virnut')" class="completa" src="assets/img/constelaciones/virnut/virnut_constelacion.png"/>
       <span class="nombre">Virnut</span>
     </div>
+
+    <div class="constelacion caal arriba" (click)="caal()">
+      <img class="estrellas" src="assets/img/constelaciones/caal/caal_estrellas.png"/>
+      <img *ngIf="mostrarCaal" class="icono" src="assets/img/constelaciones/caal/caal_icono.png"/>
+      <svg class="lineas" viewBox="0 0 100 100" preserveAspectRatio="xMidyMid meet">
+        <line *ngIf="pasoCaal >= 1 && !ocultarSVGCaal" x1="16.5%" y1="52%" x2="14.8%" y2="19%" class="trazo1Ca"/>
+        <line *ngIf="pasoCaal >= 2 && !ocultarSVGCaal" x1="14.8%" y1="19%" x2="55%" y2="40.6%" class="trazo2Ca"/>
+        <line *ngIf="pasoCaal >= 3 && !ocultarSVGCaal" x1="56%" y1="41.6%" x2="13.9%" y2="67.6%" class="trazo3Ca"/>
+        <line *ngIf="pasoCaal >= 4 && !ocultarSVGCaal" x1="13.9%" y1="67.6%" x2="66%" y2="86.9%" class="trazo4Ca"/>
+        <line *ngIf="pasoCaal >= 5 && !ocultarSVGCaal" x1="66%" y1="86.9%" x2="83.6%" y2="9.5%" class="trazo5Ca"/>
+      </svg>
+      <img *ngIf="mostrarCaal" (click)="irA('caal')" class="completa" src="assets/img/constelaciones/caal/caal_constelacion.png"/>
+      <span class="nombre">Caal</span>
+    </div>
   </div>
   
   <img 

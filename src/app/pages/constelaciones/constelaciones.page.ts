@@ -39,6 +39,11 @@ export class ConstelacionesPage implements OnInit {
   ocultarSVGVirnut = true;
   private lineasVirnut = 6;
 
+  mostrarCaal = false;
+  pasoCaal = 0;
+  ocultarSVGCaal = true;
+  private lineasCaal = 6;
+
   constructor(
       private geonesService: GeonesService
     , private musicaService: MusicaService
@@ -56,6 +61,10 @@ export class ConstelacionesPage implements OnInit {
     }
 
     if (this.geonesService.getDescubierto('virnut')) {
+      this.mostrarVirnut = true;
+    }
+
+    if (this.geonesService.getDescubierto('caal')) {
       this.mostrarVirnut = true;
     }
   }
@@ -99,6 +108,25 @@ export class ConstelacionesPage implements OnInit {
         this.geonesService.setDescubierto('virnut', true);
         this.isAnimating = false;
       }, 500 * this.lineasVirnut);
+    }
+  }
+
+  caal() {
+    if (this.isAnimating) return;
+    
+    if (!this.mostrarCaal) {
+      this.isAnimating = true;
+      this.ocultarSVGCaal = !this.ocultarSVGCaal;
+      for (let i = 0; i < this.lineasCaal; i++) {
+        setTimeout(() => {
+          this.pasoCaal++;
+        }, i * 500);
+      }
+      setTimeout(() => {
+        this.mostrarCaal = !this.mostrarCaal
+        this.geonesService.setDescubierto('caal', true);
+        this.isAnimating = false;
+      }, 500 * this.lineasCaal);
     }
   }
 }

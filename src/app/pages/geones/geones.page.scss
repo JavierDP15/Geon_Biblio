@@ -46,13 +46,13 @@ ion-content {
 
     .texto {
         white-space: pre-line;
-        height: 50vh;
+        height: 45vh;
         // height: 260%;
         overflow-y: auto;
         font-size: 1.1rem;
-        font-family: 'Aladin';
+        font-family: 'amiri';
         color: white;
-        // line-height: 1.2;
+        line-height: 1.2;
         transform: translateY(3vh);
 
         clip-path: inset(0 0 100% 0);
@@ -87,7 +87,7 @@ ion-content {
             
             text-align: center;
             font-size: 1.5rem;
-            font-family: 'fantaisie', serif;
+            font-family: 'immortal', serif;
             color: white;
             
             display: flex;
@@ -101,7 +101,7 @@ ion-content {
             .manifestaciones {
                 display: inline-block;
                 // margin-top: -0.5%;
-                line-height: 0.9;
+                line-height: 0.8;
             }
         }
     }
