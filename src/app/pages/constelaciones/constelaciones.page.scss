@@ -5,17 +5,27 @@ ion-content {
 .constelaciones {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    // column-gap: 1vw;
+
+    padding-top: 11vh;
+    padding-bottom: 5vh;
 
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
+
+    overflow-x: auto;
+    overflow-y: hidden;
 
     .constelacion {
         position: relative;
+        flex: 0 0 30vw;
+        min-width: 250px;
+        aspect-ratio: 2 / 2;
+        box-sizing: border-box;
 
-        height: 60%;
-        width: 30%;
         z-index: 1;
 
         .estrellas {

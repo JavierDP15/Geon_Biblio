@@ -42,7 +42,7 @@ export class ConstelacionesPage implements OnInit {
   mostrarCaal = false;
   pasoCaal = 0;
   ocultarSVGCaal = true;
-  private lineasCaal = 6;
+  private lineasCaal = 5;
 
   constructor(
       private geonesService: GeonesService
@@ -55,18 +55,24 @@ export class ConstelacionesPage implements OnInit {
   ionViewWillEnter() {
     this.musicaService.play('caves-of-dawn');
     this.geonesService.resetDescubierto('virnut');
+    this.geonesService.resetDescubierto('abacu');
 
     if (this.geonesService.getDescubierto('abacu')) {
       this.mostrarAbacu = true;
     }
 
     if (this.geonesService.getDescubierto('virnut')) {
+      console.log('Ayuyu');
       this.mostrarVirnut = true;
     }
 
     if (this.geonesService.getDescubierto('caal')) {
       this.mostrarVirnut = true;
     }
+
+    console.log(this.mostrarAbacu);
+    console.log(this.mostrarVirnut);
+    console.log(this.mostrarCaal);
   }
 
   irA(geonSeleccionado: string) {
@@ -126,7 +132,7 @@ export class ConstelacionesPage implements OnInit {
         this.mostrarCaal = !this.mostrarCaal
         this.geonesService.setDescubierto('caal', true);
         this.isAnimating = false;
-      }, 500 * this.lineasCaal);
+      }, 600 * this.lineasCaal);
     }
   }
 }
