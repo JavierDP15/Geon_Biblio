@@ -36,7 +36,8 @@
 
   <div *ngIf="mostrarCuerpo" class="cuerpo" [class.desvanecer]="currentStep === 3">
     <button class="archivo" [class.blur-background]="tutorial">Archivo</button>
-    <div class="botones-scroll">
+    <div class="flecha flecha-arriba" *ngIf="puedesScrollArriba">▲</div>
+    <div class="botones-scroll" (scroll)="onScroll($event)">
       <div class="botones">
         <div class="fila-botones" [class.blur-background]="tutorial && tutorialStep !== 2" [class.tutorial-resaltar-grande]="tutorialStep === 2">
           <div class="boton">
@@ -84,6 +85,7 @@
         </div>
       </div>
     </div>
+    <div class="flecha flecha-abajo" *ngIf="puedesScrollAbajo">▼</div>
   </div>
 
   <div *ngIf="mostrarCuerpo" class="opciones" [class.desvanecer]="currentStep === 3">

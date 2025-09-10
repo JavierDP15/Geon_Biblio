@@ -38,6 +38,8 @@ export class ArchivoPage implements OnInit {
 
   currentStep = 1;
   mostrarCuerpo = false;
+  puedesScrollArriba = false;
+  puedesScrollAbajo = true;
 
   tutorial: Tutorial[] | null = null;
   tutorialStep = 1;
@@ -197,5 +199,11 @@ export class ArchivoPage implements OnInit {
     if (this.currentStep !== 3) return;
     this.videoCat.nativeElement.currentTime = 0;
     this.router.navigate(['/' + this.navegarA]);
+  }
+
+  onScroll(event: any) {
+    const el = event.target;
+    this.puedesScrollArriba = el.scrollTop > 0;
+    this.puedesScrollAbajo = el.scrollTop + el.clientHeight < el.scrollHeight;
   }
 }

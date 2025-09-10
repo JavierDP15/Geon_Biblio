@@ -58,6 +58,26 @@ video.active, img.active {
         padding-top: 2px;
     }
 
+    .flecha-arriba {
+        color: black;
+        position: absolute;
+        top: 60%;
+        left: 82%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        z-index: 2;
+    }
+
+    .flecha-abajo {
+        color: black;
+        position: absolute;
+        top: 70%;
+        left: 82%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        z-index: 2;
+    }
+
     .botones-scroll {
 
         height: 55vh;
