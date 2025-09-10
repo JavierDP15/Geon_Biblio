@@ -18,10 +18,10 @@ import { AudioService } from 'src/app/services/audio/audio.service';
 export class IntroPage implements OnInit {
 
   @ViewChild('video1') introVideo1!: ElementRef<HTMLVideoElement>;
+  @ViewChild('video2') introVideo2!: ElementRef<HTMLVideoElement>;
 
   showVideo1 = true;
-  
-  // musica1!: Howl;
+  showVideo2 = false;
   
   showStartButton = false;
 
@@ -37,26 +37,22 @@ export class IntroPage implements OnInit {
     } else {
       this.startIntro();
     }
-
-    // this.musica1 = new Howl ({
-    //   src: ['assets/audios/magical-twinkle.mp3'],
-    //   volume: 1
-    // });
   }
 
   startIntro() {
     this.showStartButton = false;
     this.showVideo1 = true;
-
-    // setTimeout(() => {
-    //   this.introVideo1.nativeElement.play();
-    //   this.musica1.play();
-    // }, 100);
   }
 
   onVideoEnded() {
-    // this.musica1.stop();
-    this.router.navigate(['/inicio']);
-    // this.router.navigate(['/inicio']);
+    if(this.showVideo1) {
+      this.showVideo1 = false;
+      this.showVideo2 = true;
+    } else {
+      this.showVideo2 = false;
+      setTimeout(() => {
+        this.router.navigate(['/inicio']);
+      }, 2000)
+    }
   }
 }

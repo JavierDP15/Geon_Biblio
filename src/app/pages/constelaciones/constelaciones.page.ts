@@ -62,17 +62,12 @@ export class ConstelacionesPage implements OnInit {
     }
 
     if (this.geonesService.getDescubierto('virnut')) {
-      console.log('Ayuyu');
       this.mostrarVirnut = true;
     }
 
     if (this.geonesService.getDescubierto('caal')) {
-      this.mostrarVirnut = true;
+      this.mostrarCaal = true;
     }
-
-    console.log(this.mostrarAbacu);
-    console.log(this.mostrarVirnut);
-    console.log(this.mostrarCaal);
   }
 
   irA(geonSeleccionado: string) {
