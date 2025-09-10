@@ -36,27 +36,51 @@
 
   <div *ngIf="mostrarCuerpo" class="cuerpo" [class.desvanecer]="currentStep === 3">
     <button class="archivo" [class.blur-background]="tutorial">Archivo</button>
-    <div class="botones">
-      <div class="fila-botones" [class.blur-background]="tutorial && tutorialStep !== 2" [class.tutorial-resaltar-grande]="tutorialStep === 2">
-        <div class="boton">
-          <img class="icono-boton" src="assets/iconos/geografia.png">
-          <button class="boton">Geografía</button>
+    <div class="botones-scroll">
+      <div class="botones">
+        <div class="fila-botones" [class.blur-background]="tutorial && tutorialStep !== 2" [class.tutorial-resaltar-grande]="tutorialStep === 2">
+          <div class="boton">
+            <img class="icono-boton" src="assets/iconos/geografia.png">
+            <button class="boton">Geografía</button>
+          </div>
+          <div></div>
+          <div class="boton">
+            <img class="icono-boton" src="assets/iconos/geones.png">
+            <button class="boton" (click)="irA('geones')">Geones</button>
+          </div>
         </div>
-        <div></div>
-        <div class="boton">
-          <img class="icono-boton" src="assets/iconos/geones.png">
-          <button class="boton" (click)="irA('geones')">Geones</button>
+        <div class="fila-botones" [class.blur-background]="tutorial">
+          <div class="boton">
+            <img class="icono-boton" src="assets/iconos/magia.png">
+            <button class="boton">Magia</button>
+          </div>
+          <div></div>
+          <div class="boton">
+            <img class="icono-boton" src="assets/iconos/ferhel.png">
+            <button class="boton">Ferhel</button>
+          </div>
         </div>
-      </div>
-      <div class="fila-botones" [class.blur-background]="tutorial">
-        <div class="boton">
-          <img class="icono-boton" src="assets/iconos/magia.png">
-          <button class="boton">Magia</button>
+        <div class="fila-botones" [class.blur-background]="tutorial">
+          <div class="boton">
+            <img class="icono-boton" src="assets/iconos/astral.png">
+            <button class="boton">Astral</button>
+          </div>
+          <div></div>
+          <div class="boton">
+            <img class="icono-boton" src="assets/iconos/sociedad.png">
+            <button class="boton">Sociedad</button>
+          </div>
         </div>
-        <div></div>
-        <div class="boton">
-          <img class="icono-boton" src="assets/iconos/ferhel.png">
-          <button class="boton">Ferhel</button>
+        <div class="fila-botones" [class.blur-background]="tutorial">
+          <div class="boton">
+            <img class="icono-boton" src="assets/iconos/baluartes.png">
+            <button class="boton">Baluartes</button>
+          </div>
+          <div></div>
+          <div class="boton">
+            <img class="icono-boton" src="assets/iconos/inmortales.png">
+            <button class="boton">Inmortales</button>
+          </div>
         </div>
       </div>
     </div>

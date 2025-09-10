@@ -47,6 +47,8 @@ video.active, img.active {
         width: 35%;
         height: 25%;
 
+        // aspect-ratio: 1 / 3;
+
         z-index: 1;
 
         font-family: 'Immortal', sans-serif;
@@ -56,71 +58,87 @@ video.active, img.active {
         padding-top: 2px;
     }
 
-    .botones {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10%;
+    .botones-scroll {
 
-        font-family: 'Aladin', sans-serif;
-
+        height: 55vh;
         width: 100%;
-        height: 50%;
+        overflow-y: auto !important;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;
+        display: block;
+        // justify-content: center;
+        flex: 0 0 auto;
+        padding-top: 5vh;
 
-        .fila-botones {
-            background-image: url('/assets/img/boton_doble.png');
-            background-color: transparent;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 60%;
-            height: 100%;
-            // position: relative;
+        .botones {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4vh;
+    
+            font-family: 'Aladin', sans-serif;
+    
+            width: 100%;
 
-            display: grid;
-            grid-template-columns: 4fr 1fr 4fr;
+            min-height: max-content;
+            box-sizing: border-box;
+    
+            .fila-botones {
+                background-image: url('/assets/img/boton_doble.png');
+                background-color: transparent;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
 
-            padding-left: 5%;
-            padding-right: 5%;
-            // padding-left: 22%;
-            // padding-right: 22%;
-            
-            z-index: 1;
-            
-            .icono-boton {
-                position: absolute;
-                transform: translate(-50%, -50%);
-                top: 5%;
-                left: 50%;
-
-                // width: 80px;
-                width: 30%;
-                height: auto;
-
-                opacity: 1;
-            }
-
-            .boton {
+                width: 60%;
+                height: 25vh;
+    
+                display: grid;
+                grid-template-columns: 4fr 1fr 4fr;
+    
+                padding-left: 5%;
+                padding-right: 5%;
                 position: relative;
+                box-sizing: border-box;
+                flex: 0 0 auto;
+                scroll-snap-align: start;
+                
+                z-index: 1;
+                
+                .icono-boton {
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    top: 5%;
+                    left: 50%;
+    
+                    width: 40%;
+                    height: auto;
+    
+                    opacity: 1;
+                }
+    
+                .boton {
+                    position: relative;
+                }
+                
+                button {
+                    background: none;
+                    border: none;
+        
+                    padding-top: 3px;
+        
+                    font-size: 8vh;
+                    color: white;
+        
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+    
+                }
+    
             }
-            
-            button {
-                background: none;
-                border: none;
-    
-                padding-top: 3px;
-    
-                font-size: 8vh;
-                color: white;
-    
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-
-            }
-
         }
     }
 }
