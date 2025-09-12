@@ -44,6 +44,11 @@ export class ConstelacionesPage implements OnInit {
   ocultarSVGCaal = true;
   private lineasCaal = 5;
 
+  mostrarDyshiba = false;
+  pasoDyshiba = 0;
+  ocultarSVGDyshiba = true;
+  private lineasDyshiba = 8;
+
   constructor(
       private geonesService: GeonesService
     , private musicaService: MusicaService
@@ -56,6 +61,7 @@ export class ConstelacionesPage implements OnInit {
     this.musicaService.play('caves-of-dawn');
     this.geonesService.resetDescubierto('virnut');
     this.geonesService.resetDescubierto('abacu');
+    this.geonesService.resetDescubierto('dyshiba');
 
     if (this.geonesService.getDescubierto('abacu')) {
       this.mostrarAbacu = true;
@@ -67,6 +73,10 @@ export class ConstelacionesPage implements OnInit {
 
     if (this.geonesService.getDescubierto('caal')) {
       this.mostrarCaal = true;
+    }
+
+    if (this.geonesService.getDescubierto('dyshiba')) {
+      this.mostrarDyshiba = true;
     }
   }
 
@@ -128,6 +138,25 @@ export class ConstelacionesPage implements OnInit {
         this.geonesService.setDescubierto('caal', true);
         this.isAnimating = false;
       }, 600 * this.lineasCaal);
+    }
+  }
+
+  dyshiba() {
+    if (this.isAnimating) return;
+    
+    if (!this.mostrarDyshiba) {
+      this.isAnimating = true;
+      this.ocultarSVGDyshiba = !this.ocultarSVGDyshiba;
+      for (let i = 0; i < this.lineasDyshiba; i++) {
+        setTimeout(() => {
+          this.pasoDyshiba++;
+        }, i * 400);
+      }
+      setTimeout(() => {
+        this.mostrarDyshiba = !this.mostrarDyshiba
+        this.geonesService.setDescubierto('dyshiba', true);
+        this.isAnimating = false;
+      }, 400 * this.lineasDyshiba);
     }
   }
 }
