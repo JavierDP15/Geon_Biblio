@@ -2,12 +2,16 @@ ion-content {
     --background: #c4b48c;
 }
 
+.imagen-fondo {
+    pointer-events: none;
+}
+
 .cuerpo {
     margin-top: 8%;
-    margin-bottom: 8%;
+    // margin-bottom: 8%;
 
     width: 100%;
-    max-height: calc(100vh - 30%);
+    max-height: calc(100vh - 20%);
     flex: 1 1 auto;
     overflow-y: auto;
 

@@ -231,8 +231,9 @@ ion-content {
             top: 95%;
             left: 50%;
             color: white;
-            // transform: translate(-50%, -50%);
+            width: 100%;
             transform: translateX(-50%);
+            text-align: center;
 
             font-family: 'Aladin', serif;
             font-size: 2rem;
@@ -262,7 +263,7 @@ ion-content {
     }
 
     .arriba {
-        margin-bottom: 10vh;
+        margin-bottom: 5vh;
     }
 
     .abajo {
