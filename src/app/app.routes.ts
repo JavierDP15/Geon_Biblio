@@ -33,6 +33,14 @@ export const routes: Routes = [
   {
     path: 'entrada-geon/:geon',
     loadComponent: () => import('./pages/entrada-geon/entrada-geon.page').then( m => m.EntradaGeonPage)
+  },  {
+    path: 'geografia',
+    loadComponent: () => import('./pages/geografia/geografia.page').then( m => m.GeografiaPage)
   },
+  {
+    path: 'territorios',
+    loadComponent: () => import('./pages/territorios/territorios.page').then( m => m.TerritoriosPage)
+  },
+
 
 ];

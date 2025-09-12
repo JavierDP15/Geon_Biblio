@@ -88,6 +88,7 @@ export class MusicaService {
   }
 
   reproducirSonido(ruta: string, volumen: number = 1.2) {
+    if (this.silenciado) return;
     const sonido = new Howl({
       src: [ruta],
       volume: volumen

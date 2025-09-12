@@ -42,7 +42,7 @@
         <div class="fila-botones" [class.blur-background]="tutorial && tutorialStep !== 2" [class.tutorial-resaltar-grande]="tutorialStep === 2">
           <div class="boton">
             <img class="icono-boton" src="assets/iconos/geografia.png">
-            <button class="boton">Geografía</button>
+            <button class="boton" (click)="irA('geografia')">Geografía</button>
           </div>
           <div></div>
           <div class="boton">

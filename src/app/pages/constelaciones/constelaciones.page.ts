@@ -61,6 +61,7 @@ export class ConstelacionesPage implements OnInit {
     this.musicaService.play('caves-of-dawn');
     this.geonesService.resetDescubierto('virnut');
     this.geonesService.resetDescubierto('abacu');
+    this.geonesService.resetDescubierto('caal');
     this.geonesService.resetDescubierto('dyshiba');
 
     if (this.geonesService.getDescubierto('abacu')) {
