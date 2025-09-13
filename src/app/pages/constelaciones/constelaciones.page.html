@@ -67,14 +67,8 @@
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; z-index: 0;"
   />
   <div class="opciones aparecer">
-    <div class="atras">
-      <app-atras [pagina]="'geones'"></app-atras>
-    </div>
-    <div class="sonido">
-      <app-musica></app-musica>
-    </div>
-    <div class="ayuda">
-      <app-ayuda [pagina]="'constelaciones'"></app-ayuda>
-    </div>
+    <app-atras [pagina]="'geones'"></app-atras>
+    <app-musica></app-musica>
+    <app-ayuda [pagina]="'constelaciones'"></app-ayuda>
   </div>
 </ion-content>

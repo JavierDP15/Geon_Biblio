@@ -56,26 +56,3 @@ ion-content {
         z-index: 2;
     }
 }
-
-.opciones {
-
-    z-index: 1500;
-    
-    .sonido {
-        position: fixed;
-        top: 7%;
-        left: 91%;
-    }
-    
-    .ayuda {
-        position: fixed;
-        top: 7%;
-        left: 84%;
-    }
-    
-    .atras {
-        position: fixed;
-        top: 7%;
-        left: 5%;
-    }
-}

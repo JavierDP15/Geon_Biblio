@@ -88,14 +88,20 @@
     <div class="flecha flecha-abajo" *ngIf="puedesScrollAbajo">▼</div>
   </div>
 
-  <div *ngIf="mostrarCuerpo" class="opciones" [class.desvanecer]="currentStep === 3">
-    <div class="atras" [class.blur-background]="tutorial && tutorialStep !== 3" [class.tutorial-resaltar-pequeño]="tutorialStep === 3">
+  <div *ngIf="mostrarCuerpo && !tutorial" class="opciones">
+      <app-atras [pagina]="'inicio'"></app-atras>
+      <app-musica></app-musica>
+      <app-ayuda [pagina]="'archivo'"></app-ayuda>
+  </div>
+
+  <div *ngIf="mostrarCuerpo" class="opcionesEsp" [class.desvanecer]="currentStep === 3">
+    <div class="atrasEsp" [class.blur-background]="tutorial && tutorialStep !== 3" [class.tutorial-resaltar-pequeño]="tutorialStep === 3">
       <app-atras [pagina]="'inicio'"></app-atras>
     </div>
-    <div class="sonido" [class.blur-background]="tutorial && tutorialStep !== 4" [class.tutorial-resaltar-pequeño]="tutorialStep === 4">
+    <div class="sonidoEsp" [class.blur-background]="tutorial && tutorialStep !== 4" [class.tutorial-resaltar-pequeño]="tutorialStep === 4">
       <app-musica></app-musica>
     </div>
-    <div class="ayuda" [class.blur-background]="tutorial && tutorialStep !== 6" [class.tutorial-resaltar-pequeño]="tutorialStep === 6">
+    <div class="ayudaEsp" [class.blur-background]="tutorial && tutorialStep !== 6" [class.tutorial-resaltar-pequeño]="tutorialStep === 6">
       <app-ayuda [pagina]="'archivo'"></app-ayuda>
     </div>
   </div>

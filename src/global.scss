@@ -32,6 +32,27 @@ ion-content {
     white-space: pre-line;
 }
 
+.opciones {
+    
+    .sonido {
+        position: absolute;
+        top: 7%;
+        left: 91%;
+    }
+    
+    .ayuda {
+        position: absolute;
+        top: 7%;
+        left: 84%;
+    }
+    
+    .atras {
+        position: absolute;
+        top: 7%;
+        left: 5%;
+    }
+}
+
 /* Core CSS required for Ionic components to work properly */
 @import "@ionic/angular/css/core.css";
 
