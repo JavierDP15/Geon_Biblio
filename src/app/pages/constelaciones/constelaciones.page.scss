@@ -47,16 +47,7 @@ ion-content {
 
             ////////////////////////////////////////// Abacu
 
-            .trazo1Ab {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
-                animation: dibujar 1.5s linear forwards;
-            }
-
-            .trazo2Ab {
+            .trazo1Ab, .trazo2Ab {
                 stroke: white;
                 stroke-width: 0.5;
                 stroke-linecap: round;
@@ -94,7 +85,7 @@ ion-content {
                 animation: dibujar 2s linear forwards;
             }
 
-            .trazo2Vi {
+            .trazo2Vi, .trazo5Vi, .trazo6Vi {
                 stroke: white;
                 stroke-width: 0.5;
                 stroke-linecap: round;
@@ -121,24 +112,6 @@ ion-content {
                 animation: dibujar 1.3s linear forwards;
             }
 
-            .trazo5Vi {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
-                animation: dibujar 1s linear forwards;
-            }
-
-            .trazo6Vi {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
-                animation: dibujar 1s linear forwards;
-            }
-
             //////////////////////////////////////// Caal
 
             .trazo1Ca {
@@ -150,16 +123,7 @@ ion-content {
                 animation: dibujar 1.5s linear forwards;
             }
 
-            .trazo2Ca {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
-                animation: dibujar 1s linear forwards;
-            }
-
-            .trazo3Ca {
+            .trazo2Ca, .trazo3Ca, .trazo5Ca {
                 stroke: white;
                 stroke-width: 0.5;
                 stroke-linecap: round;
@@ -175,15 +139,6 @@ ion-content {
                 stroke-dasharray: 100;
                 stroke-dashoffset: 100;
                 animation: dibujar 0.9s linear forwards;
-            }
-
-            .trazo5Ca {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
-                animation: dibujar 1s linear forwards;
             }
 
             //////////////////////////////////////// Dyshiba
@@ -206,16 +161,7 @@ ion-content {
                 animation: dibujar 2.2s linear forwards;
             }
 
-            .trazo3Dy {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
-                animation: dibujar 1.5s linear forwards;
-            }
-
-            .trazo4Dy {
+            .trazo3Dy, .trazo4Dy {
                 stroke: white;
                 stroke-width: 0.5;
                 stroke-linecap: round;
@@ -272,8 +218,6 @@ ion-content {
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-
-            // opacity: 0;
 
             height: 90%;
 

@@ -26,10 +26,12 @@ export class AppComponent {
     if(this.platform.is('android')) {
       this.musicaService.initPista('honor-and-sword');
       this.musicaService.initPista('caves-of-dawn');
+      this.musicaService.initPista('desert-storm');
     } else {
       document.addEventListener('click', () => {
         this.musicaService.initPista('honor-and-sword');
         this.musicaService.initPista('caves-of-dawn');
+        this.musicaService.initPista('desert-storm');
       }, {once: true});
     }
 

@@ -38,6 +38,10 @@ export class GeografiaPage implements OnInit {
     this.entrada = await this.bibliotecaService.getPorId('geografia') ?? null;
   }
 
+  ionViewWillEnter() {
+    this.musicaService.play('desert-storm');
+  }
+
   irA() {
     this.musicaService.reproducirSonido('assets/audios/sonido_boton.mp3');
     this.route.navigate(['/territorios']);
