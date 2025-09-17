@@ -19,8 +19,8 @@
 
             font-family: 'aladin', serif;
             font-size: 1.5rem;
-            text-shadow: 0px 1px 0px black;
             text-align: center;
+            color: black;
             width: 100%;
         }
 
@@ -32,13 +32,12 @@
             
             width: 80%;
         }
-
     }
 
     .horizontes {
         position: fixed;
-        top: 79%;
-        left: 84%;
+        top: 76.5%;
+        left: 82%;
         transform: translate(-50%, -50%);
 
         width: 15%;
@@ -46,19 +45,43 @@
 
         aspect-ratio: 2 / 2;
 
+        z-index: 0;
+
         .texto {
             position: absolute;
             left: 50%;
-            top: 80%;
+            top: 90%;
             transform: translate(-50%, -50%);
 
             font-family: 'aladin', serif;
             font-size: 1.5rem;
-            text-shadow: 0px 1px 0px black;
             text-align: center;
-            width: 100%;
+            color: black;
+
+            width: 150%;
             line-height: 1.1rem;
         }
+
+        .foto {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .circulo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 80%;
+        opacity: 0;
+        background-color: white;
+        border-radius: 50%;
+        filter: blur(10px);
+        animation: resaltar 1s forwards;
     }
 
     .samadha {
@@ -74,7 +97,7 @@
     }
 
     .radaeron {
-        top: 39%;
+        top: 38%;
         left: 76.5%;
         transform: translate(-50%, -50%);
     }
@@ -95,5 +118,14 @@
         top: 42%;
         left: 16%;
         transform: translate(-50%, -50%);
+    }
+
+    @keyframes resaltar {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
     }
 }

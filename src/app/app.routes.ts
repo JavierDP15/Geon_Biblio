@@ -33,7 +33,8 @@ export const routes: Routes = [
   {
     path: 'entrada-geon/:geon',
     loadComponent: () => import('./pages/entrada-geon/entrada-geon.page').then( m => m.EntradaGeonPage)
-  },  {
+  },
+  {
     path: 'geografia',
     loadComponent: () => import('./pages/geografia/geografia.page').then( m => m.GeografiaPage)
   },
@@ -41,6 +42,11 @@ export const routes: Routes = [
     path: 'territorios',
     loadComponent: () => import('./pages/territorios/territorios.page').then( m => m.TerritoriosPage)
   },
+  {
+    path: 'entrada-territorio/:territorio',
+    loadComponent: () => import('./pages/entrada-territorio/entrada-territorio.page').then( m => m.EntradaTerritorioPage)
+  },
+
 
 
 ];

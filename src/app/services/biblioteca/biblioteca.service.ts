@@ -6,7 +6,7 @@ import { BehaviorSubject, firstValueFrom, Observable } from 'rxjs';
 export interface Entrada {
   id: string;
   nombre: string;
-  categoria: string;
+  url: string;
   descripcion: string;
   otrosDatos: {
     subtitulo: string,
@@ -60,9 +60,9 @@ export class BibliotecaService {
     );
   }
 
-  filtrarPorCategoria(categoria: string): Entrada[] {
-    return this.datos.filter(item => item.categoria === categoria);
-  }
+  // filtrarPorCategoria(categoria: string): Entrada[] {
+  //   return this.datos.filter(item => item.categoria === categoria);
+  // }
 
   async getPorId(id: string): Promise<Entrada | undefined> {
     await this.esperarDatos();
