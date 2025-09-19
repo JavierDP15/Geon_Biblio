@@ -9,7 +9,7 @@
     <div class="titulo">{{ entrada.nombre }}</div>
     <!-- <img src=""/> -->
     <div class="texto" [innerHTML]="entrada.descripcion"></div>
-    <div class="boton"><span>Lugares</span></div>
+    <div class="boton" (click)="irALugares()"><span>Lugares</span></div>
   </div>
 </ion-content>
 

@@ -7,7 +7,7 @@ import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
 import { MusicaComponent } from 'src/app/components/musica/musica.component';
 import { MusicaService } from 'src/app/services/musica/musica.service';
 import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/biblioteca.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-entrada-territorio',
@@ -33,11 +33,16 @@ export class EntradaTerritorioPage implements OnInit {
     private musicaService: MusicaService
     , private bibliotecaService: BibliotecaService
     , private route: ActivatedRoute
+    , private router: Router
   ) { }
 
   async ngOnInit() {
     this.territorio = this.route.snapshot.paramMap.get('territorio') || '';
     this.entrada = await this.bibliotecaService.getPorId(this.territorio) ?? null;
+  }
+
+  irALugares() {
+    this.router.navigate([`/entrada-territorio/${this.territorio}/lugares`]);
   }
 
   ionViewWillEnter() {

@@ -46,7 +46,8 @@ export const routes: Routes = [
     path: 'entrada-territorio/:territorio',
     loadComponent: () => import('./pages/entrada-territorio/entrada-territorio.page').then( m => m.EntradaTerritorioPage)
   },
-
-
-
+  {
+    path: 'entrada-territorio/:territorio/lugares',
+    loadComponent: () => import('./pages/lugares/lugares.page').then( m => m.LugaresPage)
+  },
 ];

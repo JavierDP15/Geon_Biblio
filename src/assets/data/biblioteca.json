@@ -3,8 +3,10 @@
     "id": "geografia",
     "nombre": "Geografía",
     "url": "geografia",
+    "categoria": "principal",
     "descripcion": "Cartam es un mundo rico en contrastes y pueblos, habitado por humanos, inmortales y ferhel, esculpido por la magia y por la incesante acción de los dioses. Vapuleado sin misericordia por los Geones, el planeta prevalece tras su tercera extinción.\n\nLos principales territorios, gobernados por emperadores, sultanes, kanes, reyes, faraones, sahs, arcontes y lugal mantienen una tensa situación política y geográfica mientras se enfrentan a las calamidades.\n\nLos archivos de la biblioteca de Anfírenis, aunque incompletos, contienen una amplia y variada información de la geografía física y política de Cartam.",
     "otrosDatos": {
+      "padre": "",
       "subtitulo": "",
       "imagen": ""
     }
@@ -13,8 +15,10 @@
     "id": "saprashibaya",
     "nombre": "Saprashibaya",
     "url": "entrada-territorio/saprashibaya",
+    "categoria": "territorio",
     "descripcion": "Las tierras de Saprashibaya se enmarcan en una zona de desierto cálido caracterizada por su aridez y sus territorios variados, como las planicies rocosas o hamadas, los campos de dunas o los lechos de ríos secos. También se prodigan las cadenas montañosas de suaves pendientes, los cañones y los oasis. Tres grandes desiertos, el Solis, el Jikari y el Kerfén conforman sus fronteras, cada uno con características propias.\n\nEl rango climático general es el de subtropical árido con precipitaciones escasas y temperaturas elevadas.\n\nLas tierras de Saprashibaya, por sus enormes zonas despobladas, son especialmente atractivas para los bishna inmortales y para ferhel de todo tipo, y recurrentes en la aparición de Baluartes. Una amalgama de pueblos humanos, tanto nómadas como sedentarios, residen en los tres desiertos, así como un sorprendente número de practicantes de la magia.",
     "otrosDatos": {
+      "padre": "",
       "subtitulo": "",
       "imagen": ""
     }
@@ -22,11 +26,37 @@
   {
     "id": "solis",
     "nombre": "Solis",
-    "url": "entrada-territorio/saprashibaya/solis",
+    "url": "entrada-territorio/saprashibaya/lugares",
+    "categoria": "lugar",
     "descripcion": "El Solis es el desierto de arenas blancas que alberga la capital de Saprashibaya, Valora. Pese a que existen calzadas principales hasta ciertos puntos del desierto y rutas abiertas generalmente transitadas por las caravanas, gran parte de su orografía está despoblada. Cuatro grandes oasis y diez ciudades de especial renombre se despliegan hacia el oeste, sur y este desde la capital. Colinda, entre otras, con las tierras de Radaeron, con el mar de Ventur, con Tel Abadir y con Daicon.",
     "otrosDatos": {
+      "padre": "saprashibaya",
       "subtitulo": "",
       "imagen": "assets/img/territorios/saprashibaya/desierto_solis.png"
+    }
+  },
+  {
+    "id": "jikari",
+    "nombre": "Jikari",
+    "url": "entrada-territorio/saprashibaya/lugares",
+    "categoria": "lugar",
+    "descripcion": "El Solis es el desierto de arenas blancas que alberga la capital de Saprashibaya, Valora. Pese a que existen calzadas principales hasta ciertos puntos del desierto y rutas abiertas generalmente transitadas por las caravanas, gran parte de su orografía está despoblada. Cuatro grandes oasis y diez ciudades de especial renombre se despliegan hacia el oeste, sur y este desde la capital. Colinda, entre otras, con las tierras de Radaeron, con el mar de Ventur, con Tel Abadir y con Daicon.",
+    "otrosDatos": {
+      "padre": "saprashibaya",
+      "subtitulo": "",
+      "imagen": "assets/img/territorios/saprashibaya/desierto_jikari.png"
+    }
+  },
+  {
+    "id": "kerfen",
+    "nombre": "Kerfen",
+    "url": "entrada-territorio/saprashibaya/lugares",
+    "categoria": "lugar",
+    "descripcion": "El Solis es el desierto de arenas blancas que alberga la capital de Saprashibaya, Valora. Pese a que existen calzadas principales hasta ciertos puntos del desierto y rutas abiertas generalmente transitadas por las caravanas, gran parte de su orografía está despoblada. Cuatro grandes oasis y diez ciudades de especial renombre se despliegan hacia el oeste, sur y este desde la capital. Colinda, entre otras, con las tierras de Radaeron, con el mar de Ventur, con Tel Abadir y con Daicon.",
+    "otrosDatos": {
+      "padre": "saprashibaya",
+      "subtitulo": "",
+      "imagen": "assets/img/territorios/saprashibaya/desierto_kerfen.png"
     }
   },
 
@@ -36,8 +66,10 @@
     "id": "geones",
     "nombre": "Geones",
     "url": "geones",
+    "categoria": "principal",
     "descripcion": "Los Geones son criaturas cósmicas que azotan Cartam desde el inicio de los tiempos. Los dioses no son magnánimos ni complacientes, ni responden a ruegos, oraciones o piedad alguna. Son criaturas atemporales, llegadas desde los rincones más recónditos del universo, que enfrentan directamente al mundo desde sus inicios.\n\nLas civilizaciones han evolucionado haciendo frente a esta amenaza con escasas armas en su haber. Cartam ha sido víctima de tres cataclismos planetarios propiciados por los dioses y por múltiples calamidades que han remodelado la orografía, el clima y las fronteras de los pueblos. Cientos de civilizaciones han caído y sido reemplazadas en el transcurso de las eras. Cientos más lo harán en el futuro.\n\nEsta es una batalla sin tregua, sin esperanza y sin vocación de final.\n\nEn la biblioteca de Anfírenis encontrarás exhaustiva información acerca del panteón de dioses y sus desastres. Utiliza los textos con mesura por su contenido y con cuidado en cuanto a su continente; algunos de los rollos que aquí se guardan pertenecen a periodos pre-Apotheosis. Que los Geones nunca te encuentren.",
     "otrosDatos": {
+      "padre": "",
       "subtitulo": "",
       "imagen": ""
     }
@@ -46,8 +78,10 @@
     "id": "abacu",
     "nombre": "Ábacu Thelth -el -Vandir",
     "url": "entrada-geon",
+    "categoria": "geon",
     "descripcion": "Ábacu es el Geón del tiempo. En sus manifestaciones sobre Cartam se ha dejado ver como un anciano ciego vestido con una túnica fabricada de estrellas y un báculo sobre sus manos, como un joven de ralos y largos cabellos del color de la arena que arrastra una cadena infinita tras él, y como un peregrino de tez cuarteada que llama incesantemente a golpe de escudilla a los hombres que anhelan la inmortalidad.\n\nSu presencia es siempre presagio de cosechas tardías y corruptas, de largas esperas que siempre terminan en desgracia, de fallecimientos prematuros de infantes o de sentencia de muerte para aquellos que han logrado llegar a edades avanzadas. Los que tienen la mala fortuna de encontrarse con una de sus representaciones mundanas pueden morir de inmediato, o enfrentar una condena de tiempo que aparece delante de sus ojos con una cuenta regresiva hasta su final.\n\nSe le presume una voluntad arrogante y displicente, y una actitud muy alejada de la curiosidad o el ánimo de entretenimiento que otros Geones parecen sentir sobre los humanos.\n\nSus calamidades tienen que ver siempre con el transcurso del tiempo, ya sea hacia delante o hacia atrás. Algunas de las más famosas son; «La Calamidad de Adibos», que convirtió un orfanato de una de las ciudades sureñas del Solis en un geriátrico de enfermos terminales, la «Calamidad de la flota perdida», en la que cincuenta barcos de guerra ankitas jamás regresaron a las costas, perdidos, se cuenta, en un bucle espacio-tiempo en medio del océano, o la «Calamidad de Arredés», en Samadha, que sumió a la ciudad entera en un agujero temporal que engullía todo lo que tenía alrededor.\n\nEntre sus asociaciones se le atribuye cercanía a Virnut, la diosa de la muerte.\n\nLa Orden de Orantes ha clasificado a este Geón como «Planificador no violento» y «Certero letal». Las oraciones en su contra se realizan los días impares y nunca si las tres lunas se encuentran alineadas. Entre los amuletos protectores contra su influjo son populares el ajenjo, la salvia, la madera de cedro y los exvotos de bronce con forma de reloj de arena.\n\n\n<h3><b>Adendas</b></h3>\n-En la biblioteca de Anfírenis existen dieciocho rollos dedicados a Ábacu. Para solicitar su visionado es necesaria la presencia de un sacerdote.\n\n-Una obra teatral, «La Abassenia», escrita por Plutarco de Antípele representa temerariamente una de las calamidades de este dios. Su escenificación es un acto de suma transgresión que todavía se da en algunas poblaciones rurales.\n\n-Los augures presumen que la cuna de civilización de Ábacu en su forma primigenia se encuentra en la constelación de las tres jarras.",
     "otrosDatos": { 
+      "padre": "",
       "subtitulo": "La llama imperecedera que todo lo agosta, que todo lo consume. El mensajero de lo inevitable.El señor de la transitoriedad y de la certeza. El que camina sin prisa.",
       "imagen": "assets/img/geones/abacu.png"
     }
@@ -56,8 +90,10 @@
     "id": "virnut",
     "nombre": "Virnut Alk -Hassut",
     "url": "entrada-geon",
+    "categoria": "geon",
     "descripcion": "Virnut es el Geón de la muerte. A diferencia de todos los demás dioses, de Virnut, hasta la fecha, solo se conoce una forma mundana con la que se presenta en Cartam; la de una guerrera pálida embutida en una armadura relampagueante de negro absoluto y cabellos oscuros que oscilan sin viento. Puede aparecer montada a lomos de un caballo de alas blancas con una corona de marfil, y las armas que enarbola son cambiantes; desde una lanza del tamaño de tres hombres hasta un arco con flechas de cristal cuya punta aniquila toda vida en un radio de veinte kilómetros, pasando por toda clase de espadas exóticas con filo de estrella.\n\nPese a que su dominio es la muerte en sí misma, su presencia no necesariamente causa esta entre quienes poseen la mala fortuna de encontrarla. Suele preferir dotar a sus víctimas de una percepción extraordinaria sobre la putrefacción y la podredumbre que no dejarán de ver, de una melancolía exacerbada sobre el funesto sentido de la vida, o incluso marcar humanos para manejar sus vidas con fines concretos.\n\nSe le atribuye una personalidad estoica, distante e impertérrita, con especial afinidad a los sentimientos de rencor y venganza. Posee cierto apetito por la materialidad humana y sus representaciones, así como un halo de vanidad que, en ocasiones, ha querido explotar.\n\nSus calamidades tienen que ver con la muerte física y sus representaciones. No ahonda en los estadios posteriores a este evento, sino que se regodea en el acto humano de fenecer. Por tanto, sus calamidades suelen implicar fallecimientos, resurrecciones o levantamiento de cuerpos sin vida. Entre las más famosas se encuentran  «La Calamidad de los siete Lugal», en la que condenó a siete reyes humanos a darse muerte los unos a los otros para evitar su destino, «La Calamidad de Dendetta», en la que tentó a una de las mayores ciudades de su tiempo, o «La Calamidad de los hombres pobres», sucedida en los alrededores de Bantrán, cuando dos centenares de vagabundos asesinados por el rajá se levantaron y atacaron la urbe.\n\nEntre sus asociaciones se le atribuye cercanía a Ábacu, Geón del tiempo.\n\nLas Cortes de los Misterios han clasificado a este Geón como «Represor empático», «Planificador violento», y «Vengativo». Las oraciones en su contra pueden realizarse a diario, con la excepción de los días de eclipse natural o generado por otro Geón. Los templos contra Virnut se estilan en Samadha, y se erigen como pequeñas capillas para grupos pequeños de orantes. Entre las protecciones más comunes contra el dios de la muerte se encuentran los círculos de tierra, los peines de cobre, los sahumerios de sándalo y las campanas de bronce sobre los vanos de las puertas.\n\n\n<h3><b>Adendas</b></h3>\n-La Gran Biblioteca de Usht Erestar poseía una sección completa dedicada al Geón de la muerte, custodiada por tres sellos mágicos de augur.\n\n-Virnut es uno de los Geones que más veneración han encontrado en el desarrollo de las distintas civilizaciones. El destino de tales fieles siempre ha sido desolador.\n\n-Los augures localizan la cuna cósmica de Virnut cerca de la constelación de las Eférides.",
     "otrosDatos": { 
+      "padre": "",
       "subtitulo": "La que nunca descansa. El destino funesto de los hombres. El azote de la existencia de todos cuantos hollan Cartam. La segadora. La faraona de la muerte.",
       "imagen": "assets/img/geones/virnut.png"
     }
@@ -66,8 +102,10 @@
     "id": "caal",
     "nombre": "Caal Melqart sihn -Isht -Varanis",
     "url": "entrada-geon",
+    "categoria": "geon",
     "descripcion": "Caal Melqart es el Geón del destino. Su presencia en Cartam es continuada y persistente en el tiempo. Sus manifestaciones más apreciadas son la de una plaga de gusanos que anegan el desierto, la de un rocín oscuro de crines fantasmales y ojos de fuego, o la de un viajero albino, alto y espigado, ataviado con jirones oscilantes, de melena lacia de color negro con mechones blancos.\n\nTambién conocido como Uburundus, el dios del destino posee una característica inquietante respecto a sus hermanos de panteón; es particularmente cercano al hacer de los mortales, extrañamente interesado en los asuntos mundanos de las criaturas menores, a las que considera un verdadero entretenimiento. Se dice que teje los hilos de los seres que elige para su desgracia y, para ellos, despliega un verdadero elenco de infortunios que los acompañará durante toda su existencia.\n\nExtremadamente selectivo en sus apariciones, prefiere hacerlo de forma personal y paulatinamente. Los orantes han estudiado profusamente su modus operandi; sus visitas comienzan por medio de sueños y visiones, progresan en apariciones de carácter terrorífico, generalmente a través de una plaga de gusanos, hasta convertirse en verdaderos contactos con el Geón, usualmente en su forma humanoide.\n\nLa descripción de su personalidad es una de las más notorias del panteón. Posee gustos cercanos a los humanos por las artes y la cultura, el drama y la fatalidad, e incluso se le atribuyen características mortales en sus interacciones; hedonismo, teatralidad, deseo e incluso humor. De él se dice que juega con las vidas humanas como si de actores en una obra representada para su divertimento se tratasen.\n\nSus calamidades son siempre de carácter fatalista, pero al no ser un Geón de multitudes, suelen reducirse a un limitado grupo de personas entre las que hila lazos de perdición. No se le conocen calamidades comunales como al resto de los dioses. Algunas de sus calamidades particulares han dado lugar a obras literarias basadas en sus logros como «La tragedia de Ransón», «El viaje infinito de Etreas de Jartia», «Las once pruebas del rey Olias» o «Isustra». Curiosamente, la representación de estas obras nunca se ha visto sometida a la desgracia o el infortunio. Algunos eruditos opinan que estas escenificaciones complacen al Geón.\n\nSus asociaciones con otros Geones son aleatorias. Suele entrometerse en las tramas de otros dioses sin ser invitado, lo que le ha granjeado una especial animadversión por parte de sus iguales. Se dice que mantiene una cuenta pendiente con Upsilon, el Geón de la vida.\n\nLa Orden de Orantes ha clasificado a este dios como «Planificador no violento», «Empático-intrusivo» y «Extenuante no letal». Entre las protecciones utilizadas contra él se encuentran los círculos mágicos de protección, la ágata verde, los halcones y las esferas de vida. En las Cortes de los Misterios no se suelen realizar oraciones en su contra, ya que la práctica ha determinado que resultan inútiles.\n\n\n<h3><b>Adendas</b></h3>\n-Una de las recopilaciones más notorias sobre la historia de este Geón se recoge en las crónicas de Tanselmo, un cronista reputado de Igilia del siglo quinto. Aúna las historias de tradición oral referidas a él desde la cuna hasta la desembocadura del río Ridris.\n\n-En teoría es posible, aunque extremadamente difícil, romper una marca efectuada por este Geón.\n\n-Los augures que han escrutado el cosmos ancestral han ofrecido visiones del hogar de Caal Melqart cerca del centro de una galaxia espiral conocida como «Vía Áurea».",
     "otrosDatos": { 
+      "padre": "",
       "subtitulo": "El tejedor silencioso. El que maneja los hilos de las vidas. El vagabundo de la eterna pesadumbre. El dios de la fatalidad silenciosa. Uburundus.",
       "imagen": "assets/img/geones/caal.png"
     }

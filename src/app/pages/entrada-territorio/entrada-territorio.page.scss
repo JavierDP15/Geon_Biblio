@@ -13,19 +13,21 @@
     overflow-y: auto;
 
     .titulo {
-        font-family: 'immortal', serif;
+        font-family: 'fantaisie', serif;
         font-size: 3rem;
-        // text-shadow: 0px 1px 0px black;
-        color: black;
+        text-shadow: 0px 1.5px 0px black;
+        color: white;
     }
 
     .texto {
-        width: 70%;
+        width: 65%;
         max-height: 55%;
         overflow-y: auto;
 
         font-family: 'amiri', serif;
         line-height: 1.4;
+        font-size: 1.1rem;
+        text-align: center;
         color: black;
     }
 

@@ -197,7 +197,7 @@ export class ArchivoPage implements OnInit {
 
   onVideoCatEnded() {
     if (this.currentStep !== 3) return;
-    this.videoCat.nativeElement.currentTime = 0;
+    // this.videoCat.nativeElement.currentTime = 0;
     this.router.navigate(['/' + this.navegarA]);
   }
 

@@ -7,8 +7,10 @@ export interface Entrada {
   id: string;
   nombre: string;
   url: string;
+  categoria: string;
   descripcion: string;
   otrosDatos: {
+    padre: string,
     subtitulo: string,
     imagen: string
   };
@@ -67,5 +69,11 @@ export class BibliotecaService {
   async getPorId(id: string): Promise<Entrada | undefined> {
     await this.esperarDatos();
     return this.datos.find(item => item.id === id);
+  }
+
+  async getPorPadre(padre: string): Promise<Entrada[] | null> {
+    await this.esperarDatos();
+
+    return this.datos.filter(p => p.otrosDatos.padre === padre) || null;
   }
 }

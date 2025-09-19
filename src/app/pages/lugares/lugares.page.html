@@ -1,0 +1,40 @@
+<ion-content [fullscreen]="true" [scrollY]="false">
+  <img 
+    class="imagen-fondo"
+    src="assets/fondos/fondo_territorios.jpg"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; z-index: 0; pointer-events: none; z-index: 0;"
+  />
+
+  <div *ngIf="entradaActual" class="contenedor">
+    <div class="cuerpo" [class.salirIzq]="entrarDerecha" [class.salirDer]="entrarIzquierda">
+      <div class="titulo">{{ entradaActual.nombre }}</div>
+      <div #scrollContenedor class="scroll">
+        <img class="foto" [src]="entradaActual.otrosDatos.imagen"/>
+        <div class="texto" [innerHTML]="entradaActual.descripcion"></div>
+      </div>
+      <div class="boton"><span>Puntos de interes</span></div>
+    </div>
+    
+    <div *ngIf="entradaACambiar" class="cuerpo a-entrar" [class.entrarDer]="entrarDerecha" [class.entrarIzq]="entrarIzquierda">
+      <div class="titulo">{{ entradaACambiar.nombre }}</div>
+      <div class="scroll">
+        <img class="foto" [src]="entradaACambiar.otrosDatos.imagen"/>
+        <div class="texto" [innerHTML]="entradaACambiar.descripcion"></div>
+      </div>
+      <div class="boton"><span>Puntos de interes</span></div>
+    </div>
+  </div>
+
+  <div class="paginacion">
+    <div *ngIf="paginaActual > 1" class="atras" (click)="anteriorLugar()" [class.animando]="entradaACambiar"><span>◀</span></div>
+    <div *ngIf="paginaActual < paginasTotales" class="siguiente" (click)="siguienteLugar()" [class.animando]="entradaACambiar"><span>▶</span></div>
+  </div>
+</ion-content>
+
+
+
+<div class="opciones aparecer">
+  <app-atras [pagina]="`entrada-territorio/${territorio}`"></app-atras>
+  <app-musica></app-musica>
+  <app-ayuda [pagina]="'geografia'"></app-ayuda>
+</div>
