@@ -16,6 +16,7 @@ export class FerhelComponentComponent  implements OnInit {
   entrada: Entrada | null = null;
   descubierto = false;
   nuevo = false;
+  pasoMostrar = 0;
 
   constructor(
     private bibliotecaService: BibliotecaService
@@ -24,8 +25,27 @@ export class FerhelComponentComponent  implements OnInit {
 
   async ngOnInit() {
     this.descubierto = await this.ferhelService.getDescubierto(this.ferhel);
-    this.nuevo = await this.ferhelService.getYMarcaNuevo(this.ferhel);
+    // this.nuevo = await this.ferhelService.getYMarcaNuevo(this.ferhel);
+    if (this.descubierto) {
+      this.nuevo = await this.ferhelService.getNuevo(this.ferhel);
+      if (this.nuevo) {
+        this.pasoMostrar = 1;
+      }
+    }
     this.entrada = await this.bibliotecaService.getPorId(this.ferhel) ?? null;
+  }
+
+  pulsar() {
+    if (this.pasoMostrar == 1){
+      this.pasoMostrar = 2;
+      this.ferhelService.quitarNuevo(this.ferhel);
+      setTimeout(() => {
+        this.pasoMostrar = 0;
+      }, 3000)
+
+    } else {
+      console.log('ayuyu');
+    }
   }
 
 }

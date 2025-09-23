@@ -45,7 +45,6 @@ export class FerhelesService {
 
       actual.descubierto = valor;
       this.estados[ferhel] = actual;
-      // this.estados[ferhel].descubierto = valor;
       this.guardarEnStorage();
   }
 
@@ -77,5 +76,12 @@ export class FerhelesService {
   resetTodos() {
     this.estados = {};
     this.guardarEnStorage();
+  }
+
+  quitarNuevo(ferhel: string) {
+    if (this.estados[ferhel]) {
+      this.estados[ferhel].nuevo = false;
+      this.guardarEnStorage();
+    }
   }
 }
