@@ -1,0 +1,49 @@
+.ferhel {
+    display: flex;
+    justify-content: center;
+
+    .cuerpo {
+        position: relative;
+
+        width: 78%;
+
+        .nombre {
+            position: absolute;
+            top: 82%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            font-family: 'aladin', serif;
+            color: black;
+            font-size: 1.7rem;
+        }
+
+        .nuevoImagen {
+            filter: grayscale(100%) brightness(0);
+            animation: revelar-imagen 4s forwards;
+        }
+
+        @keyframes revelar-imagen {
+            0% {
+                filter: grayscale(100%) brightness(0);
+            }
+            100% {
+                filter: grayscale(0) brightness(1);
+            }
+        }
+
+        .nuevoTexto {
+            opacity: 0;
+            animation: revelar-nombre 4s forwards;
+        }
+
+        @keyframes revelar-nombre {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+}

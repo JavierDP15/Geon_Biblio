@@ -36,6 +36,8 @@
         overflow-y: auto;
 
         transform: translateY(-4%);
+
+        z-index: 4;
     }
 
     .titulo {
@@ -94,6 +96,7 @@
     width: 100%;
     height: 100%;
     padding: 6%;
+    pointer-events: none;
 
     // display: flex;
     // flex-direction: row;
@@ -118,6 +121,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        pointer-events: auto;
     }
 
     .atras {
@@ -131,6 +135,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        pointer-events: auto;
     }
 }
 

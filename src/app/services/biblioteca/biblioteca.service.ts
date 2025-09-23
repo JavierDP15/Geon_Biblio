@@ -76,4 +76,10 @@ export class BibliotecaService {
 
     return this.datos.filter(p => p.otrosDatos.padre === padre) || null;
   }
+
+  async getPorCategoria(categoria: string): Promise<Entrada[] | null> {
+    await this.esperarDatos();
+
+    return this.datos.filter(c => c.categoria === categoria) || null;
+  }
 }

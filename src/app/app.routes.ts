@@ -49,5 +49,9 @@ export const routes: Routes = [
   {
     path: 'entrada-territorio/:territorio/lugares',
     loadComponent: () => import('./pages/lugares/lugares.page').then( m => m.LugaresPage)
+  },  {
+    path: 'ferhel',
+    loadComponent: () => import('./pages/ferhel/ferhel.page').then( m => m.FerhelPage)
   },
+
 ];
