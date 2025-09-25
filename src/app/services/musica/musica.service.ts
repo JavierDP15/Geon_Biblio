@@ -14,7 +14,7 @@ export interface Pista {
 export class MusicaService {
   private pistas: Record<string, Pista> = {};
   private pistaActual: string | null = null;
-  private volumenGlobal: number = 0.6;
+  private volumenGlobal: number = 0.5;
   private silenciado: boolean = false;
 
   constructor() {
@@ -94,6 +94,14 @@ export class MusicaService {
       volume: volumen
     });
     sonido.play();
+  }
+
+  reproducirAmbiente(nombre: string, volumen: number = 0.9) {
+    if (!this.pistas[nombre]) {
+      this.initPista(nombre, true, volumen);
+    }
+    this.pistas[nombre].howl.volume(this.silenciado ? 0 : volumen);
+    this.pistas[nombre].howl.play();
   }
 
   pauseTodas() {

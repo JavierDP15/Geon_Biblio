@@ -57,9 +57,11 @@ export class ObservarFerhelPage implements OnInit {
 
   ionViewWillEnter() {
     this.musicaService.play('the-white-lion');
+    this.musicaService.reproducirAmbiente(`ambiente_${this.bioma}`);
   }
 
   ionViewWillLeave() {
+    this.musicaService.stop(`ambiente_${this.bioma}`);
   }
 
   actualizarObjetivo(ev: PointerEvent) {
