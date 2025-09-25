@@ -1,8 +1,20 @@
 <ion-content [fullscreen]="true" scrollY="false"
-  (touchmove)="onMove($event)"
-  (mousemove)="onMove($event)"
+(pointerdown)="actualizarObjetivo($event)"
+(pointermove)="actualizarObjetivo($event)"
 >
+<!-- (touchmove)="mover($event)"
+(mousemove)="mover($event)" -->
   <img src="assets/fondos/biomas/fondo_desierto.jpg" class="fondo">
+
+  <img
+    *ngFor="let lupa of lupas"
+    class="lupa"
+    [style.left.px]="lupa.x" 
+    [style.top.px]="lupa.y" 
+    src="assets/iconos/busqueda.png"
+    (click)="clickLupa(lupa)"
+    [class.activa]="lupa.visible"
+  />
 
   <div 
     class="mascara"
@@ -11,8 +23,6 @@
       '--y': posY + 'px'
     }"
   ></div>
-
-  <div class="cosa" (click)="cosa()">Ayuyu</div>
 </ion-content>
 
 <div class="opciones aparecer">
