@@ -32,3 +32,12 @@ ion-content {
   background: radial-gradient(circle 120px at var(--x) var(--y), transparent 0 120px, black 100px);
   pointer-events: none;   // no bloquea eventos
 }
+
+.video-catalejo {
+    position: fixed;
+    width: 240px;
+    height: 240px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+}

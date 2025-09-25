@@ -14,7 +14,7 @@ export interface Pista {
 export class MusicaService {
   private pistas: Record<string, Pista> = {};
   private pistaActual: string | null = null;
-  private volumenGlobal: number = 0.8;
+  private volumenGlobal: number = 0.6;
   private silenciado: boolean = false;
 
   constructor() {
@@ -28,7 +28,7 @@ export class MusicaService {
     }
   }
 
-  initPista(nombre: string, loop: boolean = true, volumen: number = 0.8) {
+  initPista(nombre: string, loop: boolean = true, volumen: number = this.volumenGlobal) {
     if (!this.pistas[nombre]) {
       this.pistas[nombre] = {
         nombre,

@@ -1,20 +1,20 @@
 <ion-content [fullscreen]="true" scrollY="false"
-(pointerdown)="actualizarObjetivo($event)"
-(pointermove)="actualizarObjetivo($event)"
+  (pointerdown)="actualizarObjetivo($event)"
+  (pointermove)="actualizarObjetivo($event)"
 >
-<!-- (touchmove)="mover($event)"
-(mousemove)="mover($event)" -->
   <img src="assets/fondos/biomas/fondo_desierto.jpg" class="fondo">
 
-  <img
-    *ngFor="let lupa of lupas"
-    class="lupa"
-    [style.left.px]="lupa.x" 
-    [style.top.px]="lupa.y" 
-    src="assets/iconos/busqueda.png"
-    (click)="clickLupa(lupa)"
-    [class.activa]="lupa.visible"
-  />
+  <div class="lupas" *ngFor="let lupa of lupas">
+    <img
+      *ngIf="!lupa.encontrada"
+      class="lupa"
+      [style.left.px]="lupa.x" 
+      [style.top.px]="lupa.y" 
+      src="assets/iconos/busqueda.png"
+      (click)="clickLupa(lupa)"
+      [class.activa]="lupa.visible"
+    />
+  </div>
 
   <div 
     class="mascara"
@@ -23,6 +23,21 @@
       '--y': posY + 'px'
     }"
   ></div>
+
+  <video
+    *ngIf="videoActivo"
+    #videoRef
+    class="video-catalejo"
+    [src]="videoSrc"
+    autoplay
+    playsinline
+    muted
+    (ended)="cerrarVideo()"
+    [ngStyle]="{
+      left: posX + 'px',
+      top: posY + 'px'
+    }"
+  ></video>
 </ion-content>
 
 <div class="opciones aparecer">

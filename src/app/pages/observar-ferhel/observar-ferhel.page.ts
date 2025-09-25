@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 import { AtrasComponent } from 'src/app/components/atras/atras.component';
 import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
 import { MusicaComponent } from 'src/app/components/musica/musica.component';
+import { MusicaService } from 'src/app/services/musica/musica.service';
 
 @Component({
   selector: 'app-observar-ferhel',
@@ -29,21 +30,40 @@ export class ObservarFerhelPage implements OnInit {
   
   targetX = this.posX;
   targetY = this.posY;
+  bloquear = false;
+
+  videoActivo= false;
+  videoSrc = '';
   
   animFrame?: number;
 
+  lupaActual: any;
+
+  bioma= '';
+
   lupas = [
-    {x: 200, y: 150, visible: false, id: 1},
-    {x: 600, y: 300, visible: false, id: 2}
+    {x: 200, y: 150, visible: false, id: 1, video: 'assets/videos/ferhel/fermiti_animacion.mp4', encontrada: false},
+    {x: 600, y: 250, visible: false, id: 2, video: 'assets/videos/ferhel/fermiti_animacion.mp4', encontrada: false}
   ];
 
-  constructor() { }
+  constructor(
+    private musicaService: MusicaService
+  ) { }
   
   ngOnInit() {
     this.animarCatalejo();
+    this.bioma = 'desierto';
+  }
+
+  ionViewWillEnter() {
+    this.musicaService.play('the-white-lion');
+  }
+
+  ionViewWillLeave() {
   }
 
   actualizarObjetivo(ev: PointerEvent) {
+    if (this.bloquear) return;
     this.targetX = ev.clientX;
     this.targetY = ev.clientY;
 
@@ -65,18 +85,6 @@ export class ObservarFerhelPage implements OnInit {
     this.animFrame = requestAnimationFrame(animate);
   }
 
-  pointerDown(ev: PointerEvent | TouchEvent) {
-    const p = 'touches' in ev ? ev.touches[0] : ev;
-    this.targetX = p.clientX;
-    this.targetY = p.clientY;
-  }
-
-  pointerMove(ev: PointerEvent | TouchEvent) {
-    const p = 'touches' in ev ? ev.touches[0] : ev;
-    this.targetX = p.clientX;
-    this.targetY = p.clientY;
-  }
-
   actualizarLupas() {
     this.lupas.forEach(lupa => {
       const dx = lupa.x - this.posX;
@@ -89,7 +97,23 @@ export class ObservarFerhelPage implements OnInit {
   clickLupa(lupa: any) {
     if (!lupa.visible) return;
 
-    console.log('Encontrada', lupa.id);
+    this.bloquear = true;
+    this.videoActivo = true
+    this.videoSrc = lupa.video;
+    this.lupaActual = lupa;
+  }
+
+  cerrarVideo() {
+    this.videoActivo = false;
+    this.bloquear = false;
+
+    if (this.lupaActual) {
+      this.lupaActual.visible = false;
+      this.lupaActual.encontrada = true;
+      this.lupaActual = null;
+    }
+
+    console.log(this.lupas);
   }
 
 }
