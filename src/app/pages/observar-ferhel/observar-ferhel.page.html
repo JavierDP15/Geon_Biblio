@@ -1,0 +1,22 @@
+<ion-content [fullscreen]="true" scrollY="false"
+  (touchmove)="onMove($event)"
+  (mousemove)="onMove($event)"
+>
+  <img src="assets/fondos/biomas/fondo_desierto.jpg" class="fondo">
+
+  <div 
+    class="mascara"
+    [ngStyle]="{
+      '--x': posX + 'px',
+      '--y': posY + 'px'
+    }"
+  ></div>
+
+  <div class="cosa" (click)="cosa()">Ayuyu</div>
+</ion-content>
+
+<div class="opciones aparecer">
+  <app-atras [pagina]="'ferhel'"></app-atras>
+  <app-musica></app-musica>
+  <app-ayuda [pagina]="'observar-ferhel'"></app-ayuda>
+</div>

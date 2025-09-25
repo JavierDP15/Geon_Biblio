@@ -1,16 +1,30 @@
+.contenedor {
+  position: absolute;
+  left: 50%;
+  top: 17%;               
+  transform: translateX(-50%);
+  width: 80%;            
+  height: 80%;
+  overflow: hidden;      
+  z-index: 1;
+}
+
 .lista {
     z-index: 1;
 
-    margin-top: 8%;
+    // margin-top: 8%;
 
-    height: 80%;
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding-left: 10%;
-    padding-right: 10%;
-
-    overflow-y: auto;
+    grid-template-columns: repeat(4, 1fr);
+    overflow-x: hidden;
+    will-change: transform;
 }
 
 .paginacion {
@@ -21,11 +35,6 @@
     height: 100%;
     padding: 6%;
     pointer-events: none;
-
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: space-between;
-    // align-items: center;
     
     div {
         font-size: 1.5rem;
@@ -61,5 +70,71 @@
         align-items: center;
         justify-content: center;
         pointer-events: auto;
+    }
+
+    .animando {
+        pointer-events: none;
+}
+}
+
+.salirIzq {
+    animation: salirIzq 1s forwards;
+}
+
+@keyframes salirIzq {
+    0% { 
+        transform: translateX(0%);
+     }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.entrarDer {
+    animation: siguiente 1s forwards;
+}
+
+@keyframes siguiente {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    1% {
+        opacity: 1;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.salirDer {
+    animation: salirDer 1s forwards;
+}
+
+@keyframes salirDer {
+    0% { }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.entrarIzq {
+    animation: anterior 1s forwards;
+}
+
+@keyframes anterior {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    1% {
+        opacity: 1;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

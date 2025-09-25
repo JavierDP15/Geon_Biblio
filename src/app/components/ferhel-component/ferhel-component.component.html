@@ -1,6 +1,7 @@
 <div *ngIf="entrada" class="ferhel">
   <div *ngIf="descubierto" class="cuerpo" [class.animando]="pasoMostrar === 2" (click)="pulsar()">
     <img [src]="`assets/img/ferhel/${ferhel}/${ferhel}_lista.png`" [class.esperarImagen]="pasoMostrar === 1" [class.nuevoImagen]="pasoMostrar === 2">
+    <span *ngIf="pasoMostrar === 1 || pasoMostrar === 2" class="exclamacion" [class.esperarExclamacion]="pasoMostrar === 1" [class.quitarExclamacion]="pasoMostrar === 2">!</span>
     <div class="nombre" [class.esperarTexto]="pasoMostrar === 1" [class.nuevoTexto]="pasoMostrar === 2">{{ entrada.nombre }}</div>
   </div>
   <div *ngIf="!descubierto" class="cuerpo">

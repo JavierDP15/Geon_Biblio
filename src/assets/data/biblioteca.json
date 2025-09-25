@@ -210,15 +210,15 @@
     }
   },
   {
-    "id": "zentit",
-    "nombre": "Zentit",
-    "url": "ferhel/zentit",
+    "id": "yabei",
+    "nombre": "Yabei",
+    "url": "ferhel/yabei",
     "categoria": "ferhel",
     "descripcion": "",
     "otrosDatos": { 
       "padre": "",
       "subtitulo": "",
-      "imagen": "assets/img/ferhel/zentit/zentit.jpg"
+      "imagen": "assets/img/ferhel/yabei/yabei.jpg"
     }
   },
   {

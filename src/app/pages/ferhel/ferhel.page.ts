@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
@@ -30,7 +30,11 @@ import { FerhelesService } from 'src/app/services/ferheles/ferheles.service';
   ]
 })
 export class FerhelPage implements OnInit {
+  @ViewChild('videoCatalejo') videoCatalejo!: ElementRef<HTMLVideoElement>;
+
   entrada: Entrada | null = null;
+
+  mostrarVideo = false;
 
   constructor(
     private bibliotecaService: BibliotecaService
@@ -41,14 +45,29 @@ export class FerhelPage implements OnInit {
 
   async ngOnInit() {
     this.entrada = await this.bibliotecaService.getPorId('ferhel') ?? null;
+    this.mostrarVideo = false;
   }
 
   ionViewWillEnter() {
     this.musicaService.play('the-white-lion');
+    this.mostrarVideo = false;
   }
 
   irALista() {
     this.route.navigate(['/ferhel/lista-ferhel']);
+  }
+
+  irAObservar() {
+    this.mostrarVideo = true;
+    const video = this.videoCatalejo.nativeElement;
+    video.currentTime = 0;
+    video.muted = true;
+    video.playsInline = true;
+    video.play();
+  }
+  
+  onVideoCatalejoEnd() {
+    this.route.navigate(['/ferhel/observar-ferhel']);
   }
 
 }

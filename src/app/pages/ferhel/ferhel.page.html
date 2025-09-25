@@ -5,6 +5,18 @@
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; z-index: 0; pointer-events: none;"
   />
 
+  <video
+    #videoCatalejo
+    [hidden]="!mostrarVideo"
+    [src]="'assets/videos/animacion_catalejo.mp4'"
+    muted
+    playsinline
+    preload="auto"
+    poster="assets/fondos/fondo_ferhel.jpg"
+    (ended)="onVideoCatalejoEnd()"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;">
+  </video>
+
   <div *ngIf="entrada" class="cuerpo">
     <div class="entrada">
       <div class="titulo">{{ entrada.nombre }}</div>
@@ -12,7 +24,7 @@
     </div>
 
     <div class="botones">
-      <div class="boton">
+      <div class="boton" (click)="irAObservar()">
         <img class="observar" src="assets/img/observar_ferhel.png"/>
         <div class="tag">Observar</div>
       </div>

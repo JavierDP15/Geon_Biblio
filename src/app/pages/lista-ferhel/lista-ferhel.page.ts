@@ -33,6 +33,10 @@ export class ListaFerhelPage implements OnInit {
   readonly porPagina = 8;
   paginasTotales = 1;
 
+  entrarSiguiente = false;
+  entrarAnterior = false;
+  animando = false;
+
   constructor(
     private bibliotecaService: BibliotecaService
     , private ferhelService: FerhelesService
@@ -57,15 +61,46 @@ export class ListaFerhelPage implements OnInit {
     return this.lista.slice(start, start + this.porPagina);
   }
 
-  siguiente() {
+  get paginaSiguienteItems(): Entrada[] {
     if (this.paginaActual < this.paginasTotales) {
-      this.paginaActual++;
+      const start = this.paginaActual * this.porPagina;
+      return this.lista.slice(start, start + this.porPagina);
+    }
+    return [];
+  }
+
+  get paginaAnteriorItems(): Entrada[] {
+    if (this.paginaActual > 1)
+    {
+      const start = (this.paginaActual - 2) * this.porPagina;
+      return this.lista.slice(start, start + this.porPagina);
+    }
+    return [];
+  }
+
+  siguiente() {
+    console.log('ayuyu');
+    if (this.paginaActual < this.paginasTotales) {
+      this.animando = true
+      this.entrarSiguiente = true;
+      setTimeout(() => {
+        this.entrarSiguiente = false;
+        this.paginaActual++;
+        this.animando = false;
+      }, 1000);
     }
   }
 
   anterior() {
+    console.log('ayuyu');
     if (this.paginaActual > 1) {
-      this.paginaActual--;
+      this.animando =  true;
+      this.entrarAnterior = true;
+      setTimeout(() => {
+        this.entrarAnterior = false;
+        this.paginaActual--;
+        this.animando = false;
+      }, 1000);
     }
   }
 

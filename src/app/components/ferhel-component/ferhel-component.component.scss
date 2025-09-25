@@ -68,6 +68,33 @@
                 opacity: 1;
             }
         }
+
+        .exclamacion {
+            color: yellow;
+            font-size: 1.8rem;
+            font-family: 'aladin', serif;
+
+            position: absolute;
+            top: 48%;
+            left: 10%;
+        }
+
+        .esperarExclamacion {
+            animation: shake 1.2s infinite;
+        }
+
+        .quitarExclamacion {
+            animation: quitar 1.5s forwards;
+        }
+
+        @keyframes quitar {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
     }
 
     .animando {
