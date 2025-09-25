@@ -44,7 +44,7 @@ export class FerhelComponentComponent  implements OnInit {
       }, 3000)
 
     } else {
-      console.log('ayuyu');
+      // aqui se dirigirá a la página del ferhel
     }
   }
 

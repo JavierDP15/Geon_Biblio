@@ -68,5 +68,12 @@
     "texto": "Adelante y mucha suerte. Dentro de estos muros te espera un mundo fascinante. ¡Hasta ahora!",
     "foto": "assets/fotos/bibliotecaria_ayiat.png",
     "nombre": "Bibliotecaria Ayiat"
+  },
+  {
+    "pagina": "archivo",
+    "paso": 11,
+    "texto": "<i>La bibliotecaria se marcha por donde ha venido. Delante de ti se alza el templo del saber más espectacular y completo que has visto en tu vida. Sientes algo inesperado, una emoción que te recorre la espina dorsal como una descarga. La bibliotecaria tenía razón; hay algo especial en este lugar, y serás tú quien descubra todos sus secretos.</i>",
+    "foto": "",
+    "nombre": ""
   }
 ]

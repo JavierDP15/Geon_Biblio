@@ -49,12 +49,12 @@
       <div class="botones">
         <div class="fila-botones" [class.blur-background]="tutorial && tutorialStep !== 2" [class.tutorial-resaltar-grande]="tutorialStep === 2">
           <div class="boton">
-            <img class="icono-boton" src="assets/iconos/geografia.png">
+            <img class="icono-boton" src="assets/iconos/geografia.png" (click)="irA('geografia')">
             <button class="boton" (click)="irA('geografia')">Geografía</button>
           </div>
           <div></div>
           <div class="boton">
-            <img class="icono-boton" src="assets/iconos/geones.png">
+            <img class="icono-boton" src="assets/iconos/geones.png" (click)="irA('geones')">
             <button class="boton" (click)="irA('geones')">Geones</button>
           </div>
         </div>
@@ -65,7 +65,7 @@
           </div>
           <div></div>
           <div class="boton">
-            <img class="icono-boton" src="assets/iconos/ferhel.png">
+            <img class="icono-boton" src="assets/iconos/ferhel.png" (click)="irA('ferhel')">
             <button class="boton" (click)="irA('ferhel')">Ferhel</button>
           </div>
         </div>
@@ -125,5 +125,6 @@
     <app-caja-texto *ngIf="tutorialStep === 8" [entrada]="tutorial[tutorialStep -1]" (cerrar)="onCerrarTutorialStep()"></app-caja-texto>
     <app-dialogo *ngIf="tutorialStep === 9" [pagina]="'archivo'" [entrada]="tutorial[tutorialStep -1]" (cerrar)="onCerrarTutorialStep()"></app-dialogo>
     <app-dialogo *ngIf="tutorialStep === 10" [pagina]="'archivo'" [entrada]="tutorial[tutorialStep -1]" (cerrar)="onCerrarTutorialStep()"></app-dialogo>
+    <app-caja-texto *ngIf="tutorialStep === 11" [entrada]="tutorial[tutorialStep -1]" (cerrar)="onCerrarTutorialStep()"></app-caja-texto>
   </div>
 </ion-content>

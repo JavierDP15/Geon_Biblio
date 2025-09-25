@@ -1,4 +1,4 @@
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" [scrollY]="false">
   <img 
     class="imagen-fondo"
     src="assets/fondos/fondo_ferhel.jpg"
@@ -6,23 +6,17 @@
   />
 
   <div *ngIf="entrada" class="cuerpo">
-    <div *ngIf="!mostrarLista" class="entrada">
+    <div class="entrada">
       <div class="titulo">{{ entrada.nombre }}</div>
       <div class="texto" [innerHTML]="entrada.descripcion"></div>
     </div>
-    <div *ngIf="mostrarLista" class="lista">
-      <app-ferhel-component
-        *ngFor="let ferhel of lista"
-        [ferhel]="ferhel.id"
-      >
-      </app-ferhel-component>
-    </div>
+
     <div class="botones">
       <div class="boton">
         <img class="observar" src="assets/img/observar_ferhel.png"/>
         <div class="tag">Observar</div>
       </div>
-      <div class="boton" (click)="cambiarLista()">
+      <div class="boton" (click)="irALista()">
         <img class="listaBoton" src="assets/img/lista_ferhel.png"/>
         <div class="tag">Lista</div>
       </div>

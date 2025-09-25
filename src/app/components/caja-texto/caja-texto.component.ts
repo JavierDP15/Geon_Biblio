@@ -27,7 +27,7 @@ export class CajaTextoComponent  implements OnInit {
 
   ngOnInit() {
     if (this.entrada?.texto) {
-      this.paginarTexto(this.entrada.texto, 200);
+      this.paginarTexto(this.entrada.texto, 220);
       this.mostrarConAnimacion();
     }
   }

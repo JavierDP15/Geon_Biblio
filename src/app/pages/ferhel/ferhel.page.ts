@@ -31,8 +31,6 @@ import { FerhelesService } from 'src/app/services/ferheles/ferheles.service';
 })
 export class FerhelPage implements OnInit {
   entrada: Entrada | null = null;
-  lista: Entrada[] |null = null;
-  mostrarLista = false;
 
   constructor(
     private bibliotecaService: BibliotecaService
@@ -43,18 +41,14 @@ export class FerhelPage implements OnInit {
 
   async ngOnInit() {
     this.entrada = await this.bibliotecaService.getPorId('ferhel') ?? null;
-    this.lista = await this.bibliotecaService.getPorCategoria('ferhel') ?? null;
-    await this.ferhelService.setDescubierto('fermiti', true);
-    await this.ferhelService.resetDescubierto('typhos');
-    await this.ferhelService.setDescubierto('typhos', true);
   }
 
   ionViewWillEnter() {
-    this.musicaService.play('desert-storm');
+    this.musicaService.play('the-white-lion');
   }
 
-  cambiarLista() {
-    this.mostrarLista = !this.mostrarLista;
+  irALista() {
+    this.route.navigate(['/ferhel/lista-ferhel']);
   }
 
 }

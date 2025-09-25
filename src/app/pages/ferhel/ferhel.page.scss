@@ -1,3 +1,7 @@
+ion-content {
+    // --background: url("/assets/fondos/fondo_ferhel.jpg");
+}
+
 .cuerpo {
     display: grid;
     grid-template-rows: 3fr 1fr;
@@ -44,20 +48,6 @@
 
             z-index: 1;
         }
-    }
-
-    .lista {
-        z-index: 1;
-
-        // padding-top: 8%;
-        margin-top: 8%;
-
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        padding-left: 10%;
-        padding-right: 10%;
-
-        overflow-y: auto;
     }
 
     .botones {

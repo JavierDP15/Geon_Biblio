@@ -49,6 +49,11 @@ export class ConstelacionesPage implements OnInit {
   ocultarSVGDyshiba = true;
   private lineasDyshiba = 8;
 
+  mostrarUpsilon = false;
+  pasoUpsilon = 0;
+  ocultarSVGUpsilon = true;
+  private lineasUpsilon = 5;
+
   constructor(
       private geonesService: GeonesService
     , private musicaService: MusicaService
@@ -158,6 +163,25 @@ export class ConstelacionesPage implements OnInit {
         this.geonesService.setDescubierto('dyshiba', true);
         this.isAnimating = false;
       }, 400 * this.lineasDyshiba);
+    }
+  }
+
+  upsilon() {
+    if (this.isAnimating) return;
+    
+    if (!this.mostrarUpsilon) {
+      this.isAnimating = true;
+      this.ocultarSVGUpsilon = !this.ocultarSVGUpsilon;
+      for (let i = 0; i < this.lineasUpsilon; i++) {
+        setTimeout(() => {
+          this.pasoUpsilon++;
+        }, i * 500);
+      }
+      setTimeout(() => {
+        this.mostrarUpsilon = !this.mostrarUpsilon
+        this.geonesService.setDescubierto('upsilon', true);
+        this.isAnimating = false;
+      }, 500 * this.lineasUpsilon);
     }
   }
 }

@@ -59,7 +59,22 @@
       <img *ngIf="mostrarDyshiba" (click)="irA('dyshiba')" class="completa" src="assets/img/constelaciones/dyshiba/dyshiba_constelacion.png"/>
       <span class="nombre">Dyshiba</span>
     </div>
+
+    <div class="constelacion upsilon arriba" (click)="upsilon()">
+      <img class="estrellas" src="assets/img/constelaciones/upsilon/upsilon_estrellas.png" />
+      <img *ngIf="mostrarUpsilon" class="icono" src="assets/img/constelaciones/upsilon/upsilon_icono.png" />
+      <svg class="lineas" viewBox="0 0 100 100" preserveAspectRatio="xMidyMid meet">
+        <line *ngIf="pasoUpsilon >= 1 && !ocultarSVGUpsilon" x1="91.5%" y1="43.7%" x2="68.8%" y2="70.6%" class="trazo1Up" />
+        <line *ngIf="pasoUpsilon >= 2 && !ocultarSVGUpsilon" x1="69%" y1="70.6%" x2="18.7%" y2="7%" class="trazo2Up" />
+        <line *ngIf="pasoUpsilon >= 3 && !ocultarSVGUpsilon" x1="18.5%" y1="7%" x2="18.2%" y2="62%" class="trazo3Up" />
+        <line *ngIf="pasoUpsilon >= 4 && !ocultarSVGUpsilon" x1="18.6%" y1="62%" x2="42%" y2="92%" class="trazo4Up" />
+        <line *ngIf="pasoUpsilon >= 5 && !ocultarSVGUpsilon" x1="42.1%" y1="92%" x2="61%" y2="40%" class="trazo5Up" />
+      </svg>
+      <img *ngIf="mostrarUpsilon" (click)="irA('upsilon')" class="completa" src="assets/img/constelaciones/upsilon/upsilon_constelacion.png" />
+      <span class="nombre">Upsilon</span>
+    </div>
   </div>
+
   
   <img 
     class="imagen-fondo"
