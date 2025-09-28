@@ -25,6 +25,7 @@ ion-content {
 
             font-family: 'fantaisie', serif;
             font-size: 4rem;
+            color: white;
             text-shadow: 0px 2px 0px black;
 
             z-index: 1;
@@ -59,7 +60,7 @@ ion-content {
         justify-content: center;
         gap: 10vw;
 
-        padding-bottom: 3vh;
+        padding-bottom: 4vh;
 
         .boton {
             position: relative;
@@ -74,6 +75,7 @@ ion-content {
 
                 font-family: 'aladin', serif;
                 font-size: 2rem;
+                color: white;
                 text-shadow: 0px 2px 0px black;
 
                 z-index: 1;

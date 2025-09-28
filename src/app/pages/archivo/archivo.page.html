@@ -95,17 +95,20 @@
     </div>
     <div class="flecha flecha-abajo" *ngIf="puedesScrollAbajo">▼</div>
   </div>
-
-  <div *ngIf="mostrarCuerpo && !tutorial" class="opciones">
+  
+  
+  <!-- <div *ngIf="mostrarCuerpo && !tutorial" class="opciones">
+      <app-buscador></app-buscador>
       <app-atras [pagina]="'inicio'"></app-atras>
       <app-musica></app-musica>
       <app-ayuda [pagina]="'archivo'"></app-ayuda>
-  </div>
+  </div> -->
 
   <div *ngIf="mostrarCuerpo" class="opcionesEsp" [class.desvanecer]="currentStep === 3">
     <div class="atrasEsp" [class.blur-background]="tutorial && tutorialStep !== 3" [class.tutorial-resaltar-pequeño]="tutorialStep === 3">
       <app-atras [pagina]="'inicio'"></app-atras>
     </div>
+    <app-buscador [class.buscarEsp]="tutorial" [class.blur-background]="tutorial"></app-buscador>
     <div class="sonidoEsp" [class.blur-background]="tutorial && tutorialStep !== 4" [class.tutorial-resaltar-pequeño]="tutorialStep === 4">
       <app-musica></app-musica>
     </div>

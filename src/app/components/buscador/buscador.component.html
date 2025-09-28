@@ -1,0 +1,19 @@
+<div class="buscador">
+  <img class="lupa" src="assets/iconos/busqueda.png" (click)="toggle()"/>
+  
+  <form *ngIf="abierto">
+    <input class="buscar" 
+      (input)="buscar($event)"
+      type="text"
+      placeholder="Buscar..."
+      [class.aparecer]="abierto"
+      [class.ocultar]="cerrando"
+    >
+
+    <ul *ngIf="resultados.length > 0" class="resultados">
+      <li *ngFor="let entrada of resultados" (click)="elegir(entrada)">
+        <span>{{ entrada.nombre }}</span>
+      </li>
+    </ul>
+  </form>
+</div>

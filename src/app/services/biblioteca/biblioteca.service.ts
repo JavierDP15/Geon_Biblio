@@ -58,7 +58,6 @@ export class BibliotecaService {
     termino = termino.toLowerCase();
     return this.datos.filter(item => 
       item.id.toLowerCase().includes(termino)
-      || item.descripcion.toLowerCase().includes(termino)
     );
   }
 

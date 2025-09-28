@@ -51,6 +51,10 @@ export class ObservarFerhelPage implements OnInit {
   ) { }
   
   ngOnInit() {
+    document.body.style.touchAction = 'none';
+    document.addEventListener('pointerdown', this.onPointerMove)
+    document.addEventListener('pointermove', this.onPointerMove)
+
     this.animarCatalejo();
     this.bioma = 'desierto';
   }
@@ -64,10 +68,16 @@ export class ObservarFerhelPage implements OnInit {
     this.musicaService.stop(`ambiente_${this.bioma}`);
   }
 
+  private onPointerMove = (e: PointerEvent) => {
+    if (this.bloquear) return;
+    this.targetX = e.clientX;
+    this.targetY = e.clientY;
+
+  }
+
   actualizarObjetivo(ev: PointerEvent) {
     if (this.bloquear) return;
-    this.targetX = ev.clientX;
-    this.targetY = ev.clientY;
+    this.onPointerMove(ev);
 
     if (!this.animFrame) {
       this.animarCatalejo();

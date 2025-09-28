@@ -1,5 +1,6 @@
 ion-content {
     --background: transparent;
+    touch-action: none;
 }
 
 .fondo {
@@ -31,13 +32,16 @@ ion-content {
   inset: 0;
   background: radial-gradient(circle 120px at var(--x) var(--y), transparent 0 120px, black 100px);
   pointer-events: none;   // no bloquea eventos
+  z-index: 2;
 }
 
 .video-catalejo {
     position: fixed;
-    width: 240px;
-    height: 240px;
+    width: 290px;
+    height: 290px;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     pointer-events: none;
+
+    z-index: 1;
 }

@@ -11,6 +11,7 @@ import { CajaTextoComponent } from 'src/app/components/caja-texto/caja-texto.com
 import { AtrasComponent } from 'src/app/components/atras/atras.component';
 import { Router } from '@angular/router';
 import { EstadoPaginasService } from 'src/app/services/estadoPaginas/estado-paginas';
+import { BuscadorComponent } from 'src/app/components/buscador/buscador.component';
 
 @Component({
   selector: 'app-archivo',
@@ -29,6 +30,7 @@ import { EstadoPaginasService } from 'src/app/services/estadoPaginas/estado-pagi
     , DialogoComponent
     , CajaTextoComponent
     , AtrasComponent
+    , BuscadorComponent
   ]
 })
 export class ArchivoPage implements OnInit {
@@ -62,7 +64,7 @@ export class ArchivoPage implements OnInit {
   
   ionViewDidEnter() {
     if (!this.estadoService.getEntrado('archivo')) {
-      this.tutorialService.resetTutorial('archivo');
+      // this.tutorialService.resetTutorial('archivo');
 
       const video = this.video.nativeElement;
       video.currentTime = 0;

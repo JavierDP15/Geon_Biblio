@@ -1,7 +1,7 @@
-<ion-content [fullscreen]="true" scrollY="false"
-  (pointerdown)="actualizarObjetivo($event)"
-  (pointermove)="actualizarObjetivo($event)"
+<ion-content [fullscreen]="true" [scrollY]="false" [scrollX]="false"
 >
+<!-- (pointerdown)="actualizarObjetivo($event)"
+(pointermove.capture)="actualizarObjetivo($event)" -->
   <img src="assets/fondos/biomas/fondo_desierto.jpg" class="fondo">
 
   <div class="lupas" *ngFor="let lupa of lupas">
@@ -29,6 +29,8 @@
     #videoRef
     class="video-catalejo"
     [src]="videoSrc"
+    preload="auto"
+    poster="assets/img/ferhel/fermiti/fermiti.jpg"
     autoplay
     playsinline
     muted
