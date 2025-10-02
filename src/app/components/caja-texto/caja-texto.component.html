@@ -1,7 +1,7 @@
 <div class="fondo" (click)="siguiente()">
   <div *ngIf="entrada" class="caja">
     <img class="fondo-dialogo" src="assets/img/cuadro_dialogo.png">
-    <p class="texto" [innerHtml]="textoMostrado"></p>
+    <p class="texto" [innerHTML]="textoMostrado"></p>
     <div class="flecha" *ngIf="paginaActual < paginas.length - 1"></div>
   </div>
 </div>
