@@ -1,13 +1,29 @@
+<div *ngIf="abierto" 
+  class="blur"
+  [class.hacer_blur]="abierto"
+  [class.ocultar_blur]="cerrando"  
+></div>
 <div class="buscador">
   <img class="lupa" src="assets/iconos/busqueda.png" (click)="toggle()"/>
   
   <form *ngIf="abierto">
+    <img class="rollo" 
+      [class.aparecer_rollo]="abierto"
+      [class.ocultar_rollo]="cerrando"
+      src="assets/img/rollo_buscador.png">
+
     <input class="buscar" 
       (input)="buscar($event)"
       type="text"
       placeholder="Buscar..."
-      [class.aparecer]="abierto"
-      [class.ocultar]="cerrando"
+      [class.aparecer_buscar]="abierto"
+      [class.ocultar_buscar]="cerrando"
+    >
+
+    <img *ngIf="resultados.length > 0"
+      class="pergamino"
+      src="assets/img/pergamino_buscador.png"
+      [ngStyle]="{'height.px': calcularAltura(resultados.length)}"
     >
 
     <ul *ngIf="resultados.length > 0" class="resultados">

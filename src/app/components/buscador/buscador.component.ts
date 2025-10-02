@@ -45,7 +45,6 @@ export class BuscadorComponent  implements OnInit {
 
     if (this.abierto) {
       await this.bibliotecaService.esperarDatos();
-      // this.resultados = this.bibliotecaService.buscar('');
     } else {
       this.termino = '';
       this.resultados = [];
@@ -69,5 +68,13 @@ export class BuscadorComponent  implements OnInit {
     } else {
       this.router.navigate(['/' + item.url], { state: {lugarId: item.id} });
     }
+  }
+
+  calcularAltura(n: number): number {
+    const alturaPorItem = 40;
+    const alturaBase = 80;
+    const alturaMax = 400;
+
+    return Math.min(alturaBase + n * alturaPorItem, alturaMax);
   }
 }

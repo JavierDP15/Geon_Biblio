@@ -167,6 +167,7 @@ video.active, img.active {
     position: absolute;
     top: 7%;
     left: 91%;
+    z-index: 3;
 }
 
 .buscarEsp {
@@ -175,18 +176,21 @@ video.active, img.active {
     width: 48.95px;
     top: 6.3%;
     left: 11.2%;
+    z-index: 3;
 }
 
 .ayudaEsp {
     position: absolute;
     top: 7%;
     left: 84%;
+    z-index: 3;
 }
 
 .atrasEsp {
     position: absolute;
     top: 7%;
     left: 5%;
+    z-index: 3;
 }
 
 .blur-background {

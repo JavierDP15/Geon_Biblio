@@ -1,4 +1,15 @@
 .buscador {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  form {
+    width: 100%;
+    height: 100%;
+  }
+
   .lupa {
     position: absolute;
     top: 7%;
@@ -10,45 +21,63 @@
 
   .buscar {
     position: absolute;
-    top: 7%;
-    left: 18%;
-    height: 35px;
-    width: 63%;
+    // top: 15%;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 30px;
+    width: 46%;
     padding-left: 2%;
     
-    border-radius: 50px;
-    // border-radius: 0 50px 50px 0;
-    background-color: white;
+    border-radius: 10px;
+    background: url("/assets/img/texto_buscador.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
 
     color: black;
 
     z-index: 4;
   }
 
+  .buscar:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+
+  .pergamino {
+    position: absolute;
+    top: 19%;
+    left: 50%;
+    width: 55%;
+    max-height: 80%;
+    transform: translateX(-50%);
+
+    z-index: 2;
+  }
+
   .resultados {
     position: absolute;
-    // top: calc(7% + 40px);
-    top: 7%;
-    left: 18.2%;
-    width: 62.7%;
-    padding-top: 1.5%;
-    padding-bottom: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
-    background: white;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 8px black;
+    top: 19%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+
     max-height: 250px;
     overflow-y: auto;
-    z-index: 3;
-
     list-style: none;
+    z-index: 2;
+
 
     li {
       padding-top: 13px;
+      margin-left: 21%;
+      // padding-left: 22%;
       cursor: pointer;
       color: black;
-      text-align: left;
+      // text-align: left;
+      width: 55%;
 
       span {
         padding-left: 2%;
@@ -56,35 +85,124 @@
     }
 
     li + li {
-      border-top: 1px solid #e0e0e0;
+      border-top: 1px solid rgba(3, 3, 3, 0.35);
       margin-top: 8px;
       padding-top: 8px;
+      width: 45%;
     }
   }
   
-  .aparecer {
-    animation: aparecer 0.5s ease;
+  .aparecer_buscar {
+    animation: aparecer_buscar 0.5s ease;
   }
 
-  @keyframes aparecer {
-    0%{
-      width: 5%;
-    }
-    100%{
-      width: 63%;
-    }
-  }
   
-  .ocultar {
-    animation: ocultar 0.5s ease;
-  }
-
-  @keyframes ocultar {
+  @keyframes aparecer_buscar {
     0%{
-      width: 63%;
+      opacity: 0;
+      top: -40px;
+    }
+    1%{
+      opacity: 1;
+      top: -40px;
     }
     100%{
-      width: 0;
+      opacity: 1;
+      top: 60px;
     }
-  } 
+  }
+
+  .ocultar_buscar {
+    animation: ocultar_buscar 0.5s ease;
+  }
+
+  
+  @keyframes ocultar_buscar {
+    0%{
+      top: 60px;
+    }
+    100%{
+      top: -40px;
+    }
+  }
+
+  .aparecer_rollo {
+    animation: aparecer_rollo 0.5s ease;
+  }
+
+  @keyframes aparecer_rollo {
+    0%{
+      opacity: 0;
+      top: -100px;
+    }
+    1%{
+      opacity: 1;
+      top: -100px;
+    }
+    100%{
+      opacity: 1;
+      top: 0;
+    }
+  }
+
+  .ocultar_rollo {
+    animation: ocultar_rollo 0.5s ease;
+  }
+
+  @keyframes ocultar_rollo {
+    0%{
+      top: 0;
+    }
+    100%{
+      top: -100px;
+    }
+  }
+
+}
+
+.rollo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 60%;
+
+  z-index: 3;
+}
+
+.blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 2;
+}
+
+.hacer_blur {
+  animation: blurOn 0.5s forwards;
+}
+
+@keyframes blurOn {
+  0% {
+    backdrop-filter: blur(0);
+  }
+  100% {
+    backdrop-filter: blur(5px);
+  }
+}
+
+.ocultar_blur {
+  animation: blurOff 0.5s forwards;
+}
+
+@keyframes blurOff {
+  0% {
+    backdrop-filter: blur(5px);
+  }
+  100% {
+    backdrop-filter: blur(0);
+  }
 }
