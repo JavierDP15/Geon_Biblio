@@ -16,7 +16,6 @@ ion-content {
 .lupa {
     position: absolute;
     width: 40px;
-    height: 40px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s;
@@ -31,7 +30,7 @@ ion-content {
   position: fixed;
   inset: 0;
   background: radial-gradient(circle 120px at var(--x) var(--y), transparent 0 120px, black 100px);
-  pointer-events: none;   // no bloquea eventos
+  pointer-events: none;
   z-index: 2;
 }
 

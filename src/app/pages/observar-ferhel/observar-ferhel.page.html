@@ -2,7 +2,7 @@
 >
 <!-- (pointerdown)="actualizarObjetivo($event)"
 (pointermove.capture)="actualizarObjetivo($event)" -->
-  <img src="assets/fondos/biomas/fondo_desierto.jpg" class="fondo">
+  <img [src]="'assets/fondos/biomas/fondo_' + bioma + '.jpg'" class="fondo">
 
   <div class="lupas" *ngFor="let lupa of lupas">
     <img

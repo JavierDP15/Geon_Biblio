@@ -5,7 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton } from '@ionic/a
 import { AtrasComponent } from 'src/app/components/atras/atras.component';
 import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
 import { MusicaComponent } from 'src/app/components/musica/musica.component';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/biblioteca.service';
 import { MusicaService } from 'src/app/services/musica/musica.service';
 
@@ -30,7 +30,7 @@ export class LugaresPage implements OnInit {
 
   @ViewChild('scrollContenedor') scrollContenedor!: ElementRef<HTMLDivElement>;
 
-  entradas: Entrada[] | null = null;
+  entradas: Entrada[] = [];
   entradaActual: Entrada | null = null;
   entradaACambiar: Entrada | null = null;
   territorio = "";
@@ -38,16 +38,18 @@ export class LugaresPage implements OnInit {
   paginasTotales = 1;
   entrarDerecha = false;
   entrarIzquierda = false;
+  lugarBuscado = '';
 
   constructor(
     private route: ActivatedRoute
     , private bibliotecaService: BibliotecaService
     , private musicaService: MusicaService
+    , private router: Router
   ) { }
 
   async ngOnInit() {
     this.territorio = this.route.snapshot.paramMap.get('territorio') || '';
-    this.entradas = await this.bibliotecaService.getPorPadre(this.territorio);
+    this.entradas = await this.bibliotecaService.getPorPadre(this.territorio) ?? [];
     if (this.entradas) {
       this.paginasTotales = this.entradas?.length;
       this.entradaActual = this.entradas[0];
@@ -92,6 +94,30 @@ export class LugaresPage implements OnInit {
 
   ionViewWillEnter() {
     this.musicaService.play('desert-storm');
-  }
 
+    const id = history.state?.lugarId;
+    if (id) {
+      this.lugarBuscado = id;
+
+      const idx = this.entradas?.findIndex(e => e.id === id);
+      if (idx >= 0) {
+        this.paginaActual = idx + 1;
+        console.log(this.entradas);
+        this.entradaActual = this.entradas[this.paginaActual - 1];
+        console.log(this.paginaActual);
+      }
+      history.replaceState({}, '');
+    }
+    // const nav = this.router.getCurrentNavigation();
+    // console.log(nav);
+    // const id = nav?.extras.state?.['lugarId'];
+    // if (id){
+    //   this.lugarBuscado = id;
+    //   for (let index = 0; index < this.entradas?.length; index++) {
+    //     if (this.lugarBuscado == this.entradas[index].id) this.paginaActual = index + 1;
+    //     console.log(index);
+    //   }
+    // }
+    console.log('Cadena recibida: ' + this.lugarBuscado);
+    }
 }

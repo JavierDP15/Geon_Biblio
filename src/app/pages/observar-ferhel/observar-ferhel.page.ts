@@ -6,6 +6,7 @@ import { AtrasComponent } from 'src/app/components/atras/atras.component';
 import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
 import { MusicaComponent } from 'src/app/components/musica/musica.component';
 import { MusicaService } from 'src/app/services/musica/musica.service';
+import { Entrada } from 'src/app/services/biblioteca/biblioteca.service';
 
 @Component({
   selector: 'app-observar-ferhel',
@@ -24,6 +25,19 @@ import { MusicaService } from 'src/app/services/musica/musica.service';
   ]
 })
 export class ObservarFerhelPage implements OnInit {
+  biomas: string[] = [
+    'desierto'
+    // , 'cueva'
+    , 'montaña'
+    // , 'bosque'
+    // , 'pantano'
+    // , 'rio'
+    // , 'subterraneo'
+    // , 'oceano'
+    // , 'selva'
+  ];
+  ferhels: Entrada[] = [];
+
   catalejoRadio = 130
   posX = window.innerWidth / 2;
   posY = window.innerHeight / 2;
@@ -52,11 +66,12 @@ export class ObservarFerhelPage implements OnInit {
   
   ngOnInit() {
     document.body.style.touchAction = 'none';
-    document.addEventListener('pointerdown', this.onPointerMove)
-    document.addEventListener('pointermove', this.onPointerMove)
+    document.addEventListener('pointerdown', this.onPointerMove);
+    document.addEventListener('pointermove', this.onPointerMove);
 
     this.animarCatalejo();
-    this.bioma = 'desierto';
+    this.bioma = this.biomas[Math.floor(Math.random() * this.biomas.length)];
+    console.log(this.bioma);
   }
 
   ionViewWillEnter() {

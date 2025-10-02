@@ -11,6 +11,7 @@ export interface Entrada {
   descripcion: string;
   otrosDatos: {
     padre: string,
+    bioma: [string],
     subtitulo: string,
     imagen: string
   };
@@ -57,7 +58,8 @@ export class BibliotecaService {
   buscar(termino: string): Entrada[] {
     termino = termino.toLowerCase();
     return this.datos.filter(item => 
-      item.id.toLowerCase().includes(termino)
+      item.id.toLowerCase().includes(termino) ||
+      item.nombre.toLowerCase().includes(termino)
     );
   }
 
@@ -74,6 +76,12 @@ export class BibliotecaService {
     await this.esperarDatos();
 
     return this.datos.filter(p => p.otrosDatos.padre === padre) || null;
+  }
+
+  async getPorBioma(bioma: string): Promise<Entrada[] | null> {
+    await this.esperarDatos();
+
+    return this.datos.filter(p => p.otrosDatos.bioma.includes(bioma)) || null;
   }
 
   async getPorCategoria(categoria: string): Promise<Entrada[] | null> {

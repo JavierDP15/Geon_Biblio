@@ -64,7 +64,7 @@ export class ArchivoPage implements OnInit {
   
   ionViewDidEnter() {
     if (!this.estadoService.getEntrado('archivo')) {
-      // this.tutorialService.resetTutorial('archivo');
+      this.tutorialService.resetTutorial('archivo');
 
       const video = this.video.nativeElement;
       video.currentTime = 0;

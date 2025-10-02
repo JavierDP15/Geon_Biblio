@@ -63,6 +63,11 @@ export class BuscadorComponent  implements OnInit {
 
   elegir(item: Entrada) {
     this.toggle();
-    this.router.navigate(['/' + item.url]);
+    if (item.categoria != 'lugar')
+    {
+      this.router.navigate(['/' + item.url]);
+    } else {
+      this.router.navigate(['/' + item.url], { state: {lugarId: item.id} });
+    }
   }
 }
