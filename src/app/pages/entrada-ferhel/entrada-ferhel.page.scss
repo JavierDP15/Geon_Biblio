@@ -1,0 +1,46 @@
+ion-content {
+    --background: #c4b48c;
+}
+
+.imagen-fondo {
+    pointer-events: none;
+}
+
+.cuerpo {
+    position: absolute;
+    margin-top: 8%;
+
+    width: 100%;
+    max-height: calc(100vh - 20%);
+    flex: 1 1 auto;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+
+    z-index: 1;
+
+    .video {
+        width: 25%;
+    }
+
+    .nombre {
+        color: white;
+        font-family: 'Fantaisie', serif;
+        font-size: 2.5rem;
+        text-shadow: 2px 1px 0px black;
+
+        z-index: 2;
+    }
+
+    .texto {
+        color: black;
+        width: 85%;
+        text-align: center;
+        line-height: 1.4rem;
+
+        z-index: 2;
+    }
+}

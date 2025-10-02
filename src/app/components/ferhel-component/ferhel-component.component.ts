@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/biblioteca.service';
 import { FerhelesService } from 'src/app/services/ferheles/ferheles.service';
 
@@ -21,6 +22,7 @@ export class FerhelComponentComponent  implements OnInit {
   constructor(
     private bibliotecaService: BibliotecaService
     , private ferhelService: FerhelesService
+    , private router: Router
   ) { }
 
   async ngOnInit() {
@@ -44,7 +46,7 @@ export class FerhelComponentComponent  implements OnInit {
       }, 3000)
 
     } else {
-      // aqui se dirigirá a la página del ferhel
+      this.router.navigate(['/entrada-ferhel/' + this.ferhel]);
     }
   }
 
