@@ -23,8 +23,11 @@
     <img *ngIf="resultados.length > 0"
       class="pergamino"
       src="assets/img/pergamino_buscador.png"
-      [ngStyle]="{'height.px': calcularAltura(resultados.length)}"
-    >
+      [ngStyle]="{
+        'top.px': calcularAltura(resultados.length)
+        , 'clip-path': calcularInset(resultados.length)
+      }"
+      >
 
     <ul *ngIf="resultados.length > 0" class="resultados">
       <li *ngFor="let entrada of resultados" (click)="elegir(entrada)">

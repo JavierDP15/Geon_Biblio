@@ -71,10 +71,22 @@ export class BuscadorComponent  implements OnInit {
   }
 
   calcularAltura(n: number): number {
-    const alturaPorItem = 40;
-    const alturaBase = 80;
-    const alturaMax = 400;
+    const alturaPorItem = 22;
+    const alturaBase = 60;
+    const alturaMax = 7 * alturaPorItem + alturaBase;
 
-    return Math.min(alturaBase + n * alturaPorItem, alturaMax);
+    const tamañoCalculado = Math.min(alturaBase + (n * alturaPorItem), alturaMax)
+
+    return tamañoCalculado;
+  }
+
+  calcularInset(n: number): string {
+    const cantidadMaxima = 7;
+    const cantidad = n > cantidadMaxima ? cantidadMaxima : n;
+    const alturaPorItem = 16;
+    const insetMax = 7 * alturaPorItem + 60;
+    const insetFinal = 100 - (alturaPorItem * cantidad);
+
+    return `inset(${insetFinal}px 0 0 0)`
   }
 }

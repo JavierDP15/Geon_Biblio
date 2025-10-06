@@ -1,6 +1,6 @@
 
 --------------------------------------------------------------------------------
-Package: @capacitor/screen-orientation
+Package: @capacitor/app
 License: "MIT"
 
 Copyright 2020-present Ionic
@@ -28,7 +28,7 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 --------------------------------------------------------------------------------
-Package: @capacitor/app
+Package: @capacitor/screen-orientation
 License: "MIT"
 
 Copyright 2020-present Ionic
