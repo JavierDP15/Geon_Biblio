@@ -9,6 +9,44 @@
   z-index: 1;
 }
 
+.biomaAnterior {
+    position: absolute;
+    top: 0;
+    left: -50%;
+    transform: translateX(-50%);
+
+    color: black;
+    font-size: 3rem;
+    font-family: 'immortal', serif;
+}
+
+.bioma {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: black;
+    font-size: 3rem;
+    font-family: 'immortal', serif;
+
+}
+
+.biomaSiguiente {
+    position: absolute;
+    top: 0;
+    left: 150%;
+    transform: translateX(-50%);
+
+    color: black;
+    font-size: 3rem;
+    font-family: 'immortal', serif;
+}
+
+.bioma::first-letter, .biomaAnterior::first-letter, .biomaSiguiente::first-letter{
+    text-transform: uppercase;
+}
+
 .lista {
     z-index: 1;
 
@@ -17,7 +55,7 @@
     
     position: absolute;
     left: 0;
-    top: 0;
+    top: 15%;
     height: 100%;
     width: 100%;
 
@@ -90,6 +128,19 @@
     }
 }
 
+.salirIzqTitulo {
+    animation: salirIzqTitulo 1s forwards;
+}
+
+@keyframes salirIzqTitulo {
+    0% { 
+        left: 50%;
+     }
+    100% {
+        left: -50%;
+    }
+}
+
 .entrarDer {
     animation: siguiente 1s forwards;
 }
@@ -109,6 +160,19 @@
     }
 }
 
+.entrarDerTitulo {
+    animation: siguienteTitulo 1s forwards;
+}
+
+@keyframes siguienteTitulo {
+    0% {
+        left: 150%;
+    }
+    100% {
+        left: 50%;
+    }
+}
+
 .salirDer {
     animation: salirDer 1s forwards;
 }
@@ -117,6 +181,19 @@
     0% { }
     100% {
         transform: translateX(100%);
+    }
+}
+
+.salirDerTitulo {
+    animation: salirDerTitulo 1s forwards;
+}
+
+@keyframes salirDerTitulo {
+    0% { 
+        left: 50%;
+     }
+    100% {
+        left: 150%;
     }
 }
 
@@ -136,5 +213,18 @@
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+.entrarIzqTitulo {
+    animation: anteriorTitulo 1s forwards;
+}
+
+@keyframes anteriorTitulo {
+    0% {
+        left: -50%;
+    }
+    100% {
+        left: 50%;
     }
 }

@@ -1,36 +1,49 @@
 <ion-content [fullscreen]="true" [scrollY]="false">
-  <img 
-    class="imagen-fondo"
-    src="assets/fondos/fondo_ferhel.jpg"
-    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; z-index: 0; pointer-events: none;"
-  />
-<div class="contenedor">
+  <img class="imagen-fondo" src="assets/fondos/fondo_ferhel.jpg"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; z-index: 0; pointer-events: none;" />
+  <div class="contenedor">
 
-  <div *ngIf="entrarAnterior" class="lista lista-anterior" [class.entrarIzq]="entrarAnterior">
+    <div *ngIf="entrarAnterior" class="biomaAnterior" [class.entrarIzqTitulo]="entrarAnterior">
+      {{ biomas[paginaActual - 2] }}
+    </div>
+
+    <div class="bioma" [class.salirIzqTitulo]="entrarSiguiente" [class.salirDerTitulo]="entrarAnterior">
+      {{ biomas[paginaActual - 1] }}
+    </div>
+
+    <div *ngIf="entrarSiguiente" class="biomaSiguiente" [class.entrarDerTitulo]="entrarSiguiente">
+      {{ biomas[paginaActual] }}
+    </div>
+      
+      <div *ngIf="entrarAnterior" class="lista lista-anterior" [class.entrarIzq]="entrarAnterior">
     <app-ferhel-component 
-      *ngFor="let ferhel of paginaAnteriorItems" 
+      *ngFor="let ferhel of listaAEntrar" 
       [ferhel]="ferhel.id">
     </app-ferhel-component>
   </div>
 
-  <div *ngIf="lista.length" class="lista" [class.salirIzq]="entrarSiguiente" [class.salirDer]="entrarAnterior">
+    <div *ngIf="lista.length" class="lista" [class.salirIzq]="entrarSiguiente" [class.salirDer]="entrarAnterior">
     <app-ferhel-component 
-      *ngFor="let ferhel of paginaActualItems" 
+      *ngFor="let ferhel of lista" 
       [ferhel]="ferhel.id">
     </app-ferhel-component>
   </div>
 
-  <div *ngIf="entrarSiguiente" class="lista lista-siguiente" [class.entrarDer]="entrarSiguiente">
+    <div *ngIf="entrarSiguiente" class="lista lista-siguiente" [class.entrarDer]="entrarSiguiente">
     <app-ferhel-component 
-      *ngFor="let ferhel of paginaSiguienteItems" 
+      *ngFor="let ferhel of listaAEntrar" 
       [ferhel]="ferhel.id">
     </app-ferhel-component>
   </div>
-</div>
+  </div>
 
-<div class="paginacion">
-    <div *ngIf="paginaActual > 1" class="atras" (click)="anterior()" [class.animando]="animando"><span>◀</span></div>
-    <div *ngIf="paginaActual < paginasTotales" class="siguiente" (click)="siguiente()" [class.animando]="animando"><span>▶</span></div>
+  <div class="paginacion">
+    <div *ngIf="paginaActual > 1" class="atras" (click)="anterior()" [class.animando]="animando">
+      <span>◀</span>
+    </div>
+    <div *ngIf="paginaActual < paginasTotales" class="siguiente" (click)="siguiente()" [class.animando]="animando">
+      <span>▶</span>
+    </div>
   </div>
 </ion-content>
 

@@ -29,8 +29,21 @@ import { MusicaService } from 'src/app/services/musica/musica.service';
 })
 export class ListaFerhelPage implements OnInit {
   lista: Entrada[] = [];
+  listaAEntrar: Entrada[] = [];
+  biomas: string[] = [
+    'desierto'
+    // , 'cueva'
+    , 'montaña'
+    // , 'bosque'
+    // , 'pantano'
+    // , 'rio'
+    // , 'subterraneo'
+    // , 'oceano'
+    // , 'selva'
+  ];
+  listaPorBiomas: Entrada[][] = [];
   paginaActual = 1;
-  readonly porPagina = 8;
+  // readonly porPagina = 8;
   paginasTotales = 1;
 
   entrarSiguiente = false;
@@ -48,58 +61,66 @@ export class ListaFerhelPage implements OnInit {
     await this.ferhelService.resetDescubierto('typhos');
     await this.ferhelService.setDescubierto('typhos', true);
     const datos = await this.bibliotecaService.getPorCategoria('ferhel');
-    this.lista = datos ?? [];
-    this.paginasTotales = Math.ceil(this.lista.length / this.porPagina);
+    for (let index = 0; index < this.biomas.length; index++) {
+      this.listaPorBiomas[index] = await this.bibliotecaService.getPorBioma(this.biomas[index]) ?? [];
+    }
+    this.paginasTotales = this.biomas.length;
+    console.log(this.listaPorBiomas);
+    this.lista = this.listaPorBiomas[this.paginaActual - 1];
   }
 
   ionViewWillEnter() {
     this.musicaService.play('the-white-lion');
   }
 
-  get paginaActualItems(): Entrada[] {
-    const start = (this.paginaActual - 1) * this.porPagina;
-    return this.lista.slice(start, start + this.porPagina);
-  }
+  // get paginaActualItems(): Entrada[] {
+  //   const start = (this.paginaActual - 1) * this.porPagina;
+  //   return this.lista.slice(start, start + this.porPagina);
+  // }
 
-  get paginaSiguienteItems(): Entrada[] {
-    if (this.paginaActual < this.paginasTotales) {
-      const start = this.paginaActual * this.porPagina;
-      return this.lista.slice(start, start + this.porPagina);
-    }
-    return [];
-  }
+  // get paginaSiguienteItems(): Entrada[] {
+  //   if (this.paginaActual < this.paginasTotales) {
+  //     const start = this.paginaActual * this.porPagina;
+  //     return this.lista.slice(start, start + this.porPagina);
+  //   }
+  //   return [];
+  // }
 
-  get paginaAnteriorItems(): Entrada[] {
-    if (this.paginaActual > 1)
-    {
-      const start = (this.paginaActual - 2) * this.porPagina;
-      return this.lista.slice(start, start + this.porPagina);
-    }
-    return [];
-  }
+  // get paginaAnteriorItems(): Entrada[] {
+  //   if (this.paginaActual > 1)
+  //   {
+  //     const start = (this.paginaActual - 2) * this.porPagina;
+  //     return this.lista.slice(start, start + this.porPagina);
+  //   }
+  //   return [];
+  // }
 
   siguiente() {
-    console.log('ayuyu');
     if (this.paginaActual < this.paginasTotales) {
+      this.listaAEntrar = this.listaPorBiomas[this.paginaActual]
       this.animando = true
       this.entrarSiguiente = true;
       setTimeout(() => {
         this.entrarSiguiente = false;
         this.paginaActual++;
         this.animando = false;
+        this.lista = this.listaAEntrar;
+        this.listaAEntrar = [];
       }, 1000);
     }
   }
 
   anterior() {
-    console.log('ayuyu');
     if (this.paginaActual > 1) {
+      this.listaAEntrar = this.listaPorBiomas[this.paginaActual - 2]
       this.animando =  true;
       this.entrarAnterior = true;
       setTimeout(() => {
         this.entrarAnterior = false;
         this.paginaActual--;
         this.animando = false;
+        this.lista = this.listaAEntrar;
+        this.listaAEntrar = [];
       }, 1000);
     }
   }
