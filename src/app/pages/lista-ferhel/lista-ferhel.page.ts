@@ -32,7 +32,7 @@ export class ListaFerhelPage implements OnInit {
   listaAEntrar: Entrada[] = [];
   biomas: string[] = [
     'desierto'
-    // , 'cueva'
+    // , 'tundra'
     , 'montaña'
     // , 'bosque'
     // , 'pantano'

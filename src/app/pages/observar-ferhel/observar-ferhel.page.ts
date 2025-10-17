@@ -6,7 +6,15 @@ import { AtrasComponent } from 'src/app/components/atras/atras.component';
 import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
 import { MusicaComponent } from 'src/app/components/musica/musica.component';
 import { MusicaService } from 'src/app/services/musica/musica.service';
-import { Entrada } from 'src/app/services/biblioteca/biblioteca.service';
+import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/biblioteca.service';
+
+interface Lupa {
+  x: number;
+  y: number;
+  ferhel: Entrada;
+  encontrada: boolean;
+  visible: boolean
+}
 
 @Component({
   selector: 'app-observar-ferhel',
@@ -24,11 +32,12 @@ import { Entrada } from 'src/app/services/biblioteca/biblioteca.service';
     , MusicaComponent
   ]
 })
+
 export class ObservarFerhelPage implements OnInit {
   biomas: string[] = [
     'desierto'
-    // , 'cueva'
-    , 'montaña'
+    // , 'tundra'
+    // , 'montaña'
     // , 'bosque'
     // , 'pantano'
     // , 'rio'
@@ -37,6 +46,22 @@ export class ObservarFerhelPage implements OnInit {
     // , 'selva'
   ];
   ferhels: Entrada[] = [];
+  lupas: Lupa[] = [];
+
+  coordDesierto: number[][] = [
+    [window.innerWidth * 0.11 , window.innerHeight * 0.46],
+    [window.innerWidth * 0.3 , window.innerHeight * 0.74],
+    [window.innerWidth * 0.55 , window.innerHeight * 0.52],
+    [window.innerWidth * 0.8 , window.innerHeight * 0.705],
+    [window.innerWidth * 0.85 , window.innerHeight * 0.39]
+  ];
+  coordMontaña: number[][] = [
+    [window.innerWidth * 0 , window.innerHeight * 0],
+    [window.innerWidth * 0 , window.innerHeight * 0],
+    [window.innerWidth * 0 , window.innerHeight * 0],
+    [window.innerWidth * 0 , window.innerHeight * 0],
+    [window.innerWidth * 0 , window.innerHeight * 0]
+  ];
 
   catalejoRadio = 130
   posX = window.innerWidth / 2;
@@ -46,8 +71,9 @@ export class ObservarFerhelPage implements OnInit {
   targetY = this.posY;
   bloquear = false;
 
-  videoActivo= false;
+  videoActivo = false;
   videoSrc = '';
+  posterSrc = '';
   
   animFrame?: number;
 
@@ -55,32 +81,56 @@ export class ObservarFerhelPage implements OnInit {
 
   bioma= '';
 
-  lupas = [
-    {x: 200, y: 150, visible: false, id: 1, video: 'assets/videos/ferhel/fermiti_animacion.mp4', encontrada: false},
-    {x: 600, y: 250, visible: false, id: 2, video: 'assets/videos/ferhel/fermiti_animacion.mp4', encontrada: false}
-  ];
-
   constructor(
     private musicaService: MusicaService
+    , private bibliotecaService: BibliotecaService
   ) { }
   
-  ngOnInit() {
+  async ngOnInit() {
     document.body.style.touchAction = 'none';
     document.addEventListener('pointerdown', this.onPointerMove);
     document.addEventListener('pointermove', this.onPointerMove);
 
     this.animarCatalejo();
-    this.bioma = this.biomas[Math.floor(Math.random() * this.biomas.length)];
-    console.log(this.bioma);
   }
-
-  ionViewWillEnter() {
+  
+  async ionViewWillEnter() {
     this.musicaService.play('the-white-lion');
     this.musicaService.reproducirAmbiente(`ambiente_${this.bioma}`);
+    const random = Math.floor(Math.random() * this.biomas.length)
+    this.bioma = this.biomas[random];
+    this.ferhels = await this.bibliotecaService.getPorBioma(this.bioma) ?? [];
+    switch (this.bioma) {
+      case "desierto":
+        this.crearLupas(this.coordDesierto);
+        break;
+      case "tundra":
+        break;
+      case "montaña":
+        this.crearLupas(this.coordMontaña);
+        break;
+      case "bosque":
+        break;
+      case "pantano":
+        break;
+      case "rio":
+        break;
+      case "subterraneo":
+        break;
+      case "oceano":
+        break;
+      case "selva":
+        break;
+      default:
+        console.error('No se ha elegido ningún bioma.');
+        break;
+    }
   }
 
   ionViewWillLeave() {
     this.musicaService.stop(`ambiente_${this.bioma}`);
+    this.ferhels = [];
+    this.lupas = [];
   }
 
   private onPointerMove = (e: PointerEvent) => {
@@ -126,7 +176,8 @@ export class ObservarFerhelPage implements OnInit {
 
     this.bloquear = true;
     this.videoActivo = true
-    this.videoSrc = lupa.video;
+    this.videoSrc = 'assets/videos/ferhel/' + lupa.ferhel.id + '_animacion.mp4';
+    this.posterSrc = lupa.ferhel.otrosDatos.imagen;
     this.lupaActual = lupa;
   }
 
@@ -143,4 +194,30 @@ export class ObservarFerhelPage implements OnInit {
     console.log(this.lupas);
   }
 
+  crearLupas(coordenadas: number[][]) {
+    const coordAux = coordenadas;
+    const ferhelAux = this.ferhels;
+    const opcionesCantidadLupas = [1, 2, 2, 2, 3];
+    const cantidadLupas = opcionesCantidadLupas[Math.floor(Math.random() * opcionesCantidadLupas.length)];
+    for (let i = 0; i < cantidadLupas; i++) {
+      const indiceCoordSeleccionada = Math.floor(Math.random() * coordAux.length);
+      const indiceFerhelSeleccionado = Math.floor(Math.random() * ferhelAux.length);
+      const coordNuevaLupa = coordAux[indiceCoordSeleccionada];
+      this.crearLupa(coordNuevaLupa[0], coordNuevaLupa[1], ferhelAux[indiceFerhelSeleccionado]);
+      coordAux.splice(indiceCoordSeleccionada, 1);
+      ferhelAux.splice(indiceFerhelSeleccionado, 1);
+    }
+  }
+
+  crearLupa(x: number, y: number, ferhel: Entrada) {
+    const nuevaLupa: Lupa = {
+      x,
+      y,
+      ferhel,
+      encontrada: false,
+      visible: true
+    };
+
+    this.lupas.push(nuevaLupa);
+  }
 }
