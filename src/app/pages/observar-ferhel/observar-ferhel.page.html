@@ -40,6 +40,10 @@
       top: posY + 'px'
     }"
   ></video>
+
+  <div *ngIf="mostrarMensaje" class="mensaje" (click)="cerrarMensaje()">
+    <span>¡Has descubierto un {{ lupaActual.ferhel.id }}!</span>
+  </div>
 </ion-content>
 
 <div class="opciones aparecer">

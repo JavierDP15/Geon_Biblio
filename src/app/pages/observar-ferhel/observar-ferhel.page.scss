@@ -44,3 +44,45 @@ ion-content {
 
     z-index: 1;
 }
+
+.mensaje {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+
+    background: url('/assets/img/cuadro_dialogo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60%;
+    width: 70%;
+    text-align: center;
+
+    z-index: 3;
+
+    animation: parpadeo 2s infinite;
+
+    span {
+        font-family: 'amiri', sans-serif;
+        font-size: 7vh;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding-top: 5%;
+    }
+
+    @keyframes parpadeo {
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(1.2);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+}

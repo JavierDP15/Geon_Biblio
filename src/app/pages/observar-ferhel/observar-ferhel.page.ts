@@ -7,6 +7,7 @@ import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
 import { MusicaComponent } from 'src/app/components/musica/musica.component';
 import { MusicaService } from 'src/app/services/musica/musica.service';
 import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/biblioteca.service';
+import { FerhelesService } from 'src/app/services/ferheles/ferheles.service';
 
 interface Lupa {
   x: number;
@@ -81,9 +82,12 @@ export class ObservarFerhelPage implements OnInit {
 
   bioma= '';
 
+  mostrarMensaje = false;
+
   constructor(
     private musicaService: MusicaService
     , private bibliotecaService: BibliotecaService
+    , private ferhelService: FerhelesService
   ) { }
   
   async ngOnInit() {
@@ -95,6 +99,7 @@ export class ObservarFerhelPage implements OnInit {
   }
   
   async ionViewWillEnter() {
+    this.ferhelService.resetTodos(); // Temporal para pruebas.
     this.musicaService.play('the-white-lion');
     this.musicaService.reproducirAmbiente(`ambiente_${this.bioma}`);
     const random = Math.floor(Math.random() * this.biomas.length)
@@ -183,15 +188,22 @@ export class ObservarFerhelPage implements OnInit {
 
   cerrarVideo() {
     this.videoActivo = false;
-    this.bloquear = false;
-
-    if (this.lupaActual) {
-      this.lupaActual.visible = false;
-      this.lupaActual.encontrada = true;
-      this.lupaActual = null;
+    console.log(this.lupaActual.ferhel.id);
+    console.log(!this.ferhelService.getDescubierto(this.lupaActual.ferhel.id))
+    
+    if (!this.ferhelService.getDescubierto(this.lupaActual.ferhel.id)) {
+      this.mostrarMensaje = true;
+      this.ferhelService.setDescubierto(this.lupaActual.ferhel.id, true);
     }
+    else {
+      this.resetLupaActual();
+    }
+  }
 
-    console.log(this.lupas);
+  cerrarMensaje() {
+    this.bloquear = false;
+    this.resetLupaActual();
+    this.mostrarMensaje = false;
   }
 
   crearLupas(coordenadas: number[][]) {
@@ -199,7 +211,7 @@ export class ObservarFerhelPage implements OnInit {
     const ferhelAux = this.ferhels;
     const opcionesCantidadLupas = [1, 2, 2, 2, 3];
     const cantidadLupas = opcionesCantidadLupas[Math.floor(Math.random() * opcionesCantidadLupas.length)];
-    for (let i = 0; i < cantidadLupas; i++) {
+    for (let i = 0; i < cantidadLupas && i < ferhelAux.length; i++) {
       const indiceCoordSeleccionada = Math.floor(Math.random() * coordAux.length);
       const indiceFerhelSeleccionado = Math.floor(Math.random() * ferhelAux.length);
       const coordNuevaLupa = coordAux[indiceCoordSeleccionada];
@@ -219,5 +231,14 @@ export class ObservarFerhelPage implements OnInit {
     };
 
     this.lupas.push(nuevaLupa);
+  }
+
+  resetLupaActual() {
+    if (this.lupaActual) {
+      this.lupaActual.visible = false;
+      this.lupaActual.encontrada = true;
+      this.lupaActual = null;
+    }
+    this.bloquear = false;
   }
 }
