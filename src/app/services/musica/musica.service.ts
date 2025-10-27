@@ -137,9 +137,14 @@ export class MusicaService {
     this.silenciado = !this.silenciado;
     localStorage.setItem('musicaSilenciada', String(this.silenciado));
 
-    if (this.pistaActual) {
-      this.setVolumen(this.silenciado ? 0 : this.pistas[this.pistaActual].volumen ?? this.volumenGlobal, this.pistaActual)
-    }
+    // if (this.pistaActual) {
+    //   this.setVolumen(this.silenciado ? 0 : this.pistas[this.pistaActual].volumen ?? this.volumenGlobal, this.pistaActual)
+    // }
+
+    Object.values(this.pistas).forEach(pista => {
+      const volumenFinal = this.silenciado ? 0 : (pista.volumen ?? this.volumenGlobal);
+      pista.howl.volume(volumenFinal);
+    })
   }
 
   fadeOut(duracion: number, nombre: string) {

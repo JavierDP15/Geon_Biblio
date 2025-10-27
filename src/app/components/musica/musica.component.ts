@@ -12,6 +12,7 @@ import { MusicaService } from 'src/app/services/musica/musica.service';
 export class MusicaComponent  implements OnInit {
 
   musica = true;
+  ambiente = false;
 
   constructor(private musicaService: MusicaService) { }
 
@@ -29,10 +30,6 @@ export class MusicaComponent  implements OnInit {
       this.musicaService.setVolumen(0, pista);
     } else {
       this.musicaService.setVolumen(this.musicaService.getVolumenGlobal(), pista);
-      // const howl = this.musicaService.getHowl(pista);
-      // if (howl && !howl.playing()) {
-      //   howl.play();
-      // }
     }
 
     this.musica = !this.musicaService.getSilenciado();
