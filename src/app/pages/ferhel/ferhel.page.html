@@ -1,11 +1,11 @@
 <ion-content [fullscreen]="true" [scrollY]="false">
-  <img 
+    <img 
     class="imagen-fondo"
     src="assets/fondos/fondo_ferhel.jpg"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; z-index: 0; pointer-events: none;"
-  />
-
-  <video
+    />
+    
+    <video
     #videoCatalejo
     [hidden]="!mostrarVideo"
     [src]="'assets/videos/animacion_catalejo.mp4'"
@@ -16,25 +16,27 @@
     (ended)="onVideoCatalejoEnd()"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;">
   </video>
-
+  
   <div *ngIf="entrada" class="cuerpo">
     <div class="entrada">
       <div class="titulo">{{ entrada.nombre }}</div>
       <div class="texto" [innerHTML]="entrada.descripcion"></div>
     </div>
-
+    
     <div class="botones">
       <div class="boton" (click)="irAObservar()">
         <img class="observar" src="assets/img/observar_ferhel.png"/>
         <div class="tag">Observar</div>
       </div>
-      <div class="boton" (click)="irALista()">
+      <div class="boton" (click)="mostrarBiomas()">
         <img class="listaBoton" src="assets/img/lista_ferhel.png"/>
         <div class="tag">Lista</div>
       </div>
     </div>
   </div>
 </ion-content>
+
+<app-rueda-biomas class="biomas" *ngIf="biomas" (cerrar)="cerrarRueda()"></app-rueda-biomas>
 
 <div class="opciones aparecer">
   <app-atras [pagina]="'archivo'"></app-atras>

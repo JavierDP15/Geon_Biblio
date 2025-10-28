@@ -1,0 +1,171 @@
+.fondo {
+    position: fixed;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.25);
+    
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    transition: backdrop-filter 0.3s ease;
+
+    z-index: 5;
+}
+
+
+.rueda-imagen {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 40%;
+    height: auto;
+
+    aspect-ratio: 2/2;
+
+    z-index: 7;
+
+    animation: aparecer 1s forwards;
+}
+
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.image-map {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 40%;
+    height: auto;
+
+    z-index: 8;
+}
+
+.boton {
+    background-image: url('/assets/img/boton_interior.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    height: 10%;
+    width: 50%;
+    
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    z-index: 7;
+
+    span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        font-family: 'immortal', serif;
+        font-size: 1.5rem;
+        text-shadow: 1px 2px 0 black;
+        color: white;
+    }
+}
+
+.nombres {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 40%;
+    height: 80%;
+
+    pointer-events: none;
+
+    // background-color: red;
+
+    z-index: 7;
+
+    .texto {
+        font-family: 'immortal', serif;
+        color: white;
+        text-shadow: 1px 1px 0 black;
+        font-size: 1.3rem;
+        animation: aparecer 0.5s forwards;
+    }
+
+    .montaña {
+        position: fixed;
+        top: 18%;
+        left: 24%;
+        transform: translate(-50%, -50%);
+    }
+
+    .tundra {
+        top: 5%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .pantano {
+        top: 18%;
+        left: 78%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .bosque {
+        top: 50%;
+        left: 87%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .desierto {
+        top: 80%;
+        left: 77%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .oceano {
+        top: 93%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .subterraneo {
+        top: 80%;
+        left: 25%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .rio {
+        top: 50%;
+        left: 15%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .selva {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+}

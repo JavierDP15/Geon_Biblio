@@ -1,0 +1,39 @@
+<div class="fondo" (click)="cerrarRueda()"></div>
+<div class="rueda">
+  <img 
+    #imgMapa
+    src="assets/img/habitats.png"
+    alt="Rueda_Habitats" 
+    class="rueda-imagen"
+    usemap="#image-map"
+    (load)="inicializarMapa()"  
+  >
+
+  <map name="image-map">
+    <area target="" alt="montaña" title="montaña" coords="311,452,119,424,108,160,380,100,456,324" shape="poly" (click)="onAreaClick($event)">
+    <area target="" alt="tundra" title="tundra" coords="472,322,393,101,559,20,708,121,667,329" shape="poly" (click)="onAreaClick($event)">
+    <area target="" alt="pantano" title="pantano" coords="677,331,719,126,925,103,1039,295,1015,415,779,441" shape="poly" (click)="onAreaClick($event)">
+    <area target="" alt="bosque" title="bosque" coords="786,450,1020,426,1105,557,1020,712,790,645" shape="poly" (click)="onAreaClick($event)">
+    <area target="" alt="desierto" title="desierto" coords="790,656,1014,730,1049,852,909,1003,746,983,635,782" shape="poly" (click)="onAreaClick($event)">
+    <area target="" alt="oceano" title="oceano" coords="629,788,734,986,565,1069,372,996,461,784" shape="poly" (click)="onAreaClick($event)">
+    <area target="" alt="subterraneo" title="subterraneo" coords="454,780,363,993,190,998,118,776,322,680" shape="poly" (click)="onAreaClick($event)">
+    <area target="" alt="rio" title="rio" coords="323,459,107,431,24,578,105,766,323,672" shape="poly" (click)="onAreaClick($event)">
+    <area target="" alt="selva" title="selva" coords="561,556,216" shape="circle" (click)="onAreaClick($event)">
+  </map>
+
+  <div class="nombres">
+    <span *ngIf="habitatSeleccionado === 'montaña'" class="texto montaña">Montaña</span>
+    <span *ngIf="habitatSeleccionado === 'tundra'" class="texto tundra">Tundra</span>
+    <span *ngIf="habitatSeleccionado === 'pantano'" class="texto pantano">Pantano</span>
+    <span *ngIf="habitatSeleccionado === 'bosque'" class="texto bosque">Bosque</span>
+    <span *ngIf="habitatSeleccionado === 'desierto'" class="texto desierto">Desierto</span>
+    <span *ngIf="habitatSeleccionado === 'oceano'" class="texto oceano">Océano</span>
+    <span *ngIf="habitatSeleccionado === 'subterraneo'" class="texto subterraneo">Subterráneo</span>
+    <span *ngIf="habitatSeleccionado === 'rio'" class="texto rio">Rio</span>
+    <span *ngIf="habitatSeleccionado === 'selva'" class="texto selva">Selva</span>
+  </div>
+
+  <div class="boton" *ngIf="habitatSeleccionado" (click)="irAHabitat()">
+    <span>Continuar</span>
+  </div>
+</div>

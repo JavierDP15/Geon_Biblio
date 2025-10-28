@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 import { MusicaService } from 'src/app/services/musica/musica.service';
 import { FerhelComponentComponent } from 'src/app/components/ferhel-component/ferhel-component.component';
 import { FerhelesService } from 'src/app/services/ferheles/ferheles.service';
+import { RuedaBiomasComponent } from 'src/app/components/rueda-biomas/rueda-biomas.component';
 
 @Component({
   selector: 'app-ferhel',
@@ -17,16 +18,17 @@ import { FerhelesService } from 'src/app/services/ferheles/ferheles.service';
   styleUrls: ['./ferhel.page.scss'],
   standalone: true,
   imports: [
-    IonContent
+    CommonModule
+    , IonContent
     , IonHeader
     , IonTitle
     , IonToolbar
-    , CommonModule
     , FormsModule
     , AtrasComponent
     , AyudaComponent
     , MusicaComponent
     , FerhelComponentComponent
+    , RuedaBiomasComponent
   ]
 })
 export class FerhelPage implements OnInit {
@@ -35,6 +37,7 @@ export class FerhelPage implements OnInit {
   entrada: Entrada | null = null;
 
   mostrarVideo = false;
+  biomas = false;
 
   constructor(
     private bibliotecaService: BibliotecaService
@@ -53,10 +56,6 @@ export class FerhelPage implements OnInit {
     this.mostrarVideo = false;
   }
 
-  irALista() {
-    this.route.navigate(['/ferhel/lista-ferhel']);
-  }
-
   irAObservar() {
     this.mostrarVideo = true;
     const video = this.videoCatalejo.nativeElement;
@@ -65,9 +64,19 @@ export class FerhelPage implements OnInit {
     video.playsInline = true;
     video.play();
   }
+
+  mostrarBiomas() {
+    if (!this.biomas) {
+      this.biomas = true;
+    }
+  }
   
   onVideoCatalejoEnd() {
     this.route.navigate(['/ferhel/observar-ferhel']);
+  }
+
+  cerrarRueda() {
+    this.biomas = false;
   }
 
 }

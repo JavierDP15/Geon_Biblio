@@ -55,7 +55,7 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/ferhel/ferhel.page').then( m => m.FerhelPage)
   },
   {
-    path: 'ferhel/lista-ferhel',
+    path: 'ferhel/lista-ferhel/:habitat',
     loadComponent: () => import('./pages/lista-ferhel/lista-ferhel.page').then( m => m.ListaFerhelPage)
   },
   {
@@ -66,7 +66,4 @@ export const routes: Routes = [
     path: 'entrada-ferhel/:ferhel',
     loadComponent: () => import('./pages/entrada-ferhel/entrada-ferhel.page').then( m => m.EntradaFerhelPage)
   },
-
-
-
 ];

@@ -34,6 +34,7 @@
     "@ionic/angular": "^8.0.0",
     "@ionic/storage-angular": "^4.0.0",
     "howler": "^2.2.4",
+    "image-map-resizer": "^1.0.10",
     "ionicons": "^7.4.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
