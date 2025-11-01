@@ -43,7 +43,7 @@ export class RuedaBiomasComponent  implements OnInit {
     event.preventDefault();
     const target = event.target as HTMLAreaElement;
     const habitat = target.title;
-    const irA = target.className;
+    const irA = target.title;
     this.habitatSeleccionado = habitat;
     this.irASeleccionado = irA;
 
@@ -51,7 +51,6 @@ export class RuedaBiomasComponent  implements OnInit {
   }
 
   irAHabitat() {
-
     this.route.navigate(['/ferhel/lista-ferhel', this.irASeleccionado]);
   }
 }

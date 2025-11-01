@@ -42,7 +42,7 @@
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;">
   </video>
 
-  <div *ngIf="mostrarCuerpo" class="cuerpo" [class.desvanecer]="currentStep === 3">
+  <div *ngIf="mostrarCuerpo" class="cuerpo" [class.desvanecer]="desvaneciendo" (animationend)="onDesvanecerEnd($event)">
     <button class="archivo" [class.blur-background]="tutorial">Archivo</button>
     <div class="flecha flecha-arriba" *ngIf="puedesScrollArriba">▲</div>
     <div class="botones-scroll" (scroll)="onScroll($event)">
@@ -104,7 +104,7 @@
       <app-ayuda [pagina]="'archivo'"></app-ayuda>
   </div> -->
 
-  <div *ngIf="mostrarCuerpo" class="opcionesEsp" [class.desvanecer]="currentStep === 3">
+  <div *ngIf="mostrarCuerpo" class="opcionesEsp" [class.desvanecer]="desvaneciendo">
     <div class="atrasEsp" [class.blur-background]="tutorial && tutorialStep !== 3" [class.tutorial-resaltar-pequeño]="tutorialStep === 3">
       <app-atras [pagina]="'inicio'"></app-atras>
     </div>

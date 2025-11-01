@@ -9,6 +9,7 @@ import { FerhelComponentComponent } from 'src/app/components/ferhel-component/fe
 import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/biblioteca.service';
 import { FerhelesService } from 'src/app/services/ferheles/ferheles.service';
 import { MusicaService } from 'src/app/services/musica/musica.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-lista-ferhel',
@@ -29,22 +30,23 @@ import { MusicaService } from 'src/app/services/musica/musica.service';
 })
 export class ListaFerhelPage implements OnInit {
   lista: Entrada[] = [];
-  listaAEntrar: Entrada[] = [];
-  biomas: string[] = [
-    'desierto'
+  habitat = '';
+  // listaAEntrar: Entrada[] = [];
+  // biomas: string[] = [
+    // 'desierto'
     // , 'tundra'
-    , 'montaña'
+    // , 'montaña'
     // , 'bosque'
     // , 'pantano'
     // , 'rio'
     // , 'subterraneo'
     // , 'oceano'
     // , 'selva'
-  ];
-  listaPorBiomas: Entrada[][] = [];
-  paginaActual = 1;
+  // ];
+  // listaPorBiomas: Entrada[][] = [];
+  // paginaActual = 1;
   // readonly porPagina = 8;
-  paginasTotales = 1;
+  // paginasTotales = 1;
 
   entrarSiguiente = false;
   entrarAnterior = false;
@@ -54,6 +56,7 @@ export class ListaFerhelPage implements OnInit {
     private bibliotecaService: BibliotecaService
     , private ferhelService: FerhelesService
     , private musicaService: MusicaService
+    , private route: ActivatedRoute
   ) { }
 
   async ngOnInit() {
@@ -61,68 +64,42 @@ export class ListaFerhelPage implements OnInit {
     await this.ferhelService.resetDescubierto('typhos');
     await this.ferhelService.setDescubierto('typhos', true);
     const datos = await this.bibliotecaService.getPorCategoria('ferhel');
-    for (let index = 0; index < this.biomas.length; index++) {
-      this.listaPorBiomas[index] = await this.bibliotecaService.getPorBioma(this.biomas[index]) ?? [];
-    }
-    this.paginasTotales = this.biomas.length;
-    console.log(this.listaPorBiomas);
-    this.lista = this.listaPorBiomas[this.paginaActual - 1];
+    this.habitat = this.route.snapshot.paramMap.get('habitat') || '';
+    this.lista = await this.bibliotecaService.getPorBioma(this.habitat) || [];
   }
 
   ionViewWillEnter() {
     this.musicaService.play('the-white-lion');
   }
 
-  // get paginaActualItems(): Entrada[] {
-  //   const start = (this.paginaActual - 1) * this.porPagina;
-  //   return this.lista.slice(start, start + this.porPagina);
-  // }
-
-  // get paginaSiguienteItems(): Entrada[] {
+  // siguiente() {
   //   if (this.paginaActual < this.paginasTotales) {
-  //     const start = this.paginaActual * this.porPagina;
-  //     return this.lista.slice(start, start + this.porPagina);
+  //     this.listaAEntrar = this.listaPorBiomas[this.paginaActual]
+  //     this.animando = true
+  //     this.entrarSiguiente = true;
+  //     setTimeout(() => {
+  //       this.entrarSiguiente = false;
+  //       this.paginaActual++;
+  //       this.animando = false;
+  //       this.lista = this.listaAEntrar;
+  //       this.listaAEntrar = [];
+  //     }, 1000);
   //   }
-  //   return [];
   // }
 
-  // get paginaAnteriorItems(): Entrada[] {
-  //   if (this.paginaActual > 1)
-  //   {
-  //     const start = (this.paginaActual - 2) * this.porPagina;
-  //     return this.lista.slice(start, start + this.porPagina);
+  // anterior() {
+  //   if (this.paginaActual > 1) {
+  //     this.listaAEntrar = this.listaPorBiomas[this.paginaActual - 2]
+  //     this.animando =  true;
+  //     this.entrarAnterior = true;
+  //     setTimeout(() => {
+  //       this.entrarAnterior = false;
+  //       this.paginaActual--;
+  //       this.animando = false;
+  //       this.lista = this.listaAEntrar;
+  //       this.listaAEntrar = [];
+  //     }, 1000);
   //   }
-  //   return [];
   // }
-
-  siguiente() {
-    if (this.paginaActual < this.paginasTotales) {
-      this.listaAEntrar = this.listaPorBiomas[this.paginaActual]
-      this.animando = true
-      this.entrarSiguiente = true;
-      setTimeout(() => {
-        this.entrarSiguiente = false;
-        this.paginaActual++;
-        this.animando = false;
-        this.lista = this.listaAEntrar;
-        this.listaAEntrar = [];
-      }, 1000);
-    }
-  }
-
-  anterior() {
-    if (this.paginaActual > 1) {
-      this.listaAEntrar = this.listaPorBiomas[this.paginaActual - 2]
-      this.animando =  true;
-      this.entrarAnterior = true;
-      setTimeout(() => {
-        this.entrarAnterior = false;
-        this.paginaActual--;
-        this.animando = false;
-        this.lista = this.listaAEntrar;
-        this.listaAEntrar = [];
-      }, 1000);
-    }
-  }
 
 }
