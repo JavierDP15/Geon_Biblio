@@ -5,7 +5,7 @@
   transform: translateX(-50%);
   width: 80%;            
   height: 80%;
-  overflow: hidden;      
+  overflow: visible;      
   z-index: 1;
 }
 
@@ -56,12 +56,14 @@
     position: absolute;
     left: 0;
     top: 15%;
-    height: 100%;
+    bottom: 0;
+    // height: 100%;
     width: 100%;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    overflow-x: hidden;
+    // overflow-x: hidden;
+    overflow-y: auto;
     will-change: transform;
 }
 

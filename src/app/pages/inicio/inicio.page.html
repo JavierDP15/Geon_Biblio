@@ -18,13 +18,13 @@
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
   />
 
-  <div *ngIf="mostrarMenu" class="cuerpo">
+  <div *ngIf="mostrarMenu" class="cuerpo" [class.desactivar]="opciones">
     <img src="assets/img/titulo.png" alt="titulo" class="titulo">
     <img src="assets/img/subtitulo.png" alt="subtitulo" class="subtitulo">
     <button class="archivo" (click)="toArchivo()">Archivo</button>
     <div class="extras">
       <button class="boton-extra">Autora</button>
-      <button class="boton-extra">Opciones</button>
+      <button class="boton-extra" (click)="mostrarOpciones()">Opciones</button>
       <button class="boton-extra">Créditos</button>
       <button class="boton-extra">Logros</button>
     </div>
@@ -39,3 +39,5 @@
     class="desvanecer"
   />
 </ion-content>
+
+<app-opciones *ngIf="opciones" (cerrar)="cerrarOpciones()"></app-opciones>

@@ -99,7 +99,7 @@ export class ObservarFerhelPage implements OnInit {
   }
   
   async ionViewWillEnter() {
-    this.ferhelService.resetTodos(); // Temporal para pruebas.
+    // this.ferhelService.resetTodos(); // Temporal para pruebas.
     this.musicaService.play('the-white-lion');
     this.musicaService.reproducirAmbiente(`ambiente_${this.bioma}`);
     const random = Math.floor(Math.random() * this.biomas.length)
@@ -188,8 +188,6 @@ export class ObservarFerhelPage implements OnInit {
 
   cerrarVideo() {
     this.videoActivo = false;
-    console.log(this.lupaActual.ferhel.id);
-    console.log(!this.ferhelService.getDescubierto(this.lupaActual.ferhel.id))
     
     if (!this.ferhelService.getDescubierto(this.lupaActual.ferhel.id)) {
       this.mostrarMensaje = true;

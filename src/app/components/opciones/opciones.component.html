@@ -1,0 +1,18 @@
+<div class="fondo" (click)="cerrarOpciones()" [class.confirmando]="pidiendoConfirmacion"></div>
+<div class="panel" [class.confirmando]="pidiendoConfirmacion">
+  <div class="opciones">
+    <div class="opcion ferhel">
+      <img src="assets/img/opciones/marcador.png" class="marcador">
+      <div class="texto">Sistema ferhel</div>
+      <div class="boton" (click)="confirmarReinicio('ferhel')"><div class="texto-boton">Reiniciar</div></div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="pidiendoConfirmacion" class="confirmacion">
+  <div class="texto-confirmacion"><div class="texto-conf">¿Desea reiniciar el sistema de {{ sistemaAReiniciar }}?</div></div>
+  <div class="botones-confirmacion">
+    <div class="boton-confirmacion" (click)="confirmar(true)"><div>Si</div></div>
+    <div class="boton-confirmacion" (click)="confirmar(false)"><div>No</div></div>
+  </div>
+</div>

@@ -54,6 +54,7 @@ export class FerhelPage implements OnInit {
   ionViewWillEnter() {
     this.musicaService.play('the-white-lion');
     this.mostrarVideo = false;
+    this.biomas = false;
   }
 
   irAObservar() {

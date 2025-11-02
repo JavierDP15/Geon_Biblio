@@ -62,14 +62,23 @@ export class ArchivoPage implements OnInit {
     //   this.video.nativeElement.play();
     // }, 100)
   }
+
+  ionViewWillEnter() {
+    console.log(this.currentStep);
+    const video = this.video.nativeElement;
+    video.currentTime = 0;
+    if (this.currentStep === 1) {
+      video.autoplay = true;
+    }
+  }
   
   ionViewDidEnter() {
     this.desvaneciendo = false;
     if (!this.estadoService.getEntrado('archivo')) {
       this.tutorialService.resetTutorial('archivo');
 
-      const video = this.video.nativeElement;
-      video.currentTime = 0;
+      // const video = this.video.nativeElement;
+      // video.currentTime = 0;
       
       this.estadoService.setEntrado('archivo', true);
     } else {
@@ -84,15 +93,15 @@ export class ArchivoPage implements OnInit {
   }
 
   ionViewWillLeave() {
-    if (this.video?.nativeElement) {
+    // if (this.video?.nativeElement) {
       this.resetVideo(this.video.nativeElement);
-    }
-    if (this.videoCat?.nativeElement) {
+    // }
+    // if (this.videoCat?.nativeElement) {
       this.resetVideo(this.videoCat.nativeElement);
-    }
+    // }
 
-    this.currentStep = 1;
-    this.mostrarCuerpo = false;
+    this.currentStep = 2;
+    // this.mostrarCuerpo = false;
   }
 
   private resetVideo(video: HTMLVideoElement) {

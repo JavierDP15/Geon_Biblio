@@ -7,13 +7,22 @@ import { Howl } from 'howler';
 import { MusicaComponent } from 'src/app/components/musica/musica.component';
 import { Router } from '@angular/router';
 import { EstadoPaginasService } from 'src/app/services/estadoPaginas/estado-paginas';
+import { OpcionesComponent } from 'src/app/components/opciones/opciones.component';
 
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.page.html',
   styleUrls: ['./inicio.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, MusicaComponent]
+  imports: [IonContent
+    , IonHeader
+    , IonTitle
+    , IonToolbar
+    , CommonModule
+    , FormsModule
+    , MusicaComponent
+    , OpcionesComponent
+  ]
 })
 export class InicioPage implements OnInit {
 
@@ -23,6 +32,7 @@ export class InicioPage implements OnInit {
   mostrarMenu = false;
   // sonido = true;
   desvanecer = false;
+  opciones = false;
 
   constructor(
     private musicaService: MusicaService
@@ -45,6 +55,10 @@ export class InicioPage implements OnInit {
     }
   }
 
+  ionViewWillLeave() {
+    this.opciones = false;
+  }
+
   onVideo1Ended() {
     if (this.currentStep !== 1) return;
     this.currentStep = 2;
@@ -65,5 +79,14 @@ export class InicioPage implements OnInit {
       this.desvanecer = false;
       this.router.navigate(['/archivo']);
     }, 1000);
+  }
+
+  mostrarOpciones() {
+    this.musicaService.reproducirSonido('assets/audios/sonido_boton.mp3');
+    this.opciones = true;
+  }
+
+  cerrarOpciones() {
+    this.opciones = false;
   }
 }
