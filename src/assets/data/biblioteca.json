@@ -120,6 +120,32 @@
       "imagen": "assets/img/geones/caal.png"
     }
   },
+  {
+    "id": "dyshiba",
+    "nombre": "Dyshiba",
+    "url": "entrada-geon/dyshiba",
+    "categoria": "geon",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac ipsum ac tellus ultricies varius. Nulla sed libero interdum, pellentesque augue ut, pulvinar risus. Nunc tristique, justo eget lacinia feugiat, metus massa lacinia enim, non consectetur nisl nisi nec lacus. Pellentesque commodo dictum volutpat. Proin tristique justo eu arcu malesuada, et convallis mi aliquet. Cras fermentum rhoncus diam id interdum. Fusce lacinia at ligula et molestie. Quisque quis diam vel metus congue tristique. Cras tristique nisl sollicitudin aliquam ornare. Phasellus ullamcorper finibus tellus nec interdum. Nam suscipit sagittis ornare. Nulla non urna mollis, placerat eros consequat, fermentum mi. Nam suscipit orci urna.",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": [],
+      "subtitulo": "Praesent rutrum ante id massa dapibus tempor.",
+      "imagen": "assets/img/geones/dyshiba.png"
+    }
+  },
+  {
+    "id": "upsilon",
+    "nombre": "Upsilon",
+    "url": "entrada-geon/upsilon",
+    "categoria": "geon",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac ipsum ac tellus ultricies varius. Nulla sed libero interdum, pellentesque augue ut, pulvinar risus. Nunc tristique, justo eget lacinia feugiat, metus massa lacinia enim, non consectetur nisl nisi nec lacus. Pellentesque commodo dictum volutpat. Proin tristique justo eu arcu malesuada, et convallis mi aliquet. Cras fermentum rhoncus diam id interdum. Fusce lacinia at ligula et molestie. Quisque quis diam vel metus congue tristique. Cras tristique nisl sollicitudin aliquam ornare. Phasellus ullamcorper finibus tellus nec interdum. Nam suscipit sagittis ornare. Nulla non urna mollis, placerat eros consequat, fermentum mi. Nam suscipit orci urna.",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": [],
+      "subtitulo": "Nulla non urna mollis, placerat eros consequat, fermentum mi.",
+      "imagen": "assets/img/geones/upsilon.png"
+    }
+  },
 
 
 
@@ -138,6 +164,32 @@
     }
   },
   {
+    "id": "cauros",
+    "nombre": "Cauros",
+    "url": "entrada-ferhel/cauros",
+    "categoria": "ferhel",
+    "descripcion": "",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": ["desierto"],
+      "subtitulo": "",
+      "imagen": "assets/img/ferhel/cauros/cauros.jpg"
+    }
+  },
+  {
+    "id": "crematis",
+    "nombre": "Crematis",
+    "url": "entrada-ferhel/crematis",
+    "categoria": "ferhel",
+    "descripcion": "",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": ["desierto"],
+      "subtitulo": "",
+      "imagen": "assets/img/ferhel/crematis/crematis.jpg"
+    }
+  },
+  {
     "id": "fermiti",
     "nombre": "Fermiti",
     "url": "entrada-ferhel/fermiti",
@@ -151,6 +203,45 @@
     }
   },
   {
+    "id": "henn",
+    "nombre": "Henn",
+    "url": "entrada-ferhel/henn",
+    "categoria": "ferhel",
+    "descripcion": "",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": ["desierto"],
+      "subtitulo": "",
+      "imagen": "assets/img/ferhel/henn/henn.jpg"
+    }
+  },
+  {
+    "id": "jaipur",
+    "nombre": "Jaipur",
+    "url": "entrada-ferhel/jaipur",
+    "categoria": "ferhel",
+    "descripcion": "",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": ["desierto"],
+      "subtitulo": "",
+      "imagen": "assets/img/ferhel/jaipur/jaipur.jpg"
+    }
+  },
+  {
+    "id": "shavas",
+    "nombre": "Shavâs",
+    "url": "entrada-ferhel/shavas",
+    "categoria": "ferhel",
+    "descripcion": "",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": ["desierto"],
+      "subtitulo": "",
+      "imagen": "assets/img/ferhel/shavas/shavas.jpg"
+    }
+  },
+  {
     "id": "typhos",
     "nombre": "Typhos",
     "url": "entrada-ferhel/typhos",
@@ -161,6 +252,19 @@
       "bioma": ["desierto"],
       "subtitulo": "",
       "imagen": "assets/img/ferhel/typhos/typhos.jpg"
+    }
+  },
+  {
+    "id": "urro",
+    "nombre": "Urro",
+    "url": "entrada-ferhel/urro",
+    "categoria": "ferhel",
+    "descripcion": "",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": ["desierto"],
+      "subtitulo": "",
+      "imagen": "assets/img/ferhel/urro/urro.jpg"
     }
   },
   {
@@ -185,71 +289,6 @@
     "otrosDatos": {
       "padre": "",
       "bioma": ["cueva", "montaña", "bosque", "subterraneo"],
-      "subtitulo": "",
-      "imagen": "assets/img/ferhel/zentit/zentit.jpg"
-    }
-  },
-  {
-    "id": "zentit",
-    "nombre": "Zentit",
-    "url": "entrada-ferhel/zentit",
-    "categoria": "ferhel",
-    "descripcion": "",
-    "otrosDatos": {
-      "padre": "",
-      "bioma": [],
-      "subtitulo": "",
-      "imagen": "assets/img/ferhel/zentit/zentit.jpg"
-    }
-  },
-  {
-    "id": "zentit",
-    "nombre": "Zentit",
-    "url": "entrada-ferhel/zentit",
-    "categoria": "ferhel",
-    "descripcion": "",
-    "otrosDatos": {
-      "padre": "",
-      "bioma": [],
-      "subtitulo": "",
-      "imagen": "assets/img/ferhel/zentit/zentit.jpg"
-    }
-  },
-  {
-    "id": "zentit",
-    "nombre": "Zentit",
-    "url": "entrada-ferhel/zentit",
-    "categoria": "ferhel",
-    "descripcion": "",
-    "otrosDatos": {
-      "padre": "",
-      "bioma": [],
-      "subtitulo": "",
-      "imagen": "assets/img/ferhel/zentit/zentit.jpg"
-    }
-  },
-  {
-    "id": "yabei",
-    "nombre": "Yabei",
-    "url": "entrada-ferhel/yabei",
-    "categoria": "ferhel",
-    "descripcion": "",
-    "otrosDatos": {
-      "padre": "",
-      "bioma": [],
-      "subtitulo": "",
-      "imagen": "assets/img/ferhel/yabei/yabei.jpg"
-    }
-  },
-  {
-    "id": "zentit",
-    "nombre": "Zentit",
-    "url": "entrada-ferhel/zentit",
-    "categoria": "ferhel",
-    "descripcion": "",
-    "otrosDatos": {
-      "padre": "",
-      "bioma": [],
       "subtitulo": "",
       "imagen": "assets/img/ferhel/zentit/zentit.jpg"
     }

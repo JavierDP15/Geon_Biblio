@@ -60,9 +60,9 @@ export class ListaFerhelPage implements OnInit {
   ) { }
 
   async ngOnInit() {
-    await this.ferhelService.setDescubierto('fermiti', true);
-    await this.ferhelService.resetDescubierto('typhos');
-    await this.ferhelService.setDescubierto('typhos', true);
+    // await this.ferhelService.setDescubierto('fermiti', true);
+    // await this.ferhelService.resetDescubierto('typhos');
+    // await this.ferhelService.setDescubierto('typhos', true);
     const datos = await this.bibliotecaService.getPorCategoria('ferhel');
     this.habitat = this.route.snapshot.paramMap.get('habitat') || '';
     this.lista = await this.bibliotecaService.getPorBioma(this.habitat) || [];

@@ -7,6 +7,7 @@ import { SplashScreen } from '@capacitor/splash-screen'
 import { Howl } from 'howler';
 import { Platform } from '@ionic/angular'
 import { AudioService } from 'src/app/services/audio/audio.service';
+import { GeonesService } from 'src/app/services/geones/geones.service';
 
 @Component({
   selector: 'app-intro',
@@ -28,10 +29,12 @@ export class IntroPage implements OnInit {
   constructor(
     private router: Router,
     private platform: Platform,
-    private audioService: AudioService
+    private audioService: AudioService,
+    private geonesService: GeonesService
   ) { }
 
   async ngOnInit() {
+    this.geonesService.resetTodos();
     if (this.platform.is('ios')) {
       this.showStartButton = true;
     } else {

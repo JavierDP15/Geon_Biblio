@@ -64,25 +64,35 @@ export class ConstelacionesPage implements OnInit {
 
   ionViewWillEnter() {
     this.musicaService.play('caves-of-dawn');
-    this.geonesService.resetDescubierto('virnut');
-    this.geonesService.resetDescubierto('abacu');
-    this.geonesService.resetDescubierto('caal');
-    this.geonesService.resetDescubierto('dyshiba');
+    // this.geonesService.resetDescubierto('abacu');
+    // this.geonesService.resetDescubierto('virnut');
+    // this.geonesService.resetDescubierto('caal');
+    // this.geonesService.resetDescubierto('dyshiba');
+    // this.geonesService.resetDescubierto('upsilon');
 
     if (this.geonesService.getDescubierto('abacu')) {
       this.mostrarAbacu = true;
+      this.ocultarSVGAbacu = true;
     }
 
     if (this.geonesService.getDescubierto('virnut')) {
       this.mostrarVirnut = true;
+      this.ocultarSVGVirnut = true;
     }
 
     if (this.geonesService.getDescubierto('caal')) {
       this.mostrarCaal = true;
+      this.ocultarSVGCaal = true;
     }
 
     if (this.geonesService.getDescubierto('dyshiba')) {
       this.mostrarDyshiba = true;
+      this.ocultarSVGDyshiba = true;
+    }
+
+    if (this.geonesService.getDescubierto('upsilon')) {
+      this.mostrarUpsilon = true;
+      this.ocultarSVGUpsilon = true;
     }
   }
 
