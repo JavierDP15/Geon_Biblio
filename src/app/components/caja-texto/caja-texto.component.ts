@@ -11,7 +11,9 @@ import { Tutorial } from 'src/app/services/tutorial/tutorial.service';
   imports: [CommonModule]
 })
 export class CajaTextoComponent  implements OnInit {
+  @Input() pagina: string = '';
   @Input() entrada: Tutorial | Ayuda | null = null;
+  @Input() arriba: boolean = false;
   @Output() cerrar = new EventEmitter<void>();
 
   paginas: string[] = [];
@@ -21,11 +23,12 @@ export class CajaTextoComponent  implements OnInit {
   velocidad = 30;
   animando = false;
 
-  private intervalos: any[] = [];
+  private intervalos: any [] = [];
+  // private intervalo: any;
 
   constructor() { }
 
-  ngOnInit() {
+  async ngOnInit() {
     if (this.entrada?.texto) {
       this.paginarTexto(this.entrada.texto, 220);
       this.mostrarConAnimacion();
@@ -145,85 +148,58 @@ export class CajaTextoComponent  implements OnInit {
   this.paginas = pages.map(p => p.trim());
 }
 
-  private mostrarConAnimacion() {
-    if (this.animando) {
-      this.intervalos.forEach(i => clearInterval(i));
-      this.intervalos = [];
-      this.textoMostrado = this.paginas[this.paginaActual];
-      this.animando = false;
-      return;
-    }
-
+  private async mostrarConAnimacion() {
+  if (this.animando) {
     this.intervalos.forEach(i => clearInterval(i));
     this.intervalos = [];
-    this.textoMostrado = '';
-    this.animando = true;
-
-    const container = document.createElement('div');
-    container.innerHTML = this.paginas[this.paginaActual];
-    const nodes: Node[] = Array.from(container.childNodes);
-
-    let htmlAcumulado = '';
-    let i = 0;
-
-    const siguienteNodo = () => {
-      if (i < nodes.length) {
-        animarNodo(nodes[i]);
-        i++;
-      } else {
-        this.animando = false;
-        this.intervalos = [];
-      }
-    };
-
-    const animarNodo = (node: Node) => {
-      if (!node) return siguienteNodo();
-
-      if (node.nodeType === Node.TEXT_NODE) {
-        const text = node.textContent || '';
-        let j = 0;
-
-        const intervalo = setInterval(() => {
-          if (j < text.length) {
-            htmlAcumulado += text[j];
-            this.textoMostrado = htmlAcumulado;
-            j++;
-          } else {
-            clearInterval(intervalo);
-            this.intervalos = this.intervalos.filter(i => i !== intervalo);
-            siguienteNodo();
-          }
-        }, this.velocidad);
-
-        this.intervalos.push(intervalo);
-
-      } else if (node.nodeType === Node.ELEMENT_NODE) {
-        const tag = (node as HTMLElement).tagName.toLowerCase();
-        htmlAcumulado += `<${tag}>`;
-
-        const hijos = Array.from(node.childNodes);
-        let k = 0;
-
-        const animarHijo = () => {
-          if (k < hijos.length) {
-            animarNodo(hijos[k]);
-            k++;
-          } else {
-            htmlAcumulado += `</${tag}>`;
-            this.textoMostrado = htmlAcumulado;
-            siguienteNodo();
-          }
-        };
-
-        animarHijo();
-
-      } else {
-        siguienteNodo();
-      }
-    };
-
-    siguienteNodo();
+    this.textoMostrado = this.paginas[this.paginaActual];
+    this.animando = false;
+    return;
   }
+
+  this.intervalos.forEach(i => clearInterval(i));
+  this.intervalos = [];
+  this.textoMostrado = '';
+  this.animando = true;
+
+  const container = document.createElement('div');
+  container.innerHTML = this.paginas[this.paginaActual];
+  const nodes: Node[] = Array.from(container.childNodes);
+
+  let htmlAcumulado = '';
+
+  const animarNodo = async (node: Node): Promise<void> => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const text = node.textContent || '';
+      for (let j = 0; j < text.length; j++) {
+        htmlAcumulado += text[j];
+        this.textoMostrado = htmlAcumulado;
+        await new Promise(res => {
+          const t = setTimeout(res, this.velocidad);
+          this.intervalos.push(t);
+        });
+      }
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+      const tag = (node as HTMLElement).tagName.toLowerCase();
+      htmlAcumulado += `<${tag}>`;
+      this.textoMostrado = htmlAcumulado;
+
+      for (const child of Array.from(node.childNodes)) {
+        await animarNodo(child);
+      }
+
+      htmlAcumulado += `</${tag}>`;
+      this.textoMostrado = htmlAcumulado;
+    }
+  };
+
+  for (const node of nodes) {
+    await animarNodo(node);
+  }
+
+  this.animando = false;
+  this.intervalos = [];
+}
 
   siguiente() {
     if (!this.animando){

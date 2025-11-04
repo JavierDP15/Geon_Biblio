@@ -47,7 +47,6 @@ export class MusicaService {
     if (this.pistaActual === nombre) return;
 
     this.initPista(nombre, loop, volumen);
-
     if (this.pistaActual) {
       this.stop(this.pistaActual);
     }

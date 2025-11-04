@@ -75,5 +75,233 @@
     "texto": "<i>La bibliotecaria se marcha por donde ha venido. Delante de ti se alza el templo del saber más espectacular y completo que has visto en tu vida. Sientes algo inesperado, una emoción que te recorre la espina dorsal como una descarga. La bibliotecaria tenía razón; hay algo especial en este lugar, y serás tú quien descubra todos sus secretos.</i>",
     "foto": "",
     "nombre": ""
+  },
+
+
+
+
+  {
+    "pagina": "ferhel",
+    "paso": 1,
+    "texto": "Saludos, viajero. ¿Qué haces por aquí, tan lejos de tu casa? Este no es lugar para curiosos, especialmente aquellos que vienen escasamente preparados. No vendrás a buscar problemas, ¿verdad?",
+    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "nombre": "Tungalag Hija del viento"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 2,
+    "texto": "Maestra, por favor, un cazador no se hubiera presentado así. Estoy seguro de que el caminante viene en son de paz.",
+    "foto": "assets/fotos/subutai_el_aprendiz.png",
+    "nombre": "Subutai el aprendiz"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 3,
+    "texto": "…",
+    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "nombre": "Tungalag Hija del viento"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 4,
+    "texto": "Disculpa mis modales. Hemos tenido demasiados encuentros con furtivos. Deja que me presente. Mi nombre es Tungalag y provengo de la lejana Daicon, la tierra del Khanato. Este es mi aprendiz, Subutai. Ambos somos naturalistas especializados en ferhel. Recorremos Cartam para inventariar las especies, sus características y costumbres. Sabes lo que es un ferhel, ¿cierto?",
+    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "nombre": "Tungalag Hija del viento"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 5,
+    "texto": "Maestra, ¿cómo no va a saberlo?...",
+    "foto": "assets/fotos/subutai_el_aprendiz.png",
+    "nombre": "Subutai el aprendiz"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 6,
+    "texto": "<i>El aprendiz suspira, avergonzado, pero su mentora parece ignorarlo por completo.</i>",
+    "foto": "",
+    "nombre": ""
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 7,
+    "texto": "Los ferhel son las bestias mágicas que habitan Cartam. Criaturas magníficas de toda clase, tamaño y habilidad, que embellecen este mundo con su presencia. Conviven en precario equilibrio con la fauna común y nunca se acercan demasiado a las ciudades humanas. Lógico, por otro lado, viendo cómo las tratan.",
+    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "nombre": "Tungalag Hija del viento"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 8,
+    "texto": "Dime, extranjero, ¿eres también un académico? ¿Vienes a estudiar la fauna mágica? Subutai, por favor, explícale las normas.",
+    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "nombre": "Tungalag Hija del viento"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 9,
+    "texto": "Sí, maestra. La primera herramienta que deberías dominar es la del manejo del <b>Atlas naturalista</b>. Este es el compendio donde apuntarás todos tus descubrimientos y que reflejará los datos resultantes de tus investigaciones. Emocionante, ¿verdad?",
+    "foto": "assets/fotos/subutai_el_aprendiz.png",
+    "nombre": "Subutai el aprendiz"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 10,
+    "texto": "La pestaña <b>Atlas naturalista</b> es una enciclopedia ferhel a tu disposición. Para acceder a ella, debes pulsar el botón indicado.",
+    "foto": "",
+    "nombre": ""
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 11,
+    "texto": "Lógicamente, deberás mantener un orden en tus estudios o ninguna academia querrá después aceptar tus textos. Aquí nos jugamos el pan, amigo. Ordena tus apuntes por hábitats y todo te será más fácil.",
+    "foto": "assets/fotos/subutai_el_aprendiz.png",
+    "nombre": "Subutai el aprendiz"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 12,
+    "texto": "La pantalla <b>Hábitats</b> muestra una selección de los principales biomas en los que habitan las diferentes especies ferhel.",
+    "foto": "",
+    "nombre": ""
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 13,
+    "texto": "Existen nueve hábitats principales; océano, selva, bosque, desierto, montaña, tundra, pantano, río y subterráneo. Cada uno de ellos tiene su propia sección dentro del compendio. Para acceder, utiliza <b>la rueda de hábitats</b> y elige el que desees.",
+    "foto": "",
+    "nombre": ""
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 14,
+    "texto": "Bien dicho, Subutai. Solo por eso, dejaré que esta noche seas tú quien recojas las muestras de excremento de los zentits.",
+    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "nombre": "Tungalag Hija del viento"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 15,
+    "texto": "<i>El aprendiz farfulla palabras incomprensibles y suspira.</i>",
+    "foto": "",
+    "nombre": ""
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 16,
+    "texto": "De todos modos, caminante, de poco te servirá el Atlas naturalista si no aprendes a observar de manera adecuada a la fauna salvaje. Necesitarás un <i>faizán</i> para escrutar de lejos a los ferhel. Si no tienes uno, toma este. Es un poco viejo, pero sus lentes todavía funcionan muy bien.",
+    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "nombre": "Tungalag Hija del viento"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 17,
+    "texto": "<i>La investigadora te entrega una suerte de catalejo.</i> (Faizán +1)",
+    "foto": "",
+    "nombre": ""
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 18,
+    "texto": "Para recopilar información de las diferentes especies ferhel, primero deberás encontrarlas en los distintos hábitats. Para ello, entra en la pestaña llamada <b>Observar fauna</b>. El hábitat resultante será aleatorio, y en él deberás utilizar tu <i>faizán</i> para descubrir ejemplares autóctonos en su medio natural.",
+    "foto": "",
+    "nombre": ""
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 19,
+    "texto": "Desplaza la mirilla de la lente prismática hasta descubrir pistas de ferhel. Tras encontrar uno, los datos que recopiles se añadirán a tu compendio de naturalista automáticamente.",
+    "foto": "",
+    "nombre": ""
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 20,
+    "texto": "¡Parece sencillo, pero no lo es tanto! Algunas especies son bastante huidizas, créeme. Cada adenda se incorporará a tu <b>Atlas naturalista</b>, que podrás revisar siempre que quieras.",
+    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "nombre": "Tungalag Hija del viento"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 21,
+    "texto": "…",
+    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "nombre": "Tungalag Hija del viento"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 22,
+    "texto": "Subutai, ¿te estoy aburriendo?",
+    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "nombre": "Tungalag Hija del viento"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 23,
+    "texto": "No, maestra. Todavía pensaba en lo de los excrementos… ¿es realmente necesario?",
+    "foto": "assets/fotos/subutai_el_aprendiz.png",
+    "nombre": "Subutai el aprendiz"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 24,
+    "texto": "<i>El aprendiz vuelve a suspirar.</i>",
+    "foto": "",
+    "nombre": ""
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 25,
+    "texto": "¡El trabajo de laboratorio es igual de importante! Bueno, creo que ya he hablado demasiado por hoy. Tengo muchas cosas que hacer, así que Subutai te contará lo que queda. Espero que hagas un buen trabajo y guardes la consideración debida a la ciencia. No hagas que me arrepienta de haber confiado en ti.",
+    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "nombre": "Tungalag Hija del viento"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 26,
+    "texto": "¡Y si ves a algún furtivo, avísame de inmediato!",
+    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "nombre": "Tungalag Hija del viento."
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 27,
+    "texto": "<i>Subutai carraspea y se adelanta. Por su gesto, puedes afirmar que le has caído bien.</i>",
+    "foto": "",
+    "nombre": ""
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 28,
+    "texto": "Para finalizar, hay varias cosas que podrán ayudarte, extranjero. La primera de ellas es la de revisar los trabajos científicos de quienes te precedieron. Puedes informarte de características ferhel, de los usos que se les da en Cartam y de muchas otras curiosidades.",
+    "foto": "assets/fotos/subutai_el_aprendiz.png",
+    "nombre": "Subutai el aprendiz"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 29,
+    "texto": "Para acceder a una información exhaustiva sobre el impacto de los ferhel en la vida cotidiana de Cartam, entra en la pestaña <b>Ecología</b> y usos.",
+    "foto": "",
+    "nombre": ""
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 30,
+    "texto": "Por último, pero no menos importante, como investigador de campo has de tener presente el código deontológico de nuestra profesión. Recuerda que la naturaleza nos precede y que le debemos respeto y cuidado. Con el tiempo, estoy seguro de que Cartam se convertirá en un mundo más justo.",
+    "foto": "assets/fotos/subutai_el_aprendiz.png",
+    "nombre": "Subutai el aprendiz"
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 31,
+    "texto": "Para revisar la ética del naturalista, accede a la pestaña <b>decálogo</b>.",
+    "foto": "",
+    "nombre": ""
+  },
+  {
+    "pagina": "ferhel",
+    "paso": 32,
+    "texto": "Te deseo suerte en tu trabajo, desconocido. Si necesitas algo, estaremos por aquí. Que el viento de la Pradera Infinita sople siempre sobre ti. Que los Geones nunca te encuentren.",
+    "foto": "assets/fotos/subutai_el_aprendiz.png",
+    "nombre": "Subutai el aprendiz"
   }
 ]

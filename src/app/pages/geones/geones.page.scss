@@ -71,7 +71,6 @@ ion-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        // row-gap: 5vh;
         align-items: center;
         justify-content: center;
         
@@ -194,14 +193,14 @@ ion-content {
         // transform: translateX(-50%) translateY(0) rotateZ(0deg);
     }
     100% {
-        transform: translateY(-40vh) rotateZ(180deg);
+        transform: translateY(-46vh) rotateZ(180deg);
         // transform: translateX(-50%) translateY(-45vh) rotateZ(180deg);
     }
 }
 
 @keyframes bajarFlecha {
     0% {
-        transform: translateY(-40vh) rotateZ(180deg);
+        transform: translateY(-46vh) rotateZ(180deg);
         // transform: translateX(-50%) translateY(-45vh) rotateZ(180deg);
     }
     100% {
@@ -240,7 +239,7 @@ ion-content {
         opacity: 1;
     }
     100%{
-        transform: translateY(-55vh);
+        transform: translateY(-61vh);
     }
 }
 

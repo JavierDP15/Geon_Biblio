@@ -1,5 +1,5 @@
 <div class="fondo" (click)="siguiente()">
-  <div *ngIf="entrada" class="caja">
+  <div *ngIf="entrada" class="caja" [class.arriba]="arriba">
     <img class="fondo-dialogo" src="assets/img/cuadro_dialogo.png">
     <p class="texto" [innerHTML]="textoMostrado"></p>
     <div class="flecha" *ngIf="paginaActual < paginas.length - 1"></div>

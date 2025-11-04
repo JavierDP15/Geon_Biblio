@@ -100,10 +100,10 @@ export class ObservarFerhelPage implements OnInit {
   
   async ionViewWillEnter() {
     // this.ferhelService.resetTodos(); // Temporal para pruebas.
-    this.musicaService.play('the-white-lion');
-    this.musicaService.reproducirAmbiente(`ambiente_${this.bioma}`);
+    // this.musicaService.play('the-white-lion');
     const random = Math.floor(Math.random() * this.biomas.length)
     this.bioma = this.biomas[random];
+    this.musicaService.reproducirAmbiente(`ambiente_${this.bioma}`);
     this.ferhels = await this.bibliotecaService.getPorBioma(this.bioma) ?? [];
     switch (this.bioma) {
       case "desierto":

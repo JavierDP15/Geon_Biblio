@@ -64,7 +64,6 @@ export class ArchivoPage implements OnInit {
   }
 
   ionViewWillEnter() {
-    console.log(this.currentStep);
     const video = this.video.nativeElement;
     video.currentTime = 0;
     if (this.currentStep === 1) {
@@ -76,9 +75,6 @@ export class ArchivoPage implements OnInit {
     this.desvaneciendo = false;
     if (!this.estadoService.getEntrado('archivo')) {
       this.tutorialService.resetTutorial('archivo');
-
-      // const video = this.video.nativeElement;
-      // video.currentTime = 0;
       
       this.estadoService.setEntrado('archivo', true);
     } else {
@@ -216,8 +212,6 @@ export class ArchivoPage implements OnInit {
 
           if (playPromise !== undefined) {
             playPromise
-              .then(() => console.log('🎬 VideoCat reproduciéndose'))
-              .catch(err => console.warn('⚠️ No se pudo iniciar videoCat:', err));
           }
         }
 

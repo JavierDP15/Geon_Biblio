@@ -26,20 +26,39 @@
     <div class="botones">
       <div class="boton" (click)="irAObservar()">
         <img class="observar" src="assets/img/observar_ferhel.png"/>
-        <div class="tag">Observar</div>
+        <div class="tag">Observar fauna</div>
       </div>
       <div class="boton" (click)="mostrarBiomas()">
         <img class="listaBoton" src="assets/img/lista_ferhel.png"/>
-        <div class="tag">Lista</div>
+        <div class="tag">Atlas Naturista</div>
       </div>
     </div>
   </div>
 </ion-content>
 
+<div *ngIf="tutorial" class="fondo-blur"></div>
+
 <app-rueda-biomas class="biomas" *ngIf="biomas" (cerrar)="cerrarRueda()"></app-rueda-biomas>
 
-<div class="opciones aparecer">
+<div *ngIf="tutorialStep === 9 || tutorialStep === 17" class="botones-tutorial">
+  <div class="boton" [class.mostrar]="tutorialStep === 17">
+    <img class="listaBoton" src="assets/img/observar_ferhel.png"/>
+    <div class="tag">Observar Fauna</div>
+  </div>
+  <div class="boton" [class.mostrar]="tutorialStep === 9">
+    <img class="listaBoton" src="assets/img/lista_ferhel.png"/>
+    <div class="tag">Atlas Naturista</div>
+  </div>
+</div>
+
+<div *ngIf="!mostrarVideo" class="opciones aparecer">
   <app-atras [pagina]="'archivo'"></app-atras>
   <app-musica></app-musica>
   <app-ayuda [pagina]="'ferhel'"></app-ayuda>
+</div>
+
+<div *ngIf="tutorial" class="tutoriales">
+  <div *ngIf="!mostrarTutorial" class="fondo-blur"></div>
+  <app-dialogo *ngIf="tutorial[tutorialStep].foto.length > 0 && mostrarTutorial" [pagina]="'ferhel'" [entrada]="tutorial[tutorialStep]" (cerrar)="onCerrarTutorialStep()"></app-dialogo>
+  <app-caja-texto *ngIf="tutorial[tutorialStep].foto.length === 0 && mostrarTutorial" [entrada]="tutorial[tutorialStep]" [arriba]="arriba" (cerrar)="onCerrarTutorialStep()"></app-caja-texto>
 </div>

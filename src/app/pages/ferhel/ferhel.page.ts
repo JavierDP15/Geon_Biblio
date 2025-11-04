@@ -11,6 +11,10 @@ import { MusicaService } from 'src/app/services/musica/musica.service';
 import { FerhelComponentComponent } from 'src/app/components/ferhel-component/ferhel-component.component';
 import { FerhelesService } from 'src/app/services/ferheles/ferheles.service';
 import { RuedaBiomasComponent } from 'src/app/components/rueda-biomas/rueda-biomas.component';
+import { Tutorial, TutorialService } from 'src/app/services/tutorial/tutorial.service';
+import { EstadoPaginasService } from 'src/app/services/estadoPaginas/estado-paginas';
+import { DialogoComponent } from 'src/app/components/dialogo/dialogo.component';
+import { CajaTextoComponent } from 'src/app/components/caja-texto/caja-texto.component';
 
 @Component({
   selector: 'app-ferhel',
@@ -29,6 +33,8 @@ import { RuedaBiomasComponent } from 'src/app/components/rueda-biomas/rueda-biom
     , MusicaComponent
     , FerhelComponentComponent
     , RuedaBiomasComponent
+    , DialogoComponent
+    , CajaTextoComponent
   ]
 })
 export class FerhelPage implements OnInit {
@@ -38,26 +44,75 @@ export class FerhelPage implements OnInit {
 
   mostrarVideo = false;
   biomas = false;
+  tutorial: Tutorial[] | null = null;
+  tutorialStep = 0;
+  mostrarTutorial = false;
+  arriba = false;
 
   constructor(
     private bibliotecaService: BibliotecaService
     , private route: Router
     , private musicaService: MusicaService
     , private ferhelService: FerhelesService
+    , private tutorialService: TutorialService
+    , private estadoService: EstadoPaginasService
   ) { }
 
   async ngOnInit() {
     this.entrada = await this.bibliotecaService.getPorId('ferhel') ?? null;
+    this.musicaService.play('the-white-lion');
     this.mostrarVideo = false;
+    // await this.tutorialService.resetTutorial('ferhel');
+    await this.recibirTutorial();
   }
-
+  
   ionViewWillEnter() {
     this.musicaService.play('the-white-lion');
     this.mostrarVideo = false;
     this.biomas = false;
   }
+  
+  async recibirTutorial() {
+    const tutoriales = await this.tutorialService.mostrarTutorial('ferhel');
+    console.log(tutoriales);
+    if (tutoriales) {
+      this.mostrarTutorial = true;
+      this.tutorial = tutoriales;
+      this.tutorialStep = 0;
+    }
+  }
+
+  async onCerrarTutorialStep() {
+    this.mostrarTutorial = false;
+
+    await new Promise(resolve => setTimeout(resolve));
+
+    if (this.tutorial && this.tutorialStep < this.tutorial.length - 1) {
+      this.tutorialStep++;
+      switch (this.tutorialStep) {
+        case 9:
+        case 17:
+          this.arriba = true;
+          break;
+        case 11:
+          this.biomas = true;
+          break;
+        case 13:
+          this.biomas = false;
+          break;
+        default:
+          this.arriba = false;
+          break;
+      }
+    } else {
+      this.tutorial = null;
+    }
+
+    this.mostrarTutorial = true;
+  }
 
   irAObservar() {
+    this.musicaService.fadeOut(5000, 'the-white-lion');
     this.mostrarVideo = true;
     const video = this.videoCatalejo.nativeElement;
     video.currentTime = 0;
@@ -65,7 +120,7 @@ export class FerhelPage implements OnInit {
     video.playsInline = true;
     video.play();
   }
-
+  
   mostrarBiomas() {
     if (!this.biomas) {
       this.biomas = true;
@@ -73,6 +128,7 @@ export class FerhelPage implements OnInit {
   }
   
   onVideoCatalejoEnd() {
+    this.musicaService.stop('the-white-lion');
     this.route.navigate(['/ferhel/observar-ferhel']);
   }
 
