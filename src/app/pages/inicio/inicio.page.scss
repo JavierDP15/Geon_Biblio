@@ -183,12 +183,15 @@ z-index: 10;
 @keyframes botones {
     0% {
         opacity: 0;
+        pointer-events: none;
     }
     60% {
         opacity: 0;
+        pointer-events: none;
     }
     100% {
         opacity: 1;
+        pointer-events: auto;
     }
 }
 

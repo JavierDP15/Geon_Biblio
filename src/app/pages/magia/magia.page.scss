@@ -1,0 +1,19 @@
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.draw-circle {
+//   stroke-dasharray: 314; /* aprox. circunferencia = 2πr (2 * π * 50 ≈ 314) */
+  stroke-dasharray: 376.8; /* aprox. circunferencia = 2πr (2 * π * 50 ≈ 314) */
+  stroke-dashoffset: 314;
+  animation: draw 2s linear forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

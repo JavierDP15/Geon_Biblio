@@ -31,22 +31,6 @@ import { ActivatedRoute } from '@angular/router';
 export class ListaFerhelPage implements OnInit {
   lista: Entrada[] = [];
   habitat = '';
-  // listaAEntrar: Entrada[] = [];
-  // biomas: string[] = [
-    // 'desierto'
-    // , 'tundra'
-    // , 'montaña'
-    // , 'bosque'
-    // , 'pantano'
-    // , 'rio'
-    // , 'subterraneo'
-    // , 'oceano'
-    // , 'selva'
-  // ];
-  // listaPorBiomas: Entrada[][] = [];
-  // paginaActual = 1;
-  // readonly porPagina = 8;
-  // paginasTotales = 1;
 
   entrarSiguiente = false;
   entrarAnterior = false;
@@ -60,9 +44,6 @@ export class ListaFerhelPage implements OnInit {
   ) { }
 
   async ngOnInit() {
-    // await this.ferhelService.setDescubierto('fermiti', true);
-    // await this.ferhelService.resetDescubierto('typhos');
-    // await this.ferhelService.setDescubierto('typhos', true);
     const datos = await this.bibliotecaService.getPorCategoria('ferhel');
     this.habitat = this.route.snapshot.paramMap.get('habitat') || '';
     this.lista = await this.bibliotecaService.getPorBioma(this.habitat) || [];

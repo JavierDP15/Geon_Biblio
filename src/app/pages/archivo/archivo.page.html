@@ -60,8 +60,8 @@
         </div>
         <div class="fila-botones" [class.blur-background]="tutorial">
           <div class="boton">
-            <img class="icono-boton" src="assets/iconos/magia.png">
-            <button class="boton">Magia</button>
+            <img class="icono-boton" src="assets/iconos/magia.png" (click)="irA('magia')">
+            <button class="boton" (click)="irA('magia')">Magia</button>
           </div>
           <div></div>
           <div class="boton">

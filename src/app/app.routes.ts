@@ -65,5 +65,9 @@ export const routes: Routes = [
   {
     path: 'entrada-ferhel/:ferhel',
     loadComponent: () => import('./pages/entrada-ferhel/entrada-ferhel.page').then( m => m.EntradaFerhelPage)
+  },  {
+    path: 'magia',
+    loadComponent: () => import('./pages/magia/magia.page').then( m => m.MagiaPage)
   },
+
 ];

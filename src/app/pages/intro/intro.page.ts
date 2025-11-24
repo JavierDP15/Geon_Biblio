@@ -23,6 +23,7 @@ export class IntroPage implements OnInit {
 
   showVideo1 = true;
   showVideo2 = false;
+  logoAlma = true;
   
   showStartButton = false;
 
@@ -44,18 +45,22 @@ export class IntroPage implements OnInit {
 
   startIntro() {
     this.showStartButton = false;
-    this.showVideo1 = true;
+    // this.showVideo1 = true;
+    setTimeout(() => {
+      this.showVideo2 = true;
+      this.logoAlma = false;
+    }, 3000)
   }
 
   onVideoEnded() {
-    if(this.showVideo1) {
-      this.showVideo1 = false;
-      this.showVideo2 = true;
-    } else {
+    // if(this.showVideo1) {
+    //   this.showVideo1 = false;
+    //   this.showVideo2 = true;
+    // } else {
       this.showVideo2 = false;
       setTimeout(() => {
         this.router.navigate(['/inicio']);
       }, 2000)
-    }
+    // }
   }
 }

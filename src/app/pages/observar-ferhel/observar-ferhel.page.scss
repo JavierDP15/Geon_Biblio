@@ -49,7 +49,7 @@ ion-content {
     position: fixed;
     inset: 0;
     margin: auto;
-
+    
     background: url('/assets/img/cuadro_dialogo.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -57,14 +57,15 @@ ion-content {
     height: 60%;
     width: 70%;
     text-align: center;
-
+    
     z-index: 3;
-
+    
     animation: parpadeo 2s infinite;
-
+    
     span {
         font-family: 'amiri', sans-serif;
         font-size: 7vh;
+        color: white;
 
         position: absolute;
         top: 50%;
