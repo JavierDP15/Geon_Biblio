@@ -1,0 +1,19 @@
+<ion-content [fullscreen]="true">
+  <img
+    class="fondo" 
+    src="assets/fondos/fondo_personajes.jpg"
+  >
+
+  <div class="cuerpo">
+    <div class="titulo">Salas de Anfírenis</div>
+    <div class="salas">
+      <app-salas-pj *ngFor="let sala of salas" class="sala" [sala]="sala.id" (click)="irA(sala.id)"></app-salas-pj>
+    </div>
+  </div>
+</ion-content>
+
+<div class="opciones">
+  <app-atras [pagina]="'archivo'"></app-atras>
+  <app-musica></app-musica>
+  <app-ayuda [pagina]="'personajes'"></app-ayuda>
+</div>

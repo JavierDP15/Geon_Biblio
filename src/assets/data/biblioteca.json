@@ -242,7 +242,7 @@
     }
   },
   {
-    "id": "shavâs",
+    "id": "shavas",
     "nombre": "Shavâs",
     "url": "entrada-ferhel/shavas",
     "categoria": "ferhel",
@@ -304,6 +304,48 @@
       "bioma": ["cueva", "montaña", "bosque", "subterraneo"],
       "subtitulo": "",
       "imagen": "assets/img/ferhel/zentit/zentit.jpg"
+    }
+  },
+
+
+
+  {
+    "id": "abratem",
+    "nombre": "Abratem Telima",
+    "url": "personaje/abratem",
+    "categoria": "personaje",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
+    "otrosDatos": {
+      "padre": "bishna",
+      "bioma": [],
+      "subtitulo": "",
+      "imagen": "assets/fotos/pj-pagina/abratem_telima.png"
+    }
+  },
+  {
+    "id": "iago",
+    "nombre": "Iago Bashón",
+    "url": "personaje/iago",
+    "categoria": "personaje",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
+    "otrosDatos": {
+      "padre": "bishna",
+      "bioma": [],
+      "subtitulo": "",
+      "imagen": "assets/fotos/pj-pagina/iago_bashon.png"
+    }
+  },
+  {
+    "id": "lampra",
+    "nombre": "Lampra Usai",
+    "url": "personaje/lampra",
+    "categoria": "personaje",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
+    "otrosDatos": {
+      "padre": "bishna",
+      "bioma": [],
+      "subtitulo": "",
+      "imagen": "assets/fotos/pj-pagina/lampra_usai.png"
     }
   }
 ]

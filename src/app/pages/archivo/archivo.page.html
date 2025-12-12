@@ -91,6 +91,17 @@
             <button class="boton">Inmortales</button>
           </div>
         </div>
+        <div class="fila-botones" [class.blur-background]="tutorial">
+          <div class="boton">
+            <img class="icono-boton" src="assets/iconos/historia.png">
+            <button class="boton">Historia</button>
+          </div>
+          <div></div>
+          <div class="boton">
+            <img class="icono-boton" src="assets/iconos/personajes.png" (click)="irA('personajes')">
+            <button class="boton" (click)="irA('personajes')">Personajes</button>
+          </div>
+        </div>
       </div>
     </div>
     <div class="flecha flecha-abajo" *ngIf="puedesScrollAbajo">▼</div>

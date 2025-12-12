@@ -1,0 +1,34 @@
+.cuerpo {
+    .fondo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .personaje {
+        position: absolute;
+        width: 20%;
+        transform: translate(-50%, -50%);
+    }
+
+    .personaje1 {
+        top: var(--coord-y1);
+        left: var(--coord-x1);
+        scale: var(--scale1);
+    }
+
+    .personaje2 {
+        top: var(--coord-y2);
+        left: var(--coord-x2);
+        scale: var(--scale2);
+    }
+
+    .personaje3 {
+        top: var(--coord-y3);
+        left: var(--coord-x3);
+        scale: var(--scale3);
+    }
+}

@@ -1,0 +1,47 @@
+.fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cuerpo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    .titulo {
+        font-family: 'fantaisie', sans-serif;
+        font-size: 10vh;
+        color: black;
+
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .salas {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 85%;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 3vw;
+        row-gap: 4vh;
+
+        .sala {
+
+        }
+    }
+}

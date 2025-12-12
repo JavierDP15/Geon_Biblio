@@ -74,7 +74,7 @@ export class ArchivoPage implements OnInit {
   ionViewDidEnter() {
     this.desvaneciendo = false;
     if (!this.estadoService.getEntrado('archivo')) {
-      this.tutorialService.resetTutorial('archivo');
+      // this.tutorialService.resetTutorial('archivo');
       
       this.estadoService.setEntrado('archivo', true);
     } else {

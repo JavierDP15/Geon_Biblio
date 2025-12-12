@@ -1,0 +1,19 @@
+<ion-content [fullscreen]="true" [scrollY]="false">
+  <img class="fondo" src="assets/fondos/fondo_personajes.jpg">
+  <div *ngIf="entrada" class="cuerpo">
+    <div class="cuadro">
+      <img src="assets/img/marco_personajes.png" class="marco">
+      <img [src]="entrada.otrosDatos.imagen" class="foto">
+    </div>
+    <div class="texto">
+      <div class="nombre">{{ entrada.nombre }}</div>
+      <div class="descripcion">{{ entrada.descripcion }}</div>
+    </div>
+  </div>
+</ion-content>
+
+<div class="opciones">
+  <app-atras [pagina]="atras"></app-atras>
+  <app-musica></app-musica>
+  <app-ayuda [pagina]="personaje"></app-ayuda>
+</div>

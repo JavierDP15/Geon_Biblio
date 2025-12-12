@@ -31,9 +31,9 @@
     (ended)="onVideoEnded()">
   </video>
 
-  <!-- *ngIf="!showVideo1 && !showVideo2" -->
   <img
-    src="assets/img/neo_asteride.jpg"
+  *ngIf="showGeon"
+    src="assets/img/geon_universe_logo.jpg"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;"
   />
   

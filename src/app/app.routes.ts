@@ -65,9 +65,23 @@ export const routes: Routes = [
   {
     path: 'entrada-ferhel/:ferhel',
     loadComponent: () => import('./pages/entrada-ferhel/entrada-ferhel.page').then( m => m.EntradaFerhelPage)
-  },  {
+  },
+  {
     path: 'magia',
     loadComponent: () => import('./pages/magia/magia.page').then( m => m.MagiaPage)
   },
+  {
+    path: 'personajes',
+    loadComponent: () => import('./pages/personajes/personajes.page').then( m => m.PersonajesPage)
+  },
+  {
+    path: 'sala-pj/:sala',
+    loadComponent: () => import('./pages/sala-pj/sala-pj.page').then( m => m.SalaPjPage)
+  },
+  {
+    path: 'personaje/:personaje',
+    loadComponent: () => import('./pages/personaje/personaje.page').then( m => m.PersonajePage)
+  },
+
 
 ];

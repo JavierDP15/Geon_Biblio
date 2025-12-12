@@ -1,0 +1,14 @@
+<ion-content [fullscreen]="true" [scrollY]="false">
+  <div *ngIf="salaArray" class="cuerpo">
+    <img [src]="`assets/fondos/salas-pj/${sala}_fondo.jpg`" class="fondo">
+    <app-personaje class="personaje personaje1" [personaje]="salaArray.personajes[0]"></app-personaje>
+    <app-personaje class="personaje personaje2" [personaje]="salaArray.personajes[1]"></app-personaje>
+    <app-personaje class="personaje personaje3" [personaje]="salaArray.personajes[2]"></app-personaje>
+  </div>
+</ion-content>
+
+<div class="opciones">
+  <app-atras [pagina]="'personajes'"></app-atras>
+  <app-musica></app-musica>
+  <app-ayuda [pagina]="sala"></app-ayuda>
+</div>

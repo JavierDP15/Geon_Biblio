@@ -4,7 +4,7 @@
         "numero": 1,
         "paso": 1,
         "nombre": "Oberus Hajit",
-        "foto": "assets/fotos/oberus_hajit.png",
+        "foto": "assets/fotos/dialogos/oberus_hajit.png",
         "texto": "¿Que te hable sobre el Geón del tiempo?"
     },
     {
@@ -12,7 +12,7 @@
         "numero": 1,
         "paso": 2,
         "nombre": "Oberus Hajit",
-        "foto": "assets/fotos/oberus_hajit.png",
+        "foto": "assets/fotos/dialogos/oberus_hajit.png",
         "texto": "..."
     },
     {
@@ -20,7 +20,7 @@
         "numero": 1,
         "paso": 3,
         "nombre": "Oberus Hajit",
-        "foto": "assets/fotos/oberus_hajit.png",
+        "foto": "assets/fotos/dialogos/oberus_hajit.png",
         "texto": "..."
     },
     {
@@ -28,7 +28,7 @@
         "numero": 1,
         "paso": 4,
         "nombre": "Oberus Hajit",
-        "foto": "assets/fotos/oberus_hajit.png",
+        "foto": "assets/fotos/dialogos/oberus_hajit.png",
         "texto": "¿No tienes otras preguntas que hacerme? Es que… mis asuntos con él son demasiado personales. En serio… necesito un poco de aire. Con permiso…"
     },
     {
@@ -47,7 +47,7 @@
         "numero": 1,
         "paso": 1,
         "nombre": "Bibliotecaria Ayiat",
-        "foto": "assets/fotos/bibliotecaria_ayiat.png",
+        "foto": "assets/fotos/dialogos/bibliotecaria_ayiat.png",
         "texto": "Por favor, te pido consideración. Algunos de los eruditos que ves en esta sala son peregrinos llegados de lejanas tierras. El estudio de los Geones es un asunto muy delicado; una simple distracción podría romper las guardas mágicas que utilizan para escrutar los textos impíos. En Anfírenis nos tomamos muy en serio el asunto de las Calamidades."
     },
 
@@ -58,7 +58,7 @@
         "numero": 1,
         "paso": 1,
         "nombre": "Bibliotecaria Ayiat",
-        "foto": "assets/fotos/bibliotecaria_ayiat.png",
+        "foto": "assets/fotos/dialogos/bibliotecaria_ayiat.png",
         "texto": "¿Buscas información sobre el Geón del destino? Te aconsejo que no te emplees demasiado. Se sabe que la obsesión con este dios puede atraer su atención hacia uno… Y no queremos que nos preste atención, ¿verdad?"
     },
     {
@@ -66,7 +66,7 @@
         "numero": 2,
         "paso": 1,
         "nombre": "Bibliotecaria Ayiat",
-        "foto": "assets/fotos/bibliotecaria_ayiat.png",
+        "foto": "assets/fotos/dialogos/bibliotecaria_ayiat.png",
         "texto": "¿Has visto miles de gusanos en tus sueños? ¡Contra los Geones! La biblioteca no es el lugar que necesitas, te aconsejo que te acerques a la Corte de los Misterios más cercana. ¡Y rápido!"
     },
     {
@@ -82,7 +82,7 @@
         "numero": 3,
         "paso": 2,
         "nombre": "Iago Bashon",
-        "foto": "assets/fotos/iago_bashon.png",
+        "foto": "assets/fotos/dialogos/iago_bashon.png",
         "texto": "¿Mmm? ¿Caal Melqart? No sé, no conozco a ese tipo."
     },
     {

@@ -1,0 +1,12 @@
+.sala {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+
+    .texto {
+        color: black;
+        font-family: 'immortal', serif;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}

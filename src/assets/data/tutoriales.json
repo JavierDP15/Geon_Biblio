@@ -3,7 +3,7 @@
     "pagina": "archivo",
     "paso": 1,
     "texto": "Te doy la bienvenida a la Biblioteca de Anfírenis. En ella encontrarás todo tipo de textos e información sobre el mundo de Cartam. Nuestro noble templo de sabiduría abre todos los días y horas del año, salvo en caso de Calamidad. Siéntete libre de investigar el edificio y de estudiar los miles de rollos y libros de sus estanterías.",
-    "foto": "assets/fotos/bibliotecaria_ayiat.png",
+    "foto": "assets/fotos/dialogos/bibliotecaria_ayiat.png",
     "nombre": "Bibliotecaria Ayiat"
   },
   {
@@ -31,7 +31,7 @@
     "pagina": "archivo",
     "paso": 5,
     "texto": "Nuestro personal estará siempre atento por si necesitas algo. Por favor, no dudes en dirigirte a nosotros.",
-    "foto": "assets/fotos/bibliotecaria_ayiat.png",
+    "foto": "assets/fotos/dialogos/bibliotecaria_ayiat.png",
     "nombre": "Bibliotecaria Ayiat"
   },
   {
@@ -45,7 +45,7 @@
     "pagina": "archivo",
     "paso": 7,
     "texto": "Sin embargo, comprende que no podremos atenderte en todo momento. ¡Siempre estamos sobrepasados de trabajo!",
-    "foto": "assets/fotos/bibliotecaria_ayiat.png",
+    "foto": "assets/fotos/dialogos/bibliotecaria_ayiat.png",
     "nombre": "Bibliotecaria Ayiat"
   },
   {
@@ -59,14 +59,14 @@
     "pagina": "archivo",
     "paso": 9,
     "texto": "¡Ah, importante! Algunos de los sabios más reputados de Cartam vienen hasta Anfírenis para realizar sus estudios. Quizás puedas conocerlos entre estas salas.",
-    "foto": "assets/fotos/bibliotecaria_ayiat.png",
+    "foto": "assets/fotos/dialogos/bibliotecaria_ayiat.png",
     "nombre": "Bibliotecaria Ayiat"
   },
   {
     "pagina": "archivo",
     "paso": 10,
     "texto": "Adelante y mucha suerte. Dentro de estos muros te espera un mundo fascinante. ¡Hasta ahora!",
-    "foto": "assets/fotos/bibliotecaria_ayiat.png",
+    "foto": "assets/fotos/dialogos/bibliotecaria_ayiat.png",
     "nombre": "Bibliotecaria Ayiat"
   },
   {
@@ -84,35 +84,35 @@
     "pagina": "ferhel",
     "paso": 1,
     "texto": "Saludos, viajero. ¿Qué haces por aquí, tan lejos de tu casa? Este no es lugar para curiosos, especialmente aquellos que vienen escasamente preparados. No vendrás a buscar problemas, ¿verdad?",
-    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "foto": "assets/fotos/dialogos/tungalag_hija_del_viento.png",
     "nombre": "Tungalag Hija del viento"
   },
   {
     "pagina": "ferhel",
     "paso": 2,
     "texto": "Maestra, por favor, un cazador no se hubiera presentado así. Estoy seguro de que el caminante viene en son de paz.",
-    "foto": "assets/fotos/subutai_el_aprendiz.png",
+    "foto": "assets/fotos/dialogos/subutai_el_aprendiz.png",
     "nombre": "Subutai el aprendiz"
   },
   {
     "pagina": "ferhel",
     "paso": 3,
     "texto": "…",
-    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "foto": "assets/fotos/dialogos/tungalag_hija_del_viento.png",
     "nombre": "Tungalag Hija del viento"
   },
   {
     "pagina": "ferhel",
     "paso": 4,
     "texto": "Disculpa mis modales. Hemos tenido demasiados encuentros con furtivos. Deja que me presente. Mi nombre es Tungalag y provengo de la lejana Daicon, la tierra del Khanato. Este es mi aprendiz, Subutai. Ambos somos naturalistas especializados en ferhel. Recorremos Cartam para inventariar las especies, sus características y costumbres. Sabes lo que es un ferhel, ¿cierto?",
-    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "foto": "assets/fotos/dialogos/tungalag_hija_del_viento.png",
     "nombre": "Tungalag Hija del viento"
   },
   {
     "pagina": "ferhel",
     "paso": 5,
     "texto": "Maestra, ¿cómo no va a saberlo?...",
-    "foto": "assets/fotos/subutai_el_aprendiz.png",
+    "foto": "assets/fotos/dialogos/subutai_el_aprendiz.png",
     "nombre": "Subutai el aprendiz"
   },
   {
@@ -126,21 +126,21 @@
     "pagina": "ferhel",
     "paso": 7,
     "texto": "Los ferhel son las bestias mágicas que habitan Cartam. Criaturas magníficas de toda clase, tamaño y habilidad, que embellecen este mundo con su presencia. Conviven en precario equilibrio con la fauna común y nunca se acercan demasiado a las ciudades humanas. Lógico, por otro lado, viendo cómo las tratan.",
-    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "foto": "assets/fotos/dialogos/tungalag_hija_del_viento.png",
     "nombre": "Tungalag Hija del viento"
   },
   {
     "pagina": "ferhel",
     "paso": 8,
     "texto": "Dime, extranjero, ¿eres también un académico? ¿Vienes a estudiar la fauna mágica? Subutai, por favor, explícale las normas.",
-    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "foto": "assets/fotos/dialogos/tungalag_hija_del_viento.png",
     "nombre": "Tungalag Hija del viento"
   },
   {
     "pagina": "ferhel",
     "paso": 9,
     "texto": "Sí, maestra. La primera herramienta que deberías dominar es la del manejo del <b>Atlas naturalista</b>. Este es el compendio donde apuntarás todos tus descubrimientos y que reflejará los datos resultantes de tus investigaciones. Emocionante, ¿verdad?",
-    "foto": "assets/fotos/subutai_el_aprendiz.png",
+    "foto": "assets/fotos/dialogos/subutai_el_aprendiz.png",
     "nombre": "Subutai el aprendiz"
   },
   {
@@ -154,7 +154,7 @@
     "pagina": "ferhel",
     "paso": 11,
     "texto": "Lógicamente, deberás mantener un orden en tus estudios o ninguna academia querrá después aceptar tus textos. Aquí nos jugamos el pan, amigo. Ordena tus apuntes por hábitats y todo te será más fácil.",
-    "foto": "assets/fotos/subutai_el_aprendiz.png",
+    "foto": "assets/fotos/dialogos/subutai_el_aprendiz.png",
     "nombre": "Subutai el aprendiz"
   },
   {
@@ -175,7 +175,7 @@
     "pagina": "ferhel",
     "paso": 14,
     "texto": "Bien dicho, Subutai. Solo por eso, dejaré que esta noche seas tú quien recojas las muestras de excremento de los zentits.",
-    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "foto": "assets/fotos/dialogos/tungalag_hija_del_viento.png",
     "nombre": "Tungalag Hija del viento"
   },
   {
@@ -189,7 +189,7 @@
     "pagina": "ferhel",
     "paso": 16,
     "texto": "De todos modos, caminante, de poco te servirá el Atlas naturalista si no aprendes a observar de manera adecuada a la fauna salvaje. Necesitarás un <i>faizán</i> para escrutar de lejos a los ferhel. Si no tienes uno, toma este. Es un poco viejo, pero sus lentes todavía funcionan muy bien.",
-    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "foto": "assets/fotos/dialogos/tungalag_hija_del_viento.png",
     "nombre": "Tungalag Hija del viento"
   },
   {
@@ -217,28 +217,28 @@
     "pagina": "ferhel",
     "paso": 20,
     "texto": "¡Parece sencillo, pero no lo es tanto! Algunas especies son bastante huidizas, créeme. Cada adenda se incorporará a tu <b>Atlas naturalista</b>, que podrás revisar siempre que quieras.",
-    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "foto": "assets/fotos/dialogos/tungalag_hija_del_viento.png",
     "nombre": "Tungalag Hija del viento"
   },
   {
     "pagina": "ferhel",
     "paso": 21,
     "texto": "…",
-    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "foto": "assets/fotos/dialogos/tungalag_hija_del_viento.png",
     "nombre": "Tungalag Hija del viento"
   },
   {
     "pagina": "ferhel",
     "paso": 22,
     "texto": "Subutai, ¿te estoy aburriendo?",
-    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "foto": "assets/fotos/dialogos/tungalag_hija_del_viento.png",
     "nombre": "Tungalag Hija del viento"
   },
   {
     "pagina": "ferhel",
     "paso": 23,
     "texto": "No, maestra. Todavía pensaba en lo de los excrementos… ¿es realmente necesario?",
-    "foto": "assets/fotos/subutai_el_aprendiz.png",
+    "foto": "assets/fotos/dialogos/subutai_el_aprendiz.png",
     "nombre": "Subutai el aprendiz"
   },
   {
@@ -252,14 +252,14 @@
     "pagina": "ferhel",
     "paso": 25,
     "texto": "¡El trabajo de laboratorio es igual de importante! Bueno, creo que ya he hablado demasiado por hoy. Tengo muchas cosas que hacer, así que Subutai te contará lo que queda. Espero que hagas un buen trabajo y guardes la consideración debida a la ciencia. No hagas que me arrepienta de haber confiado en ti.",
-    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "foto": "assets/fotos/dialogos/tungalag_hija_del_viento.png",
     "nombre": "Tungalag Hija del viento"
   },
   {
     "pagina": "ferhel",
     "paso": 26,
     "texto": "¡Y si ves a algún furtivo, avísame de inmediato!",
-    "foto": "assets/fotos/tungalag_hija_del_viento.png",
+    "foto": "assets/fotos/dialogos/tungalag_hija_del_viento.png",
     "nombre": "Tungalag Hija del viento."
   },
   {
@@ -273,7 +273,7 @@
     "pagina": "ferhel",
     "paso": 28,
     "texto": "Para finalizar, hay varias cosas que podrán ayudarte, extranjero. La primera de ellas es la de revisar los trabajos científicos de quienes te precedieron. Puedes informarte de características ferhel, de los usos que se les da en Cartam y de muchas otras curiosidades.",
-    "foto": "assets/fotos/subutai_el_aprendiz.png",
+    "foto": "assets/fotos/dialogos/subutai_el_aprendiz.png",
     "nombre": "Subutai el aprendiz"
   },
   {
@@ -287,7 +287,7 @@
     "pagina": "ferhel",
     "paso": 30,
     "texto": "Por último, pero no menos importante, como investigador de campo has de tener presente el código deontológico de nuestra profesión. Recuerda que la naturaleza nos precede y que le debemos respeto y cuidado. Con el tiempo, estoy seguro de que Cartam se convertirá en un mundo más justo.",
-    "foto": "assets/fotos/subutai_el_aprendiz.png",
+    "foto": "assets/fotos/dialogos/subutai_el_aprendiz.png",
     "nombre": "Subutai el aprendiz"
   },
   {
@@ -301,7 +301,7 @@
     "pagina": "ferhel",
     "paso": 32,
     "texto": "Te deseo suerte en tu trabajo, desconocido. Si necesitas algo, estaremos por aquí. Que el viento de la Pradera Infinita sople siempre sobre ti. Que los Geones nunca te encuentren.",
-    "foto": "assets/fotos/subutai_el_aprendiz.png",
+    "foto": "assets/fotos/dialogos/subutai_el_aprendiz.png",
     "nombre": "Subutai el aprendiz"
   }
 ]
