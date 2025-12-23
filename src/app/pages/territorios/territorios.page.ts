@@ -7,6 +7,7 @@ import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
 import { AtrasComponent } from 'src/app/components/atras/atras.component';
 import { MusicaService } from 'src/app/services/musica/musica.service';
 import { Router } from '@angular/router';
+import { SalirComponent } from 'src/app/components/salir/salir.component';
 
 @Component({
   selector: 'app-territorios',
@@ -22,6 +23,7 @@ import { Router } from '@angular/router';
     , MusicaComponent
     , AyudaComponent
     , AtrasComponent
+    , SalirComponent
   ]
 })
 export class TerritoriosPage implements OnInit {

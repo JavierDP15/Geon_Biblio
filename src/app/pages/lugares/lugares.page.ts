@@ -8,6 +8,7 @@ import { MusicaComponent } from 'src/app/components/musica/musica.component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/biblioteca.service';
 import { MusicaService } from 'src/app/services/musica/musica.service';
+import { SalirComponent } from 'src/app/components/salir/salir.component';
 
 @Component({
   selector: 'app-lugares',
@@ -24,6 +25,7 @@ import { MusicaService } from 'src/app/services/musica/musica.service';
     , AtrasComponent
     , AyudaComponent
     , MusicaComponent
+    , SalirComponent
   ]
 })
 export class LugaresPage implements OnInit {

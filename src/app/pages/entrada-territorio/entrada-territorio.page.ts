@@ -8,6 +8,7 @@ import { MusicaComponent } from 'src/app/components/musica/musica.component';
 import { MusicaService } from 'src/app/services/musica/musica.service';
 import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/biblioteca.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SalirComponent } from 'src/app/components/salir/salir.component';
 
 @Component({
   selector: 'app-entrada-territorio',
@@ -23,6 +24,7 @@ import { ActivatedRoute, Router } from '@angular/router';
     , AtrasComponent
     , AyudaComponent
     , MusicaComponent
+    , SalirComponent
   ]
 })
 export class EntradaTerritorioPage implements OnInit {

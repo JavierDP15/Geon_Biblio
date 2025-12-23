@@ -8,6 +8,7 @@ import { MusicaComponent } from 'src/app/components/musica/musica.component';
 import { MusicaService } from 'src/app/services/musica/musica.service';
 import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/biblioteca.service';
 import { FerhelesService } from 'src/app/services/ferheles/ferheles.service';
+import { SalirComponent } from 'src/app/components/salir/salir.component';
 
 interface Lupa {
   x: number;
@@ -31,6 +32,7 @@ interface Lupa {
     , AtrasComponent
     , AyudaComponent
     , MusicaComponent
+    , SalirComponent
   ]
 })
 

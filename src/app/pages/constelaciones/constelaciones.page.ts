@@ -8,6 +8,7 @@ import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
 import { GeonesService } from 'src/app/services/geones/geones.service';
 import { MusicaService } from 'src/app/services/musica/musica.service';
 import { Router } from '@angular/router';
+import { SalirComponent } from 'src/app/components/salir/salir.component';
 
 @Component({
   selector: 'app-constelaciones',
@@ -24,6 +25,7 @@ import { Router } from '@angular/router';
     , MusicaComponent
     , AtrasComponent
     , AyudaComponent
+    , SalirComponent
   ]
 })
 export class ConstelacionesPage implements OnInit {

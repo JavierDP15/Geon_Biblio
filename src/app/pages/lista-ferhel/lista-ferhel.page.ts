@@ -10,6 +10,7 @@ import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/bibliote
 import { FerhelesService } from 'src/app/services/ferheles/ferheles.service';
 import { MusicaService } from 'src/app/services/musica/musica.service';
 import { ActivatedRoute } from '@angular/router';
+import { SalirComponent } from 'src/app/components/salir/salir.component';
 
 @Component({
   selector: 'app-lista-ferhel',
@@ -26,6 +27,7 @@ import { ActivatedRoute } from '@angular/router';
     , AyudaComponent
     , MusicaComponent
     , FerhelComponentComponent
+    , SalirComponent
   ]
 })
 export class ListaFerhelPage implements OnInit {

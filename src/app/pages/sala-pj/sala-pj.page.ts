@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 import { PersonajeComponent } from 'src/app/components/personaje/personaje.component';
 import { SalaPj, SalasPjService } from 'src/app/services/salas-pj/salas-pj.service';
 import { MusicaService } from 'src/app/services/musica/musica.service';
+import { SalirComponent } from 'src/app/components/salir/salir.component';
 
 @Component({
   selector: 'app-sala-pj',
@@ -25,6 +26,7 @@ import { MusicaService } from 'src/app/services/musica/musica.service';
     , AyudaComponent
     , MusicaComponent
     , PersonajeComponent
+    , SalirComponent
   ]
 })
 export class SalaPjPage implements OnInit {

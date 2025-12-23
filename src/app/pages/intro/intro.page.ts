@@ -49,7 +49,7 @@ export class IntroPage implements OnInit {
     setTimeout(() => {
       this.showVideo2 = true;
       this.logoAlma = false;
-    }, 3000)
+    }, 5000)
     setTimeout(() => {
       this.showGeon = true;
     }, 5000);
@@ -59,6 +59,6 @@ export class IntroPage implements OnInit {
       this.showVideo2 = false;
       setTimeout(() => {
         this.router.navigate(['/inicio']);
-      }, 2000);
+      }, 4000);
   }
 }

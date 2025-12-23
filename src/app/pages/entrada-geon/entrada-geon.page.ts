@@ -8,6 +8,7 @@ import { AtrasComponent } from 'src/app/components/atras/atras.component';
 import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
 import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/biblioteca.service';
 import { MusicaService } from 'src/app/services/musica/musica.service';
+import { SalirComponent } from 'src/app/components/salir/salir.component';
 
 @Component({
   selector: 'app-entrada-geon',
@@ -23,6 +24,7 @@ import { MusicaService } from 'src/app/services/musica/musica.service';
     , MusicaComponent
     , AtrasComponent
     , AyudaComponent
+    , SalirComponent
   ]
 })
 export class EntradaGeonPage implements OnInit {

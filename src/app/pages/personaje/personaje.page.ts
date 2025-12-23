@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/biblioteca.service';
 import { SalasPjService } from 'src/app/services/salas-pj/salas-pj.service';
 import { MusicaService } from 'src/app/services/musica/musica.service';
+import { SalirComponent } from 'src/app/components/salir/salir.component';
 
 @Component({
   selector: 'app-personaje',
@@ -24,6 +25,7 @@ import { MusicaService } from 'src/app/services/musica/musica.service';
     , AtrasComponent
     , AyudaComponent
     , MusicaComponent
+    , SalirComponent
   ]
 })
 export class PersonajePage implements OnInit {
