@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+  <img
+    class="fondo" 
+    src="assets/fondos/fondo_inmortales.jpg"
+  >
+
+  <div class="categoria bishna">
+    <div class="texto"><span>Bishna</span></div>
+    <img src="assets/iconos/bishnas.png" class="icono bishnas">
+  </div>
+
+  <div class="categoria celestial">
+    <img src="assets/iconos/celestiales.png" class="icono celestiales">
+    <div class="texto"><span>Celestial</span></div>
+  </div>
+
+  <div class="categoria vishundi">
+    <img src="assets/iconos/vishundis.png" class="icono vishundis">
+    <div class="texto"><span>Vishundi</span></div>
+  </div>
+
+</ion-content>
+
+<div class="opciones aparecer">
+  <app-atras [pagina]="'archivo'"></app-atras>
+  <app-musica></app-musica>
+  <app-ayuda [pagina]="'inmortales'"></app-ayuda>
+</div>

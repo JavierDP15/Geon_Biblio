@@ -1,0 +1,106 @@
+.fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    transform: translate(-50%, -50%);
+
+    width: 15%;
+}
+
+.bishna {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+
+    animation: bishna 3s forwards;
+}
+
+.celestial {
+    position: absolute;
+    top: 75%;
+    left: 35%;
+
+    animation: celestial 3s forwards;
+}
+
+.vishundi {
+    position: absolute;
+    top: 75%;
+    left: 65%;
+
+    animation: vishundi 3s forwards;
+}
+
+.texto {
+    font-family: 'immortal', serif;
+    font-size: 1.3rem;
+
+    animation: aparecer-texto 5s forwards;
+}
+
+@keyframes bishna {
+    0% {
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        // transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        top: 25%;
+        left: 50%;
+        opacity: 1;
+        // transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes celestial {
+    0% {
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        // transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        top: 75%;
+        left: 35%;
+        opacity: 1;
+        // transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes vishundi {
+    0% {
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        // transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        top: 75%;
+        left: 65%;
+        opacity: 1;
+        // transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes aparecer-texto {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
