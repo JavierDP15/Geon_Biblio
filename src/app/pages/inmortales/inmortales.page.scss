@@ -48,6 +48,33 @@
     animation: aparecer-texto 5s forwards;
 }
 
+// video {
+//     transition: transform 6s linear;
+// }
+
+.animar {
+    animation: videoZoom 2s ease-in-out forwards;
+}
+
+.flash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mostrarFlash {
+    animation: flash 3s forwards;
+}
+
+.desaparecer {
+    animation: desaparecer 2s forwards
+}
+
 @keyframes bishna {
     0% {
         top: 50%;
@@ -102,5 +129,38 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes videoZoom {
+    from{
+        transform: scale(1);
+    }
+    to {
+        transform: scale(2.5);
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes desaparecer {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
