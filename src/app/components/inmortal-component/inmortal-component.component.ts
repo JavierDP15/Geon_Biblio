@@ -22,6 +22,8 @@ export class InmortalComponentComponent  implements OnInit {
 
   entrada: Entrada | null = null;
 
+  textoBoton: string = '';
+
   constructor(
     private bibliotecaService: BibliotecaService
   ) { }
@@ -32,9 +34,11 @@ export class InmortalComponentComponent  implements OnInit {
 
   seleccionar() {
     this.seleccionadoEvento.emit(this.inmortal);
+    this.textoBoton = 'Detalles'
   }
 
   detalles() {
     this.detallesEvento.emit(this.inmortalEl.nativeElement);
+    this.textoBoton = 'Volver'
   }
 }

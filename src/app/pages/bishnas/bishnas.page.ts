@@ -55,7 +55,7 @@ export class BishnasPage implements OnInit {
         inline: 'center',
         block: 'nearest'
       });
-    }, 0);
+    });
   }
 
 }

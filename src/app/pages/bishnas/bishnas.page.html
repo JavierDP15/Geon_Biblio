@@ -6,7 +6,7 @@
     src="assets/fondos/fondo_inmortales_mesa.jpg"
   >
 
-  <div *ngIf="bishnas" class="lista">
+  <div *ngIf="bishnas" class="lista" [class.ampliar-lista]="detalle">
     <app-inmortal-component 
     *ngFor="let bishna of bishnas" 
     [inmortal]="bishna.id" 

@@ -5,6 +5,6 @@
     <img [src]="`${entrada.otrosDatos.imagen}.png`" class="foto foto-sepia">
     <img *ngIf="seleccionado" [src]="`${entrada.otrosDatos.imagen}_color.png`" class="foto foto-color">
   </div>
-  <div *ngIf="seleccionado" class="botonAceptar" (click)="detalles()">Detalles</div> 
+  <div *ngIf="seleccionado" class="botonAceptar" (click)="detalles()">{{ textoBoton }}</div> 
   <!-- <div *ngIf="seleccionado" class="texto-der">{{ entrada.otrosDatos.subtitulo }}</div> -->
 </div>
