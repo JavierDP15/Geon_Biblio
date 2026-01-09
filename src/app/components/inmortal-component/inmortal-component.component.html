@@ -1,3 +1,10 @@
-<p>
-  inmortal-component works!
-</p>
+<div *ngIf="entrada" class="inmortal" #inmortalEl>
+  <!-- <div *ngIf="seleccionado" class="texto-izq">{{ entrada.descripcion }}</div> -->
+  <div class="cuerpo-inmortal" (click)="seleccionar()">
+    <div class="nombre">{{ entrada.nombre }}</div>
+    <img [src]="`${entrada.otrosDatos.imagen}.png`" class="foto foto-sepia">
+    <img *ngIf="seleccionado" [src]="`${entrada.otrosDatos.imagen}_color.png`" class="foto foto-color">
+  </div>
+  <div *ngIf="seleccionado" class="botonAceptar" (click)="detalles()">Detalles</div> 
+  <!-- <div *ngIf="seleccionado" class="texto-der">{{ entrada.otrosDatos.subtitulo }}</div> -->
+</div>

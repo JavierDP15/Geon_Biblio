@@ -86,4 +86,9 @@ export const routes: Routes = [
     path: 'inmortales',
     loadComponent: () => import('./pages/inmortales/inmortales.page').then( m => m.InmortalesPage)
   },
+  {
+    path: 'inmortales/bishnas',
+    loadComponent: () => import('./pages/bishnas/bishnas.page').then( m => m.BishnasPage)
+  },
+
 ];

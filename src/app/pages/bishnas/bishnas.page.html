@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true" [scrollY]="false">
+  <div class="flash"></div>
+
+  <img
+    class="fondo" 
+    src="assets/fondos/fondo_inmortales_mesa.jpg"
+  >
+
+  <div *ngIf="bishnas" class="lista">
+    <app-inmortal-component 
+    *ngFor="let bishna of bishnas" 
+    [inmortal]="bishna.id" 
+    [seleccionado]="seleccionado === bishna.id"
+    (seleccionadoEvento)="onItemSelected(bishna.id)"
+    (detallesEvento)="mostrarDetalles($event, bishna.id)"
+    class="bishna"
+    [class.oculto]="detalle && detalle !== bishna.id"
+    [class.mostrar]="detalle === bishna.id"
+    ></app-inmortal-component>
+  </div>
+</ion-content>
+
+<div class="opciones aparecer">
+  <app-atras [pagina]="'inmortales'"></app-atras>
+  <app-musica></app-musica>
+  <app-ayuda [pagina]="'bishna'"></app-ayuda>
+  <app-salir></app-salir>
+</div>

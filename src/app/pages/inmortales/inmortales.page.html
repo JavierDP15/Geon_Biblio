@@ -30,17 +30,17 @@
 
   <div class="flash" [class.mostrarFlash]="animacion"></div>
 
-  <div class="categoria bishna" (click)="irA('bishna')" [class.desaparecer]="mostrarVideo">
+  <div class="categoria bishna" (click)="irA('bishnas')" [class.desaparecer]="mostrarVideo || animacion">
     <div class="texto"><span>Bishna</span></div>
     <img src="assets/iconos/bishnas.png" class="icono bishnas">
   </div>
 
-  <div class="categoria celestial" [class.desaparecer]="mostrarVideo">
+  <div class="categoria celestial" [class.desaparecer]="mostrarVideo || animacion">
     <img src="assets/iconos/celestiales.png" class="icono celestiales">
     <div class="texto"><span>Celestial</span></div>
   </div>
 
-  <div class="categoria vishundi" [class.desaparecer]="mostrarVideo">
+  <div class="categoria vishundi" [class.desaparecer]="mostrarVideo || animacion">
     <img src="assets/iconos/vishundis.png" class="icono vishundis">
     <div class="texto"><span>Vishundi</span></div>
   </div>

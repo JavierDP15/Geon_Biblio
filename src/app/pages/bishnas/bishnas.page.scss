@@ -1,0 +1,78 @@
+.flash {
+    background-color: white;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    animation: desaparecer-flash 1.5s forwards;
+
+    z-index: 10;
+}
+
+.fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+.lista {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    width: 85%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    // gap: 3%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    z-index: 1;
+
+    .bishna {
+        flex: 0 0 auto;
+        height: 100%;
+        aspect-ratio: 2/2.5;
+    }
+
+    .oculto {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .mostrar {
+        // animation: centrar 2s forwards;
+    }
+
+    // @keyframes centrar {
+    //     100% {
+    //         position: fixed;
+    //     }
+    // }
+}
+
+@keyframes desaparecer-flash {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
