@@ -56,6 +56,16 @@ export class ConstelacionesPage implements OnInit {
   ocultarSVGUpsilon = true;
   private lineasUpsilon = 5;
 
+  mostrarAbadon = false;
+  pasoAbadon = 0;
+  ocultarSVGAbadon = true;
+  private lineasAbadon = 6;
+
+  mostrarAnima = false;
+  pasoAnima = 0;
+  ocultarSVGAnima = true;
+  private lineasAnima = 5;
+
   constructor(
       private geonesService: GeonesService
     , private musicaService: MusicaService
@@ -66,11 +76,13 @@ export class ConstelacionesPage implements OnInit {
 
   ionViewWillEnter() {
     this.musicaService.play('caves-of-dawn');
-    // this.geonesService.resetDescubierto('abacu');
-    // this.geonesService.resetDescubierto('virnut');
-    // this.geonesService.resetDescubierto('caal');
-    // this.geonesService.resetDescubierto('dyshiba');
-    // this.geonesService.resetDescubierto('upsilon');
+    this.geonesService.resetDescubierto('abacu');
+    this.geonesService.resetDescubierto('virnut');
+    this.geonesService.resetDescubierto('caal');
+    this.geonesService.resetDescubierto('dyshiba');
+    this.geonesService.resetDescubierto('upsilon');
+    this.geonesService.resetDescubierto('abadon');
+    this.geonesService.resetDescubierto('anima');
 
     if (this.geonesService.getDescubierto('abacu')) {
       this.mostrarAbacu = true;
@@ -194,6 +206,44 @@ export class ConstelacionesPage implements OnInit {
         this.geonesService.setDescubierto('upsilon', true);
         this.isAnimating = false;
       }, 500 * this.lineasUpsilon);
+    }
+  }
+
+  abadon() {
+    if (this.isAnimating) return;
+    
+    if (!this.mostrarAbadon) {
+      this.isAnimating = true;
+      this.ocultarSVGAbadon = !this.ocultarSVGAbadon;
+      for (let i = 0; i < this.lineasAbadon; i++) {
+        setTimeout(() => {
+          this.pasoAbadon++;
+        }, i * 500);
+      }
+      setTimeout(() => {
+        this.mostrarAbadon = !this.mostrarAbadon
+        this.geonesService.setDescubierto('abadon', true);
+        this.isAnimating = false;
+      }, 250 * this.lineasAbadon);
+    }
+  }
+
+  anima() {
+    if (this.isAnimating) return;
+    
+    if (!this.mostrarAnima) {
+      this.isAnimating = true;
+      this.ocultarSVGAnima = !this.ocultarSVGAnima;
+      for (let i = 0; i < this.lineasAnima; i++) {
+        setTimeout(() => {
+          this.pasoAnima++;
+        }, i * 500);
+      }
+      setTimeout(() => {
+        this.mostrarAnima = !this.mostrarAnima
+        this.geonesService.setDescubierto('anima', true);
+        this.isAnimating = false;
+      }, 500 * this.lineasAnima);
     }
   }
 }

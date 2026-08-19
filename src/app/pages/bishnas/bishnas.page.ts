@@ -49,13 +49,13 @@ export class BishnasPage implements OnInit {
   mostrarDetalles(element: HTMLElement, id: string) {
     this.detalle = id;
 
-    setTimeout(() => {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        inline: 'center',
-        block: 'nearest'
-      });
-    });
+    // setTimeout(() => {
+    //   element.scrollIntoView({
+    //     behavior: 'smooth',
+    //     inline: 'start',
+    //     block: 'nearest'
+    //   });
+    // });
   }
 
 }

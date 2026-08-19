@@ -95,6 +95,32 @@
     }
   },
   {
+    "id": "abadon",
+    "nombre": "Abadón -Ra",
+    "url": "entrada-geon/abadon",
+    "categoria": "geon",
+    "descripcion": "",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": [],
+      "subtitulo": "",
+      "imagen": "assets/img/geones/abadon.png"
+    }
+  },
+  {
+    "id": "anima",
+    "nombre": "Ánima",
+    "url": "entrada-geon/anima",
+    "categoria": "geon",
+    "descripcion": "",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": [],
+      "subtitulo": "",
+      "imagen": "assets/img/geones/anima.png"
+    }
+  },
+  {
     "id": "virnut",
     "nombre": "Virnut Alk -Hassut",
     "url": "entrada-geon/virnut",
@@ -324,7 +350,7 @@
   },
   {
     "id": "iago",
-    "nombre": "Iago Bashón",
+    "nombre": "Iago Bashon",
     "url": "personaje/iago",
     "categoria": "personaje",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",

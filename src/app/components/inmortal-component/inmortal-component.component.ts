@@ -21,6 +21,7 @@ export class InmortalComponentComponent  implements OnInit {
   inmortalEl!: ElementRef<HTMLElement>;
 
   entrada: Entrada | null = null;
+  ampliado: boolean = false;
 
   textoBoton: string = '';
 
@@ -34,11 +35,13 @@ export class InmortalComponentComponent  implements OnInit {
 
   seleccionar() {
     this.seleccionadoEvento.emit(this.inmortal);
+  if (this.textoBoton === 'Volver') return;
     this.textoBoton = 'Detalles'
   }
 
   detalles() {
     this.detallesEvento.emit(this.inmortalEl.nativeElement);
+    this.ampliado = true;
     this.textoBoton = 'Volver'
   }
 }

@@ -9,13 +9,13 @@
   <div *ngIf="bishnas" class="lista" [class.ampliar-lista]="detalle">
     <app-inmortal-component 
     *ngFor="let bishna of bishnas" 
-    [inmortal]="bishna.id" 
-    [seleccionado]="seleccionado === bishna.id"
-    (seleccionadoEvento)="onItemSelected(bishna.id)"
-    (detallesEvento)="mostrarDetalles($event, bishna.id)"
-    class="bishna"
-    [class.oculto]="detalle && detalle !== bishna.id"
-    [class.mostrar]="detalle === bishna.id"
+      [inmortal]="bishna.id" 
+      [seleccionado]="seleccionado === bishna.id"
+      (seleccionadoEvento)="onItemSelected(bishna.id)"
+      (detallesEvento)="mostrarDetalles($event, bishna.id)"
+      class="bishna"
+      [class.oculto]="detalle && detalle !== bishna.id"
+      [class.mostrar]="detalle === bishna.id"
     ></app-inmortal-component>
   </div>
 </ion-content>

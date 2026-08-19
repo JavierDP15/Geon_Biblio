@@ -3,7 +3,7 @@
         "id": "bishna",
         "nombre": "Ala de los Bishnas",
         "personajes": ["lampra", "iago", "abratem"],
-        "coords": [[39,63], [64,74], [87,74]],
-        "scale": [0.7, 1.1, 0.9]
+        "coords": [[39,63], [64,74], [80,78]],
+        "scale": [0.7, 1.01, 1]
     }
 ]
