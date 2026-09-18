@@ -35,7 +35,7 @@
       "padre": "saprashibaya",
       "bioma": "",
       "subtitulo": "",
-      "imagen": "assets/img/territorios/saprashibaya/desierto_solis.png"
+      "imagen": "assets/img/territorios/saprashibaya/desierto_solis.webp"
     }
   },
   {
@@ -48,7 +48,7 @@
       "padre": "saprashibaya",
       "bioma": "",
       "subtitulo": "",
-      "imagen": "assets/img/territorios/saprashibaya/desierto_jikari.png"
+      "imagen": "assets/img/territorios/saprashibaya/desierto_jikari.webp"
     }
   },
   {
@@ -61,7 +61,7 @@
       "padre": "saprashibaya",
       "bioma": "",
       "subtitulo": "",
-      "imagen": "assets/img/territorios/saprashibaya/desierto_kerfen.png"
+      "imagen": "assets/img/territorios/saprashibaya/desierto_kerfen.webp"
     }
   },
 
@@ -91,7 +91,7 @@
       "padre": "",
       "bioma": [],
       "subtitulo": "La llama imperecedera que todo lo agosta, que todo lo consume. El mensajero de lo inevitable.El señor de la transitoriedad y de la certeza. El que camina sin prisa.",
-      "imagen": "assets/img/geones/abacu.png"
+      "imagen": "assets/img/geones/abacu.webp"
     }
   },
   {
@@ -104,7 +104,7 @@
       "padre": "",
       "bioma": [],
       "subtitulo": "",
-      "imagen": "assets/img/geones/abadon.png"
+      "imagen": "assets/img/geones/abadon.webp"
     }
   },
   {
@@ -117,7 +117,7 @@
       "padre": "",
       "bioma": [],
       "subtitulo": "",
-      "imagen": "assets/img/geones/anima.png"
+      "imagen": "assets/img/geones/anima.webp"
     }
   },
   {
@@ -130,7 +130,7 @@
       "padre": "",
       "bioma": [],
       "subtitulo": "La que nunca descansa. El destino funesto de los hombres. El azote de la existencia de todos cuantos hollan Cartam. La segadora. La faraona de la muerte.",
-      "imagen": "assets/img/geones/virnut.png"
+      "imagen": "assets/img/geones/virnut.webp"
     }
   },
   {
@@ -143,7 +143,7 @@
       "padre": "",
       "bioma": [],
       "subtitulo": "El tejedor silencioso. El que maneja los hilos de las vidas. El vagabundo de la eterna pesadumbre. El dios de la fatalidad silenciosa. Uburundus.",
-      "imagen": "assets/img/geones/caal.png"
+      "imagen": "assets/img/geones/caal.webp"
     }
   },
   {
@@ -156,7 +156,7 @@
       "padre": "",
       "bioma": [],
       "subtitulo": "Praesent rutrum ante id massa dapibus tempor.",
-      "imagen": "assets/img/geones/dyshiba.png"
+      "imagen": "assets/img/geones/dyshiba.webp"
     }
   },
   {
@@ -169,7 +169,7 @@
       "padre": "",
       "bioma": [],
       "subtitulo": "Nulla non urna mollis, placerat eros consequat, fermentum mi.",
-      "imagen": "assets/img/geones/upsilon.png"
+      "imagen": "assets/img/geones/upsilon.webp"
     }
   },
 
@@ -199,7 +199,7 @@
       "padre": "",
       "bioma": ["desierto"],
       "subtitulo": "",
-      "imagen": "assets/img/ferhel/cauros/cauros.jpg"
+      "imagen": "assets/img/ferhel/cauros/cauros.webp"
     }
   },
   {
@@ -212,7 +212,7 @@
       "padre": "",
       "bioma": ["desierto"],
       "subtitulo": "",
-      "imagen": "assets/img/ferhel/crematis/crematis.jpg"
+      "imagen": "assets/img/ferhel/crematis/crematis.webp"
     }
   },
   {
@@ -225,7 +225,7 @@
       "padre": "",
       "bioma": ["cueva", "montaña", "subterraneo"],
       "subtitulo": "",
-      "imagen": "assets/img/ferhel/fermiti/fermiti.jpg"
+      "imagen": "assets/img/ferhel/fermiti/fermiti.webp"
     }
   },
   {
@@ -238,7 +238,7 @@
       "padre": "",
       "bioma": ["desierto"],
       "subtitulo": "",
-      "imagen": "assets/img/ferhel/henn/henn.jpg"
+      "imagen": "assets/img/ferhel/henn/henn.webp"
     }
   },
   {
@@ -251,7 +251,7 @@
       "padre": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
       "bioma": ["desierto"],
       "subtitulo": "",
-      "imagen": "assets/img/ferhel/jaipur/jaipur.jpg"
+      "imagen": "assets/img/ferhel/jaipur/jaipur.webp"
     }
   },
   {
@@ -264,7 +264,7 @@
       "padre": "",
       "bioma": ["desierto"],
       "subtitulo": "",
-      "imagen": "assets/img/ferhel/nyt/nyt.jpg"
+      "imagen": "assets/img/ferhel/nyt/nyt.webp"
     }
   },
   {
@@ -277,7 +277,7 @@
       "padre": "",
       "bioma": ["desierto"],
       "subtitulo": "",
-      "imagen": "assets/img/ferhel/shavas/shavas.jpg"
+      "imagen": "assets/img/ferhel/shavas/shavas.webp"
     }
   },
   {
@@ -290,7 +290,7 @@
       "padre": "",
       "bioma": ["desierto"],
       "subtitulo": "",
-      "imagen": "assets/img/ferhel/typhos/typhos.jpg"
+      "imagen": "assets/img/ferhel/typhos/typhos.webp"
     }
   },
   {
@@ -303,7 +303,7 @@
       "padre": "",
       "bioma": ["desierto"],
       "subtitulo": "",
-      "imagen": "assets/img/ferhel/urro/urro.jpg"
+      "imagen": "assets/img/ferhel/urro/urro.webp"
     }
   },
   {
@@ -316,7 +316,7 @@
       "padre": "",
       "bioma": ["desierto", "montaña", "bosque"],
       "subtitulo": "",
-      "imagen": "assets/img/ferhel/yabei/yabei.jpg"
+      "imagen": "assets/img/ferhel/yabei/yabei.webp"
     }
   },
   {
@@ -329,7 +329,7 @@
       "padre": "",
       "bioma": ["cueva", "montaña", "bosque", "subterraneo"],
       "subtitulo": "",
-      "imagen": "assets/img/ferhel/zentit/zentit.jpg"
+      "imagen": "assets/img/ferhel/zentit/zentit.webp"
     }
   },
 
@@ -345,7 +345,7 @@
       "padre": "bishna",
       "bioma": [],
       "subtitulo": "",
-      "imagen": "assets/fotos/pj-pagina/abratem_telima.png"
+      "imagen": "assets/fotos/pj-pagina/abratem_telima.webp"
     }
   },
   {
@@ -358,7 +358,7 @@
       "padre": "bishna",
       "bioma": [],
       "subtitulo": "",
-      "imagen": "assets/fotos/pj-pagina/iago_bashon.png"
+      "imagen": "assets/fotos/pj-pagina/iago_bashon.webp"
     }
   },
   {
@@ -371,7 +371,7 @@
       "padre": "bishna",
       "bioma": [],
       "subtitulo": "",
-      "imagen": "assets/fotos/pj-pagina/lampra_usai.png"
+      "imagen": "assets/fotos/pj-pagina/lampra_usai.webp"
     }
   },
 

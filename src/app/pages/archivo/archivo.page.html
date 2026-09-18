@@ -6,7 +6,7 @@
     preload="auto"
     playsinline
     muted
-    poster="assets/fondos/negro.jpg"
+    poster="assets/fondos/negro.webp"
     (click)="saltarVideo()"
     (ended)="onVideoEnded()"
     [class.active]="currentStep === 1"
@@ -15,7 +15,7 @@
 
   <img 
     class="imagen-fondo"
-    src="assets/fondos/fondo_archivo.png"
+    src="assets/fondos/fondo_archivo.webp"
     [class.active]="currentStep === 2"
     [class.blur-background]="tutorial"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
@@ -23,7 +23,7 @@
 
   <img 
     class="imagen-fondo"
-    src="assets/fondos/fondo_puerta_abierta.jpg"
+    src="assets/fondos/fondo_puerta_abierta.webp"
     [class.active]="currentStep === 3"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;"
     />
@@ -35,7 +35,7 @@
     muted
     playsinline
     preload="auto"
-    poster="assets/fondos/fondo_archivo.png"
+    poster="assets/fondos/fondo_archivo.webp"
     (click)="saltarVideo()"
     (ended)="onVideoCatEnded()"
     [class.active]="currentStep === 3"
@@ -49,56 +49,56 @@
       <div class="botones">
         <div class="fila-botones" [class.blur-background]="tutorial && tutorialStep !== 2" [class.tutorial-resaltar-grande]="tutorialStep === 2">
           <div class="boton">
-            <img class="icono-boton" src="assets/iconos/geografia.png" (click)="irA('geografia')">
+            <img class="icono-boton" src="assets/iconos/geografia.webp" (click)="irA('geografia')">
             <button class="boton" (click)="irA('geografia')">Geografía</button>
           </div>
           <div></div>
           <div class="boton">
-            <img class="icono-boton" src="assets/iconos/geones.png" (click)="irA('geones')">
+            <img class="icono-boton" src="assets/iconos/geones.webp" (click)="irA('geones')">
             <button class="boton" (click)="irA('geones')">Geones</button>
           </div>
         </div>
         <div class="fila-botones" [class.blur-background]="tutorial">
           <div class="boton">
-            <img class="icono-boton" src="assets/iconos/magia.png" (click)="irA('magia')">
+            <img class="icono-boton" src="assets/iconos/magia.webp" (click)="irA('magia')">
             <button class="boton" (click)="irA('magia')">Magia</button>
           </div>
           <div></div>
           <div class="boton">
-            <img class="icono-boton" src="assets/iconos/ferhel.png" (click)="irA('ferhel')">
+            <img class="icono-boton" src="assets/iconos/ferhel.webp" (click)="irA('ferhel')">
             <button class="boton" (click)="irA('ferhel')">Ferhel</button>
           </div>
         </div>
         <div class="fila-botones" [class.blur-background]="tutorial">
           <div class="boton">
-            <img class="icono-boton" src="assets/iconos/astral.png">
+            <img class="icono-boton" src="assets/iconos/astral.webp">
             <button class="boton">El Astral</button>
           </div>
           <div></div>
           <div class="boton">
-            <img class="icono-boton" src="assets/iconos/sociedad.png">
+            <img class="icono-boton" src="assets/iconos/sociedad.webp">
             <button class="boton">Sociedad</button>
           </div>
         </div>
         <div class="fila-botones" [class.blur-background]="tutorial">
           <div class="boton">
-            <img class="icono-boton" src="assets/iconos/baluartes.png">
+            <img class="icono-boton" src="assets/iconos/baluartes.webp">
             <button class="boton">Baluartes</button>
           </div>
           <div></div>
           <div class="boton">
-            <img class="icono-boton" src="assets/iconos/lunas.png" (click)="irA('inmortales')">
+            <img class="icono-boton" src="assets/iconos/lunas.webp" (click)="irA('inmortales')">
             <button class="boton" (click)="irA('inmortales')">Lunas</button>
           </div>
         </div>
         <div class="fila-botones" [class.blur-background]="tutorial">
           <div class="boton">
-            <img class="icono-boton" src="assets/iconos/glosario.png">
+            <img class="icono-boton" src="assets/iconos/glosario.webp">
             <button class="boton">Glosario</button>
           </div>
           <div></div>
           <div class="boton">
-            <img class="icono-boton" src="assets/iconos/personajes.png" (click)="irA('personajes')">
+            <img class="icono-boton" src="assets/iconos/personajes.webp" (click)="irA('personajes')">
             <button class="boton" (click)="irA('personajes')">Personajes</button>
           </div>
         </div>

@@ -4,13 +4,13 @@
   [class.ocultar_blur]="cerrando"  
 ></div>
 <div class="buscador">
-  <img class="lupa" src="assets/iconos/busqueda.png" (click)="toggle()"/>
+  <img class="lupa" src="assets/iconos/busqueda.webp" (click)="toggle()"/>
   
   <form *ngIf="abierto">
     <img class="rollo" 
       [class.aparecer_rollo]="abierto"
       [class.ocultar_rollo]="cerrando"
-      src="assets/img/rollo_buscador.png">
+      src="assets/img/rollo_buscador.webp">
 
     <input class="buscar" 
       (input)="buscar($event)"
@@ -22,7 +22,7 @@
 
     <img *ngIf="resultados.length > 0"
       class="pergamino"
-      src="assets/img/pergamino_buscador.png"
+      src="assets/img/pergamino_buscador.webp"
       [ngStyle]="{
         'top.px': calcularAltura(resultados.length)
         , 'clip-path': calcularInset(resultados.length)

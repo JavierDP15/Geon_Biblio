@@ -2,7 +2,7 @@
 >
 <!-- (pointerdown)="actualizarObjetivo($event)"
 (pointermove.capture)="actualizarObjetivo($event)" -->
-  <img [src]="'assets/fondos/biomas/fondo_' + bioma + '.jpg'" class="fondo">
+  <img [src]="'assets/fondos/biomas/fondo_' + bioma + '.webp'" class="fondo">
 
   <div class="lupas" *ngFor="let lupa of lupas">
     <img
@@ -10,7 +10,7 @@
       class="lupa"
       [style.left.px]="lupa.x" 
       [style.top.px]="lupa.y" 
-      src="assets/iconos/busqueda.png"
+      src="assets/iconos/busqueda.webp"
       (click)="clickLupa(lupa)"
       [class.activa]="lupa.visible"
     />

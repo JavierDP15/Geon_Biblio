@@ -1,8 +1,8 @@
 <div *ngIf="entrada && !ampliado" class="inmortal" #inmortalEl>
   <div class="cuerpo-inmortal" (click)="seleccionar()">
     <div class="nombre">{{ entrada.nombre }}</div>
-    <img [src]="`${entrada.otrosDatos.imagen}.png`" class="foto foto-sepia">
-    <img *ngIf="seleccionado" [src]="`${entrada.otrosDatos.imagen}_color.png`" class="foto foto-color">
+    <img [src]="`${entrada.otrosDatos.imagen}.webp`" class="foto foto-sepia">
+    <img *ngIf="seleccionado" [src]="`${entrada.otrosDatos.imagen}_color.webp`" class="foto foto-color">
   </div>
   <div *ngIf="seleccionado" class="botonAceptar" (click)="detalles()">{{ textoBoton }}</div> 
 </div>
@@ -11,7 +11,7 @@
 <div *ngIf="entrada && ampliado" class="inmortal-ampliado" #inmortalEl>
   <div class="cuerpo-inmortal" [class.seleccionado]="ampliado" (click)="seleccionar()">
     <div class="nombre">{{ entrada.nombre }}</div>
-    <img *ngIf="seleccionado" [src]="`${entrada.otrosDatos.imagen}_color.png`" class="foto foto-color">
+    <img *ngIf="seleccionado" [src]="`${entrada.otrosDatos.imagen}_color.webp`" class="foto foto-color">
   </div>
   <div *ngIf="seleccionado" class="botonAceptar" (click)="detalles()">{{ textoBoton }}</div> 
 </div>

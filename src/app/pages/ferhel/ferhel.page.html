@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true" [scrollY]="false">
     <img 
     class="imagen-fondo"
-    src="assets/fondos/fondo_ferhel.jpg"
+    src="assets/fondos/fondo_ferhel.webp"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; z-index: 0; pointer-events: none;"
     />
     
@@ -12,7 +12,7 @@
     muted
     playsinline
     preload="auto"
-    poster="assets/fondos/fondo_ferhel.jpg"
+    poster="assets/fondos/fondo_ferhel.webp"
     (ended)="onVideoCatalejoEnd()"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;">
   </video>
@@ -25,11 +25,11 @@
     
     <div class="botones">
       <div class="boton" (click)="irAObservar()">
-        <img class="observar" src="assets/img/observar_ferhel.png"/>
+        <img class="observar" src="assets/img/observar_ferhel.webp"/>
         <div class="tag">Observar fauna</div>
       </div>
       <div class="boton" (click)="mostrarBiomas()">
-        <img class="listaBoton" src="assets/img/lista_ferhel.png"/>
+        <img class="listaBoton" src="assets/img/lista_ferhel.webp"/>
         <div class="tag">Atlas Naturista</div>
       </div>
     </div>
@@ -42,11 +42,11 @@
 
 <div *ngIf="tutorialStep === 9 || tutorialStep === 17" class="botones-tutorial">
   <div class="boton" [class.mostrar]="tutorialStep === 17">
-    <img class="listaBoton" src="assets/img/observar_ferhel.png"/>
+    <img class="listaBoton" src="assets/img/observar_ferhel.webp"/>
     <div class="tag">Observar Fauna</div>
   </div>
   <div class="boton" [class.mostrar]="tutorialStep === 9">
-    <img class="listaBoton" src="assets/img/lista_ferhel.png"/>
+    <img class="listaBoton" src="assets/img/lista_ferhel.webp"/>
     <div class="tag">Atlas Naturista</div>
   </div>
 </div>
