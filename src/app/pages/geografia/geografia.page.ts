@@ -27,6 +27,9 @@ import { MusicaService } from 'src/app/services/musica/musica.service';
 })
 export class GeografiaPage implements OnInit {
   entrada: Entrada | null = null;
+  seleccion: string = '';
+  nuevaSeleccion: string | null = null;
+  imagenCargada = false;
 
   constructor(
     private route: Router
@@ -37,14 +40,44 @@ export class GeografiaPage implements OnInit {
   async ngOnInit() {
     this.entrada = await this.bibliotecaService.getPorId('geografia') ?? null;
   }
-
+  
   ionViewWillEnter() {
     this.musicaService.play('desert-storm');
+    this.seleccion = 'geografia';
   }
 
   irA() {
-    this.musicaService.reproducirSonido('assets/audios/sonido_boton.mp3');
-    this.route.navigate(['/territorios']);
+    // this.musicaService.reproducirSonido('assets/audios/sonido_boton.mp3');
+    if (this.nuevaSeleccion != null) {
+      this.route.navigate(['/geografia', this.nuevaSeleccion]);
+    } else {
+      this.route.navigate(['/geografia', this.seleccion]);
+    }
   }
+
+  cambiarRegion(region: string) {
+    if (region === this.seleccion) {
+      this.nuevaSeleccion = 'geografia';
+      this.imagenCargada = false;
+    } else {
+      this.imagenCargada = false;
+      this.nuevaSeleccion = region;
+    }
+  }
+
+  finalizarCambio() {
+    if (!this.nuevaSeleccion) return;
+    this.seleccion = this.nuevaSeleccion;
+    this.nuevaSeleccion = null;
+    this.imagenCargada = false
+  }
+
+  // seleccionar(seleccion: string) {
+  //   if (seleccion == this.seleccion) {
+  //     this.seleccion = 'geografia';
+  //   } else {
+  //     this.nuevaSeleccion = seleccion;
+  //   }
+  // }
 
 }

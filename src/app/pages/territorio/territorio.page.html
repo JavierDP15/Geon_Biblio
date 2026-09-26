@@ -1,0 +1,26 @@
+<ion-content [fullscreen]="true" [scrollY]="false">
+  <img 
+    class="imagen-fondo"
+    [src]="'assets/fondos/geografia/fondo_' + territorio + '.webp'"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; z-index: 0; pointer-events: none;"
+  />
+
+  <div class="cuerpo">
+    <img
+        class="nombre"
+        [src]="'assets/img/titulos_geografia/' + territorio + '.webp'"
+        alt="Título"
+        />
+    <div class="marco">
+      <div *ngIf="entrada" class="texto no-scrollbar">{{ entrada.descripcion }}</div>
+    </div>
+    <div *ngIf="entrada" class="boton" (click)="irA()"><span>{{ entrada.otrosDatos.subtitulo }}</span></div>
+  </div>
+</ion-content>
+
+<div class="opciones aparecer">
+  <app-atras [pagina]="'geografia'"></app-atras>
+  <app-musica></app-musica>
+  <app-ayuda [pagina]="'territorio'"></app-ayuda>
+  <app-salir></app-salir>
+</div>

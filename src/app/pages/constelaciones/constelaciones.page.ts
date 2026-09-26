@@ -66,6 +66,16 @@ export class ConstelacionesPage implements OnInit {
   ocultarSVGAnima = true;
   private lineasAnima = 5;
 
+  mostrarBardan = false;
+  pasoBardan = 0;
+  ocultarSVGBardan = true;
+  private lineasBardan = 6;
+
+  mostrarMahra = false;
+  pasoMahra = 0;
+  ocultarSVGMahra = true;
+  private lineasMahra = 5;
+
   constructor(
       private geonesService: GeonesService
     , private musicaService: MusicaService
@@ -83,6 +93,8 @@ export class ConstelacionesPage implements OnInit {
     this.geonesService.resetDescubierto('upsilon');
     this.geonesService.resetDescubierto('abadon');
     this.geonesService.resetDescubierto('anima');
+    this.geonesService.resetDescubierto('bardan');
+    this.geonesService.resetDescubierto('mahra');
 
     if (this.geonesService.getDescubierto('abacu')) {
       this.mostrarAbacu = true;
@@ -244,6 +256,44 @@ export class ConstelacionesPage implements OnInit {
         this.geonesService.setDescubierto('anima', true);
         this.isAnimating = false;
       }, 500 * this.lineasAnima);
+    }
+  }
+
+  bardan() {
+    if (this.isAnimating) return;
+    
+    if (!this.mostrarBardan) {
+      this.isAnimating = true;
+      this.ocultarSVGBardan = !this.ocultarSVGBardan;
+      for (let i = 0; i < this.lineasBardan; i++) {
+        setTimeout(() => {
+          this.pasoBardan++;
+        }, i * 400);
+      }
+      setTimeout(() => {
+        this.mostrarBardan = !this.mostrarBardan
+        this.geonesService.setDescubierto('bardan', true);
+        this.isAnimating = false;
+      }, 500 * this.lineasBardan);
+    }
+  }
+
+  mahra() {
+    if (this.isAnimating) return;
+    
+    if (!this.mostrarMahra) {
+      this.isAnimating = true;
+      this.ocultarSVGMahra = !this.ocultarSVGMahra;
+      for (let i = 0; i < this.lineasMahra; i++) {
+        setTimeout(() => {
+          this.pasoMahra++;
+        }, i * 550);
+      }
+      setTimeout(() => {
+        this.mostrarMahra = !this.mostrarMahra
+        this.geonesService.setDescubierto('mahra', true);
+        this.isAnimating = false;
+      }, 550 * this.lineasMahra);
     }
   }
 }

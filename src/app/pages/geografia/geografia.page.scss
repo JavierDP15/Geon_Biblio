@@ -2,54 +2,203 @@ ion-content {
     // background: url("/assets/fondos/fondo_geografia.jpg");
 }
 
+.imagen-nueva {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+
+    &.visible {
+        opacity: 1;
+    }
+}
+
 .cuerpo {
     width: 100%;
     height: 100%;
-
+    
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    gap: 2%;
+    
+    .botones {
+        width: 30vw;
+        height: 100%;
+        max-height: 64%;
 
-    .titulo {
-        font-family: 'fantaisie', serif;
-        font-size: 5rem;
-        text-shadow: 1px 1px 0px black;
-        color: white;
-    }
-
-    .texto {
-        width: 80%;
-        max-height: 47%;
-
-        font-family: 'amiri', serif;
-        line-height: 1.4rem;
-        font-size: 1.1rem;
-        text-align: center;
-        color: black;
-
-        overflow-y: auto;
-    }
-
-    .boton {
-        background-image: url('/assets/img/boton_interior.webp');
-        background-color: transparent;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        height: 20%;
-        width: 20%;
+        margin-top: 8%;
+        margin-left: 4%;
 
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        gap: 3%;
 
-        span {
-            font-family: 'immortal', serif;
-            color: white;
-            font-size: 1.3rem;
+        overflow-y: scroll;
+
+        animation: aparecer-info 0.8s ease-in-out;
+
+        .boton {
+            background-image: url('/assets/img/boton_geografia.webp');
+            background-color: transparent;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+            width: 100%;
+            height: 11vh;
+            
+            flex-shrink: 0;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                font-family: 'aladin', serif;
+                color: white;
+                font-size: 1.35rem;
+                letter-spacing: 1px;
+            }
         }
+    }
+
+    .contenido-region {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        margin-top: 8%;
+        margin-right: 5%;
+    }
+
+    .info {
+        position: absolute;
+        inset: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        height: 100%;
+        width: 100%;
+        // margin-top: 10%;
+        // margin-right: 5%;
+
+        // animation: aparecer-info 0.8s ease-in-out;
+        
+        .titulo {
+            font-family: 'fantaisie', serif;
+            font-size: 4rem;
+            text-shadow: 1px 1px 0px black;
+            color: #54878f;
+
+            margin-right: 15%;
+        }
+        
+        .texto {
+            width: 100%;
+            max-height: 60%;
+            
+            font-family: "Bahnschrift", serif;
+            line-height: 1.4rem;
+            text-align: center;
+            color: black;
+            
+            overflow-y: auto;
+        }
+
+        .oculto {
+            opacity: 0;
+        }
+    }
+
+    .info-nueva {
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+
+        &.visible {
+            opacity: 1;
+        }
+    }
+
+    @keyframes aparecer-info {
+        from {
+            opacity: 0;
+        } to {
+            opacity: 1;
+        }
+    }
+
+    .nombre {
+        position: absolute;
+        inset: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+
+        width: 100%;
+        height: 100%;
+        // margin-top: 10%;
+        // margin-right: 5%;
+
+        .titulo {
+            height: 32vh;
+            width: auto;
+            max-width: 75%;
+
+            object-fit: contain;
+
+            margin-right: 15%;
+        }
+
+        .titulo-nuevo {
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+
+            &.visible {
+                opacity: 1;
+            }
+        }
+
+        .boton-seleccionar {
+            background-image: url('/assets/img/boton_viajar.webp');
+            background-color: transparent;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            width: 30%;
+            height: 30%;
+            margin-bottom: 8%;
+            margin-right: 15%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            animation: aparecer-boton 0.8s ease-in-out;
+        }
+
+        @keyframes aparecer-boton {
+            from {
+                opacity: 0;
+            } to {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+//Ocultar barra de scroll
+.no-scrollbar {
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
     }
 }

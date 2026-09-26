@@ -15,53 +15,53 @@
   {
     "id": "saprashibaya",
     "nombre": "Saprashibaya",
-    "url": "entrada-territorio/saprashibaya",
+    "url": "territorio/saprashibaya",
     "categoria": "territorio",
     "descripcion": "Las tierras de Saprashibaya se enmarcan en una zona de desierto cálido caracterizada por su aridez y sus territorios variados, como las planicies rocosas o hamadas, los campos de dunas o los lechos de ríos secos. También se prodigan las cadenas montañosas de suaves pendientes, los cañones y los oasis. Tres grandes desiertos, el Solis, el Jikari y el Kerfén conforman sus fronteras, cada uno con características propias.\n\nEl rango climático general es el de subtropical árido con precipitaciones escasas y temperaturas elevadas.\n\nLas tierras de Saprashibaya, por sus enormes zonas despobladas, son especialmente atractivas para los bishna inmortales y para ferhel de todo tipo, y recurrentes en la aparición de Baluartes. Una amalgama de pueblos humanos, tanto nómadas como sedentarios, residen en los tres desiertos, así como un sorprendente número de practicantes de la magia.",
     "otrosDatos": {
       "padre": "",
       "bioma": [],
-      "subtitulo": "",
+      "subtitulo": "Desiertos",
       "imagen": ""
-    }
-  },
-  {
-    "id": "solis",
-    "nombre": "Solis",
-    "url": "entrada-territorio/saprashibaya/lugares",
-    "categoria": "lugar",
-    "descripcion": "El Solis es el desierto de arenas blancas que alberga la capital de Saprashibaya, Valora. Pese a que existen calzadas principales hasta ciertos puntos del desierto y rutas abiertas generalmente transitadas por las caravanas, gran parte de su orografía está despoblada. Cuatro grandes oasis y diez ciudades de especial renombre se despliegan hacia el oeste, sur y este desde la capital. Colinda, entre otras, con las tierras de Radaeron, con el mar de Ventur, con Tel Abadir y con Daicon.",
-    "otrosDatos": {
-      "padre": "saprashibaya",
-      "bioma": "",
-      "subtitulo": "",
-      "imagen": "assets/img/territorios/saprashibaya/desierto_solis.webp"
     }
   },
   {
     "id": "jikari",
     "nombre": "Jikari",
-    "url": "entrada-territorio/saprashibaya/lugares",
+    "url": "territorio/saprashibaya/lugares",
     "categoria": "lugar",
     "descripcion": "El Solis es el desierto de arenas blancas que alberga la capital de Saprashibaya, Valora. Pese a que existen calzadas principales hasta ciertos puntos del desierto y rutas abiertas generalmente transitadas por las caravanas, gran parte de su orografía está despoblada. Cuatro grandes oasis y diez ciudades de especial renombre se despliegan hacia el oeste, sur y este desde la capital. Colinda, entre otras, con las tierras de Radaeron, con el mar de Ventur, con Tel Abadir y con Daicon.",
     "otrosDatos": {
       "padre": "saprashibaya",
       "bioma": "",
       "subtitulo": "",
-      "imagen": "assets/img/territorios/saprashibaya/desierto_jikari.webp"
+      "imagen": "assets/img/lugares/saprashibaya/desierto_jikari.webp"
     }
   },
   {
     "id": "kerfen",
     "nombre": "Kerfen",
-    "url": "entrada-territorio/saprashibaya/lugares",
+    "url": "territorio/saprashibaya/lugares",
     "categoria": "lugar",
     "descripcion": "El Solis es el desierto de arenas blancas que alberga la capital de Saprashibaya, Valora. Pese a que existen calzadas principales hasta ciertos puntos del desierto y rutas abiertas generalmente transitadas por las caravanas, gran parte de su orografía está despoblada. Cuatro grandes oasis y diez ciudades de especial renombre se despliegan hacia el oeste, sur y este desde la capital. Colinda, entre otras, con las tierras de Radaeron, con el mar de Ventur, con Tel Abadir y con Daicon.",
     "otrosDatos": {
       "padre": "saprashibaya",
       "bioma": "",
       "subtitulo": "",
-      "imagen": "assets/img/territorios/saprashibaya/desierto_kerfen.webp"
+      "imagen": "assets/img/lugares/saprashibaya/desierto_kerfen.webp"
+    }
+  },
+  {
+    "id": "solis",
+    "nombre": "Solis",
+    "url": "territorio/saprashibaya/lugares",
+    "categoria": "lugar",
+    "descripcion": "El Solis es el desierto de arenas blancas que alberga la capital de Saprashibaya, Valora. Pese a que existen calzadas principales hasta ciertos puntos del desierto y rutas abiertas generalmente transitadas por las caravanas, gran parte de su orografía está despoblada. Cuatro grandes oasis y diez ciudades de especial renombre se despliegan hacia el oeste, sur y este desde la capital. Colinda, entre otras, con las tierras de Radaeron, con el mar de Ventur, con Tel Abadir y con Daicon.",
+    "otrosDatos": {
+      "padre": "saprashibaya",
+      "bioma": "",
+      "subtitulo": "",
+      "imagen": "assets/img/lugares/saprashibaya/desierto_solis.webp"
     }
   },
 

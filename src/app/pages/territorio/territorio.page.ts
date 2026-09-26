@@ -1,0 +1,50 @@
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { MusicaComponent } from 'src/app/components/musica/musica.component';
+import { AyudaComponent } from 'src/app/components/ayuda/ayuda.component';
+import { AtrasComponent } from 'src/app/components/atras/atras.component';
+import { SalirComponent } from 'src/app/components/salir/salir.component';
+import { BibliotecaService, Entrada } from 'src/app/services/biblioteca/biblioteca.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MusicaService } from 'src/app/services/musica/musica.service';
+
+@Component({
+  selector: 'app-territorio',
+  templateUrl: './territorio.page.html',
+  styleUrls: ['./territorio.page.scss'],
+  standalone: true,
+  imports: [
+    IonContent
+    , IonHeader
+    , IonTitle
+    , IonToolbar
+    , CommonModule
+    , FormsModule
+    , MusicaComponent
+    , AyudaComponent
+    , AtrasComponent
+    , SalirComponent
+  ]
+})
+export class TerritorioPage implements OnInit {
+  territorio = '';
+  entrada: Entrada | null = null;
+
+  constructor(
+    private route: ActivatedRoute
+    , private router: Router
+    , private bibliotecaService: BibliotecaService
+    , private musicaService: MusicaService
+  ) { }
+
+  async ngOnInit() {
+    this.territorio = this.route.snapshot.paramMap.get('territorio') || '';
+    this.entrada = await this.bibliotecaService.getPorId(this.territorio) ?? null;
+  }
+
+  irA() {
+    this.router.navigate(['/geografia', this.territorio, 'lugares-territorio'])
+  }
+}

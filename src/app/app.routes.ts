@@ -39,16 +39,8 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/geografia/geografia.page').then( m => m.GeografiaPage)
   },
   {
-    path: 'territorios',
-    loadComponent: () => import('./pages/territorios/territorios.page').then( m => m.TerritoriosPage)
-  },
-  {
-    path: 'entrada-territorio/:territorio',
-    loadComponent: () => import('./pages/entrada-territorio/entrada-territorio.page').then( m => m.EntradaTerritorioPage)
-  },
-  {
-    path: 'entrada-territorio/:territorio/lugares',
-    loadComponent: () => import('./pages/lugares/lugares.page').then( m => m.LugaresPage)
+    path: 'geografia/:territorio',
+    loadComponent: () => import('./pages/territorio/territorio.page').then( m => m.TerritorioPage)
   },
   {
     path: 'ferhel',
@@ -90,5 +82,11 @@ export const routes: Routes = [
     path: 'inmortales/bishnas',
     loadComponent: () => import('./pages/bishnas/bishnas.page').then( m => m.BishnasPage)
   },
+  {
+    path: 'geografia/:territorio/lugares-territorio',
+    loadComponent: () => import('./pages/lugares-territorio/lugares-territorio.page').then( m => m.LugaresTerritorioPage)
+  },
+
+
 
 ];

@@ -1,14 +1,59 @@
 <ion-content [fullscreen]="true" [scrollY]="false">
   <img 
-    class="imagen-fondo"
-    src="assets/fondos/fondo_geografia.webp"
+    class="imagen-fondo-nueva"
+    [src]="'assets/fondos/geografia/fondo_' + seleccion + '.webp'"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; z-index: 0; pointer-events: none;"
+  />
+  <img 
+    *ngIf="nuevaSeleccion"
+    class="imagen-fondo imagen-nueva"
+    [src]="'assets/fondos/geografia/fondo_' + nuevaSeleccion + '.webp'"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; z-index: 0; pointer-events: none;"
+    (load)="imagenCargada = true"
+    (transitionend)="finalizarCambio()"
+    [class.visible]="imagenCargada"
   />
 
   <div class="cuerpo">
-    <div class="titulo">Geografía</div>
-    <div class="texto" [innerHTML]="entrada?.descripcion"></div>
-    <div class="boton" (click)="irA()"><span>Territorios</span></div>
+    <div class="botones no-scrollbar">
+      <div class="boton" (click)="cambiarRegion('saprashibaya')"><span>Saprashibaya</span></div>
+      <div class="boton" (click)="cambiarRegion('ankit')"><span>Ankit</span></div>
+      <div class="boton" (click)="cambiarRegion('daicon')"><span>Daicon</span></div>
+      <div class="boton" (click)="cambiarRegion('nuantis')"><span>Nuantis</span></div>
+      <div class="boton" (click)="cambiarRegion('radaeron')"><span>Radaeron</span></div>
+      <div class="boton" (click)="cambiarRegion('samadha')"><span>Samadha</span></div>
+      <div class="boton" (click)="cambiarRegion('segisdra_nautakis')"><span>Segisdra Nautakis</span></div>
+      <div class="boton" (click)="cambiarRegion('tel_abadir')"><span>Tel-Abadir</span></div>
+    </div>
+    <div class="contenido-region">
+      <div 
+        *ngIf="(seleccion==='geografia' && nuevaSeleccion===null) || nuevaSeleccion==='geografia'"
+        class="info"
+        [class.info-nueva]="nuevaSeleccion==='geografia'"
+        [class.visible]="imagenCargada">
+        <div class="titulo">Geografía</div>
+        <div class="texto no-scrollbar" [innerHTML]="entrada?.descripcion"></div>
+      </div>
+      <div *ngIf="seleccion!=='geografia' || nuevaSeleccion" class="nombre">
+        <img
+        *ngIf="!nuevaSeleccion"
+        class="titulo"
+        [src]="'assets/img/titulos_geografia/' + seleccion + '.webp'"
+        alt="Título"
+        />
+        <img
+        *ngIf="nuevaSeleccion && nuevaSeleccion!=='geografia'"
+        class="titulo titulo-nuevo"
+        [src]="'assets/img/titulos_geografia/' + nuevaSeleccion + '.webp'"
+        [class.visible]="imagenCargada"
+        alt="Título"
+        />
+        <div
+        *ngIf="seleccion!=='geografia' && nuevaSeleccion!=='geografia'"
+        class="boton-seleccionar"
+        (click)="irA()"></div>
+      </div>
+    </div>
   </div>
 </ion-content>
 
