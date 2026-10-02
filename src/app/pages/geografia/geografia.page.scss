@@ -60,6 +60,13 @@ ion-content {
                 color: white;
                 font-size: 1.35rem;
                 letter-spacing: 1px;
+                white-space: nowrap;
+            }
+
+            @media (max-width: 725px) {
+                .segisdra {
+                    font-size: clamp(1rem, 2.5vw, 11.35rem);
+                }
             }
         }
     }

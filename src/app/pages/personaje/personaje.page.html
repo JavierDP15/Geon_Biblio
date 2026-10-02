@@ -1,13 +1,22 @@
 <ion-content [fullscreen]="true" [scrollY]="false">
-  <img class="fondo" src="assets/fondos/fondo_personajes.webp">
-  <div *ngIf="entrada" class="cuerpo">
-    <div class="cuadro">
-      <img src="assets/img/marco_personajes.webp" class="marco">
-      <img [src]="entrada.otrosDatos.imagen" class="foto">
-    </div>
+  <!-- <img class="fondo" [src]="'assets/fotos/pj-pagina/' + personaje + '.webp'"> -->
+  <video
+    #videoPj
+    [src]="'assets/videos/pj-pagina/' + personaje + '.mp4'"
+    class="fondo"
+    autoplay
+    muted
+    playsinline
+    preload="auto"
+    [poster]="'assets/fotos/pj-pagina/' + personaje + '.webp'"
+    (click)="reproducirVideo()"
+    (ended)="onVideoEnded()"
+  >
+  </video>
+  <div *ngIf="entrada && !primeraReproduccion" class="cuerpo">
     <div class="texto">
       <div class="nombre">{{ entrada.nombre }}</div>
-      <div class="descripcion">{{ entrada.descripcion }}</div>
+      <div class="descripcion no-scrollbar">{{ entrada.descripcion }}</div>
     </div>
   </div>
 </ion-content>

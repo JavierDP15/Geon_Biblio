@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
@@ -29,8 +29,11 @@ import { SalirComponent } from 'src/app/components/salir/salir.component';
   ]
 })
 export class PersonajePage implements OnInit {
+  @ViewChild('videoPj') video!: ElementRef<HTMLVideoElement>;
+  
   personaje = '';
   atras = '';
+  primeraReproduccion = true;
 
   entrada: Entrada | null = null;
 
@@ -50,4 +53,14 @@ export class PersonajePage implements OnInit {
     this.musicaService.play('musica-pjs');
   }
 
+  reproducirVideo() {
+    this.video.nativeElement.currentTime = 0;
+    this.video.nativeElement.play();
+  }
+
+  onVideoEnded() {
+    if (this.primeraReproduccion = false) return;
+    
+    this.primeraReproduccion = false;
+  }
 }

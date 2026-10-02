@@ -15,8 +15,8 @@
   {
     "id": "saprashibaya",
     "nombre": "Saprashibaya",
-    "url": "territorio/saprashibaya",
-    "categoria": "territorio",
+    "url": "geografia/saprashibaya",
+    "categoria": "geografia",
     "descripcion": "Las tierras de Saprashibaya se enmarcan en una zona de desierto cálido caracterizada por su aridez y sus territorios variados, como las planicies rocosas o hamadas, los campos de dunas o los lechos de ríos secos. También se prodigan las cadenas montañosas de suaves pendientes, los cañones y los oasis. Tres grandes desiertos, el Solis, el Jikari y el Kerfén conforman sus fronteras, cada uno con características propias.\n\nEl rango climático general es el de subtropical árido con precipitaciones escasas y temperaturas elevadas.\n\nLas tierras de Saprashibaya, por sus enormes zonas despobladas, son especialmente atractivas para los bishna inmortales y para ferhel de todo tipo, y recurrentes en la aparición de Baluartes. Una amalgama de pueblos humanos, tanto nómadas como sedentarios, residen en los tres desiertos, así como un sorprendente número de practicantes de la magia.",
     "otrosDatos": {
       "padre": "",
@@ -26,9 +26,22 @@
     }
   },
   {
+    "id": "solis",
+    "nombre": "Solis",
+    "url": "geografia/saprashibaya/lugares",
+    "categoria": "lugar",
+    "descripcion": "El Solis es el desierto de arenas blancas que alberga la capital de Saprashibaya, Valora. Pese a que existen calzadas principales hasta ciertos puntos del desierto y rutas abiertas generalmente transitadas por las caravanas, gran parte de su orografía está despoblada. Cuatro grandes oasis y diez ciudades de especial renombre se despliegan hacia el oeste, sur y este desde la capital. Colinda, entre otras, con las tierras de Radaeron, con el mar de Ventur, con Tel Abadir y con Daicon.",
+    "otrosDatos": {
+      "padre": "saprashibaya",
+      "bioma": "",
+      "subtitulo": "",
+      "imagen": "assets/img/lugares/saprashibaya/desierto_solis.webp"
+    }
+  },
+  {
     "id": "jikari",
     "nombre": "Jikari",
-    "url": "territorio/saprashibaya/lugares",
+    "url": "geografia/saprashibaya/lugares",
     "categoria": "lugar",
     "descripcion": "El Solis es el desierto de arenas blancas que alberga la capital de Saprashibaya, Valora. Pese a que existen calzadas principales hasta ciertos puntos del desierto y rutas abiertas generalmente transitadas por las caravanas, gran parte de su orografía está despoblada. Cuatro grandes oasis y diez ciudades de especial renombre se despliegan hacia el oeste, sur y este desde la capital. Colinda, entre otras, con las tierras de Radaeron, con el mar de Ventur, con Tel Abadir y con Daicon.",
     "otrosDatos": {
@@ -41,7 +54,7 @@
   {
     "id": "kerfen",
     "nombre": "Kerfen",
-    "url": "territorio/saprashibaya/lugares",
+    "url": "geografia/saprashibaya/lugares",
     "categoria": "lugar",
     "descripcion": "El Solis es el desierto de arenas blancas que alberga la capital de Saprashibaya, Valora. Pese a que existen calzadas principales hasta ciertos puntos del desierto y rutas abiertas generalmente transitadas por las caravanas, gran parte de su orografía está despoblada. Cuatro grandes oasis y diez ciudades de especial renombre se despliegan hacia el oeste, sur y este desde la capital. Colinda, entre otras, con las tierras de Radaeron, con el mar de Ventur, con Tel Abadir y con Daicon.",
     "otrosDatos": {
@@ -49,19 +62,6 @@
       "bioma": "",
       "subtitulo": "",
       "imagen": "assets/img/lugares/saprashibaya/desierto_kerfen.webp"
-    }
-  },
-  {
-    "id": "solis",
-    "nombre": "Solis",
-    "url": "territorio/saprashibaya/lugares",
-    "categoria": "lugar",
-    "descripcion": "El Solis es el desierto de arenas blancas que alberga la capital de Saprashibaya, Valora. Pese a que existen calzadas principales hasta ciertos puntos del desierto y rutas abiertas generalmente transitadas por las caravanas, gran parte de su orografía está despoblada. Cuatro grandes oasis y diez ciudades de especial renombre se despliegan hacia el oeste, sur y este desde la capital. Colinda, entre otras, con las tierras de Radaeron, con el mar de Ventur, con Tel Abadir y con Daicon.",
-    "otrosDatos": {
-      "padre": "saprashibaya",
-      "bioma": "",
-      "subtitulo": "",
-      "imagen": "assets/img/lugares/saprashibaya/desierto_solis.webp"
     }
   },
 
@@ -336,9 +336,9 @@
 
 
   {
-    "id": "abratem",
+    "id": "abratem_telima",
     "nombre": "Abratem Telima",
-    "url": "personaje/abratem",
+    "url": "personaje/abratem_telima",
     "categoria": "personaje",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
     "otrosDatos": {
@@ -349,9 +349,9 @@
     }
   },
   {
-    "id": "iago",
+    "id": "iago_bashon",
     "nombre": "Iago Bashon",
-    "url": "personaje/iago",
+    "url": "personaje/iago_bashon",
     "categoria": "personaje",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
     "otrosDatos": {
@@ -362,9 +362,9 @@
     }
   },
   {
-    "id": "lampra",
+    "id": "lampra_usai",
     "nombre": "Lampra Usai",
-    "url": "personaje/lampra",
+    "url": "personaje/lampra_usai",
     "categoria": "personaje",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
     "otrosDatos": {
@@ -372,6 +372,97 @@
       "bioma": [],
       "subtitulo": "",
       "imagen": "assets/fotos/pj-pagina/lampra_usai.webp"
+    }
+  },
+  {
+    "id": "bajir",
+    "nombre": "Bajir",
+    "url": "personaje/bajir",
+    "categoria": "personaje",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
+    "otrosDatos": {
+      "padre": "bishna",
+      "bioma": [],
+      "subtitulo": "",
+      "imagen": "assets/fotos/pj-pagina/bajir.webp"
+    }
+  },
+  {
+    "id": "palmira",
+    "nombre": "Palmira",
+    "url": "personaje/palmira",
+    "categoria": "personaje",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
+    "otrosDatos": {
+      "padre": "jardines",
+      "bioma": [],
+      "subtitulo": "",
+      "imagen": "assets/fotos/pj-pagina/palmira.webp"
+    }
+  },
+  {
+    "id": "desiralenire",
+    "nombre": "Princesa Desiralenire",
+    "url": "personaje/desiralenire",
+    "categoria": "personaje",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
+    "otrosDatos": {
+      "padre": "jardines",
+      "bioma": [],
+      "subtitulo": "",
+      "imagen": "assets/fotos/pj-pagina/desiralenire.webp"
+    }
+  },
+  {
+    "id": "vasu",
+    "nombre": "Princepe Vasu",
+    "url": "personaje/vasu",
+    "categoria": "personaje",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
+    "otrosDatos": {
+      "padre": "jardines",
+      "bioma": [],
+      "subtitulo": "",
+      "imagen": "assets/fotos/pj-pagina/vasu.webp"
+    }
+  },
+  {
+    "id": "tyrjan_venturi",
+    "nombre": "Tyrjan Venturi",
+    "url": "personaje/tyrjan_venturi",
+    "categoria": "personaje",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
+    "otrosDatos": {
+      "padre": "mapas",
+      "bioma": [],
+      "subtitulo": "",
+      "imagen": "assets/fotos/pj-pagina/tyrjan_venturi.webp"
+    }
+  },
+  {
+    "id": "lyari_atjae",
+    "nombre": "Lyari Atjae",
+    "url": "personaje/lyari_atjae",
+    "categoria": "personaje",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
+    "otrosDatos": {
+      "padre": "mapas",
+      "bioma": [],
+      "subtitulo": "",
+      "imagen": "assets/fotos/pj-pagina/lyari_atjae.webp"
+    }
+  },
+  {
+    "id": "freah",
+    "nombre": "Freah",
+    "url": "personaje/freah",
+    "categoria": "personaje",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
+    "otrosDatos": {
+      "padre": "mapas",
+      "bioma": [],
+      "subtitulo": "",
+      "imagen": "assets/fotos/pj-pagina/freah.webp"
     }
   },
 

@@ -5,59 +5,37 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    // z-index: 0;
 }
 
 .cuerpo{
     position: relative;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 43%;
+    width: 57%;
     height: 100%;
 
-    .cuadro {
-        position: relative;
-        top: 0;
-        left: 10%;
-        width: 45%;
-        height: 100%;
+    z-index: 1;
 
-        .marco {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transform: translateY(-50%);
-
-        }
-        
-        .foto {
-            position: absolute;
-            top: 105%;
-            left: 50%;
-            transform: translate(-50%, -100%) scale(1.2);
-            height: 95%;
-
-            z-index: 1;
-        }
-    }
+    animation: aparecer 0.8s ease-in-out;
 
     .texto {   
         position: absolute;
-        top: 18%;
-        left: 57%;
+        top: 10%;
 
-        width: 35%;
+        width: 100%;
         height: 72%;
+
+        padding-right: 7vw;
 
         display: flex;
         flex-direction: column;
         gap: 7vh;
         align-items: center;
 
-        overflow-y: auto;
-
         z-index: 1;
+
         .nombre {
             color: black;
             font-family: 'fantaisie', serif;
@@ -70,6 +48,15 @@
             color: black;
             font-size: 0.9rem;
             
+            overflow-y: auto;
+        }
+    }
+
+    @keyframes aparecer {
+        0% {
+            opacity: 0;
+        } 100% {
+            opacity: 1;
         }
     }
 }

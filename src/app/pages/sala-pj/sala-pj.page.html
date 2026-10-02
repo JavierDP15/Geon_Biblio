@@ -1,9 +1,15 @@
 <ion-content [fullscreen]="true" [scrollY]="false">
   <div *ngIf="salaArray" class="cuerpo">
-    <img [src]="`assets/fondos/salas-pj/${sala}_fondo.webp`" class="fondo">
-    <app-personaje class="personaje personaje1" [personaje]="salaArray.personajes[0]"></app-personaje>
-    <app-personaje class="personaje personaje2" [personaje]="salaArray.personajes[1]"></app-personaje>
-    <app-personaje class="personaje personaje3" [personaje]="salaArray.personajes[2]"></app-personaje>
+    <img [src]="`assets/fondos/salas-pj/${sala}_fondo.webp`" class="fondo" usemap="#pj-map" >
+      <map *ngIf="mapaInicializado" name="pj-map">
+        <!-- <area shape="rect" coords="0,0,1000,1000" alt="" (click)="prueba()"> -->
+        <area *ngFor="let personaje of salaArray.personajes; let i = index"
+          [attr.alt]="personaje"
+          [attr.title]="personaje"
+          [attr.coords]="salaArray.coords[i].join(',')"
+          shape="poly"
+          (click)="irA(personaje)">
+      </map>
   </div>
 </ion-content>
 

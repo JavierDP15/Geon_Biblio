@@ -10,8 +10,7 @@ export interface SalaPj {
   id: string,
   nombre: string,
   personajes: string[],
-  coords: [number, number][],
-  scale: number[]
+  coords: [number, number][]
 }
 
 @Injectable({
