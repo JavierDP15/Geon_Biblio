@@ -4,7 +4,7 @@
     "nombre": "Geografía",
     "url": "geografia",
     "categoria": "principal",
-    "descripcion": "<b>Cartam es un mundo rico en contrastes y pueblos, habitado por humanos, inmortales y ferhel, esculpido por la magia y por la incesante acción de los dioses. Vapuleado sin misericordia por los Geones, el planeta prevalece tras su tercera extinción.\n\nLos principales territorios, gobernados por emperadores, sultanes, kanes, reyes, faraones, sahs, arcontes y lugal mantienen una tensa situación política y geográfica mientras se enfrentan a las calamidades.\n\nLos archivos de la biblioteca de Anfírenis, aunque incompletos, contienen una amplia y variada información de la geografía física y política de Cartam.</b>",
+    "descripcion": "Cartam es un mundo rico en contrastes y pueblos, habitado por humanos, inmortales y ferhel, esculpido por la magia y por la incesante acción de los dioses. Vapuleado sin misericordia por los Geones, el planeta prevalece tras su tercera extinción.\n\nLos principales territorios, gobernados por emperadores, sultanes, kanes, reyes, faraones, sahs, arcontes y lugal mantienen una tensa situación política y geográfica mientras se enfrentan a las calamidades.\n\nLos archivos de la biblioteca de Anfírenis, aunque incompletos, contienen una amplia y variada información de la geografía física y política de Cartam.",
     "otrosDatos": {
       "padre": "",
       "bioma": [],
@@ -170,6 +170,71 @@
       "bioma": [],
       "subtitulo": "Nulla non urna mollis, placerat eros consequat, fermentum mi.",
       "imagen": "assets/img/geones/upsilon.webp"
+    }
+  },
+  {
+    "id": "bardan",
+    "nombre": "Bardán Akatergis",
+    "url": "entrada-geon/bardan",
+    "categoria": "geon",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac ipsum ac tellus ultricies varius. Nulla sed libero interdum, pellentesque augue ut, pulvinar risus. Nunc tristique, justo eget lacinia feugiat, metus massa lacinia enim, non consectetur nisl nisi nec lacus. Pellentesque commodo dictum volutpat. Proin tristique justo eu arcu malesuada, et convallis mi aliquet. Cras fermentum rhoncus diam id interdum. Fusce lacinia at ligula et molestie. Quisque quis diam vel metus congue tristique. Cras tristique nisl sollicitudin aliquam ornare. Phasellus ullamcorper finibus tellus nec interdum. Nam suscipit sagittis ornare. Nulla non urna mollis, placerat eros consequat, fermentum mi. Nam suscipit orci urna.",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": [],
+      "subtitulo": "Nulla non urna mollis, placerat eros consequat, fermentum mi.",
+      "imagen": "assets/img/geones/bardan.webp"
+    }
+  },
+  {
+    "id": "lekto",
+    "nombre": "Lekto",
+    "url": "entrada-geon/lekto",
+    "categoria": "geon",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac ipsum ac tellus ultricies varius. Nulla sed libero interdum, pellentesque augue ut, pulvinar risus. Nunc tristique, justo eget lacinia feugiat, metus massa lacinia enim, non consectetur nisl nisi nec lacus. Pellentesque commodo dictum volutpat. Proin tristique justo eu arcu malesuada, et convallis mi aliquet. Cras fermentum rhoncus diam id interdum. Fusce lacinia at ligula et molestie. Quisque quis diam vel metus congue tristique. Cras tristique nisl sollicitudin aliquam ornare. Phasellus ullamcorper finibus tellus nec interdum. Nam suscipit sagittis ornare. Nulla non urna mollis, placerat eros consequat, fermentum mi. Nam suscipit orci urna.",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": [],
+      "subtitulo": "Nulla non urna mollis, placerat eros consequat, fermentum mi.",
+      "imagen": "assets/img/geones/lekto.webp"
+    }
+  },
+  {
+    "id": "mahra",
+    "nombre": "Mahra",
+    "url": "entrada-geon/mahra",
+    "categoria": "geon",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac ipsum ac tellus ultricies varius. Nulla sed libero interdum, pellentesque augue ut, pulvinar risus. Nunc tristique, justo eget lacinia feugiat, metus massa lacinia enim, non consectetur nisl nisi nec lacus. Pellentesque commodo dictum volutpat. Proin tristique justo eu arcu malesuada, et convallis mi aliquet. Cras fermentum rhoncus diam id interdum. Fusce lacinia at ligula et molestie. Quisque quis diam vel metus congue tristique. Cras tristique nisl sollicitudin aliquam ornare. Phasellus ullamcorper finibus tellus nec interdum. Nam suscipit sagittis ornare. Nulla non urna mollis, placerat eros consequat, fermentum mi. Nam suscipit orci urna.",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": [],
+      "subtitulo": "Nulla non urna mollis, placerat eros consequat, fermentum mi.",
+      "imagen": "assets/img/geones/mahra.webp"
+    }
+  },
+  {
+    "id": "vaash",
+    "nombre": "Vaash -Kutra",
+    "url": "entrada-geon/vaash",
+    "categoria": "geon",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac ipsum ac tellus ultricies varius. Nulla sed libero interdum, pellentesque augue ut, pulvinar risus. Nunc tristique, justo eget lacinia feugiat, metus massa lacinia enim, non consectetur nisl nisi nec lacus. Pellentesque commodo dictum volutpat. Proin tristique justo eu arcu malesuada, et convallis mi aliquet. Cras fermentum rhoncus diam id interdum. Fusce lacinia at ligula et molestie. Quisque quis diam vel metus congue tristique. Cras tristique nisl sollicitudin aliquam ornare. Phasellus ullamcorper finibus tellus nec interdum. Nam suscipit sagittis ornare. Nulla non urna mollis, placerat eros consequat, fermentum mi. Nam suscipit orci urna.",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": [],
+      "subtitulo": "Nulla non urna mollis, placerat eros consequat, fermentum mi.",
+      "imagen": "assets/img/geones/vaash.webp"
+    }
+  },
+  {
+    "id": "sahannagrupta",
+    "nombre": "Sahannagrupta",
+    "url": "entrada-geon/sahannagrupta",
+    "categoria": "geon",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac ipsum ac tellus ultricies varius. Nulla sed libero interdum, pellentesque augue ut, pulvinar risus. Nunc tristique, justo eget lacinia feugiat, metus massa lacinia enim, non consectetur nisl nisi nec lacus. Pellentesque commodo dictum volutpat. Proin tristique justo eu arcu malesuada, et convallis mi aliquet. Cras fermentum rhoncus diam id interdum. Fusce lacinia at ligula et molestie. Quisque quis diam vel metus congue tristique. Cras tristique nisl sollicitudin aliquam ornare. Phasellus ullamcorper finibus tellus nec interdum. Nam suscipit sagittis ornare. Nulla non urna mollis, placerat eros consequat, fermentum mi. Nam suscipit orci urna.",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": [],
+      "subtitulo": "Nulla non urna mollis, placerat eros consequat, fermentum mi.",
+      "imagen": "assets/img/geones/sahannagrupta.webp"
     }
   },
 
@@ -518,6 +583,61 @@
       "bioma": [],
       "subtitulo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
       "imagen": "assets/img/inmortales/bishnas/shajic/shajic"
+    }
+  },
+
+
+  
+
+  {
+    "id": "phibos",
+    "nombre": "Phibos",
+    "url": "lunas/phibos",
+    "categoria": "luna",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": [],
+      "subtitulo": "",
+      "imagen": "assets/img/lunas/phibos"
+    }
+  },
+  {
+    "id": "andromas",
+    "nombre": "Andromas",
+    "url": "lunas/andromas",
+    "categoria": "luna",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": [],
+      "subtitulo": "",
+      "imagen": "assets/img/lunas/andromas"
+    }
+  },{
+    "id": "inive",
+    "nombre": "Ínive",
+    "url": "lunas/inive",
+    "categoria": "luna",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": [],
+      "subtitulo": "",
+      "imagen": "assets/img/lunas/inive"
+    }
+  },
+  {
+    "id": "omega",
+    "nombre": "Omega",
+    "url": "lunas/omega",
+    "categoria": "luna",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo accumsan purus, vel condimentum purus. Pellentesque dictum turpis at pharetra aliquet. Nulla volutpat ullamcorper tincidunt. Donec vitae sem ligula. Cras iaculis aliquam fringilla. Sed pulvinar lacus pellentesque lorem feugiat, a ornare ex ultricies. Quisque feugiat molestie elit, eu ultricies quam ullamcorper eu. Maecenas ultricies nisl quis lacus eleifend lacinia. Donec quis tortor aliquet, pulvinar nibh sed, fermentum elit. Mauris mollis consectetur eros, quis luctus lorem imperdiet vel. Aliquam sodales accumsan lorem nec fermentum. Etiam nec molestie diam. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque. Praesent rutrum ante id massa dapibus tempor. Cras vitae pellentesque sapien. Fusce euismod orci varius odio pellentesque, eu finibus metus scelerisque.",
+    "otrosDatos": {
+      "padre": "",
+      "bioma": [],
+      "subtitulo": "",
+      "imagen": "assets/img/lunas/omega"
     }
   }
 ]

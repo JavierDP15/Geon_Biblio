@@ -86,6 +86,15 @@ export const routes: Routes = [
     path: 'geografia/:territorio/lugares-territorio',
     loadComponent: () => import('./pages/lugares-territorio/lugares-territorio.page').then( m => m.LugaresTerritorioPage)
   },
+  {
+    path: 'lunas',
+    loadComponent: () => import('./pages/lunas/lunas.page').then( m => m.LunasPage)
+  },
+  {
+    path: 'lunas/:luna',
+    loadComponent: () => import('./pages/entrada-luna/entrada-luna.page').then( m => m.EntradaLunaPage)
+  },
+
 
 
 

@@ -14,7 +14,7 @@
       <span class="nombre">Ábacu</span>
     </div>
 
-    <div class="constelacion virnut abajo" (click)="virnut()">
+    <!-- <div class="constelacion virnut abajo" (click)="virnut()">
       <img class="estrellas" src="assets/img/constelaciones/virnut/virnut_estrellas.webp"/>
       <img *ngIf="mostrarVirnut" class="icono" src="assets/img/constelaciones/virnut/virnut_icono.webp"/>
       <svg class="lineas" viewBox="0 0 100 100" preserveAspectRatio="xMidyMid meet">
@@ -115,7 +115,7 @@
         <line *ngIf="pasoBardan >= 6 && !ocultarSVGBardan" x1="73%" y1="78%" x2="13%" y2="90.3%" class="trazo6Ba" />
       </svg>
       <img *ngIf="mostrarBardan" (click)="irA('bardan')" class="completa" src="assets/img/constelaciones/bardan/bardan_constelacion.webp" />
-      <span class="nombre">Bardan Akatergis</span>
+      <span class="nombre">Bardán Akatergis</span>
     </div>
 
     <div class="constelacion mahra arriba" (click)="mahra()">
@@ -130,6 +130,17 @@
       </svg>
       <img *ngIf="mostrarMahra" (click)="irA('mahra')" class="completa" src="assets/img/constelaciones/mahra/mahra_constelacion.webp" />
       <span class="nombre">Mahra</span>
+    </div> -->
+
+    <div class="constelacion sahannagrupta abajo" (click)="sahannagrupta()">
+      <img class="estrellas" src="assets/img/constelaciones/sahannagrupta/sahannagrupta_estrellas.webp" />
+      <img *ngIf="mostrarSahannagrupta" class="icono" src="assets/img/constelaciones/sahannagrupta/sahannagrupta_icono.webp" />
+      <svg class="lineas" viewBox="0 0 100 100" preserveAspectRatio="xMidyMid meet">
+        <line *ngIf="pasoSahannagrupta >= 1 && !ocultarSVGSahannagrupta" x1="23%" y1="35%" x2="89%" y2="68%" class="trazo1Sa" />
+        <line *ngIf="pasoSahannagrupta >= 2 && !ocultarSVGSahannagrupta" x1="61%" y1="14%" x2="34%" y2="92%" class="trazo2Sa" />
+      </svg>
+      <img *ngIf="mostrarSahannagrupta" (click)="irA('sahannagrupta')" class="completa" src="assets/img/constelaciones/sahannagrupta/sahannagrupta_constelacion.webp" />
+      <span class="nombre">Sahannagrupta</span>
     </div>
   </div>
   

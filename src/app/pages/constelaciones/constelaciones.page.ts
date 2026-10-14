@@ -76,6 +76,11 @@ export class ConstelacionesPage implements OnInit {
   ocultarSVGMahra = true;
   private lineasMahra = 5;
 
+  mostrarSahannagrupta = false;
+  pasoSahannagrupta = 0;
+  ocultarSVGSahannagrupta = true;
+  private lineasSahannagrupta = 2;
+
   constructor(
       private geonesService: GeonesService
     , private musicaService: MusicaService
@@ -95,6 +100,7 @@ export class ConstelacionesPage implements OnInit {
     this.geonesService.resetDescubierto('anima');
     this.geonesService.resetDescubierto('bardan');
     this.geonesService.resetDescubierto('mahra');
+    // this.geonesService.resetDescubierto('shannagrupta');
 
     if (this.geonesService.getDescubierto('abacu')) {
       this.mostrarAbacu = true;
@@ -120,6 +126,31 @@ export class ConstelacionesPage implements OnInit {
       this.mostrarUpsilon = true;
       this.ocultarSVGUpsilon = true;
     }
+
+    if (this.geonesService.getDescubierto('abadon')) {
+      this.mostrarAbadon = true;
+      this.ocultarSVGAbadon = true;
+    }
+
+    if (this.geonesService.getDescubierto('anima')) {
+      this.mostrarAnima = true;
+      this.ocultarSVGAnima = true;
+    }
+
+    if (this.geonesService.getDescubierto('bardan')) {
+      this.mostrarBardan = true;
+      this.ocultarSVGBardan = true;
+    }
+
+    if (this.geonesService.getDescubierto('mahra')) {
+      this.mostrarMahra = true;
+      this.ocultarSVGMahra = true;
+    }
+
+    // if (this.geonesService.getDescubierto('sahannagrupta')) {
+    //   this.mostrarSahannagrupta = true;
+    //   this.ocultarSVGSahannagrupta = true;
+    // }
   }
 
   irA(geonSeleccionado: string) {
@@ -268,7 +299,7 @@ export class ConstelacionesPage implements OnInit {
       for (let i = 0; i < this.lineasBardan; i++) {
         setTimeout(() => {
           this.pasoBardan++;
-        }, i * 400);
+        }, i * 500);
       }
       setTimeout(() => {
         this.mostrarBardan = !this.mostrarBardan
@@ -294,6 +325,25 @@ export class ConstelacionesPage implements OnInit {
         this.geonesService.setDescubierto('mahra', true);
         this.isAnimating = false;
       }, 550 * this.lineasMahra);
+    }
+  }
+
+  sahannagrupta() {
+    if (this.isAnimating) return;
+    
+    if (!this.mostrarSahannagrupta) {
+      this.isAnimating = true;
+      this.ocultarSVGSahannagrupta = !this.ocultarSVGSahannagrupta;
+      for (let i = 0; i < this.lineasSahannagrupta; i++) {
+        setTimeout(() => {
+          this.pasoSahannagrupta++;
+        }, i * 550);
+      }
+      setTimeout(() => {
+        this.mostrarSahannagrupta = !this.mostrarSahannagrupta
+        this.geonesService.setDescubierto('sahannagrupta', true);
+        this.isAnimating = false;
+      }, 550 * this.lineasSahannagrupta);
     }
   }
 }

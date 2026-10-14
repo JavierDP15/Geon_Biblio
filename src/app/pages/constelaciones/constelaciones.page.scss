@@ -331,6 +331,24 @@ ion-content {
                 animation: dibujar 0.9s linear forwards;
             }
 
+            ////////////////////////////////////////// Sahannagrupta
+
+            .trazo1Sa {
+                stroke: white;
+                stroke-width: 0.5;
+                stroke-linecap: round;
+                stroke-dasharray: 100;
+                stroke-dashoffset: 100;
+                animation: dibujar 0.8s linear forwards;
+            }.trazo2Sa {
+                stroke: white;
+                stroke-width: 0.5;
+                stroke-linecap: round;
+                stroke-dasharray: 100;
+                stroke-dashoffset: 100;
+                animation: dibujar 1s linear forwards;
+            }
+
             @keyframes dibujar {
                 to {
                     stroke-dashoffset: 0;

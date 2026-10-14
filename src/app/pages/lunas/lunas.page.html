@@ -1,0 +1,55 @@
+<ion-content [fullscreen]="true">
+  <video
+    #videoLunas
+    src="assets/videos/video_lunas.mp4"
+    class="fondo"
+    autoplay
+    muted
+    playsinline
+    preload="auto"
+  ></video>
+  <svg 
+    class="mapa"
+    viewBox="0 0 1280 720"
+    preserveAspectRatio="xMidYMin slice">
+    
+    <circle
+      class="phibos"
+      cx="185px"
+      cy="294px"
+      r="79px"
+      fill="transparent"
+      (click)="irA('phibos')"
+    ></circle>
+    <circle
+      class="andromas"
+      cx="525px"
+      cy="250px"
+      r="185px"
+      fill="transparent"
+      (click)="irA('andromas')"
+    ></circle>
+    <circle
+      class="inive"
+      cx="861px"
+      cy="320"
+      r="73px"
+      fill="transparent"
+      (click)="irA('inive')"
+    ></circle>
+    <circle
+      class="omega"
+      cx="1056px"
+      cy="177px"
+      r="99px"
+      fill="transparent"
+      (click)="irA('omega')"
+    ></circle>
+  </svg>
+</ion-content>
+
+<div class="opciones aparecer">
+  <app-atras [pagina]="'archivo'"></app-atras>
+  <app-musica></app-musica>
+  <app-ayuda [pagina]="'lunas'"></app-ayuda>
+</div>
