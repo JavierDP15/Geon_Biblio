@@ -45,307 +45,167 @@ ion-content {
             transform: translateX(-50%);
             height: 90%;
 
-            ////////////////////////////////////////// Abacu
-
-            .trazo1Ab, .trazo2Ab {
+            line {
                 stroke: white;
                 stroke-width: 0.5;
                 stroke-linecap: round;
                 stroke-dasharray: 100;
                 stroke-dashoffset: 100;
+            }
+
+            ////////////////////////////////////////// Abacu
+
+            .trazo1Ab, .trazo2Ab {
                 animation: dibujar 1.5s linear forwards;
             }
 
             .trazo3Ab {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 0.5s linear forwards;
             }
 
             .trazo4Ab {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 1s linear forwards;
             }
 
             //////////////////////////////////////// Virnut
 
             .trazo1Vi {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 2s linear forwards;
             }
 
             .trazo2Vi, .trazo5Vi, .trazo6Vi {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 1s linear forwards;
             }
 
             .trazo3Vi {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 1.2s linear forwards;
             }
 
             .trazo4Vi {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 1.3s linear forwards;
             }
 
             //////////////////////////////////////// Caal
 
             .trazo1Ca {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 1.5s linear forwards;
             }
 
             .trazo2Ca, .trazo3Ca, .trazo5Ca {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 1s linear forwards;
             }
 
             .trazo4Ca {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 0.9s linear forwards;
             }
 
             //////////////////////////////////////// Dyshiba
 
             .trazo1Dy {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 1.8s linear forwards;
             }
 
             .trazo2Dy {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 2.2s linear forwards;
             }
 
             .trazo3Dy, .trazo4Dy {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 1.5s linear forwards;
             }
 
             .trazo5Dy {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 1.3s linear forwards;
             }
 
             .trazo6Dy {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 1.6s linear forwards;
             }
 
             .trazo7Dy {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 1.2s linear forwards;
             }
 
             .trazo8Dy {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 1s linear forwards;
             }
 
             ////////////////////////////////////////// Upsilon
 
             .trazo1Up {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 1.3s linear forwards;
-            }.trazo2Up {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
+            }
+            
+            .trazo2Up {
                 animation: dibujar 0.6s linear forwards;
-            }.trazo3Up, .trazo5Up {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
+            }
+            
+            .trazo3Up, .trazo5Up {
                 animation: dibujar 1s linear forwards;
-            }.trazo4Up {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
+            }
+            
+            .trazo4Up {
                 animation: dibujar 1.2s linear forwards;
             }
 
             ////////////////////////////////////////// Abadon
 
             .trazo1AbRa, .trazo4AbRa {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 1.7s linear forwards;
-            }.trazo2AbRa, .trazo5AbRa {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
+            }
+            
+            .trazo2AbRa, .trazo5AbRa {
                 animation: dibujar 1.3s linear forwards;
-            }.trazo3AbRa, .trazo6AbRa {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
+            }
+            
+            .trazo3AbRa, .trazo6AbRa {
                 animation: dibujar 1s linear forwards;
             }
 
             ////////////////////////////////////////// Anima
 
             .trazo1An, .trazo4An, .trazo5An {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 1s linear forwards;
-            }.trazo2An,.trazo3An {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
+            }
+            
+            .trazo2An,.trazo3An {
                 animation: dibujar 1.5s linear forwards;
             }
 
             ////////////////////////////////////////// Bardan
 
             .trazo1Ba{
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 0.8s linear forwards;
-            }.trazo2Ba, .trazo3Ba {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
+            }
+            
+            .trazo2Ba, .trazo3Ba {
                 animation: dibujar 1.4s linear forwards;
-            }.trazo4Ba, .trazo6Ba {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
+            }
+            
+            .trazo4Ba, .trazo6Ba {
                 animation: dibujar 1s linear forwards;
-            }.trazo5Ba {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
+            }
+            
+            .trazo5Ba {
                 animation: dibujar 0.9s linear forwards;
             }
 
             ////////////////////////////////////////// Mahra
 
             .trazo1Ma {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 1.5s linear forwards;
-            }.trazo2Ma, .trazo3Ma, .trazo4Ma, .trazo5Ma {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
+            }
+            
+            .trazo2Ma, .trazo3Ma, .trazo4Ma, .trazo5Ma {
                 animation: dibujar 0.9s linear forwards;
             }
 
             ////////////////////////////////////////// Sahannagrupta
 
             .trazo1Sa {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
                 animation: dibujar 0.8s linear forwards;
-            }.trazo2Sa {
-                stroke: white;
-                stroke-width: 0.5;
-                stroke-linecap: round;
-                stroke-dasharray: 100;
-                stroke-dashoffset: 100;
+            }
+            
+            .trazo2Sa {
                 animation: dibujar 1s linear forwards;
             }
 

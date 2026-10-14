@@ -1,22 +1,23 @@
 <ion-content [fullscreen]="true" [scrollY]="false">
-  <!-- <video
+  <video
     #video1
     *ngIf="showVideo1"
     [src]="'assets/videos/firma_alma.mp4'"
-    poster="assets/fondos/negro.jpg"
+    poster="assets/fondos/negro.webp"
     autoplay
     playsinline
     muted
     preload="auto"
+    (loadedmetadata)="comprobarVideo(video1)"
     (ended)="onVideoEnded()">
-  </video> -->
+  </video>
 
-  <img
+  <!-- <img
     *ngIf="logoAlma"
     class="logo_alma"
     src="assets/img/alma_logo.webp"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; z-index: 1;"
-  />
+  /> -->
 
 
   <video
@@ -28,14 +29,15 @@
     playsinline
     muted
     preload="auto"
+    (loadedmetadata)="comprobarVideo(video2)"
     (ended)="onVideoEnded()">
   </video>
 
-  <img
+  <!-- <img
   *ngIf="showGeon"
     src="assets/img/geon_universe_logo.webp"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;"
-  />
+  /> -->
   
     <!-- Botón para iniciar en iOS -->
      <div *ngIf="showStartButton" class="start-button-container">

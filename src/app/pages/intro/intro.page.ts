@@ -8,6 +8,8 @@ import { Howl } from 'howler';
 import { Platform } from '@ionic/angular'
 import { AudioService } from 'src/app/services/audio/audio.service';
 import { GeonesService } from 'src/app/services/geones/geones.service';
+import { Capacitor } from '@capacitor/core';
+import { MusicaService } from 'src/app/services/musica/musica.service';
 
 @Component({
   selector: 'app-intro',
@@ -21,44 +23,52 @@ export class IntroPage implements OnInit {
   @ViewChild('video1') introVideo1!: ElementRef<HTMLVideoElement>;
   @ViewChild('video2') introVideo2!: ElementRef<HTMLVideoElement>;
 
-  showVideo1 = true;
+  showVideo1 = false;
   showVideo2 = false;
-  logoAlma = true;
-  showGeon = false;
   
-  showStartButton = false;
+  showStartButton = true;
 
   constructor(
     private router: Router,
     private platform: Platform,
     private audioService: AudioService,
+    private musicaService: MusicaService,
     private geonesService: GeonesService
   ) { }
 
   async ngOnInit() {
     this.geonesService.resetTodos();
-    if (this.platform.is('ios')) {
+
+    if (!Capacitor.isNativePlatform() || Capacitor.getPlatform() === 'ios') {
       this.showStartButton = true;
     } else {
+      this.showVideo1 = true;
       this.startIntro();
+    }
+  }
+
+  comprobarVideo(video: HTMLVideoElement) {
+    if (!this.musicaService.getSilenciado()) {
+      return
+    } else {
+      video.muted = true;
     }
   }
 
   startIntro() {
     this.showStartButton = false;
     setTimeout(() => {
-      this.showVideo2 = true;
-      this.logoAlma = false;
-    }, 5000)
-    setTimeout(() => {
-      this.showGeon = true;
-    }, 5000);
+      this.showVideo1 = true;
+    }, 5)
   }
 
   onVideoEnded() {
+    if (this.showVideo1) {
+      this.showVideo1 = false;
+      this.showVideo2 = true;
+    } else {
       this.showVideo2 = false;
-      setTimeout(() => {
         this.router.navigate(['/inicio']);
-      }, 4000);
+    }
   }
 }
