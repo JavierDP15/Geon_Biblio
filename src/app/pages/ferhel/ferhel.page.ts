@@ -136,4 +136,7 @@ export class FerhelPage implements OnInit {
     this.biomas = false;
   }
 
+  irABiomas() {
+    this.route.navigate(['/ferhel/biomas']);
+  }
 }

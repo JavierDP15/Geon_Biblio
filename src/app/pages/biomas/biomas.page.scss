@@ -1,0 +1,29 @@
+.cuerpo {
+    display: flex;
+    flex-direction: row;
+
+    max-width: 100%;
+    height: 100%;
+    align-items: end;
+
+    margin-left: 10%;
+    margin-right: 10%;
+
+    gap: 2%;
+
+    overflow-x: auto;
+
+    .bioma {
+        height: 73%;
+        margin-bottom: 4%;
+        filter: grayscale(100%);
+        pointer-events: none;
+
+        z-index: 2;
+    }
+
+    .activo {
+        filter: grayscale(0%) !important;
+        pointer-events: all !important;
+    }
+}

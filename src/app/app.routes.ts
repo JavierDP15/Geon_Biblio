@@ -94,6 +94,11 @@ export const routes: Routes = [
     path: 'lunas/:luna',
     loadComponent: () => import('./pages/entrada-luna/entrada-luna.page').then( m => m.EntradaLunaPage)
   },
+  {
+    path: 'ferhel/biomas',
+    loadComponent: () => import('./pages/biomas/biomas.page').then( m => m.BiomasPage)
+  },
+
 
 
 

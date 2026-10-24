@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+ <img class="imagen-fondo" src='assets/fondos/fondo_ferhel.webp'
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; z-index: 0; pointer-events: none;" />
+
+  <div class="cuerpo">
+    <img src="assets/img/biomas/desierto.webp" alt="desierto" class="bioma" [class.activo]="desierto" (click)="irAHabitat('desierto')">
+    <img src="assets/img/biomas/montana.webp" alt="montaña" class="bioma" [class.activo]="montana" (click)="irAHabitat('montana')">
+    <img src="assets/img/biomas/bosque.webp" alt="bosque" class="bioma" [class.activo]="bosque" (click)="irAHabitat('bosque')">
+    <img src="assets/img/biomas/oceano.webp" alt="oceano" class="bioma" [class.activo]="oceano" (click)="irAHabitat('oceano')">
+    <img src="assets/img/biomas/pantano.webp" alt="pantano" class="bioma" [class.activo]="pantano" (click)="irAHabitat('pantano')">
+    <img src="assets/img/biomas/rio.webp" alt="rio" class="bioma" [class.activo]="rio" (click)="irAHabitat('rio')">
+    <img src="assets/img/biomas/selva.webp" alt="selva" class="bioma" [class.activo]="selva" (click)="irAHabitat('selva')">
+    <img src="assets/img/biomas/subterraneo.webp" alt="subterraneo" class="bioma" [class.activo]="subterraneo" (click)="irAHabitat('subterraneo')">
+    <img src="assets/img/biomas/tundra.webp" alt="tundra" class="bioma" [class.activo]="tundra" (click)="irAHabitat('tundra')">
+  </div>
+</ion-content>
+
+<div class="opciones aparecer">
+  <app-atras [pagina]="'ferhel'"></app-atras>
+  <app-musica></app-musica>
+  <app-ayuda [pagina]="'biomas'"></app-ayuda>
+  <app-salir></app-salir>
+</div>
