@@ -21,12 +21,15 @@
   <div *ngIf="mostrarMenu" class="cuerpo" [class.desactivar]="opciones">
     <img src="assets/img/titulo.webp" alt="titulo" class="titulo">
     <img src="assets/img/subtitulo.webp" alt="subtitulo" class="subtitulo">
-    <button class="archivo" (click)="toArchivo()">Archivo</button>
+    <div class="entradas">
+      <button class="archivo" (click)="toArchivo()">Archivo</button>
+      <button class="mouseion">Mouseion</button>
+    </div>
     <div class="extras">
-      <button class="boton-extra">Autora</button>
-      <button class="boton-extra" (click)="mostrarOpciones()">Opciones</button>
-      <button class="boton-extra">Créditos</button>
-      <button class="boton-extra">Logros</button>
+      <button class="boton-extra"><span class="texto">Autora</span></button>
+      <button class="boton-extra" (click)="mostrarOpciones()"><span class="texto">Opciones</span></button>
+      <button class="boton-extra"><span class="texto">Extras</span></button>
+      <button class="boton-extra"><span class="texto capitulos">Capítulos Perdidos</span></button>
     </div>
   </div>
   <div *ngIf="mostrarMenu" class="sonido">

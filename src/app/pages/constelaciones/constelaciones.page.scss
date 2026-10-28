@@ -208,12 +208,23 @@ ion-content {
             .trazo2Sa {
                 animation: dibujar 1s linear forwards;
             }
+            
+            ////////////////////////////////////////// Sahannagrupta
+
+            .trazo1Ak, .trazo2Ak {
+                animation: dibujar 1.4s linear forwards;
+            }
+
+            .trazo3Ak, .trazo4Ak, .trazo5Ak {
+                animation: dibujar 1.2s linear forwards;
+            }
 
             @keyframes dibujar {
                 to {
                     stroke-dashoffset: 0;
                 }
             }
+
         }
 
         .icono {

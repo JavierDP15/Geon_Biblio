@@ -32,6 +32,14 @@
         <img class="listaBoton" src="assets/img/lista_ferhel.webp"/>
         <div class="tag">Atlas Naturista</div>
       </div>
+      <div class="boton">
+        <img class="listaBoton" src="assets/img/ecologia_ferhel.webp"/>
+        <div class="tag">Ecología y Usos</div>
+      </div>
+      <div class="boton">
+        <img class="listaBoton" src="assets/img/decalogo_ferhel.webp"/>
+        <div class="tag">Decálogo</div>
+      </div>
     </div>
   </div>
 </ion-content>
@@ -40,7 +48,7 @@
 
 <app-rueda-biomas class="biomas" *ngIf="biomas" (cerrar)="cerrarRueda()"></app-rueda-biomas>
 
-<div *ngIf="tutorialStep === 9 || tutorialStep === 17" class="botones-tutorial">
+<div *ngIf="tutorialStep === 9 || tutorialStep === 17 || tutorialStep === 28 || tutorialStep === 30" class="botones-tutorial">
   <div class="boton" [class.mostrar]="tutorialStep === 17">
     <img class="listaBoton" src="assets/img/observar_ferhel.webp"/>
     <div class="tag">Observar Fauna</div>
@@ -48,6 +56,14 @@
   <div class="boton" [class.mostrar]="tutorialStep === 9">
     <img class="listaBoton" src="assets/img/lista_ferhel.webp"/>
     <div class="tag">Atlas Naturista</div>
+  </div>
+  <div class="boton" [class.mostrar]="tutorialStep === 28">
+    <img class="listaBoton" src="assets/img/ecologia_ferhel.webp"/>
+    <div class="tag">Ecología y Usos</div>
+  </div>
+  <div class="boton" [class.mostrar]="tutorialStep === 30">
+    <img class="listaBoton" src="assets/img/decalogo_ferhel.webp"/>
+    <div class="tag">Decálogo</div>
   </div>
 </div>
 

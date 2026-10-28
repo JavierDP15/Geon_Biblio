@@ -81,6 +81,11 @@ export class ConstelacionesPage implements OnInit {
   ocultarSVGSahannagrupta = true;
   private lineasSahannagrupta = 2;
 
+  mostrarAkraemundis = false;
+  pasoAkraemundis = 0;
+  ocultarSVGAkraemundis = true;
+  private lineasAkraemundis = 5;
+
   constructor(
       private geonesService: GeonesService
     , private musicaService: MusicaService
@@ -100,7 +105,8 @@ export class ConstelacionesPage implements OnInit {
     this.geonesService.resetDescubierto('anima');
     this.geonesService.resetDescubierto('bardan');
     this.geonesService.resetDescubierto('mahra');
-    // this.geonesService.resetDescubierto('shannagrupta');
+    this.geonesService.resetDescubierto('shannagrupta');
+    this.geonesService.resetDescubierto('akraemundis');
 
     if (this.geonesService.getDescubierto('abacu')) {
       this.mostrarAbacu = true;
@@ -147,10 +153,15 @@ export class ConstelacionesPage implements OnInit {
       this.ocultarSVGMahra = true;
     }
 
-    // if (this.geonesService.getDescubierto('sahannagrupta')) {
-    //   this.mostrarSahannagrupta = true;
-    //   this.ocultarSVGSahannagrupta = true;
-    // }
+    if (this.geonesService.getDescubierto('sahannagrupta')) {
+      this.mostrarSahannagrupta = true;
+      this.ocultarSVGSahannagrupta = true;
+    }
+
+    if (this.geonesService.getDescubierto('akraemundis')) {
+      this.mostrarAkraemundis = true;
+      this.ocultarSVGAkraemundis = true;
+    }
   }
 
   irA(geonSeleccionado: string) {
@@ -344,6 +355,25 @@ export class ConstelacionesPage implements OnInit {
         this.geonesService.setDescubierto('sahannagrupta', true);
         this.isAnimating = false;
       }, 550 * this.lineasSahannagrupta);
+    }
+  }
+
+  akraemundis() {
+    if (this.isAnimating) return;
+    
+    if (!this.mostrarAkraemundis) {
+      this.isAnimating = true;
+      this.ocultarSVGAkraemundis = !this.ocultarSVGAkraemundis;
+      for (let i = 0; i < this.lineasAkraemundis; i++) {
+        setTimeout(() => {
+          this.pasoAkraemundis++;
+        }, i * 500);
+      }
+      setTimeout(() => {
+        this.mostrarAkraemundis = !this.mostrarAkraemundis
+        this.geonesService.setDescubierto('akraemundis', true);
+        this.isAnimating = false;
+      }, 500 * this.lineasAkraemundis);
     }
   }
 }

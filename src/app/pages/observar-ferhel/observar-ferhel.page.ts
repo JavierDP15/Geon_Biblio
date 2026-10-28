@@ -40,7 +40,7 @@ export class ObservarFerhelPage implements OnInit {
   biomas: string[] = [
     'desierto'
     // , 'tundra'
-    // , 'montaña'
+    , 'montaña'
     // , 'bosque'
     // , 'pantano'
     // , 'rio'
@@ -59,11 +59,11 @@ export class ObservarFerhelPage implements OnInit {
     [window.innerWidth * 0.85 , window.innerHeight * 0.39]
   ];
   coordMontaña: number[][] = [
-    [window.innerWidth * 0 , window.innerHeight * 0],
-    [window.innerWidth * 0 , window.innerHeight * 0],
-    [window.innerWidth * 0 , window.innerHeight * 0],
-    [window.innerWidth * 0 , window.innerHeight * 0],
-    [window.innerWidth * 0 , window.innerHeight * 0]
+    [window.innerWidth * 0.11 , window.innerHeight * 0.46],
+    [window.innerWidth * 0.3 , window.innerHeight * 0.74],
+    [window.innerWidth * 0.55 , window.innerHeight * 0.52],
+    [window.innerWidth * 0.8 , window.innerHeight * 0.705],
+    [window.innerWidth * 0.85 , window.innerHeight * 0.39]
   ];
 
   catalejoRadio = 130

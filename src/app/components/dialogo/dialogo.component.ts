@@ -28,7 +28,9 @@ export class DialogoComponent  implements OnInit {
   constructor() { }
 
   async ngOnInit() {
+    console.log('Entrada: ', this.entrada);
     if (this.entrada?.texto) {
+      console.log('ayuyu');
       this.paginarTexto(this.entrada.texto, 220);
       this.mostrarConAnimacion();
     }

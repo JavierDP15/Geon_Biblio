@@ -62,7 +62,7 @@ export class FerhelPage implements OnInit {
     this.entrada = await this.bibliotecaService.getPorId('ferhel') ?? null;
     this.musicaService.play('the-white-lion');
     this.mostrarVideo = false;
-    // await this.tutorialService.resetTutorial('ferhel');
+    await this.tutorialService.resetTutorial('ferhel');
     await this.recibirTutorial();
   }
   
@@ -99,6 +99,12 @@ export class FerhelPage implements OnInit {
           break;
         case 13:
           this.biomas = false;
+          break;
+        case 28:
+          this.arriba = true
+          break;
+        case 30:
+          this.arriba = true
           break;
         default:
           this.arriba = false;
